@@ -23,12 +23,12 @@ namespace VillageNewbies
                 connect.Open();
                 using (SQLiteCommand fmd = connect.CreateCommand())
                 {
-                    fmd.CommandText = @"SELECT name Name, price Price FROM cars";
+                    fmd.CommandText = @"SELECT etunimi Etunimi, sukunimi Sukunimi FROM asiakas";
                     fmd.CommandType = CommandType.Text;
                     SQLiteDataReader r = fmd.ExecuteReader();
                     while (r.Read())
                     {
-                        ImportedFiles.Add(r["name"].ToString());
+                        ImportedFiles.Add(r["etunimi"].ToString() + " " + r["sukunimi"].ToString());
                     }
                 }
             }
