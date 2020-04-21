@@ -91,8 +91,13 @@ namespace VillageNewbies
           "FOREIGN KEY(postinro) REFERENCES posti(postinro))";
             cmd.ExecuteNonQuery();
 
-            cmd.CommandText = "INSERT INTO asiakas(postinro,etunimi,sukunimi,lahiosoite,email,puhelinnro)" +
-                " VALUES('70460','matti','meikalainen','kuopiontie1','matti.m@gmail.com','0505005005')";
+            cmd.CommandText = "INSERT INTO asiakas(asiakas_id,postinro,etunimi,sukunimi,lahiosoite,email,puhelinnro)" +
+                "VALUES('100','70460','matti','meikalainen','kuopiontie1','matti.m@gmail.com','0505005005')," +
+                "('101','70460', 'keijo', 'meikalainen', 'kuopiontie1', 'matti.m@gmail.com', '0505005005')";
+            
+
+
+
             cmd.ExecuteNonQuery();
 
 
