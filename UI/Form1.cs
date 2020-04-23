@@ -16,14 +16,6 @@ namespace VillageNewbies
         {
             InitializeComponent();
 
-            SQL s = new SQL();
-            s.create();
-
-            DataTable dt = s.returnstuff();
-            dataGridView1.DataSource = dt;
-
-            dataGridView1.DataSource = SQL.GetImportedFileList().Select(x => new { Value = x }).ToList();
-
         }
     }
 }

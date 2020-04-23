@@ -332,6 +332,7 @@
             // menuStripZ1
             // 
             resources.ApplyResources(this.menuStripZ1, "menuStripZ1");
+            this.menuStripZ1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStripZ1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ToolstripItems,
             this.toolstripaccount,
@@ -697,8 +698,8 @@
             this.btn_Loan_LoanItem.Name = "btn_Loan_LoanItem";
             this.btn_Loan_LoanItem.ShowButtontext = true;
             this.btn_Loan_LoanItem.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.btn_Loan_LoanItem.TextLocation_X = 26;
-            this.btn_Loan_LoanItem.TextLocation_Y = 15;
+            this.btn_Loan_LoanItem.TextLocation_X = 52;
+            this.btn_Loan_LoanItem.TextLocation_Y = 27;
             this.btn_Loan_LoanItem.Transparent1 = 250;
             this.btn_Loan_LoanItem.Transparent2 = 250;
             this.btn_Loan_LoanItem.UseVisualStyleBackColor = false;
@@ -806,8 +807,8 @@
             this.btnCancelReservation.Name = "btnCancelReservation";
             this.btnCancelReservation.ShowButtontext = true;
             this.btnCancelReservation.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnCancelReservation.TextLocation_X = 13;
-            this.btnCancelReservation.TextLocation_Y = 16;
+            this.btnCancelReservation.TextLocation_X = 64;
+            this.btnCancelReservation.TextLocation_Y = 27;
             this.btnCancelReservation.Transparent1 = 250;
             this.btnCancelReservation.Transparent2 = 250;
             this.btnCancelReservation.UseVisualStyleBackColor = false;
@@ -867,8 +868,8 @@
             this.btn_UserLoans_ReturnItem.Name = "btn_UserLoans_ReturnItem";
             this.btn_UserLoans_ReturnItem.ShowButtontext = true;
             this.btn_UserLoans_ReturnItem.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.btn_UserLoans_ReturnItem.TextLocation_X = 22;
-            this.btn_UserLoans_ReturnItem.TextLocation_Y = 16;
+            this.btn_UserLoans_ReturnItem.TextLocation_X = 52;
+            this.btn_UserLoans_ReturnItem.TextLocation_Y = 27;
             this.btn_UserLoans_ReturnItem.Transparent1 = 250;
             this.btn_UserLoans_ReturnItem.Transparent2 = 250;
             this.btn_UserLoans_ReturnItem.UseVisualStyleBackColor = false;
@@ -996,8 +997,8 @@
             this.btn_ChangeItemDetails.Name = "btn_ChangeItemDetails";
             this.btn_ChangeItemDetails.ShowButtontext = true;
             this.btn_ChangeItemDetails.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.btn_ChangeItemDetails.TextLocation_X = 28;
-            this.btn_ChangeItemDetails.TextLocation_Y = 17;
+            this.btn_ChangeItemDetails.TextLocation_X = 52;
+            this.btn_ChangeItemDetails.TextLocation_Y = 27;
             this.btn_ChangeItemDetails.Transparent1 = 250;
             this.btn_ChangeItemDetails.Transparent2 = 250;
             this.btn_ChangeItemDetails.UseVisualStyleBackColor = false;
@@ -1044,8 +1045,8 @@
             this.btn_CreateItem.Name = "btn_CreateItem";
             this.btn_CreateItem.ShowButtontext = true;
             this.btn_CreateItem.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_CreateItem.TextLocation_X = 2;
-            this.btn_CreateItem.TextLocation_Y = -3;
+            this.btn_CreateItem.TextLocation_X = 27;
+            this.btn_CreateItem.TextLocation_Y = 31;
             this.btn_CreateItem.Transparent1 = 250;
             this.btn_CreateItem.Transparent2 = 250;
             this.btn_CreateItem.UseVisualStyleBackColor = false;
@@ -1103,8 +1104,8 @@
             this.btn_CreateItemType.Name = "btn_CreateItemType";
             this.btn_CreateItemType.ShowButtontext = true;
             this.btn_CreateItemType.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_CreateItemType.TextLocation_X = 2;
-            this.btn_CreateItemType.TextLocation_Y = -3;
+            this.btn_CreateItemType.TextLocation_X = 27;
+            this.btn_CreateItemType.TextLocation_Y = 31;
             this.btn_CreateItemType.Transparent1 = 250;
             this.btn_CreateItemType.Transparent2 = 250;
             this.btn_CreateItemType.UseVisualStyleBackColor = false;
@@ -1186,8 +1187,8 @@
             this.btnAcceptReturn.Name = "btnAcceptReturn";
             this.btnAcceptReturn.ShowButtontext = true;
             this.btnAcceptReturn.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnAcceptReturn.TextLocation_X = 15;
-            this.btnAcceptReturn.TextLocation_Y = 16;
+            this.btnAcceptReturn.TextLocation_X = 89;
+            this.btnAcceptReturn.TextLocation_Y = 27;
             this.btnAcceptReturn.Transparent1 = 250;
             this.btnAcceptReturn.Transparent2 = 250;
             this.btnAcceptReturn.UseVisualStyleBackColor = false;
@@ -1250,8 +1251,8 @@
             this.btnDenyLoan.Name = "btnDenyLoan";
             this.btnDenyLoan.ShowButtontext = true;
             this.btnDenyLoan.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnDenyLoan.TextLocation_X = 12;
-            this.btnDenyLoan.TextLocation_Y = 16;
+            this.btnDenyLoan.TextLocation_X = 54;
+            this.btnDenyLoan.TextLocation_Y = 27;
             this.btnDenyLoan.Transparent1 = 250;
             this.btnDenyLoan.Transparent2 = 250;
             this.btnDenyLoan.UseVisualStyleBackColor = false;
@@ -1291,8 +1292,8 @@
             this.btnAcceptLoan.Name = "btnAcceptLoan";
             this.btnAcceptLoan.ShowButtontext = true;
             this.btnAcceptLoan.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnAcceptLoan.TextLocation_X = 15;
-            this.btnAcceptLoan.TextLocation_Y = 16;
+            this.btnAcceptLoan.TextLocation_X = 72;
+            this.btnAcceptLoan.TextLocation_Y = 27;
             this.btnAcceptLoan.Transparent1 = 250;
             this.btnAcceptLoan.Transparent2 = 250;
             this.btnAcceptLoan.UseVisualStyleBackColor = false;
@@ -1378,8 +1379,8 @@
             this.btn_UpdateUserDetails.Name = "btn_UpdateUserDetails";
             this.btn_UpdateUserDetails.ShowButtontext = true;
             this.btn_UpdateUserDetails.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_UpdateUserDetails.TextLocation_X = 16;
-            this.btn_UpdateUserDetails.TextLocation_Y = 17;
+            this.btn_UpdateUserDetails.TextLocation_X = 80;
+            this.btn_UpdateUserDetails.TextLocation_Y = 26;
             this.btn_UpdateUserDetails.Transparent1 = 250;
             this.btn_UpdateUserDetails.Transparent2 = 250;
             this.btn_UpdateUserDetails.UseVisualStyleBackColor = false;
@@ -1421,8 +1422,8 @@
             this.btn_AM_ChangeEmail.Name = "btn_AM_ChangeEmail";
             this.btn_AM_ChangeEmail.ShowButtontext = true;
             this.btn_AM_ChangeEmail.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_AM_ChangeEmail.TextLocation_X = 22;
-            this.btn_AM_ChangeEmail.TextLocation_Y = 17;
+            this.btn_AM_ChangeEmail.TextLocation_X = 65;
+            this.btn_AM_ChangeEmail.TextLocation_Y = 26;
             this.btn_AM_ChangeEmail.Transparent1 = 250;
             this.btn_AM_ChangeEmail.Transparent2 = 250;
             this.btn_AM_ChangeEmail.UseVisualStyleBackColor = false;
@@ -1482,8 +1483,8 @@
             this.btn_AM_ChangePassword.Name = "btn_AM_ChangePassword";
             this.btn_AM_ChangePassword.ShowButtontext = true;
             this.btn_AM_ChangePassword.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_AM_ChangePassword.TextLocation_X = 15;
-            this.btn_AM_ChangePassword.TextLocation_Y = 17;
+            this.btn_AM_ChangePassword.TextLocation_X = 68;
+            this.btn_AM_ChangePassword.TextLocation_Y = 26;
             this.btn_AM_ChangePassword.Transparent1 = 250;
             this.btn_AM_ChangePassword.Transparent2 = 250;
             this.btn_AM_ChangePassword.UseVisualStyleBackColor = false;
@@ -1583,8 +1584,8 @@
             this.btn_Reserve.Name = "btn_Reserve";
             this.btn_Reserve.ShowButtontext = true;
             this.btn_Reserve.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.btn_Reserve.TextLocation_X = 29;
-            this.btn_Reserve.TextLocation_Y = 17;
+            this.btn_Reserve.TextLocation_X = 52;
+            this.btn_Reserve.TextLocation_Y = 27;
             this.btn_Reserve.Transparent1 = 250;
             this.btn_Reserve.Transparent2 = 250;
             this.btn_Reserve.UseVisualStyleBackColor = false;
