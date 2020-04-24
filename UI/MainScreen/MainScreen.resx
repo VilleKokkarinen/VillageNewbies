@@ -216,332 +216,14 @@
   <data name="&gt;&gt;BottomPanel.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
-  <data name="pictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 3</value>
-  </data>
-  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 64</value>
-  </data>
-  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
-    <value>pictureBox1</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
-    <value>TopPanel</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="_MinButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="_MinButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="_MinButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft YaHei UI, 20.25pt, style=Bold</value>
-  </data>
-  <data name="_MinButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="_MinButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1502, 6</value>
-  </data>
-  <data name="_MinButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>31, 24</value>
-  </data>
-  <data name="_MinButton.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="_MinButton.Text" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>139, 17</value>
-  </metadata>
-  <data name="_MinButton.ToolTip" xml:space="preserve">
-    <value>Minimize</value>
-  </data>
-  <data name="&gt;&gt;_MinButton.Name" xml:space="preserve">
-    <value>_MinButton</value>
-  </data>
-  <data name="&gt;&gt;_MinButton.Type" xml:space="preserve">
-    <value>Reservation_System.UI.ButtonZ, Reservation_System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;_MinButton.Parent" xml:space="preserve">
-    <value>TopPanel</value>
-  </data>
-  <data name="&gt;&gt;_MinButton.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="_MaxButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="_MaxButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="_MaxButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="_MaxButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1533, 6</value>
-  </data>
-  <data name="_MaxButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>31, 24</value>
-  </data>
-  <data name="_MaxButton.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="_MaxButton.Text" xml:space="preserve">
-    <value>minMaxButton1</value>
-  </data>
-  <data name="_MaxButton.ToolTip" xml:space="preserve">
-    <value>Maximize</value>
-  </data>
-  <data name="&gt;&gt;_MaxButton.Name" xml:space="preserve">
-    <value>_MaxButton</value>
-  </data>
-  <data name="&gt;&gt;_MaxButton.Type" xml:space="preserve">
-    <value>Reservation_System.UI.MinMaxButton, Reservation_System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;_MaxButton.Parent" xml:space="preserve">
-    <value>TopPanel</value>
-  </data>
-  <data name="&gt;&gt;_MaxButton.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="_CloseButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="_CloseButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="_CloseButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft YaHei UI, 12pt, style=Bold</value>
-  </data>
-  <data name="_CloseButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="_CloseButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1564, 6</value>
-  </data>
-  <data name="_CloseButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>31, 24</value>
-  </data>
-  <data name="_CloseButton.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="_CloseButton.Text" xml:space="preserve">
-    <value>X</value>
-  </data>
-  <data name="_CloseButton.ToolTip" xml:space="preserve">
-    <value>Close</value>
-  </data>
-  <data name="&gt;&gt;_CloseButton.Name" xml:space="preserve">
-    <value>_CloseButton</value>
-  </data>
-  <data name="&gt;&gt;_CloseButton.Type" xml:space="preserve">
-    <value>Reservation_System.UI.ButtonZ, Reservation_System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;_CloseButton.Parent" xml:space="preserve">
-    <value>TopPanel</value>
-  </data>
-  <data name="&gt;&gt;_CloseButton.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <metadata name="menuStripZ1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="menuStripZ1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="menuStripZ1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="menuStripZ1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 11.25pt</value>
-  </data>
-  <data name="toolStripItemManagement.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 24</value>
-  </data>
-  <data name="toolStripItemManagement.Text" xml:space="preserve">
-    <value>Tavaroiden hallinta</value>
-  </data>
-  <data name="ToolstripItems.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 24</value>
-  </data>
-  <data name="ToolstripItems.Text" xml:space="preserve">
-    <value>Tavarat</value>
-  </data>
-  <data name="ToolstripItems.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="ToolStripAccountManagement.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 11.25pt</value>
-  </data>
-  <data name="ToolStripAccountManagement.Size" type="System.Drawing.Size, System.Drawing">
-    <value>210, 24</value>
-  </data>
-  <data name="ToolStripAccountManagement.Text" xml:space="preserve">
-    <value>Käyttäjätilin hallinta</value>
-  </data>
-  <data name="kirjauduUlosToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 11.25pt</value>
-  </data>
-  <data name="kirjauduUlosToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>210, 24</value>
-  </data>
-  <data name="kirjauduUlosToolStripMenuItem.Text" xml:space="preserve">
-    <value>Kirjaudu ulos</value>
-  </data>
-  <data name="lainausHistoriaToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 11.25pt</value>
-  </data>
-  <data name="lainausHistoriaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>210, 24</value>
-  </data>
-  <data name="lainausHistoriaToolStripMenuItem.Text" xml:space="preserve">
-    <value>Lainaushistoria</value>
-  </data>
-  <data name="toolstripaccount.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 11.25pt, style=Underline</value>
-  </data>
-  <data name="toolstripaccount.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 24</value>
-  </data>
-  <data name="toolstripaccount.Text" xml:space="preserve">
-    <value>Käyttäjä</value>
-  </data>
-  <data name="SettingsToolStrip_LanguageSelect.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 24</value>
-  </data>
-  <data name="SettingsToolStrip_LanguageSelect.Text" xml:space="preserve">
-    <value>Kieliasetukset</value>
-  </data>
-  <data name="ToolStripSettings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 24</value>
-  </data>
-  <data name="ToolStripSettings.Text" xml:space="preserve">
-    <value>Asetukset</value>
-  </data>
-  <data name="helpContentsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>172, 24</value>
-  </data>
-  <data name="helpContentsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Help Contents</value>
-  </data>
-  <data name="onlineHelpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>172, 24</value>
-  </data>
-  <data name="onlineHelpToolStripMenuItem.Text" xml:space="preserve">
-    <value>Online Help</value>
-  </data>
-  <data name="aboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>172, 24</value>
-  </data>
-  <data name="aboutToolStripMenuItem.Text" xml:space="preserve">
-    <value>About</value>
-  </data>
-  <data name="ToolStripHelp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 24</value>
-  </data>
-  <data name="ToolStripHelp.Text" xml:space="preserve">
-    <value>Apua</value>
-  </data>
-  <data name="menuStripZ1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1328, 33</value>
-  </data>
-  <data name="menuStripZ1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>223, 28</value>
-  </data>
-  <data name="menuStripZ1.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <data name="menuStripZ1.Text" xml:space="preserve">
-    <value>menuStripZ1</value>
-  </data>
-  <data name="&gt;&gt;menuStripZ1.Name" xml:space="preserve">
-    <value>menuStripZ1</value>
-  </data>
-  <data name="&gt;&gt;menuStripZ1.Type" xml:space="preserve">
-    <value>Reservation_System.UI.MenuStripZ, Reservation_System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;menuStripZ1.Parent" xml:space="preserve">
-    <value>TopPanel</value>
-  </data>
-  <data name="&gt;&gt;menuStripZ1.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="WindowTextLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="WindowTextLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Copperplate Gothic Bold, 36pt, style=Italic</value>
-  </data>
-  <data name="WindowTextLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="WindowTextLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>81, 18</value>
-  </data>
-  <data name="WindowTextLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>555, 53</value>
-  </data>
-  <data name="WindowTextLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="WindowTextLabel.Text" xml:space="preserve">
-    <value>Varausjärjestelmä</value>
-  </data>
-  <data name="&gt;&gt;WindowTextLabel.Name" xml:space="preserve">
-    <value>WindowTextLabel</value>
-  </data>
-  <data name="&gt;&gt;WindowTextLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;WindowTextLabel.Parent" xml:space="preserve">
-    <value>TopPanel</value>
-  </data>
-  <data name="&gt;&gt;WindowTextLabel.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="TopPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="TopPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="TopPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1600, 76</value>
-  </data>
-  <data name="TopPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;TopPanel.Name" xml:space="preserve">
-    <value>TopPanel</value>
-  </data>
-  <data name="&gt;&gt;TopPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TopPanel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;TopPanel.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
   <data name="lblCurrentDate.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="lblCurrentDate.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial Rounded MT Bold, 24pt, style=Italic</value>
+  </data>
+  <data name="lblCurrentDate.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="lblCurrentDate.Location" type="System.Drawing.Point, System.Drawing">
     <value>17, 17</value>
@@ -614,6 +296,123 @@
   </data>
   <data name="&gt;&gt;BtmPanel.ZOrder" xml:space="preserve">
     <value>15</value>
+  </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>139, 17</value>
+  </metadata>
+  <data name="_CloseButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="_CloseButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="_CloseButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft YaHei UI, 12pt, style=Bold</value>
+  </data>
+  <data name="_CloseButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="_CloseButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1564, 6</value>
+  </data>
+  <data name="_CloseButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 24</value>
+  </data>
+  <data name="_CloseButton.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="_CloseButton.Text" xml:space="preserve">
+    <value>X</value>
+  </data>
+  <data name="_CloseButton.ToolTip" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="&gt;&gt;_CloseButton.Name" xml:space="preserve">
+    <value>_CloseButton</value>
+  </data>
+  <data name="&gt;&gt;_CloseButton.Type" xml:space="preserve">
+    <value>VillageNewbies.UI.ButtonZ, VillageNewbies, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;_CloseButton.Parent" xml:space="preserve">
+    <value>TopPanel</value>
+  </data>
+  <data name="&gt;&gt;_CloseButton.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="_MaxButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="_MaxButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="_MaxButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="_MaxButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1533, 6</value>
+  </data>
+  <data name="_MaxButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 24</value>
+  </data>
+  <data name="_MaxButton.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="_MaxButton.Text" xml:space="preserve">
+    <value>minMaxButton1</value>
+  </data>
+  <data name="_MaxButton.ToolTip" xml:space="preserve">
+    <value>Maximize</value>
+  </data>
+  <data name="&gt;&gt;_MaxButton.Name" xml:space="preserve">
+    <value>_MaxButton</value>
+  </data>
+  <data name="&gt;&gt;_MaxButton.Type" xml:space="preserve">
+    <value>VillageNewbies.UI.MinMaxButton, VillageNewbies, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;_MaxButton.Parent" xml:space="preserve">
+    <value>TopPanel</value>
+  </data>
+  <data name="&gt;&gt;_MaxButton.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="_MinButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="_MinButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="_MinButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft YaHei UI, 20.25pt, style=Bold</value>
+  </data>
+  <data name="_MinButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="_MinButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1502, 6</value>
+  </data>
+  <data name="_MinButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 24</value>
+  </data>
+  <data name="_MinButton.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="_MinButton.Text" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="_MinButton.ToolTip" xml:space="preserve">
+    <value>Minimize</value>
+  </data>
+  <data name="&gt;&gt;_MinButton.Name" xml:space="preserve">
+    <value>_MinButton</value>
+  </data>
+  <data name="&gt;&gt;_MinButton.Type" xml:space="preserve">
+    <value>VillageNewbies.UI.ButtonZ, VillageNewbies, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;_MinButton.Parent" xml:space="preserve">
+    <value>TopPanel</value>
+  </data>
+  <data name="&gt;&gt;_MinButton.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="RightBottomPanel_2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
@@ -811,7 +610,7 @@
     <value>btnWaitingEvents</value>
   </data>
   <data name="&gt;&gt;btnWaitingEvents.Type" xml:space="preserve">
-    <value>Reservation_System.UI.ButtonX, Reservation_System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>VillageNewbies.UI.ButtonX, VillageNewbies, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;btnWaitingEvents.Parent" xml:space="preserve">
     <value>Left_Button_Panel</value>
@@ -847,7 +646,7 @@
     <value>btn_Reservation</value>
   </data>
   <data name="&gt;&gt;btn_Reservation.Type" xml:space="preserve">
-    <value>Reservation_System.UI.ButtonX, Reservation_System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>VillageNewbies.UI.ButtonX, VillageNewbies, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;btn_Reservation.Parent" xml:space="preserve">
     <value>Left_Button_Panel</value>
@@ -883,7 +682,7 @@
     <value>btn_UsersLoans</value>
   </data>
   <data name="&gt;&gt;btn_UsersLoans.Type" xml:space="preserve">
-    <value>Reservation_System.UI.ButtonX, Reservation_System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>VillageNewbies.UI.ButtonX, VillageNewbies, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;btn_UsersLoans.Parent" xml:space="preserve">
     <value>Left_Button_Panel</value>
@@ -919,7 +718,7 @@
     <value>btn_Loan</value>
   </data>
   <data name="&gt;&gt;btn_Loan.Type" xml:space="preserve">
-    <value>Reservation_System.UI.ButtonX, Reservation_System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>VillageNewbies.UI.ButtonX, VillageNewbies, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;btn_Loan.Parent" xml:space="preserve">
     <value>Left_Button_Panel</value>
@@ -1180,7 +979,7 @@
     <value>btn_Loan_LoanItem</value>
   </data>
   <data name="&gt;&gt;btn_Loan_LoanItem.Type" xml:space="preserve">
-    <value>Reservation_System.UI.ShapedButton, Reservation_System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>VillageNewbies.UI.ShapedButton, VillageNewbies, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;btn_Loan_LoanItem.Parent" xml:space="preserve">
     <value>Loan_Panel</value>
@@ -1477,7 +1276,7 @@
     <value>btnCancelReservation</value>
   </data>
   <data name="&gt;&gt;btnCancelReservation.Type" xml:space="preserve">
-    <value>Reservation_System.UI.ShapedButton, Reservation_System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>VillageNewbies.UI.ShapedButton, VillageNewbies, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;btnCancelReservation.Parent" xml:space="preserve">
     <value>UserLoans_Panel</value>
@@ -1606,7 +1405,7 @@
     <value>btn_UserLoans_ReturnItem</value>
   </data>
   <data name="&gt;&gt;btn_UserLoans_ReturnItem.Type" xml:space="preserve">
-    <value>Reservation_System.UI.ShapedButton, Reservation_System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>VillageNewbies.UI.ShapedButton, VillageNewbies, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;btn_UserLoans_ReturnItem.Parent" xml:space="preserve">
     <value>UserLoans_Panel</value>
@@ -1933,7 +1732,7 @@
     <value>btn_ChangeItemDetails</value>
   </data>
   <data name="&gt;&gt;btn_ChangeItemDetails.Type" xml:space="preserve">
-    <value>Reservation_System.UI.ShapedButton, Reservation_System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>VillageNewbies.UI.ShapedButton, VillageNewbies, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;btn_ChangeItemDetails.Parent" xml:space="preserve">
     <value>groupBox11</value>
@@ -1990,7 +1789,7 @@
     <value>btn_CreateItem</value>
   </data>
   <data name="&gt;&gt;btn_CreateItem.Type" xml:space="preserve">
-    <value>Reservation_System.UI.ShapedButton, Reservation_System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>VillageNewbies.UI.ShapedButton, VillageNewbies, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;btn_CreateItem.Parent" xml:space="preserve">
     <value>groupBox9</value>
@@ -2146,7 +1945,7 @@
     <value>btn_CreateItemType</value>
   </data>
   <data name="&gt;&gt;btn_CreateItemType.Type" xml:space="preserve">
-    <value>Reservation_System.UI.ShapedButton, Reservation_System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>VillageNewbies.UI.ShapedButton, VillageNewbies, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;btn_CreateItemType.Parent" xml:space="preserve">
     <value>groupBox8</value>
@@ -2313,6 +2112,9 @@
   <data name="checkbox_AcceptAllReturns.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="checkbox_AcceptAllReturns.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="checkbox_AcceptAllReturns.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 8</value>
   </data>
@@ -2407,7 +2209,7 @@
     <value>btnAcceptReturn</value>
   </data>
   <data name="&gt;&gt;btnAcceptReturn.Type" xml:space="preserve">
-    <value>Reservation_System.UI.ShapedButton, Reservation_System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>VillageNewbies.UI.ShapedButton, VillageNewbies, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;btnAcceptReturn.Parent" xml:space="preserve">
     <value>Waiting_Events_panel</value>
@@ -2557,7 +2359,7 @@
     <value>btnDenyLoan</value>
   </data>
   <data name="&gt;&gt;btnDenyLoan.Type" xml:space="preserve">
-    <value>Reservation_System.UI.ShapedButton, Reservation_System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>VillageNewbies.UI.ShapedButton, VillageNewbies, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;btnDenyLoan.Parent" xml:space="preserve">
     <value>Waiting_Events_panel</value>
@@ -2635,7 +2437,7 @@
     <value>btnAcceptLoan</value>
   </data>
   <data name="&gt;&gt;btnAcceptLoan.Type" xml:space="preserve">
-    <value>Reservation_System.UI.ShapedButton, Reservation_System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>VillageNewbies.UI.ShapedButton, VillageNewbies, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;btnAcceptLoan.Parent" xml:space="preserve">
     <value>Waiting_Events_panel</value>
@@ -2830,7 +2632,7 @@
     <value>btn_UpdateUserDetails</value>
   </data>
   <data name="&gt;&gt;btn_UpdateUserDetails.Type" xml:space="preserve">
-    <value>Reservation_System.UI.ShapedButton, Reservation_System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>VillageNewbies.UI.ShapedButton, VillageNewbies, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;btn_UpdateUserDetails.Parent" xml:space="preserve">
     <value>groupBox20</value>
@@ -2920,7 +2722,7 @@
     <value>btn_AM_ChangeEmail</value>
   </data>
   <data name="&gt;&gt;btn_AM_ChangeEmail.Type" xml:space="preserve">
-    <value>Reservation_System.UI.ShapedButton, Reservation_System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>VillageNewbies.UI.ShapedButton, VillageNewbies, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;btn_AM_ChangeEmail.Parent" xml:space="preserve">
     <value>groupBox19</value>
@@ -2930,6 +2732,9 @@
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 40</value>
@@ -3060,6 +2865,9 @@
   <data name="btn_AM_ChangePassword.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
+  <data name="btn_AM_ChangePassword.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="btn_AM_ChangePassword.Location" type="System.Drawing.Point, System.Drawing">
     <value>20, 220</value>
   </data>
@@ -3073,7 +2881,7 @@
     <value>btn_AM_ChangePassword</value>
   </data>
   <data name="&gt;&gt;btn_AM_ChangePassword.Type" xml:space="preserve">
-    <value>Reservation_System.UI.ShapedButton, Reservation_System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>VillageNewbies.UI.ShapedButton, VillageNewbies, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;btn_AM_ChangePassword.Parent" xml:space="preserve">
     <value>groupBox18</value>
@@ -3083,6 +2891,9 @@
   </data>
   <data name="label4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
     <value>20, 104</value>
@@ -3110,6 +2921,9 @@
   </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
     <value>17, 22</value>
@@ -3409,7 +3223,7 @@
     <value>btn_Reserve</value>
   </data>
   <data name="&gt;&gt;btn_Reserve.Type" xml:space="preserve">
-    <value>Reservation_System.UI.ShapedButton, Reservation_System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>VillageNewbies.UI.ShapedButton, VillageNewbies, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;btn_Reserve.Parent" xml:space="preserve">
     <value>Reservation_Panel</value>
@@ -3756,6 +3570,210 @@
   <data name="&gt;&gt;LoanHistoryPanel.ZOrder" xml:space="preserve">
     <value>18</value>
   </data>
+  <data name="WindowTextLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="WindowTextLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Copperplate Gothic Bold, 36pt, style=Italic</value>
+  </data>
+  <data name="WindowTextLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="WindowTextLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>81, 18</value>
+  </data>
+  <data name="WindowTextLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>555, 53</value>
+  </data>
+  <data name="WindowTextLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="WindowTextLabel.Text" xml:space="preserve">
+    <value>Varausjärjestelmä</value>
+  </data>
+  <data name="&gt;&gt;WindowTextLabel.Name" xml:space="preserve">
+    <value>WindowTextLabel</value>
+  </data>
+  <data name="&gt;&gt;WindowTextLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;WindowTextLabel.Parent" xml:space="preserve">
+    <value>TopPanel</value>
+  </data>
+  <data name="&gt;&gt;WindowTextLabel.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <metadata name="menuStripZ1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="menuStripZ1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="menuStripZ1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="menuStripZ1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11.25pt</value>
+  </data>
+  <data name="toolStripItemManagement.Size" type="System.Drawing.Size, System.Drawing">
+    <value>203, 24</value>
+  </data>
+  <data name="toolStripItemManagement.Text" xml:space="preserve">
+    <value>Tavaroiden hallinta</value>
+  </data>
+  <data name="ToolstripItems.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 24</value>
+  </data>
+  <data name="ToolstripItems.Text" xml:space="preserve">
+    <value>Tavarat</value>
+  </data>
+  <data name="ToolstripItems.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ToolStripAccountManagement.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11.25pt</value>
+  </data>
+  <data name="ToolStripAccountManagement.Size" type="System.Drawing.Size, System.Drawing">
+    <value>210, 24</value>
+  </data>
+  <data name="ToolStripAccountManagement.Text" xml:space="preserve">
+    <value>Käyttäjätilin hallinta</value>
+  </data>
+  <data name="kirjauduUlosToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11.25pt</value>
+  </data>
+  <data name="kirjauduUlosToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>210, 24</value>
+  </data>
+  <data name="kirjauduUlosToolStripMenuItem.Text" xml:space="preserve">
+    <value>Kirjaudu ulos</value>
+  </data>
+  <data name="lainausHistoriaToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11.25pt</value>
+  </data>
+  <data name="lainausHistoriaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>210, 24</value>
+  </data>
+  <data name="lainausHistoriaToolStripMenuItem.Text" xml:space="preserve">
+    <value>Lainaushistoria</value>
+  </data>
+  <data name="toolstripaccount.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11.25pt, style=Underline</value>
+  </data>
+  <data name="toolstripaccount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 24</value>
+  </data>
+  <data name="toolstripaccount.Text" xml:space="preserve">
+    <value>Käyttäjä</value>
+  </data>
+  <data name="SettingsToolStrip_LanguageSelect.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 24</value>
+  </data>
+  <data name="SettingsToolStrip_LanguageSelect.Text" xml:space="preserve">
+    <value>Kieliasetukset</value>
+  </data>
+  <data name="ToolStripSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 24</value>
+  </data>
+  <data name="ToolStripSettings.Text" xml:space="preserve">
+    <value>Asetukset</value>
+  </data>
+  <data name="helpContentsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 24</value>
+  </data>
+  <data name="helpContentsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Help Contents</value>
+  </data>
+  <data name="onlineHelpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 24</value>
+  </data>
+  <data name="onlineHelpToolStripMenuItem.Text" xml:space="preserve">
+    <value>Online Help</value>
+  </data>
+  <data name="aboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 24</value>
+  </data>
+  <data name="aboutToolStripMenuItem.Text" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="ToolStripHelp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 24</value>
+  </data>
+  <data name="ToolStripHelp.Text" xml:space="preserve">
+    <value>Apua</value>
+  </data>
+  <data name="menuStripZ1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1328, 33</value>
+  </data>
+  <data name="menuStripZ1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>223, 28</value>
+  </data>
+  <data name="menuStripZ1.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="menuStripZ1.Text" xml:space="preserve">
+    <value>menuStripZ1</value>
+  </data>
+  <data name="&gt;&gt;menuStripZ1.Name" xml:space="preserve">
+    <value>menuStripZ1</value>
+  </data>
+  <data name="&gt;&gt;menuStripZ1.Type" xml:space="preserve">
+    <value>VillageNewbies.UI.MenuStripZ, VillageNewbies, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;menuStripZ1.Parent" xml:space="preserve">
+    <value>TopPanel</value>
+  </data>
+  <data name="&gt;&gt;menuStripZ1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="pictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 3</value>
+  </data>
+  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 64</value>
+  </data>
+  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
+    <value>pictureBox1</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
+    <value>TopPanel</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="TopPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="TopPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="TopPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1600, 76</value>
+  </data>
+  <data name="TopPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;TopPanel.Name" xml:space="preserve">
+    <value>TopPanel</value>
+  </data>
+  <data name="&gt;&gt;TopPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TopPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;TopPanel.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -3768,8 +3786,17 @@
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>1600, 900</value>
   </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>600, 480</value>
+  </data>
   <data name="$this.Text" xml:space="preserve">
     <value> </value>
+  </data>
+  <data name="&gt;&gt;toolTip1.Name" xml:space="preserve">
+    <value>toolTip1</value>
+  </data>
+  <data name="&gt;&gt;toolTip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;ToolstripItems.Name" xml:space="preserve">
     <value>ToolstripItems</value>
@@ -3842,12 +3869,6 @@
   </data>
   <data name="&gt;&gt;aboutToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolTip1.Name" xml:space="preserve">
-    <value>toolTip1</value>
-  </data>
-  <data name="&gt;&gt;toolTip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>MainScreen</value>

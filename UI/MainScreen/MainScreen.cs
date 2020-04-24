@@ -14,9 +14,76 @@ namespace VillageNewbies.UI
 {
     public partial class MainScreen : Form
     {
+        #region starting Stuff
         TypeAssistant Loan_Assistant;
         TypeAssistant UserLoans_Assistant;
         TypeAssistant Reservation_Assistant;
+
+
+        private void itemtypes()
+        {/*
+            using (MySqlConnection connection = Program.sql.MySqlConnection())
+            {
+
+                ComboItem def = new ComboItem();
+                def.ID = 999;
+                def.Text = "KAIKKI";
+                connection.Open();
+                combobox_Loan_ItemType.Items.Clear();
+                combobox_Loan_ItemType.Items.Add(def);
+                combobox_Loan_ItemType.SelectedItem = combobox_Loan_ItemType.Items[0];
+
+                combobox_UserLoans_ItemType.Items.Clear();
+                combobox_UserLoans_ItemType.Items.Add(def);
+                combobox_UserLoans_ItemType.SelectedItem = combobox_UserLoans_ItemType.Items[0];
+
+                ComboBoxCreateItemType.Items.Clear();
+                ComboBoxCreateItemType.Items.Add(def);
+                ComboBoxCreateItemType.SelectedItem = ComboBoxCreateItemType.Items[0];
+
+                cb_ItemNewState.Items.Clear();
+                cb_ItemNewState.DisplayMember = "Text";
+
+                combox_reservation_itemtype.Items.Clear();
+                combox_reservation_itemtype.Items.Add(def);
+                combox_reservation_itemtype.SelectedItem = combox_reservation_itemtype.Items[0];
+
+                using (MySqlCommand GetItemTypes = Program.sql.MySqlGetItemTypes(connection))
+                {
+                    MySqlDataReader reader = GetItemTypes.ExecuteReader();
+
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            string text = (string)reader["IT_NAME"];
+                            int id = (int)reader["IT_ID"];
+                            combobox_Loan_ItemType.Items.Add(new ComboItem { Text = text, ID = id });
+                            combobox_UserLoans_ItemType.Items.Add(new ComboItem { Text = text, ID = id });
+                            ComboBoxCreateItemType.Items.Add(new ComboItem { Text = text, ID = id });
+                            combox_reservation_itemtype.Items.Add(new ComboItem { Text = text, ID = id });
+                        }
+                    }
+                }
+
+                using (MySqlCommand GetItemTypes = Program.sql.MySqlGetItemStates(connection))
+                {
+                    MySqlDataReader reader = GetItemTypes.ExecuteReader();
+
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            string text = (string)reader["IS_NAME"];
+                            int id = (int)reader["IS_ID"];
+                            cb_ItemNewState.Items.Add(new ComboItem { Text = text, ID = id });
+                        }
+                    }
+                }
+
+            }
+            */
+        }
 
         private void txt_reservation_itemsearch_TextChanged(object sender, EventArgs e)
         {
@@ -104,6 +171,7 @@ namespace VillageNewbies.UI
             */
         }
 
+        #endregion
         public MainScreen()
         {
             InitializeComponent();
@@ -150,8 +218,6 @@ namespace VillageNewbies.UI
             }
 
         }
-
-
 
         private void BlackForm_Load(object sender, EventArgs e)
         {
@@ -218,6 +284,19 @@ namespace VillageNewbies.UI
         }
 
 
+        private void TopPanel_Resize(object sender, EventArgs e)
+        {
+
+            if (this.Size.Width <= 1425)
+            {
+                menuStripZ1.Parent = BtmPanel;
+            }
+            else
+            {
+                menuStripZ1.Parent = TopPanel;
+            }
+               
+        }
 
         private void TopPanel_MouseDown(object sender, MouseEventArgs e)
         {
@@ -636,71 +715,6 @@ namespace VillageNewbies.UI
 
         #endregion
 
-        private void itemtypes()
-        {/*
-            using (MySqlConnection connection = Program.sql.MySqlConnection())
-            {
-
-                ComboItem def = new ComboItem();
-                def.ID = 999;
-                def.Text = "KAIKKI";
-                connection.Open();
-                combobox_Loan_ItemType.Items.Clear();
-                combobox_Loan_ItemType.Items.Add(def);
-                combobox_Loan_ItemType.SelectedItem = combobox_Loan_ItemType.Items[0];
-
-                combobox_UserLoans_ItemType.Items.Clear();
-                combobox_UserLoans_ItemType.Items.Add(def);
-                combobox_UserLoans_ItemType.SelectedItem = combobox_UserLoans_ItemType.Items[0];
-
-                ComboBoxCreateItemType.Items.Clear();
-                ComboBoxCreateItemType.Items.Add(def);
-                ComboBoxCreateItemType.SelectedItem = ComboBoxCreateItemType.Items[0];
-
-                cb_ItemNewState.Items.Clear();
-                cb_ItemNewState.DisplayMember = "Text";
-
-                combox_reservation_itemtype.Items.Clear();
-                combox_reservation_itemtype.Items.Add(def);
-                combox_reservation_itemtype.SelectedItem = combox_reservation_itemtype.Items[0];
-
-                using (MySqlCommand GetItemTypes = Program.sql.MySqlGetItemTypes(connection))
-                {
-                    MySqlDataReader reader = GetItemTypes.ExecuteReader();
-
-                    if (reader.HasRows)
-                    {
-                        while (reader.Read())
-                        {
-                            string text = (string)reader["IT_NAME"];
-                            int id = (int)reader["IT_ID"];
-                            combobox_Loan_ItemType.Items.Add(new ComboItem { Text = text, ID = id });
-                            combobox_UserLoans_ItemType.Items.Add(new ComboItem { Text = text, ID = id });
-                            ComboBoxCreateItemType.Items.Add(new ComboItem { Text = text, ID = id });
-                            combox_reservation_itemtype.Items.Add(new ComboItem { Text = text, ID = id });
-                        }
-                    }
-                }
-
-                using (MySqlCommand GetItemTypes = Program.sql.MySqlGetItemStates(connection))
-                {
-                    MySqlDataReader reader = GetItemTypes.ExecuteReader();
-
-                    if (reader.HasRows)
-                    {
-                        while (reader.Read())
-                        {
-                            string text = (string)reader["IS_NAME"];
-                            int id = (int)reader["IS_ID"];
-                            cb_ItemNewState.Items.Add(new ComboItem { Text = text, ID = id });
-                        }
-                    }
-                }
-
-            }
-            */
-        }
-
 
         #region LeftPanel_Buttons
         private void btn_Loan_Click(object sender, EventArgs e)
@@ -828,6 +842,8 @@ namespace VillageNewbies.UI
         }
         private void toolStripItemManagement_Click(object sender, EventArgs e)
         {
+            //TODO
+
             btn_Loan.BZBackColor = Color.FromArgb(40, 40, 40);
             btn_UsersLoans.BZBackColor = Color.FromArgb(50, 50, 50);
             btn_Reservation.BZBackColor = Color.FromArgb(40, 40, 40);
@@ -838,6 +854,7 @@ namespace VillageNewbies.UI
 
             Item_Management.Visible = true;
             Controls.SetChildIndex(Item_Management, Controls.Count - 8);
+
             itemtypes();
             GetAllItems();
         }
@@ -1150,6 +1167,25 @@ namespace VillageNewbies.UI
 
         #region Reservation panel
 
+        private void checklist_Reservation_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            if (e.CurrentValue == CheckState.Checked)
+            {
+                txt_reservation_Itemstate.Text = "";
+                txt_reservation_Itemtype.Text = "";
+                e.NewValue = CheckState.Unchecked;
+            }
+            if (e.NewValue == CheckState.Unchecked)
+            {
+                txt_reservation_Itemstate.Text = "";
+                txt_reservation_Itemtype.Text = "";
+            }
+
+        }
+
+        private void checklist_Reservation_MouseClick(object sender, MouseEventArgs e)
+        {
+        }
         private void checklist_Reservation_SelectedValueChanged(object sender, EventArgs e)
         {/*
             try
@@ -1981,6 +2017,58 @@ namespace VillageNewbies.UI
 
         }
 
+
+        private void cb_EditItemDetails_SelectedValueChanged(object sender, EventArgs e)
+        {/*
+            txt_ChangeItem_ItemID.Text = ((Item)cb_EditItemDetails.SelectedItem).ID.ToString();
+            txt_ChangeItem_ItemType.Text = ((Item)cb_EditItemDetails.SelectedItem).TYPE.ToString();
+            txt_ChangeItem_ItemState.Text = ((Item)cb_EditItemDetails.SelectedItem).STATE.ToString();
+            txt_ItemNewName.Text = ((Item)cb_EditItemDetails.SelectedItem).NAME.ToString();
+            cb_ItemNewState.SelectedItem = cb_ItemNewState.Items[((Item)cb_EditItemDetails.SelectedItem).STATE];
+            using (MySqlConnection connection = Program.sql.MySqlConnection())
+            {
+                using (MySqlCommand ItemType = Program.sql.MySqlGetItemTypeName(connection))
+                {
+                    ItemType.Parameters.AddWithValue("@ITEMTYPEID", txt_ChangeItem_ItemType.Text);
+
+                    connection.Open();
+                    MySqlDataReader reader = ItemType.ExecuteReader();
+
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            string itemtype = (string)reader["IT_NAME"];
+                            txt_ChangeItem_ItemType.Text = itemtype;
+                        }
+                    }
+                }
+                connection.Close();
+            }
+            using (MySqlConnection connection = Program.sql.MySqlConnection())
+            {
+                using (MySqlCommand ItemType = Program.sql.MySqlGetItemStateName(connection))
+                {
+                    ItemType.Parameters.AddWithValue("@ITEMSTATEID", txt_ChangeItem_ItemState.Text);
+
+                    connection.Open();
+                    MySqlDataReader reader = ItemType.ExecuteReader();
+
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            string itemstate = (string)reader["IS_NAME"];
+                            txt_ChangeItem_ItemState.Text = itemstate;
+                        }
+                    }
+                }
+                connection.Close();
+            }
+            */
+
+        }
+
         private void btn_CreateItem_Click(object sender, EventArgs e)
         {/*
             try
@@ -2189,12 +2277,7 @@ namespace VillageNewbies.UI
         #endregion
 
 
-        private void MainScreen_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            DialogResult exit = MessageBox.Show("Are you sure you want to exit?", "!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            e.Cancel = (exit == DialogResult.No);
-        }
-
+        #region Toolstrip
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string dev = "Main Dev & Coder: Ville Kokkarinen\nEmail: kokkarinen.ville@gmail.com\nGithub: VilleKokkarinen\n\n";
@@ -2214,77 +2297,15 @@ namespace VillageNewbies.UI
             Process.Start("https://github.com/VilleKokkarinen/Ohje_dokumentti.pdf"); // linkki korjaus
         }
 
-        private void checklist_Reservation_ItemCheck(object sender, ItemCheckEventArgs e)
+
+        #endregion
+
+        private void MainScreen_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (e.CurrentValue == CheckState.Checked)
-            {
-                txt_reservation_Itemstate.Text = "";
-                txt_reservation_Itemtype.Text = "";
-                e.NewValue = CheckState.Unchecked;
-            }
-            if (e.NewValue == CheckState.Unchecked)
-            {
-                txt_reservation_Itemstate.Text = "";
-                txt_reservation_Itemtype.Text = "";
-            }
-
+            DialogResult exit = MessageBox.Show("Are you sure you want to exit?", "!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            e.Cancel = (exit == DialogResult.No);
         }
 
-        private void checklist_Reservation_MouseClick(object sender, MouseEventArgs e)
-        {
-        }
-
-        private void cb_EditItemDetails_SelectedValueChanged(object sender, EventArgs e)
-        {/*
-            txt_ChangeItem_ItemID.Text = ((Item)cb_EditItemDetails.SelectedItem).ID.ToString();
-            txt_ChangeItem_ItemType.Text = ((Item)cb_EditItemDetails.SelectedItem).TYPE.ToString();
-            txt_ChangeItem_ItemState.Text = ((Item)cb_EditItemDetails.SelectedItem).STATE.ToString();
-            txt_ItemNewName.Text = ((Item)cb_EditItemDetails.SelectedItem).NAME.ToString();
-            cb_ItemNewState.SelectedItem = cb_ItemNewState.Items[((Item)cb_EditItemDetails.SelectedItem).STATE];
-            using (MySqlConnection connection = Program.sql.MySqlConnection())
-            {
-                using (MySqlCommand ItemType = Program.sql.MySqlGetItemTypeName(connection))
-                {
-                    ItemType.Parameters.AddWithValue("@ITEMTYPEID", txt_ChangeItem_ItemType.Text);
-
-                    connection.Open();
-                    MySqlDataReader reader = ItemType.ExecuteReader();
-
-                    if (reader.HasRows)
-                    {
-                        while (reader.Read())
-                        {
-                            string itemtype = (string)reader["IT_NAME"];
-                            txt_ChangeItem_ItemType.Text = itemtype;
-                        }
-                    }
-                }
-                connection.Close();
-            }
-            using (MySqlConnection connection = Program.sql.MySqlConnection())
-            {
-                using (MySqlCommand ItemType = Program.sql.MySqlGetItemStateName(connection))
-                {
-                    ItemType.Parameters.AddWithValue("@ITEMSTATEID", txt_ChangeItem_ItemState.Text);
-
-                    connection.Open();
-                    MySqlDataReader reader = ItemType.ExecuteReader();
-
-                    if (reader.HasRows)
-                    {
-                        while (reader.Read())
-                        {
-                            string itemstate = (string)reader["IS_NAME"];
-                            txt_ChangeItem_ItemState.Text = itemstate;
-                        }
-                    }
-                }
-                connection.Close();
-            }
-            */
-
-        }
-        
-    }
-    
+      
+    }    
 }

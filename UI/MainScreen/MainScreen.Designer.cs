@@ -34,29 +34,13 @@
             this.RightPanel = new System.Windows.Forms.Panel();
             this.LeftPanel = new System.Windows.Forms.Panel();
             this.BottomPanel = new System.Windows.Forms.Panel();
-            this.TopPanel = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this._MinButton = new VillageNewbies.UI.ButtonZ();
-            this._MaxButton = new VillageNewbies.UI.MinMaxButton();
-            this._CloseButton = new VillageNewbies.UI.ButtonZ();
-            this.menuStripZ1 = new VillageNewbies.UI.MenuStripZ();
-            this.ToolstripItems = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripItemManagement = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolstripaccount = new System.Windows.Forms.ToolStripMenuItem();
-            this.ToolStripAccountManagement = new System.Windows.Forms.ToolStripMenuItem();
-            this.kirjauduUlosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lainausHistoriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ToolStripSettings = new System.Windows.Forms.ToolStripMenuItem();
-            this.SettingsToolStrip_LanguageSelect = new System.Windows.Forms.ToolStripMenuItem();
-            this.ToolStripHelp = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpContentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.onlineHelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.WindowTextLabel = new System.Windows.Forms.Label();
             this.lblCurrentDate = new System.Windows.Forms.Label();
             this.RightBottomPanel_1 = new System.Windows.Forms.Panel();
             this.BtmPanel = new System.Windows.Forms.Panel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this._CloseButton = new VillageNewbies.UI.ButtonZ();
+            this._MaxButton = new VillageNewbies.UI.MinMaxButton();
+            this._MinButton = new VillageNewbies.UI.ButtonZ();
             this.RightBottomPanel_2 = new System.Windows.Forms.Panel();
             this.LeftBottomPanel_1 = new System.Windows.Forms.Panel();
             this.LeftBottomPanel_2 = new System.Windows.Forms.Panel();
@@ -180,9 +164,22 @@
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.cb_LoanHistory_User = new System.Windows.Forms.ComboBox();
             this.dataGridUserLoanHistory = new System.Windows.Forms.DataGridView();
-            this.TopPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.menuStripZ1.SuspendLayout();
+            this.WindowTextLabel = new System.Windows.Forms.Label();
+            this.menuStripZ1 = new VillageNewbies.UI.MenuStripZ();
+            this.ToolstripItems = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripItemManagement = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolstripaccount = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripAccountManagement = new System.Windows.Forms.ToolStripMenuItem();
+            this.kirjauduUlosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lainausHistoriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripSettings = new System.Windows.Forms.ToolStripMenuItem();
+            this.SettingsToolStrip_LanguageSelect = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripHelp = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpContentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.onlineHelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.TopPanel = new System.Windows.Forms.Panel();
             this.BtmPanel.SuspendLayout();
             this.Left_Button_Panel.SuspendLayout();
             this.Settings_Panel.SuspendLayout();
@@ -219,6 +216,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridItemLoanHistory)).BeginInit();
             this.groupBox12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridUserLoanHistory)).BeginInit();
+            this.menuStripZ1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.TopPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // TopBorderPanel
@@ -261,185 +261,6 @@
             this.BottomPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.BottomPanel_MouseMove);
             this.BottomPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BottomPanel_MouseUp);
             // 
-            // TopPanel
-            // 
-            this.TopPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.TopPanel.Controls.Add(this.pictureBox1);
-            this.TopPanel.Controls.Add(this._MinButton);
-            this.TopPanel.Controls.Add(this._MaxButton);
-            this.TopPanel.Controls.Add(this._CloseButton);
-            this.TopPanel.Controls.Add(this.menuStripZ1);
-            this.TopPanel.Controls.Add(this.WindowTextLabel);
-            resources.ApplyResources(this.TopPanel, "TopPanel");
-            this.TopPanel.Name = "TopPanel";
-            this.TopPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TopPanel_MouseDown);
-            this.TopPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TopPanel_MouseMove);
-            this.TopPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.TopPanel_MouseUp);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::VillageNewbies.Properties.Resources.logo;
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
-            // 
-            // _MinButton
-            // 
-            resources.ApplyResources(this._MinButton, "_MinButton");
-            this._MinButton.BZBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this._MinButton.DisplayText = "_";
-            this._MinButton.ForeColor = System.Drawing.Color.White;
-            this._MinButton.MouseClickColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(160)))));
-            this._MinButton.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this._MinButton.Name = "_MinButton";
-            this._MinButton.TextLocation_X = 6;
-            this._MinButton.TextLocation_Y = -20;
-            this.toolTip1.SetToolTip(this._MinButton, resources.GetString("_MinButton.ToolTip"));
-            this._MinButton.UseVisualStyleBackColor = true;
-            this._MinButton.Click += new System.EventHandler(this._MinButton_Click);
-            // 
-            // _MaxButton
-            // 
-            resources.ApplyResources(this._MaxButton, "_MaxButton");
-            this._MaxButton.BZBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this._MaxButton.CFormState = VillageNewbies.UI.MinMaxButton.CustomFormState.Normal;
-            this._MaxButton.DisplayText = "_";
-            this._MaxButton.ForeColor = System.Drawing.Color.White;
-            this._MaxButton.MouseClickColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(160)))));
-            this._MaxButton.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this._MaxButton.Name = "_MaxButton";
-            this._MaxButton.TextLocation_X = 8;
-            this._MaxButton.TextLocation_Y = 6;
-            this.toolTip1.SetToolTip(this._MaxButton, resources.GetString("_MaxButton.ToolTip"));
-            this._MaxButton.UseVisualStyleBackColor = true;
-            this._MaxButton.Click += new System.EventHandler(this._MaxButton_Click);
-            // 
-            // _CloseButton
-            // 
-            resources.ApplyResources(this._CloseButton, "_CloseButton");
-            this._CloseButton.BZBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this._CloseButton.DisplayText = "X";
-            this._CloseButton.ForeColor = System.Drawing.Color.White;
-            this._CloseButton.MouseClickColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(160)))));
-            this._CloseButton.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this._CloseButton.Name = "_CloseButton";
-            this._CloseButton.TextLocation_X = 6;
-            this._CloseButton.TextLocation_Y = 1;
-            this.toolTip1.SetToolTip(this._CloseButton, resources.GetString("_CloseButton.ToolTip"));
-            this._CloseButton.UseVisualStyleBackColor = true;
-            this._CloseButton.Click += new System.EventHandler(this._CloseButton_Click);
-            // 
-            // menuStripZ1
-            // 
-            resources.ApplyResources(this.menuStripZ1, "menuStripZ1");
-            this.menuStripZ1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ToolstripItems,
-            this.toolstripaccount,
-            this.ToolStripSettings,
-            this.ToolStripHelp});
-            this.menuStripZ1.Name = "menuStripZ1";
-            // 
-            // ToolstripItems
-            // 
-            this.ToolstripItems.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripItemManagement});
-            this.ToolstripItems.ForeColor = System.Drawing.Color.White;
-            this.ToolstripItems.Name = "ToolstripItems";
-            resources.ApplyResources(this.ToolstripItems, "ToolstripItems");
-            // 
-            // toolStripItemManagement
-            // 
-            this.toolStripItemManagement.ForeColor = System.Drawing.Color.White;
-            this.toolStripItemManagement.Name = "toolStripItemManagement";
-            resources.ApplyResources(this.toolStripItemManagement, "toolStripItemManagement");
-            this.toolStripItemManagement.Click += new System.EventHandler(this.toolStripItemManagement_Click);
-            // 
-            // toolstripaccount
-            // 
-            this.toolstripaccount.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ToolStripAccountManagement,
-            this.kirjauduUlosToolStripMenuItem,
-            this.lainausHistoriaToolStripMenuItem});
-            resources.ApplyResources(this.toolstripaccount, "toolstripaccount");
-            this.toolstripaccount.ForeColor = System.Drawing.Color.White;
-            this.toolstripaccount.Name = "toolstripaccount";
-            // 
-            // ToolStripAccountManagement
-            // 
-            resources.ApplyResources(this.ToolStripAccountManagement, "ToolStripAccountManagement");
-            this.ToolStripAccountManagement.ForeColor = System.Drawing.Color.White;
-            this.ToolStripAccountManagement.Name = "ToolStripAccountManagement";
-            this.ToolStripAccountManagement.Click += new System.EventHandler(this.ToolStripAccountManagement_Click);
-            // 
-            // kirjauduUlosToolStripMenuItem
-            // 
-            resources.ApplyResources(this.kirjauduUlosToolStripMenuItem, "kirjauduUlosToolStripMenuItem");
-            this.kirjauduUlosToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.kirjauduUlosToolStripMenuItem.Name = "kirjauduUlosToolStripMenuItem";
-            this.kirjauduUlosToolStripMenuItem.Click += new System.EventHandler(this.kirjauduUlosToolStripMenuItem_Click);
-            // 
-            // lainausHistoriaToolStripMenuItem
-            // 
-            resources.ApplyResources(this.lainausHistoriaToolStripMenuItem, "lainausHistoriaToolStripMenuItem");
-            this.lainausHistoriaToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.lainausHistoriaToolStripMenuItem.Name = "lainausHistoriaToolStripMenuItem";
-            this.lainausHistoriaToolStripMenuItem.Click += new System.EventHandler(this.lainausHistoriaToolStripMenuItem_Click);
-            // 
-            // ToolStripSettings
-            // 
-            this.ToolStripSettings.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.SettingsToolStrip_LanguageSelect});
-            this.ToolStripSettings.ForeColor = System.Drawing.Color.White;
-            this.ToolStripSettings.Name = "ToolStripSettings";
-            resources.ApplyResources(this.ToolStripSettings, "ToolStripSettings");
-            // 
-            // SettingsToolStrip_LanguageSelect
-            // 
-            this.SettingsToolStrip_LanguageSelect.ForeColor = System.Drawing.Color.White;
-            this.SettingsToolStrip_LanguageSelect.Name = "SettingsToolStrip_LanguageSelect";
-            resources.ApplyResources(this.SettingsToolStrip_LanguageSelect, "SettingsToolStrip_LanguageSelect");
-            this.SettingsToolStrip_LanguageSelect.Click += new System.EventHandler(this.Language_Settings_Button_Click);
-            // 
-            // ToolStripHelp
-            // 
-            this.ToolStripHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.helpContentsToolStripMenuItem,
-            this.onlineHelpToolStripMenuItem,
-            this.aboutToolStripMenuItem});
-            this.ToolStripHelp.ForeColor = System.Drawing.Color.White;
-            this.ToolStripHelp.Name = "ToolStripHelp";
-            resources.ApplyResources(this.ToolStripHelp, "ToolStripHelp");
-            // 
-            // helpContentsToolStripMenuItem
-            // 
-            this.helpContentsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.helpContentsToolStripMenuItem.Name = "helpContentsToolStripMenuItem";
-            resources.ApplyResources(this.helpContentsToolStripMenuItem, "helpContentsToolStripMenuItem");
-            this.helpContentsToolStripMenuItem.Click += new System.EventHandler(this.helpContentsToolStripMenuItem_Click);
-            // 
-            // onlineHelpToolStripMenuItem
-            // 
-            this.onlineHelpToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.onlineHelpToolStripMenuItem.Name = "onlineHelpToolStripMenuItem";
-            resources.ApplyResources(this.onlineHelpToolStripMenuItem, "onlineHelpToolStripMenuItem");
-            this.onlineHelpToolStripMenuItem.Click += new System.EventHandler(this.onlineHelpToolStripMenuItem_Click);
-            // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            resources.ApplyResources(this.aboutToolStripMenuItem, "aboutToolStripMenuItem");
-            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
-            // 
-            // WindowTextLabel
-            // 
-            resources.ApplyResources(this.WindowTextLabel, "WindowTextLabel");
-            this.WindowTextLabel.ForeColor = System.Drawing.Color.White;
-            this.WindowTextLabel.Name = "WindowTextLabel";
-            this.WindowTextLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.WindowTextLabel_MouseDown);
-            this.WindowTextLabel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.WindowTextLabel_MouseMove);
-            this.WindowTextLabel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.WindowTextLabel_MouseUp);
-            // 
             // lblCurrentDate
             // 
             resources.ApplyResources(this.lblCurrentDate, "lblCurrentDate");
@@ -462,6 +283,52 @@
             this.BtmPanel.Controls.Add(this.lblCurrentDate);
             resources.ApplyResources(this.BtmPanel, "BtmPanel");
             this.BtmPanel.Name = "BtmPanel";
+            // 
+            // _CloseButton
+            // 
+            resources.ApplyResources(this._CloseButton, "_CloseButton");
+            this._CloseButton.BZBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this._CloseButton.DisplayText = "X";
+            this._CloseButton.ForeColor = System.Drawing.Color.White;
+            this._CloseButton.MouseClickColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(160)))));
+            this._CloseButton.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this._CloseButton.Name = "_CloseButton";
+            this._CloseButton.TextLocation_X = 6;
+            this._CloseButton.TextLocation_Y = 1;
+            this.toolTip1.SetToolTip(this._CloseButton, resources.GetString("_CloseButton.ToolTip"));
+            this._CloseButton.UseVisualStyleBackColor = true;
+            this._CloseButton.Click += new System.EventHandler(this._CloseButton_Click);
+            // 
+            // _MaxButton
+            // 
+            resources.ApplyResources(this._MaxButton, "_MaxButton");
+            this._MaxButton.BZBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this._MaxButton.CFormState = VillageNewbies.UI.MinMaxButton.CustomFormState.Normal;
+            this._MaxButton.DisplayText = "_";
+            this._MaxButton.ForeColor = System.Drawing.Color.White;
+            this._MaxButton.MouseClickColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(160)))));
+            this._MaxButton.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this._MaxButton.Name = "_MaxButton";
+            this._MaxButton.TextLocation_X = 8;
+            this._MaxButton.TextLocation_Y = 6;
+            this.toolTip1.SetToolTip(this._MaxButton, resources.GetString("_MaxButton.ToolTip"));
+            this._MaxButton.UseVisualStyleBackColor = true;
+            this._MaxButton.Click += new System.EventHandler(this._MaxButton_Click);
+            // 
+            // _MinButton
+            // 
+            resources.ApplyResources(this._MinButton, "_MinButton");
+            this._MinButton.BZBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this._MinButton.DisplayText = "_";
+            this._MinButton.ForeColor = System.Drawing.Color.White;
+            this._MinButton.MouseClickColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(160)))));
+            this._MinButton.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this._MinButton.Name = "_MinButton";
+            this._MinButton.TextLocation_X = 6;
+            this._MinButton.TextLocation_Y = -20;
+            this.toolTip1.SetToolTip(this._MinButton, resources.GetString("_MinButton.ToolTip"));
+            this._MinButton.UseVisualStyleBackColor = true;
+            this._MinButton.Click += new System.EventHandler(this._MinButton_Click);
             // 
             // RightBottomPanel_2
             // 
@@ -1689,6 +1556,140 @@
             this.dataGridUserLoanHistory.Name = "dataGridUserLoanHistory";
             this.dataGridUserLoanHistory.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             // 
+            // WindowTextLabel
+            // 
+            resources.ApplyResources(this.WindowTextLabel, "WindowTextLabel");
+            this.WindowTextLabel.ForeColor = System.Drawing.Color.White;
+            this.WindowTextLabel.Name = "WindowTextLabel";
+            this.WindowTextLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.WindowTextLabel_MouseDown);
+            this.WindowTextLabel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.WindowTextLabel_MouseMove);
+            this.WindowTextLabel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.WindowTextLabel_MouseUp);
+            // 
+            // menuStripZ1
+            // 
+            resources.ApplyResources(this.menuStripZ1, "menuStripZ1");
+            this.menuStripZ1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolstripItems,
+            this.toolstripaccount,
+            this.ToolStripSettings,
+            this.ToolStripHelp});
+            this.menuStripZ1.Name = "menuStripZ1";
+            // 
+            // ToolstripItems
+            // 
+            this.ToolstripItems.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripItemManagement});
+            this.ToolstripItems.ForeColor = System.Drawing.Color.White;
+            this.ToolstripItems.Name = "ToolstripItems";
+            resources.ApplyResources(this.ToolstripItems, "ToolstripItems");
+            // 
+            // toolStripItemManagement
+            // 
+            this.toolStripItemManagement.ForeColor = System.Drawing.Color.White;
+            this.toolStripItemManagement.Name = "toolStripItemManagement";
+            resources.ApplyResources(this.toolStripItemManagement, "toolStripItemManagement");
+            this.toolStripItemManagement.Click += new System.EventHandler(this.toolStripItemManagement_Click);
+            // 
+            // toolstripaccount
+            // 
+            this.toolstripaccount.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripAccountManagement,
+            this.kirjauduUlosToolStripMenuItem,
+            this.lainausHistoriaToolStripMenuItem});
+            resources.ApplyResources(this.toolstripaccount, "toolstripaccount");
+            this.toolstripaccount.ForeColor = System.Drawing.Color.White;
+            this.toolstripaccount.Name = "toolstripaccount";
+            // 
+            // ToolStripAccountManagement
+            // 
+            resources.ApplyResources(this.ToolStripAccountManagement, "ToolStripAccountManagement");
+            this.ToolStripAccountManagement.ForeColor = System.Drawing.Color.White;
+            this.ToolStripAccountManagement.Name = "ToolStripAccountManagement";
+            this.ToolStripAccountManagement.Click += new System.EventHandler(this.ToolStripAccountManagement_Click);
+            // 
+            // kirjauduUlosToolStripMenuItem
+            // 
+            resources.ApplyResources(this.kirjauduUlosToolStripMenuItem, "kirjauduUlosToolStripMenuItem");
+            this.kirjauduUlosToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.kirjauduUlosToolStripMenuItem.Name = "kirjauduUlosToolStripMenuItem";
+            this.kirjauduUlosToolStripMenuItem.Click += new System.EventHandler(this.kirjauduUlosToolStripMenuItem_Click);
+            // 
+            // lainausHistoriaToolStripMenuItem
+            // 
+            resources.ApplyResources(this.lainausHistoriaToolStripMenuItem, "lainausHistoriaToolStripMenuItem");
+            this.lainausHistoriaToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.lainausHistoriaToolStripMenuItem.Name = "lainausHistoriaToolStripMenuItem";
+            this.lainausHistoriaToolStripMenuItem.Click += new System.EventHandler(this.lainausHistoriaToolStripMenuItem_Click);
+            // 
+            // ToolStripSettings
+            // 
+            this.ToolStripSettings.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.SettingsToolStrip_LanguageSelect});
+            this.ToolStripSettings.ForeColor = System.Drawing.Color.White;
+            this.ToolStripSettings.Name = "ToolStripSettings";
+            resources.ApplyResources(this.ToolStripSettings, "ToolStripSettings");
+            // 
+            // SettingsToolStrip_LanguageSelect
+            // 
+            this.SettingsToolStrip_LanguageSelect.ForeColor = System.Drawing.Color.White;
+            this.SettingsToolStrip_LanguageSelect.Name = "SettingsToolStrip_LanguageSelect";
+            resources.ApplyResources(this.SettingsToolStrip_LanguageSelect, "SettingsToolStrip_LanguageSelect");
+            this.SettingsToolStrip_LanguageSelect.Click += new System.EventHandler(this.Language_Settings_Button_Click);
+            // 
+            // ToolStripHelp
+            // 
+            this.ToolStripHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.helpContentsToolStripMenuItem,
+            this.onlineHelpToolStripMenuItem,
+            this.aboutToolStripMenuItem});
+            this.ToolStripHelp.ForeColor = System.Drawing.Color.White;
+            this.ToolStripHelp.Name = "ToolStripHelp";
+            resources.ApplyResources(this.ToolStripHelp, "ToolStripHelp");
+            // 
+            // helpContentsToolStripMenuItem
+            // 
+            this.helpContentsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.helpContentsToolStripMenuItem.Name = "helpContentsToolStripMenuItem";
+            resources.ApplyResources(this.helpContentsToolStripMenuItem, "helpContentsToolStripMenuItem");
+            this.helpContentsToolStripMenuItem.Click += new System.EventHandler(this.helpContentsToolStripMenuItem_Click);
+            // 
+            // onlineHelpToolStripMenuItem
+            // 
+            this.onlineHelpToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.onlineHelpToolStripMenuItem.Name = "onlineHelpToolStripMenuItem";
+            resources.ApplyResources(this.onlineHelpToolStripMenuItem, "onlineHelpToolStripMenuItem");
+            this.onlineHelpToolStripMenuItem.Click += new System.EventHandler(this.onlineHelpToolStripMenuItem_Click);
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            resources.ApplyResources(this.aboutToolStripMenuItem, "aboutToolStripMenuItem");
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::VillageNewbies.Properties.Resources.logo;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            // 
+            // TopPanel
+            // 
+            this.TopPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.TopPanel.Controls.Add(this.pictureBox1);
+            this.TopPanel.Controls.Add(this._MinButton);
+            this.TopPanel.Controls.Add(this._MaxButton);
+            this.TopPanel.Controls.Add(this._CloseButton);
+            this.TopPanel.Controls.Add(this.menuStripZ1);
+            this.TopPanel.Controls.Add(this.WindowTextLabel);
+            resources.ApplyResources(this.TopPanel, "TopPanel");
+            this.TopPanel.Name = "TopPanel";
+            this.TopPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TopPanel_MouseDown);
+            this.TopPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TopPanel_MouseMove);
+            this.TopPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.TopPanel_MouseUp);
+            this.TopPanel.Resize += new System.EventHandler(this.TopPanel_Resize);
+            // 
             // MainScreen
             // 
             resources.ApplyResources(this, "$this");
@@ -1723,11 +1724,6 @@
             this.Name = "MainScreen";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainScreen_FormClosing);
             this.Load += new System.EventHandler(this.BlackForm_Load);
-            this.TopPanel.ResumeLayout(false);
-            this.TopPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.menuStripZ1.ResumeLayout(false);
-            this.menuStripZ1.PerformLayout();
             this.BtmPanel.ResumeLayout(false);
             this.BtmPanel.PerformLayout();
             this.Left_Button_Panel.ResumeLayout(false);
@@ -1786,6 +1782,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridItemLoanHistory)).EndInit();
             this.groupBox12.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridUserLoanHistory)).EndInit();
+            this.menuStripZ1.ResumeLayout(false);
+            this.menuStripZ1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.TopPanel.ResumeLayout(false);
+            this.TopPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1796,13 +1797,8 @@
         private System.Windows.Forms.Panel RightPanel;
         private System.Windows.Forms.Panel LeftPanel;
         private System.Windows.Forms.Panel BottomPanel;
-        private System.Windows.Forms.Panel TopPanel;
-        private ButtonZ _CloseButton;
         private System.Windows.Forms.Panel RightBottomPanel_1;
-        private System.Windows.Forms.Label WindowTextLabel;
-        private MinMaxButton _MaxButton;
         private System.Windows.Forms.Panel BtmPanel;
-        private ButtonZ _MinButton;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Panel RightBottomPanel_2;
         private System.Windows.Forms.Panel LeftBottomPanel_1;
@@ -1816,12 +1812,6 @@
         private System.Windows.Forms.Panel Separator_Panel;
         private ButtonX btn_UsersLoans;
         private ButtonX btn_Reservation;
-        private MenuStripZ menuStripZ1;
-        private System.Windows.Forms.ToolStripMenuItem ToolStripHelp;
-        private System.Windows.Forms.ToolStripMenuItem helpContentsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem onlineHelpToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ToolStripSettings;
         private System.Windows.Forms.Panel Settings_Panel;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton rbEnglish;
@@ -1837,7 +1827,6 @@
         private System.Windows.Forms.DateTimePicker dtp_Loan_ReturnDate;
         private ShapedButton btn_Loan_LoanItem;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.ToolStripMenuItem SettingsToolStrip_LanguageSelect;
         private System.Windows.Forms.Panel UserLoans_Panel;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.ComboBox combobox_UserLoans_ItemType;
@@ -1853,7 +1842,6 @@
         private System.Windows.Forms.TextBox txt_ChangeItem_ItemState;
         private System.Windows.Forms.TextBox txt_ChangeItem_ItemType;
         private System.Windows.Forms.TextBox txt_ChangeItem_ItemID;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox8;
         private ShapedButton btn_CreateItemType;
         private System.Windows.Forms.TextBox txt_CreateItemType;
@@ -1885,10 +1873,6 @@
         private System.Windows.Forms.TextBox txt_Waiting_ReturnItemID;
         private System.Windows.Forms.CheckedListBox checklist_Waiting_PendingReturns;
         private ButtonX btnWaitingEvents;
-        private System.Windows.Forms.ToolStripMenuItem toolstripaccount;
-        private System.Windows.Forms.ToolStripMenuItem ToolStripAccountManagement;
-        private System.Windows.Forms.ToolStripMenuItem ToolstripItems;
-        private System.Windows.Forms.ToolStripMenuItem toolStripItemManagement;
         private System.Windows.Forms.Panel AccountManagement_Panel;
         private System.Windows.Forms.Panel Reservation_Panel;
         private System.Windows.Forms.GroupBox groupBox24;
@@ -1909,7 +1893,6 @@
         private System.Windows.Forms.TextBox txt_user_reservations_enddate;
         private System.Windows.Forms.TextBox txt_user_reservations_startdate;
         private System.Windows.Forms.TextBox txt_Loan_ReservedTill;
-        private System.Windows.Forms.ToolStripMenuItem kirjauduUlosToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupBox19;
         private System.Windows.Forms.TextBox txt_AM_NewEmail;
         private System.Windows.Forms.TextBox txt_AM_NewEmail_Confirm;
@@ -1930,7 +1913,6 @@
         private ShapedButton btn_UpdateUserDetails;
         private System.Windows.Forms.DataGridView datagrid_Users;
         private System.Windows.Forms.Label lblCurrentDate;
-        private System.Windows.Forms.ToolStripMenuItem lainausHistoriaToolStripMenuItem;
         private System.Windows.Forms.Panel LoanHistoryPanel;
         private System.Windows.Forms.GroupBox groupBox21;
         private System.Windows.Forms.ComboBox cb_LoanHistory_Item;
@@ -1942,5 +1924,24 @@
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.TextBox txt_ItemNewName;
         private System.Windows.Forms.ComboBox cb_ItemNewState;
+        private System.Windows.Forms.Label WindowTextLabel;
+        private MenuStripZ menuStripZ1;
+        private System.Windows.Forms.ToolStripMenuItem ToolstripItems;
+        private System.Windows.Forms.ToolStripMenuItem toolStripItemManagement;
+        private System.Windows.Forms.ToolStripMenuItem toolstripaccount;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripAccountManagement;
+        private System.Windows.Forms.ToolStripMenuItem kirjauduUlosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem lainausHistoriaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripSettings;
+        private System.Windows.Forms.ToolStripMenuItem SettingsToolStrip_LanguageSelect;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripHelp;
+        private System.Windows.Forms.ToolStripMenuItem helpContentsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem onlineHelpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private ButtonZ _CloseButton;
+        private MinMaxButton _MaxButton;
+        private ButtonZ _MinButton;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel TopPanel;
     }
 }
