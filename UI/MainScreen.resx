@@ -274,7 +274,7 @@
     <value>_MinButton</value>
   </data>
   <data name="&gt;&gt;_MinButton.Type" xml:space="preserve">
-    <value>Reservation_System.UI.ButtonZ, Reservation_System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>VillageNewbies.UI.ButtonZ, VillageNewbies, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;_MinButton.Parent" xml:space="preserve">
     <value>TopPanel</value>
@@ -310,7 +310,7 @@
     <value>_MaxButton</value>
   </data>
   <data name="&gt;&gt;_MaxButton.Type" xml:space="preserve">
-    <value>Reservation_System.UI.MinMaxButton, Reservation_System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>VillageNewbies.UI.MinMaxButton, VillageNewbies, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;_MaxButton.Parent" xml:space="preserve">
     <value>TopPanel</value>
@@ -349,7 +349,7 @@
     <value>_CloseButton</value>
   </data>
   <data name="&gt;&gt;_CloseButton.Type" xml:space="preserve">
-    <value>Reservation_System.UI.ButtonZ, Reservation_System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>VillageNewbies.UI.ButtonZ, VillageNewbies, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;_CloseButton.Parent" xml:space="preserve">
     <value>TopPanel</value>
@@ -472,7 +472,7 @@
     <value>menuStripZ1</value>
   </data>
   <data name="&gt;&gt;menuStripZ1.Type" xml:space="preserve">
-    <value>Reservation_System.UI.MenuStripZ, Reservation_System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>VillageNewbies.UI.MenuStripZ, VillageNewbies, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;menuStripZ1.Parent" xml:space="preserve">
     <value>TopPanel</value>
@@ -811,7 +811,7 @@
     <value>btnWaitingEvents</value>
   </data>
   <data name="&gt;&gt;btnWaitingEvents.Type" xml:space="preserve">
-    <value>Reservation_System.UI.ButtonX, Reservation_System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>VillageNewbies.UI.ButtonX, VillageNewbies, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;btnWaitingEvents.Parent" xml:space="preserve">
     <value>Left_Button_Panel</value>
@@ -847,7 +847,7 @@
     <value>btn_Reservation</value>
   </data>
   <data name="&gt;&gt;btn_Reservation.Type" xml:space="preserve">
-    <value>Reservation_System.UI.ButtonX, Reservation_System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>VillageNewbies.UI.ButtonX, VillageNewbies, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;btn_Reservation.Parent" xml:space="preserve">
     <value>Left_Button_Panel</value>
@@ -883,7 +883,7 @@
     <value>btn_UsersLoans</value>
   </data>
   <data name="&gt;&gt;btn_UsersLoans.Type" xml:space="preserve">
-    <value>Reservation_System.UI.ButtonX, Reservation_System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>VillageNewbies.UI.ButtonX, VillageNewbies, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;btn_UsersLoans.Parent" xml:space="preserve">
     <value>Left_Button_Panel</value>
@@ -919,7 +919,7 @@
     <value>btn_Loan</value>
   </data>
   <data name="&gt;&gt;btn_Loan.Type" xml:space="preserve">
-    <value>Reservation_System.UI.ButtonX, Reservation_System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>VillageNewbies.UI.ButtonX, VillageNewbies, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;btn_Loan.Parent" xml:space="preserve">
     <value>Left_Button_Panel</value>
@@ -952,7 +952,7 @@
     <value>Top, Bottom, Left</value>
   </data>
   <data name="Separator_Panel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>282, 78</value>
+    <value>310, 82</value>
   </data>
   <data name="Separator_Panel.Size" type="System.Drawing.Size, System.Drawing">
     <value>2, 751</value>
@@ -1060,7 +1060,7 @@
     <value>0</value>
   </data>
   <data name="Settings_Panel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>290, 80</value>
+    <value>318, 84</value>
   </data>
   <data name="Settings_Panel.Size" type="System.Drawing.Size, System.Drawing">
     <value>1310, 750</value>
@@ -1081,7 +1081,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Settings_Panel.ZOrder" xml:space="preserve">
-    <value>23</value>
+    <value>20</value>
   </data>
   <data name="combobox_Loan_ItemType.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
@@ -1180,7 +1180,7 @@
     <value>btn_Loan_LoanItem</value>
   </data>
   <data name="&gt;&gt;btn_Loan_LoanItem.Type" xml:space="preserve">
-    <value>Reservation_System.UI.ShapedButton, Reservation_System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>VillageNewbies.UI.ShapedButton, VillageNewbies, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;btn_Loan_LoanItem.Parent" xml:space="preserve">
     <value>Loan_Panel</value>
@@ -1361,375 +1361,6 @@
   </data>
   <data name="&gt;&gt;checklist_Loan_Items.ZOrder" xml:space="preserve">
     <value>5</value>
-  </data>
-  <data name="Loan_Panel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>290, 80</value>
-  </data>
-  <data name="Loan_Panel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1310, 750</value>
-  </data>
-  <data name="Loan_Panel.TabIndex" type="System.Int32, mscorlib">
-    <value>39</value>
-  </data>
-  <data name="Loan_Panel.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;Loan_Panel.Name" xml:space="preserve">
-    <value>Loan_Panel</value>
-  </data>
-  <data name="&gt;&gt;Loan_Panel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Loan_Panel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;Loan_Panel.ZOrder" xml:space="preserve">
-    <value>17</value>
-  </data>
-  <data name="txt_user_reservations_enddate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 62</value>
-  </data>
-  <data name="txt_user_reservations_enddate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>143, 26</value>
-  </data>
-  <data name="txt_user_reservations_enddate.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;txt_user_reservations_enddate.Name" xml:space="preserve">
-    <value>txt_user_reservations_enddate</value>
-  </data>
-  <data name="&gt;&gt;txt_user_reservations_enddate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txt_user_reservations_enddate.Parent" xml:space="preserve">
-    <value>groupBox26</value>
-  </data>
-  <data name="&gt;&gt;txt_user_reservations_enddate.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="txt_user_reservations_startdate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 25</value>
-  </data>
-  <data name="txt_user_reservations_startdate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>143, 26</value>
-  </data>
-  <data name="txt_user_reservations_startdate.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;txt_user_reservations_startdate.Name" xml:space="preserve">
-    <value>txt_user_reservations_startdate</value>
-  </data>
-  <data name="&gt;&gt;txt_user_reservations_startdate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txt_user_reservations_startdate.Parent" xml:space="preserve">
-    <value>groupBox26</value>
-  </data>
-  <data name="&gt;&gt;txt_user_reservations_startdate.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="groupBox26.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="groupBox26.Location" type="System.Drawing.Point, System.Drawing">
-    <value>786, 57</value>
-  </data>
-  <data name="groupBox26.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 99</value>
-  </data>
-  <data name="groupBox26.TabIndex" type="System.Int32, mscorlib">
-    <value>54</value>
-  </data>
-  <data name="groupBox26.Text" xml:space="preserve">
-    <value>Tavaran tiedot</value>
-  </data>
-  <data name="&gt;&gt;groupBox26.Name" xml:space="preserve">
-    <value>groupBox26</value>
-  </data>
-  <data name="&gt;&gt;groupBox26.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox26.Parent" xml:space="preserve">
-    <value>UserLoans_Panel</value>
-  </data>
-  <data name="&gt;&gt;groupBox26.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="btnCancelReservation.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnCancelReservation.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt, style=Bold</value>
-  </data>
-  <data name="btnCancelReservation.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnCancelReservation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>586, 239</value>
-  </data>
-  <data name="btnCancelReservation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>148, 55</value>
-  </data>
-  <data name="btnCancelReservation.TabIndex" type="System.Int32, mscorlib">
-    <value>57</value>
-  </data>
-  <data name="&gt;&gt;btnCancelReservation.Name" xml:space="preserve">
-    <value>btnCancelReservation</value>
-  </data>
-  <data name="&gt;&gt;btnCancelReservation.Type" xml:space="preserve">
-    <value>Reservation_System.UI.ShapedButton, Reservation_System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;btnCancelReservation.Parent" xml:space="preserve">
-    <value>UserLoans_Panel</value>
-  </data>
-  <data name="&gt;&gt;btnCancelReservation.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="checklist_user_reservations.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
-  </data>
-  <data name="checklist_user_reservations.Location" type="System.Drawing.Point, System.Drawing">
-    <value>553, 8</value>
-  </data>
-  <data name="checklist_user_reservations.Size" type="System.Drawing.Size, System.Drawing">
-    <value>225, 225</value>
-  </data>
-  <data name="checklist_user_reservations.TabIndex" type="System.Int32, mscorlib">
-    <value>56</value>
-  </data>
-  <data name="&gt;&gt;checklist_user_reservations.Name" xml:space="preserve">
-    <value>checklist_user_reservations</value>
-  </data>
-  <data name="&gt;&gt;checklist_user_reservations.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckedListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;checklist_user_reservations.Parent" xml:space="preserve">
-    <value>UserLoans_Panel</value>
-  </data>
-  <data name="&gt;&gt;checklist_user_reservations.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="combobox_UserLoans_ItemType.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="combobox_UserLoans_ItemType.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 58</value>
-  </data>
-  <data name="combobox_UserLoans_ItemType.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 28</value>
-  </data>
-  <data name="combobox_UserLoans_ItemType.TabIndex" type="System.Int32, mscorlib">
-    <value>47</value>
-  </data>
-  <data name="&gt;&gt;combobox_UserLoans_ItemType.Name" xml:space="preserve">
-    <value>combobox_UserLoans_ItemType</value>
-  </data>
-  <data name="&gt;&gt;combobox_UserLoans_ItemType.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;combobox_UserLoans_ItemType.Parent" xml:space="preserve">
-    <value>groupBox4</value>
-  </data>
-  <data name="&gt;&gt;combobox_UserLoans_ItemType.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="txt_UserLoans_SearchItem.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="txt_UserLoans_SearchItem.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 23</value>
-  </data>
-  <data name="txt_UserLoans_SearchItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 26</value>
-  </data>
-  <data name="txt_UserLoans_SearchItem.TabIndex" type="System.Int32, mscorlib">
-    <value>45</value>
-  </data>
-  <data name="&gt;&gt;txt_UserLoans_SearchItem.Name" xml:space="preserve">
-    <value>txt_UserLoans_SearchItem</value>
-  </data>
-  <data name="&gt;&gt;txt_UserLoans_SearchItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txt_UserLoans_SearchItem.Parent" xml:space="preserve">
-    <value>groupBox4</value>
-  </data>
-  <data name="&gt;&gt;txt_UserLoans_SearchItem.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="groupBox4.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="groupBox4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>246, 14</value>
-  </data>
-  <data name="groupBox4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 99</value>
-  </data>
-  <data name="groupBox4.TabIndex" type="System.Int32, mscorlib">
-    <value>54</value>
-  </data>
-  <data name="groupBox4.Text" xml:space="preserve">
-    <value>Hae Tavaroita</value>
-  </data>
-  <data name="&gt;&gt;groupBox4.Name" xml:space="preserve">
-    <value>groupBox4</value>
-  </data>
-  <data name="&gt;&gt;groupBox4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox4.Parent" xml:space="preserve">
-    <value>UserLoans_Panel</value>
-  </data>
-  <data name="&gt;&gt;groupBox4.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="btn_UserLoans_ReturnItem.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btn_UserLoans_ReturnItem.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt, style=Bold</value>
-  </data>
-  <data name="btn_UserLoans_ReturnItem.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btn_UserLoans_ReturnItem.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 250</value>
-  </data>
-  <data name="btn_UserLoans_ReturnItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 55</value>
-  </data>
-  <data name="btn_UserLoans_ReturnItem.TabIndex" type="System.Int32, mscorlib">
-    <value>55</value>
-  </data>
-  <data name="&gt;&gt;btn_UserLoans_ReturnItem.Name" xml:space="preserve">
-    <value>btn_UserLoans_ReturnItem</value>
-  </data>
-  <data name="&gt;&gt;btn_UserLoans_ReturnItem.Type" xml:space="preserve">
-    <value>Reservation_System.UI.ShapedButton, Reservation_System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;btn_UserLoans_ReturnItem.Parent" xml:space="preserve">
-    <value>UserLoans_Panel</value>
-  </data>
-  <data name="&gt;&gt;btn_UserLoans_ReturnItem.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="txt_UserLoans_ItemState.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 57</value>
-  </data>
-  <data name="txt_UserLoans_ItemState.Size" type="System.Drawing.Size, System.Drawing">
-    <value>143, 26</value>
-  </data>
-  <data name="txt_UserLoans_ItemState.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;txt_UserLoans_ItemState.Name" xml:space="preserve">
-    <value>txt_UserLoans_ItemState</value>
-  </data>
-  <data name="&gt;&gt;txt_UserLoans_ItemState.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txt_UserLoans_ItemState.Parent" xml:space="preserve">
-    <value>groupBox5</value>
-  </data>
-  <data name="&gt;&gt;txt_UserLoans_ItemState.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="txt_UserLoans_ItemType.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 25</value>
-  </data>
-  <data name="txt_UserLoans_ItemType.Size" type="System.Drawing.Size, System.Drawing">
-    <value>143, 26</value>
-  </data>
-  <data name="txt_UserLoans_ItemType.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;txt_UserLoans_ItemType.Name" xml:space="preserve">
-    <value>txt_UserLoans_ItemType</value>
-  </data>
-  <data name="&gt;&gt;txt_UserLoans_ItemType.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txt_UserLoans_ItemType.Parent" xml:space="preserve">
-    <value>groupBox5</value>
-  </data>
-  <data name="&gt;&gt;txt_UserLoans_ItemType.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="groupBox5.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="groupBox5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>246, 139</value>
-  </data>
-  <data name="groupBox5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 99</value>
-  </data>
-  <data name="groupBox5.TabIndex" type="System.Int32, mscorlib">
-    <value>53</value>
-  </data>
-  <data name="groupBox5.Text" xml:space="preserve">
-    <value>Tavaran tiedot</value>
-  </data>
-  <data name="&gt;&gt;groupBox5.Name" xml:space="preserve">
-    <value>groupBox5</value>
-  </data>
-  <data name="&gt;&gt;groupBox5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox5.Parent" xml:space="preserve">
-    <value>UserLoans_Panel</value>
-  </data>
-  <data name="&gt;&gt;groupBox5.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="Checklist_UserLoans_Items.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
-  </data>
-  <data name="Checklist_UserLoans_Items.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 9</value>
-  </data>
-  <data name="Checklist_UserLoans_Items.Size" type="System.Drawing.Size, System.Drawing">
-    <value>225, 225</value>
-  </data>
-  <data name="Checklist_UserLoans_Items.TabIndex" type="System.Int32, mscorlib">
-    <value>42</value>
-  </data>
-  <data name="&gt;&gt;Checklist_UserLoans_Items.Name" xml:space="preserve">
-    <value>Checklist_UserLoans_Items</value>
-  </data>
-  <data name="&gt;&gt;Checklist_UserLoans_Items.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckedListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Checklist_UserLoans_Items.Parent" xml:space="preserve">
-    <value>UserLoans_Panel</value>
-  </data>
-  <data name="&gt;&gt;Checklist_UserLoans_Items.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="UserLoans_Panel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>290, 80</value>
-  </data>
-  <data name="UserLoans_Panel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1310, 750</value>
-  </data>
-  <data name="UserLoans_Panel.TabIndex" type="System.Int32, mscorlib">
-    <value>53</value>
-  </data>
-  <data name="UserLoans_Panel.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;UserLoans_Panel.Name" xml:space="preserve">
-    <value>UserLoans_Panel</value>
-  </data>
-  <data name="&gt;&gt;UserLoans_Panel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;UserLoans_Panel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;UserLoans_Panel.ZOrder" xml:space="preserve">
-    <value>21</value>
   </data>
   <data name="txt_ItemNewName.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 25</value>
@@ -1933,7 +1564,7 @@
     <value>btn_ChangeItemDetails</value>
   </data>
   <data name="&gt;&gt;btn_ChangeItemDetails.Type" xml:space="preserve">
-    <value>Reservation_System.UI.ShapedButton, Reservation_System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>VillageNewbies.UI.ShapedButton, VillageNewbies, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;btn_ChangeItemDetails.Parent" xml:space="preserve">
     <value>groupBox11</value>
@@ -1990,7 +1621,7 @@
     <value>btn_CreateItem</value>
   </data>
   <data name="&gt;&gt;btn_CreateItem.Type" xml:space="preserve">
-    <value>Reservation_System.UI.ShapedButton, Reservation_System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>VillageNewbies.UI.ShapedButton, VillageNewbies, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;btn_CreateItem.Parent" xml:space="preserve">
     <value>groupBox9</value>
@@ -2146,7 +1777,7 @@
     <value>btn_CreateItemType</value>
   </data>
   <data name="&gt;&gt;btn_CreateItemType.Type" xml:space="preserve">
-    <value>Reservation_System.UI.ShapedButton, Reservation_System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>VillageNewbies.UI.ShapedButton, VillageNewbies, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;btn_CreateItemType.Parent" xml:space="preserve">
     <value>groupBox8</value>
@@ -2257,7 +1888,7 @@
     <value>1</value>
   </data>
   <data name="Item_Management.Location" type="System.Drawing.Point, System.Drawing">
-    <value>290, 80</value>
+    <value>504, 132</value>
   </data>
   <data name="Item_Management.Size" type="System.Drawing.Size, System.Drawing">
     <value>1310, 750</value>
@@ -2275,10 +1906,379 @@
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;Item_Management.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>Loan_Panel</value>
   </data>
   <data name="&gt;&gt;Item_Management.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>6</value>
+  </data>
+  <data name="Loan_Panel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>315, 59</value>
+  </data>
+  <data name="Loan_Panel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1310, 750</value>
+  </data>
+  <data name="Loan_Panel.TabIndex" type="System.Int32, mscorlib">
+    <value>39</value>
+  </data>
+  <data name="Loan_Panel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;Loan_Panel.Name" xml:space="preserve">
+    <value>Loan_Panel</value>
+  </data>
+  <data name="&gt;&gt;Loan_Panel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Loan_Panel.Parent" xml:space="preserve">
+    <value>groupBox12</value>
+  </data>
+  <data name="&gt;&gt;Loan_Panel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="txt_user_reservations_enddate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 62</value>
+  </data>
+  <data name="txt_user_reservations_enddate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 26</value>
+  </data>
+  <data name="txt_user_reservations_enddate.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;txt_user_reservations_enddate.Name" xml:space="preserve">
+    <value>txt_user_reservations_enddate</value>
+  </data>
+  <data name="&gt;&gt;txt_user_reservations_enddate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txt_user_reservations_enddate.Parent" xml:space="preserve">
+    <value>groupBox26</value>
+  </data>
+  <data name="&gt;&gt;txt_user_reservations_enddate.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txt_user_reservations_startdate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 25</value>
+  </data>
+  <data name="txt_user_reservations_startdate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 26</value>
+  </data>
+  <data name="txt_user_reservations_startdate.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;txt_user_reservations_startdate.Name" xml:space="preserve">
+    <value>txt_user_reservations_startdate</value>
+  </data>
+  <data name="&gt;&gt;txt_user_reservations_startdate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txt_user_reservations_startdate.Parent" xml:space="preserve">
+    <value>groupBox26</value>
+  </data>
+  <data name="&gt;&gt;txt_user_reservations_startdate.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="groupBox26.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="groupBox26.Location" type="System.Drawing.Point, System.Drawing">
+    <value>786, 57</value>
+  </data>
+  <data name="groupBox26.Size" type="System.Drawing.Size, System.Drawing">
+    <value>158, 99</value>
+  </data>
+  <data name="groupBox26.TabIndex" type="System.Int32, mscorlib">
+    <value>54</value>
+  </data>
+  <data name="groupBox26.Text" xml:space="preserve">
+    <value>Tavaran tiedot</value>
+  </data>
+  <data name="&gt;&gt;groupBox26.Name" xml:space="preserve">
+    <value>groupBox26</value>
+  </data>
+  <data name="&gt;&gt;groupBox26.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox26.Parent" xml:space="preserve">
+    <value>UserLoans_Panel</value>
+  </data>
+  <data name="&gt;&gt;groupBox26.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnCancelReservation.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnCancelReservation.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt, style=Bold</value>
+  </data>
+  <data name="btnCancelReservation.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnCancelReservation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>586, 239</value>
+  </data>
+  <data name="btnCancelReservation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 55</value>
+  </data>
+  <data name="btnCancelReservation.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="&gt;&gt;btnCancelReservation.Name" xml:space="preserve">
+    <value>btnCancelReservation</value>
+  </data>
+  <data name="&gt;&gt;btnCancelReservation.Type" xml:space="preserve">
+    <value>VillageNewbies.UI.ShapedButton, VillageNewbies, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnCancelReservation.Parent" xml:space="preserve">
+    <value>UserLoans_Panel</value>
+  </data>
+  <data name="&gt;&gt;btnCancelReservation.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="checklist_user_reservations.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="checklist_user_reservations.Location" type="System.Drawing.Point, System.Drawing">
+    <value>553, 8</value>
+  </data>
+  <data name="checklist_user_reservations.Size" type="System.Drawing.Size, System.Drawing">
+    <value>225, 225</value>
+  </data>
+  <data name="checklist_user_reservations.TabIndex" type="System.Int32, mscorlib">
+    <value>56</value>
+  </data>
+  <data name="&gt;&gt;checklist_user_reservations.Name" xml:space="preserve">
+    <value>checklist_user_reservations</value>
+  </data>
+  <data name="&gt;&gt;checklist_user_reservations.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckedListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checklist_user_reservations.Parent" xml:space="preserve">
+    <value>UserLoans_Panel</value>
+  </data>
+  <data name="&gt;&gt;checklist_user_reservations.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="combobox_UserLoans_ItemType.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="combobox_UserLoans_ItemType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 58</value>
+  </data>
+  <data name="combobox_UserLoans_ItemType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 28</value>
+  </data>
+  <data name="combobox_UserLoans_ItemType.TabIndex" type="System.Int32, mscorlib">
+    <value>47</value>
+  </data>
+  <data name="&gt;&gt;combobox_UserLoans_ItemType.Name" xml:space="preserve">
+    <value>combobox_UserLoans_ItemType</value>
+  </data>
+  <data name="&gt;&gt;combobox_UserLoans_ItemType.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;combobox_UserLoans_ItemType.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;combobox_UserLoans_ItemType.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txt_UserLoans_SearchItem.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="txt_UserLoans_SearchItem.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 23</value>
+  </data>
+  <data name="txt_UserLoans_SearchItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 26</value>
+  </data>
+  <data name="txt_UserLoans_SearchItem.TabIndex" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <data name="&gt;&gt;txt_UserLoans_SearchItem.Name" xml:space="preserve">
+    <value>txt_UserLoans_SearchItem</value>
+  </data>
+  <data name="&gt;&gt;txt_UserLoans_SearchItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txt_UserLoans_SearchItem.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;txt_UserLoans_SearchItem.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="groupBox4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="groupBox4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>246, 14</value>
+  </data>
+  <data name="groupBox4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>158, 99</value>
+  </data>
+  <data name="groupBox4.TabIndex" type="System.Int32, mscorlib">
+    <value>54</value>
+  </data>
+  <data name="groupBox4.Text" xml:space="preserve">
+    <value>Hae Tavaroita</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.Name" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.Parent" xml:space="preserve">
+    <value>UserLoans_Panel</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btn_UserLoans_ReturnItem.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btn_UserLoans_ReturnItem.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt, style=Bold</value>
+  </data>
+  <data name="btn_UserLoans_ReturnItem.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btn_UserLoans_ReturnItem.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 250</value>
+  </data>
+  <data name="btn_UserLoans_ReturnItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 55</value>
+  </data>
+  <data name="btn_UserLoans_ReturnItem.TabIndex" type="System.Int32, mscorlib">
+    <value>55</value>
+  </data>
+  <data name="&gt;&gt;btn_UserLoans_ReturnItem.Name" xml:space="preserve">
+    <value>btn_UserLoans_ReturnItem</value>
+  </data>
+  <data name="&gt;&gt;btn_UserLoans_ReturnItem.Type" xml:space="preserve">
+    <value>VillageNewbies.UI.ShapedButton, VillageNewbies, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btn_UserLoans_ReturnItem.Parent" xml:space="preserve">
+    <value>UserLoans_Panel</value>
+  </data>
+  <data name="&gt;&gt;btn_UserLoans_ReturnItem.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="txt_UserLoans_ItemState.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 57</value>
+  </data>
+  <data name="txt_UserLoans_ItemState.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 26</value>
+  </data>
+  <data name="txt_UserLoans_ItemState.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;txt_UserLoans_ItemState.Name" xml:space="preserve">
+    <value>txt_UserLoans_ItemState</value>
+  </data>
+  <data name="&gt;&gt;txt_UserLoans_ItemState.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txt_UserLoans_ItemState.Parent" xml:space="preserve">
+    <value>groupBox5</value>
+  </data>
+  <data name="&gt;&gt;txt_UserLoans_ItemState.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txt_UserLoans_ItemType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 25</value>
+  </data>
+  <data name="txt_UserLoans_ItemType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 26</value>
+  </data>
+  <data name="txt_UserLoans_ItemType.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;txt_UserLoans_ItemType.Name" xml:space="preserve">
+    <value>txt_UserLoans_ItemType</value>
+  </data>
+  <data name="&gt;&gt;txt_UserLoans_ItemType.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txt_UserLoans_ItemType.Parent" xml:space="preserve">
+    <value>groupBox5</value>
+  </data>
+  <data name="&gt;&gt;txt_UserLoans_ItemType.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="groupBox5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="groupBox5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>246, 139</value>
+  </data>
+  <data name="groupBox5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>158, 99</value>
+  </data>
+  <data name="groupBox5.TabIndex" type="System.Int32, mscorlib">
+    <value>53</value>
+  </data>
+  <data name="groupBox5.Text" xml:space="preserve">
+    <value>Tavaran tiedot</value>
+  </data>
+  <data name="&gt;&gt;groupBox5.Name" xml:space="preserve">
+    <value>groupBox5</value>
+  </data>
+  <data name="&gt;&gt;groupBox5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox5.Parent" xml:space="preserve">
+    <value>UserLoans_Panel</value>
+  </data>
+  <data name="&gt;&gt;groupBox5.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="Checklist_UserLoans_Items.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="Checklist_UserLoans_Items.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 9</value>
+  </data>
+  <data name="Checklist_UserLoans_Items.Size" type="System.Drawing.Size, System.Drawing">
+    <value>225, 225</value>
+  </data>
+  <data name="Checklist_UserLoans_Items.TabIndex" type="System.Int32, mscorlib">
+    <value>42</value>
+  </data>
+  <data name="&gt;&gt;Checklist_UserLoans_Items.Name" xml:space="preserve">
+    <value>Checklist_UserLoans_Items</value>
+  </data>
+  <data name="&gt;&gt;Checklist_UserLoans_Items.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckedListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Checklist_UserLoans_Items.Parent" xml:space="preserve">
+    <value>UserLoans_Panel</value>
+  </data>
+  <data name="&gt;&gt;Checklist_UserLoans_Items.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="UserLoans_Panel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>318, 84</value>
+  </data>
+  <data name="UserLoans_Panel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1310, 750</value>
+  </data>
+  <data name="UserLoans_Panel.TabIndex" type="System.Int32, mscorlib">
+    <value>53</value>
+  </data>
+  <data name="UserLoans_Panel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;UserLoans_Panel.Name" xml:space="preserve">
+    <value>UserLoans_Panel</value>
+  </data>
+  <data name="&gt;&gt;UserLoans_Panel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;UserLoans_Panel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;UserLoans_Panel.ZOrder" xml:space="preserve">
+    <value>18</value>
   </data>
   <data name="checkbox_AcceptAllLoans.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2407,7 +2407,7 @@
     <value>btnAcceptReturn</value>
   </data>
   <data name="&gt;&gt;btnAcceptReturn.Type" xml:space="preserve">
-    <value>Reservation_System.UI.ShapedButton, Reservation_System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>VillageNewbies.UI.ShapedButton, VillageNewbies, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;btnAcceptReturn.Parent" xml:space="preserve">
     <value>Waiting_Events_panel</value>
@@ -2557,7 +2557,7 @@
     <value>btnDenyLoan</value>
   </data>
   <data name="&gt;&gt;btnDenyLoan.Type" xml:space="preserve">
-    <value>Reservation_System.UI.ShapedButton, Reservation_System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>VillageNewbies.UI.ShapedButton, VillageNewbies, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;btnDenyLoan.Parent" xml:space="preserve">
     <value>Waiting_Events_panel</value>
@@ -2635,7 +2635,7 @@
     <value>btnAcceptLoan</value>
   </data>
   <data name="&gt;&gt;btnAcceptLoan.Type" xml:space="preserve">
-    <value>Reservation_System.UI.ShapedButton, Reservation_System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>VillageNewbies.UI.ShapedButton, VillageNewbies, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;btnAcceptLoan.Parent" xml:space="preserve">
     <value>Waiting_Events_panel</value>
@@ -2763,8 +2763,170 @@
   <data name="&gt;&gt;checklist_Waiting_PendingLoans.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
+  <data name="cb_LoanHistory_Item.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 27</value>
+  </data>
+  <data name="cb_LoanHistory_Item.Size" type="System.Drawing.Size, System.Drawing">
+    <value>233, 26</value>
+  </data>
+  <data name="cb_LoanHistory_Item.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;cb_LoanHistory_Item.Name" xml:space="preserve">
+    <value>cb_LoanHistory_Item</value>
+  </data>
+  <data name="&gt;&gt;cb_LoanHistory_Item.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cb_LoanHistory_Item.Parent" xml:space="preserve">
+    <value>groupBox21</value>
+  </data>
+  <data name="&gt;&gt;cb_LoanHistory_Item.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="dataGridItemLoanHistory.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 128</value>
+  </data>
+  <data name="dataGridItemLoanHistory.Size" type="System.Drawing.Size, System.Drawing">
+    <value>543, 511</value>
+  </data>
+  <data name="dataGridItemLoanHistory.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;dataGridItemLoanHistory.Name" xml:space="preserve">
+    <value>dataGridItemLoanHistory</value>
+  </data>
+  <data name="&gt;&gt;dataGridItemLoanHistory.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridItemLoanHistory.Parent" xml:space="preserve">
+    <value>groupBox21</value>
+  </data>
+  <data name="&gt;&gt;dataGridItemLoanHistory.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="groupBox21.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="groupBox21.Location" type="System.Drawing.Point, System.Drawing">
+    <value>656, 91</value>
+  </data>
+  <data name="groupBox21.Size" type="System.Drawing.Size, System.Drawing">
+    <value>568, 652</value>
+  </data>
+  <data name="groupBox21.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="groupBox21.Text" xml:space="preserve">
+    <value>Tavaran Lainaushistoria</value>
+  </data>
+  <data name="&gt;&gt;groupBox21.Name" xml:space="preserve">
+    <value>groupBox21</value>
+  </data>
+  <data name="&gt;&gt;groupBox21.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox21.Parent" xml:space="preserve">
+    <value>LoanHistoryPanel</value>
+  </data>
+  <data name="&gt;&gt;groupBox21.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="cb_LoanHistory_User.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 27</value>
+  </data>
+  <data name="cb_LoanHistory_User.Size" type="System.Drawing.Size, System.Drawing">
+    <value>191, 26</value>
+  </data>
+  <data name="cb_LoanHistory_User.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;cb_LoanHistory_User.Name" xml:space="preserve">
+    <value>cb_LoanHistory_User</value>
+  </data>
+  <data name="&gt;&gt;cb_LoanHistory_User.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cb_LoanHistory_User.Parent" xml:space="preserve">
+    <value>groupBox12</value>
+  </data>
+  <data name="&gt;&gt;cb_LoanHistory_User.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="dataGridUserLoanHistory.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 128</value>
+  </data>
+  <data name="dataGridUserLoanHistory.Size" type="System.Drawing.Size, System.Drawing">
+    <value>543, 511</value>
+  </data>
+  <data name="dataGridUserLoanHistory.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;dataGridUserLoanHistory.Name" xml:space="preserve">
+    <value>dataGridUserLoanHistory</value>
+  </data>
+  <data name="&gt;&gt;dataGridUserLoanHistory.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridUserLoanHistory.Parent" xml:space="preserve">
+    <value>groupBox12</value>
+  </data>
+  <data name="&gt;&gt;dataGridUserLoanHistory.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="groupBox12.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="groupBox12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 91</value>
+  </data>
+  <data name="groupBox12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>568, 652</value>
+  </data>
+  <data name="groupBox12.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="groupBox12.Text" xml:space="preserve">
+    <value>Käyttäjän Lainaushistoria</value>
+  </data>
+  <data name="&gt;&gt;groupBox12.Name" xml:space="preserve">
+    <value>groupBox12</value>
+  </data>
+  <data name="&gt;&gt;groupBox12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox12.Parent" xml:space="preserve">
+    <value>LoanHistoryPanel</value>
+  </data>
+  <data name="&gt;&gt;groupBox12.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="LoanHistoryPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>45, 88</value>
+  </data>
+  <data name="LoanHistoryPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1310, 750</value>
+  </data>
+  <data name="LoanHistoryPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>61</value>
+  </data>
+  <data name="LoanHistoryPanel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;LoanHistoryPanel.Name" xml:space="preserve">
+    <value>LoanHistoryPanel</value>
+  </data>
+  <data name="&gt;&gt;LoanHistoryPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LoanHistoryPanel.Parent" xml:space="preserve">
+    <value>Waiting_Events_panel</value>
+  </data>
+  <data name="&gt;&gt;LoanHistoryPanel.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
   <data name="Waiting_Events_panel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>290, 80</value>
+    <value>318, 84</value>
   </data>
   <data name="Waiting_Events_panel.Size" type="System.Drawing.Size, System.Drawing">
     <value>1310, 750</value>
@@ -2785,7 +2947,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Waiting_Events_panel.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>16</value>
   </data>
   <data name="datagrid_Users.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 18</value>
@@ -2830,7 +2992,7 @@
     <value>btn_UpdateUserDetails</value>
   </data>
   <data name="&gt;&gt;btn_UpdateUserDetails.Type" xml:space="preserve">
-    <value>Reservation_System.UI.ShapedButton, Reservation_System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>VillageNewbies.UI.ShapedButton, VillageNewbies, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;btn_UpdateUserDetails.Parent" xml:space="preserve">
     <value>groupBox20</value>
@@ -2920,7 +3082,7 @@
     <value>btn_AM_ChangeEmail</value>
   </data>
   <data name="&gt;&gt;btn_AM_ChangeEmail.Type" xml:space="preserve">
-    <value>Reservation_System.UI.ShapedButton, Reservation_System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>VillageNewbies.UI.ShapedButton, VillageNewbies, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;btn_AM_ChangeEmail.Parent" xml:space="preserve">
     <value>groupBox19</value>
@@ -3073,7 +3235,7 @@
     <value>btn_AM_ChangePassword</value>
   </data>
   <data name="&gt;&gt;btn_AM_ChangePassword.Type" xml:space="preserve">
-    <value>Reservation_System.UI.ShapedButton, Reservation_System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>VillageNewbies.UI.ShapedButton, VillageNewbies, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;btn_AM_ChangePassword.Parent" xml:space="preserve">
     <value>groupBox18</value>
@@ -3232,7 +3394,7 @@
     <value>2</value>
   </data>
   <data name="AccountManagement_Panel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>290, 80</value>
+    <value>318, 84</value>
   </data>
   <data name="AccountManagement_Panel.Size" type="System.Drawing.Size, System.Drawing">
     <value>1310, 750</value>
@@ -3253,7 +3415,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;AccountManagement_Panel.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>17</value>
   </data>
   <data name="label6.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3409,7 +3571,7 @@
     <value>btn_Reserve</value>
   </data>
   <data name="&gt;&gt;btn_Reserve.Type" xml:space="preserve">
-    <value>Reservation_System.UI.ShapedButton, Reservation_System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>VillageNewbies.UI.ShapedButton, VillageNewbies, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;btn_Reserve.Parent" xml:space="preserve">
     <value>Reservation_Panel</value>
@@ -3571,7 +3733,7 @@
     <value>7</value>
   </data>
   <data name="Reservation_Panel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>290, 80</value>
+    <value>318, 84</value>
   </data>
   <data name="Reservation_Panel.Size" type="System.Drawing.Size, System.Drawing">
     <value>1310, 750</value>
@@ -3592,169 +3754,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Reservation_Panel.ZOrder" xml:space="preserve">
-    <value>22</value>
-  </data>
-  <data name="cb_LoanHistory_Item.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 27</value>
-  </data>
-  <data name="cb_LoanHistory_Item.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 26</value>
-  </data>
-  <data name="cb_LoanHistory_Item.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;cb_LoanHistory_Item.Name" xml:space="preserve">
-    <value>cb_LoanHistory_Item</value>
-  </data>
-  <data name="&gt;&gt;cb_LoanHistory_Item.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cb_LoanHistory_Item.Parent" xml:space="preserve">
-    <value>groupBox21</value>
-  </data>
-  <data name="&gt;&gt;cb_LoanHistory_Item.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="dataGridItemLoanHistory.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 128</value>
-  </data>
-  <data name="dataGridItemLoanHistory.Size" type="System.Drawing.Size, System.Drawing">
-    <value>543, 511</value>
-  </data>
-  <data name="dataGridItemLoanHistory.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;dataGridItemLoanHistory.Name" xml:space="preserve">
-    <value>dataGridItemLoanHistory</value>
-  </data>
-  <data name="&gt;&gt;dataGridItemLoanHistory.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridItemLoanHistory.Parent" xml:space="preserve">
-    <value>groupBox21</value>
-  </data>
-  <data name="&gt;&gt;dataGridItemLoanHistory.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="groupBox21.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt</value>
-  </data>
-  <data name="groupBox21.Location" type="System.Drawing.Point, System.Drawing">
-    <value>656, 91</value>
-  </data>
-  <data name="groupBox21.Size" type="System.Drawing.Size, System.Drawing">
-    <value>568, 652</value>
-  </data>
-  <data name="groupBox21.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="groupBox21.Text" xml:space="preserve">
-    <value>Tavaran Lainaushistoria</value>
-  </data>
-  <data name="&gt;&gt;groupBox21.Name" xml:space="preserve">
-    <value>groupBox21</value>
-  </data>
-  <data name="&gt;&gt;groupBox21.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox21.Parent" xml:space="preserve">
-    <value>LoanHistoryPanel</value>
-  </data>
-  <data name="&gt;&gt;groupBox21.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="cb_LoanHistory_User.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 27</value>
-  </data>
-  <data name="cb_LoanHistory_User.Size" type="System.Drawing.Size, System.Drawing">
-    <value>191, 26</value>
-  </data>
-  <data name="cb_LoanHistory_User.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;cb_LoanHistory_User.Name" xml:space="preserve">
-    <value>cb_LoanHistory_User</value>
-  </data>
-  <data name="&gt;&gt;cb_LoanHistory_User.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cb_LoanHistory_User.Parent" xml:space="preserve">
-    <value>groupBox12</value>
-  </data>
-  <data name="&gt;&gt;cb_LoanHistory_User.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="dataGridUserLoanHistory.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 128</value>
-  </data>
-  <data name="dataGridUserLoanHistory.Size" type="System.Drawing.Size, System.Drawing">
-    <value>543, 511</value>
-  </data>
-  <data name="dataGridUserLoanHistory.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;dataGridUserLoanHistory.Name" xml:space="preserve">
-    <value>dataGridUserLoanHistory</value>
-  </data>
-  <data name="&gt;&gt;dataGridUserLoanHistory.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridUserLoanHistory.Parent" xml:space="preserve">
-    <value>groupBox12</value>
-  </data>
-  <data name="&gt;&gt;dataGridUserLoanHistory.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="groupBox12.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt</value>
-  </data>
-  <data name="groupBox12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 91</value>
-  </data>
-  <data name="groupBox12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>568, 652</value>
-  </data>
-  <data name="groupBox12.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="groupBox12.Text" xml:space="preserve">
-    <value>Käyttäjän Lainaushistoria</value>
-  </data>
-  <data name="&gt;&gt;groupBox12.Name" xml:space="preserve">
-    <value>groupBox12</value>
-  </data>
-  <data name="&gt;&gt;groupBox12.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox12.Parent" xml:space="preserve">
-    <value>LoanHistoryPanel</value>
-  </data>
-  <data name="&gt;&gt;groupBox12.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="LoanHistoryPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>290, 80</value>
-  </data>
-  <data name="LoanHistoryPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1310, 750</value>
-  </data>
-  <data name="LoanHistoryPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>61</value>
-  </data>
-  <data name="LoanHistoryPanel.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;LoanHistoryPanel.Name" xml:space="preserve">
-    <value>LoanHistoryPanel</value>
-  </data>
-  <data name="&gt;&gt;LoanHistoryPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LoanHistoryPanel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;LoanHistoryPanel.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>19</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

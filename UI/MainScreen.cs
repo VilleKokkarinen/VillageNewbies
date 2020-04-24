@@ -2284,7 +2284,11 @@ namespace VillageNewbies.UI
             */
 
         }
-        
+
+        private void Left_Button_Panel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
     
 }

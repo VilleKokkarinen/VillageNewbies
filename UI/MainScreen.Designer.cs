@@ -86,20 +86,6 @@
             this.txt_Loan_Item_State = new System.Windows.Forms.TextBox();
             this.txt_Loan_ItemType = new System.Windows.Forms.TextBox();
             this.checklist_Loan_Items = new System.Windows.Forms.CheckedListBox();
-            this.UserLoans_Panel = new System.Windows.Forms.Panel();
-            this.groupBox26 = new System.Windows.Forms.GroupBox();
-            this.txt_user_reservations_enddate = new System.Windows.Forms.TextBox();
-            this.txt_user_reservations_startdate = new System.Windows.Forms.TextBox();
-            this.btnCancelReservation = new VillageNewbies.UI.ShapedButton();
-            this.checklist_user_reservations = new System.Windows.Forms.CheckedListBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.combobox_UserLoans_ItemType = new System.Windows.Forms.ComboBox();
-            this.txt_UserLoans_SearchItem = new System.Windows.Forms.TextBox();
-            this.btn_UserLoans_ReturnItem = new VillageNewbies.UI.ShapedButton();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.txt_UserLoans_ItemState = new System.Windows.Forms.TextBox();
-            this.txt_UserLoans_ItemType = new System.Windows.Forms.TextBox();
-            this.Checklist_UserLoans_Items = new System.Windows.Forms.CheckedListBox();
             this.Item_Management = new System.Windows.Forms.Panel();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
@@ -122,6 +108,20 @@
             this.btn_CreateItemType = new VillageNewbies.UI.ShapedButton();
             this.txt_CreateItemType = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.UserLoans_Panel = new System.Windows.Forms.Panel();
+            this.groupBox26 = new System.Windows.Forms.GroupBox();
+            this.txt_user_reservations_enddate = new System.Windows.Forms.TextBox();
+            this.txt_user_reservations_startdate = new System.Windows.Forms.TextBox();
+            this.btnCancelReservation = new VillageNewbies.UI.ShapedButton();
+            this.checklist_user_reservations = new System.Windows.Forms.CheckedListBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.combobox_UserLoans_ItemType = new System.Windows.Forms.ComboBox();
+            this.txt_UserLoans_SearchItem = new System.Windows.Forms.TextBox();
+            this.btn_UserLoans_ReturnItem = new VillageNewbies.UI.ShapedButton();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.txt_UserLoans_ItemState = new System.Windows.Forms.TextBox();
+            this.txt_UserLoans_ItemType = new System.Windows.Forms.TextBox();
+            this.Checklist_UserLoans_Items = new System.Windows.Forms.CheckedListBox();
             this.Waiting_Events_panel = new System.Windows.Forms.Panel();
             this.checkbox_AcceptAllLoans = new System.Windows.Forms.CheckBox();
             this.checkbox_AcceptAllReturns = new System.Windows.Forms.CheckBox();
@@ -142,6 +142,13 @@
             this.txt_Waiting_LoanItemID = new System.Windows.Forms.TextBox();
             this.dtp_Waiting_LoanReturnDate = new System.Windows.Forms.DateTimePicker();
             this.checklist_Waiting_PendingLoans = new System.Windows.Forms.CheckedListBox();
+            this.LoanHistoryPanel = new System.Windows.Forms.Panel();
+            this.groupBox21 = new System.Windows.Forms.GroupBox();
+            this.cb_LoanHistory_Item = new System.Windows.Forms.ComboBox();
+            this.dataGridItemLoanHistory = new System.Windows.Forms.DataGridView();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.cb_LoanHistory_User = new System.Windows.Forms.ComboBox();
+            this.dataGridUserLoanHistory = new System.Windows.Forms.DataGridView();
             this.AccountManagement_Panel = new System.Windows.Forms.Panel();
             this.groupBox20 = new System.Windows.Forms.GroupBox();
             this.datagrid_Users = new System.Windows.Forms.DataGridView();
@@ -173,13 +180,6 @@
             this.txt_reservation_Itemtype = new System.Windows.Forms.TextBox();
             this.txt_reservation_Itemstate = new System.Windows.Forms.TextBox();
             this.checklist_Reservation = new System.Windows.Forms.CheckedListBox();
-            this.LoanHistoryPanel = new System.Windows.Forms.Panel();
-            this.groupBox21 = new System.Windows.Forms.GroupBox();
-            this.cb_LoanHistory_Item = new System.Windows.Forms.ComboBox();
-            this.dataGridItemLoanHistory = new System.Windows.Forms.DataGridView();
-            this.groupBox12 = new System.Windows.Forms.GroupBox();
-            this.cb_LoanHistory_User = new System.Windows.Forms.ComboBox();
-            this.dataGridUserLoanHistory = new System.Windows.Forms.DataGridView();
             this.TopPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStripZ1.SuspendLayout();
@@ -190,10 +190,6 @@
             this.Loan_Panel.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.UserLoans_Panel.SuspendLayout();
-            this.groupBox26.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox5.SuspendLayout();
             this.Item_Management.SuspendLayout();
             this.groupBox11.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -201,11 +197,20 @@
             this.groupBox10.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.groupBox8.SuspendLayout();
+            this.UserLoans_Panel.SuspendLayout();
+            this.groupBox26.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.Waiting_Events_panel.SuspendLayout();
             this.groupBox15.SuspendLayout();
             this.groupBox17.SuspendLayout();
             this.groupBox14.SuspendLayout();
             this.groupBox13.SuspendLayout();
+            this.LoanHistoryPanel.SuspendLayout();
+            this.groupBox21.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridItemLoanHistory)).BeginInit();
+            this.groupBox12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridUserLoanHistory)).BeginInit();
             this.AccountManagement_Panel.SuspendLayout();
             this.groupBox20.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagrid_Users)).BeginInit();
@@ -214,11 +219,6 @@
             this.Reservation_Panel.SuspendLayout();
             this.groupBox24.SuspendLayout();
             this.groupBox25.SuspendLayout();
-            this.LoanHistoryPanel.SuspendLayout();
-            this.groupBox21.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridItemLoanHistory)).BeginInit();
-            this.groupBox12.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridUserLoanHistory)).BeginInit();
             this.SuspendLayout();
             // 
             // TopBorderPanel
@@ -542,6 +542,7 @@
             this.Left_Button_Panel.Controls.Add(this.btn_UsersLoans);
             this.Left_Button_Panel.Controls.Add(this.btn_Loan);
             this.Left_Button_Panel.Name = "Left_Button_Panel";
+            this.Left_Button_Panel.Paint += new System.Windows.Forms.PaintEventHandler(this.Left_Button_Panel_Paint);
             // 
             // btnWaitingEvents
             // 
@@ -647,6 +648,7 @@
             this.Loan_Panel.Controls.Add(this.dtp_Loan_ReturnDate);
             this.Loan_Panel.Controls.Add(this.groupBox2);
             this.Loan_Panel.Controls.Add(this.checklist_Loan_Items);
+            this.Loan_Panel.Controls.Add(this.Item_Management);
             resources.ApplyResources(this.Loan_Panel, "Loan_Panel");
             this.Loan_Panel.Name = "Loan_Panel";
             // 
@@ -753,155 +755,6 @@
             this.checklist_Loan_Items.FormattingEnabled = true;
             this.checklist_Loan_Items.Name = "checklist_Loan_Items";
             this.checklist_Loan_Items.SelectedValueChanged += new System.EventHandler(this.checklist_Loan_Items_SelectedValueChanged);
-            // 
-            // UserLoans_Panel
-            // 
-            this.UserLoans_Panel.Controls.Add(this.groupBox26);
-            this.UserLoans_Panel.Controls.Add(this.btnCancelReservation);
-            this.UserLoans_Panel.Controls.Add(this.checklist_user_reservations);
-            this.UserLoans_Panel.Controls.Add(this.groupBox4);
-            this.UserLoans_Panel.Controls.Add(this.btn_UserLoans_ReturnItem);
-            this.UserLoans_Panel.Controls.Add(this.groupBox5);
-            this.UserLoans_Panel.Controls.Add(this.Checklist_UserLoans_Items);
-            resources.ApplyResources(this.UserLoans_Panel, "UserLoans_Panel");
-            this.UserLoans_Panel.Name = "UserLoans_Panel";
-            // 
-            // groupBox26
-            // 
-            this.groupBox26.Controls.Add(this.txt_user_reservations_enddate);
-            this.groupBox26.Controls.Add(this.txt_user_reservations_startdate);
-            resources.ApplyResources(this.groupBox26, "groupBox26");
-            this.groupBox26.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox26.Name = "groupBox26";
-            this.groupBox26.TabStop = false;
-            // 
-            // txt_user_reservations_enddate
-            // 
-            resources.ApplyResources(this.txt_user_reservations_enddate, "txt_user_reservations_enddate");
-            this.txt_user_reservations_enddate.Name = "txt_user_reservations_enddate";
-            // 
-            // txt_user_reservations_startdate
-            // 
-            resources.ApplyResources(this.txt_user_reservations_startdate, "txt_user_reservations_startdate");
-            this.txt_user_reservations_startdate.Name = "txt_user_reservations_startdate";
-            // 
-            // btnCancelReservation
-            // 
-            this.btnCancelReservation.BackColor = System.Drawing.Color.Transparent;
-            this.btnCancelReservation.BorderColor = System.Drawing.Color.Transparent;
-            this.btnCancelReservation.BorderWidth = 2;
-            this.btnCancelReservation.ButtonShape = VillageNewbies.UI.ShapedButton.ButtonsShapes.RoundRect;
-            this.btnCancelReservation.ButtonText = "Peru varaus";
-            this.btnCancelReservation.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnCancelReservation.FlatAppearance.BorderSize = 0;
-            this.btnCancelReservation.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnCancelReservation.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.btnCancelReservation, "btnCancelReservation");
-            this.btnCancelReservation.ForeColor = System.Drawing.Color.White;
-            this.btnCancelReservation.GradientAngle = 90;
-            this.btnCancelReservation.MouseClickColor1 = System.Drawing.Color.Black;
-            this.btnCancelReservation.MouseClickColor2 = System.Drawing.Color.Black;
-            this.btnCancelReservation.MouseHoverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnCancelReservation.MouseHoverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnCancelReservation.Name = "btnCancelReservation";
-            this.btnCancelReservation.ShowButtontext = true;
-            this.btnCancelReservation.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnCancelReservation.TextLocation_X = 13;
-            this.btnCancelReservation.TextLocation_Y = 16;
-            this.btnCancelReservation.Transparent1 = 250;
-            this.btnCancelReservation.Transparent2 = 250;
-            this.btnCancelReservation.UseVisualStyleBackColor = false;
-            this.btnCancelReservation.Click += new System.EventHandler(this.btnCancelReservation_Click);
-            // 
-            // checklist_user_reservations
-            // 
-            this.checklist_user_reservations.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.checklist_user_reservations.CheckOnClick = true;
-            resources.ApplyResources(this.checklist_user_reservations, "checklist_user_reservations");
-            this.checklist_user_reservations.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.checklist_user_reservations.FormattingEnabled = true;
-            this.checklist_user_reservations.Name = "checklist_user_reservations";
-            this.checklist_user_reservations.SelectedValueChanged += new System.EventHandler(this.checklist_user_reservations_SelectedValueChanged);
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.combobox_UserLoans_ItemType);
-            this.groupBox4.Controls.Add(this.txt_UserLoans_SearchItem);
-            resources.ApplyResources(this.groupBox4, "groupBox4");
-            this.groupBox4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.TabStop = false;
-            // 
-            // combobox_UserLoans_ItemType
-            // 
-            this.combobox_UserLoans_ItemType.DisplayMember = "Text";
-            this.combobox_UserLoans_ItemType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            resources.ApplyResources(this.combobox_UserLoans_ItemType, "combobox_UserLoans_ItemType");
-            this.combobox_UserLoans_ItemType.FormattingEnabled = true;
-            this.combobox_UserLoans_ItemType.Name = "combobox_UserLoans_ItemType";
-            // 
-            // txt_UserLoans_SearchItem
-            // 
-            resources.ApplyResources(this.txt_UserLoans_SearchItem, "txt_UserLoans_SearchItem");
-            this.txt_UserLoans_SearchItem.Name = "txt_UserLoans_SearchItem";
-            this.txt_UserLoans_SearchItem.TextChanged += new System.EventHandler(this.txt_UserLoans_itemsearch_TextChanged);
-            // 
-            // btn_UserLoans_ReturnItem
-            // 
-            this.btn_UserLoans_ReturnItem.BackColor = System.Drawing.Color.Transparent;
-            this.btn_UserLoans_ReturnItem.BorderColor = System.Drawing.Color.Transparent;
-            this.btn_UserLoans_ReturnItem.BorderWidth = 2;
-            this.btn_UserLoans_ReturnItem.ButtonShape = VillageNewbies.UI.ShapedButton.ButtonsShapes.RoundRect;
-            this.btn_UserLoans_ReturnItem.ButtonText = "Palauta";
-            this.btn_UserLoans_ReturnItem.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.btn_UserLoans_ReturnItem.FlatAppearance.BorderSize = 0;
-            this.btn_UserLoans_ReturnItem.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_UserLoans_ReturnItem.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.btn_UserLoans_ReturnItem, "btn_UserLoans_ReturnItem");
-            this.btn_UserLoans_ReturnItem.ForeColor = System.Drawing.Color.White;
-            this.btn_UserLoans_ReturnItem.GradientAngle = 90;
-            this.btn_UserLoans_ReturnItem.MouseClickColor1 = System.Drawing.Color.Black;
-            this.btn_UserLoans_ReturnItem.MouseClickColor2 = System.Drawing.Color.Black;
-            this.btn_UserLoans_ReturnItem.MouseHoverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.btn_UserLoans_ReturnItem.MouseHoverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.btn_UserLoans_ReturnItem.Name = "btn_UserLoans_ReturnItem";
-            this.btn_UserLoans_ReturnItem.ShowButtontext = true;
-            this.btn_UserLoans_ReturnItem.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.btn_UserLoans_ReturnItem.TextLocation_X = 22;
-            this.btn_UserLoans_ReturnItem.TextLocation_Y = 16;
-            this.btn_UserLoans_ReturnItem.Transparent1 = 250;
-            this.btn_UserLoans_ReturnItem.Transparent2 = 250;
-            this.btn_UserLoans_ReturnItem.UseVisualStyleBackColor = false;
-            this.btn_UserLoans_ReturnItem.Click += new System.EventHandler(this.btn_UserLoans_ReturnItem_Click);
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.txt_UserLoans_ItemState);
-            this.groupBox5.Controls.Add(this.txt_UserLoans_ItemType);
-            resources.ApplyResources(this.groupBox5, "groupBox5");
-            this.groupBox5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.TabStop = false;
-            // 
-            // txt_UserLoans_ItemState
-            // 
-            resources.ApplyResources(this.txt_UserLoans_ItemState, "txt_UserLoans_ItemState");
-            this.txt_UserLoans_ItemState.Name = "txt_UserLoans_ItemState";
-            // 
-            // txt_UserLoans_ItemType
-            // 
-            resources.ApplyResources(this.txt_UserLoans_ItemType, "txt_UserLoans_ItemType");
-            this.txt_UserLoans_ItemType.Name = "txt_UserLoans_ItemType";
-            // 
-            // Checklist_UserLoans_Items
-            // 
-            this.Checklist_UserLoans_Items.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.Checklist_UserLoans_Items.CheckOnClick = true;
-            resources.ApplyResources(this.Checklist_UserLoans_Items, "Checklist_UserLoans_Items");
-            this.Checklist_UserLoans_Items.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Checklist_UserLoans_Items.FormattingEnabled = true;
-            this.Checklist_UserLoans_Items.Name = "Checklist_UserLoans_Items";
-            this.Checklist_UserLoans_Items.SelectedValueChanged += new System.EventHandler(this.Checklist_UserLoans_SelectedValueChanged);
             // 
             // Item_Management
             // 
@@ -1120,6 +973,155 @@
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
             // 
+            // UserLoans_Panel
+            // 
+            this.UserLoans_Panel.Controls.Add(this.groupBox26);
+            this.UserLoans_Panel.Controls.Add(this.btnCancelReservation);
+            this.UserLoans_Panel.Controls.Add(this.checklist_user_reservations);
+            this.UserLoans_Panel.Controls.Add(this.groupBox4);
+            this.UserLoans_Panel.Controls.Add(this.btn_UserLoans_ReturnItem);
+            this.UserLoans_Panel.Controls.Add(this.groupBox5);
+            this.UserLoans_Panel.Controls.Add(this.Checklist_UserLoans_Items);
+            resources.ApplyResources(this.UserLoans_Panel, "UserLoans_Panel");
+            this.UserLoans_Panel.Name = "UserLoans_Panel";
+            // 
+            // groupBox26
+            // 
+            this.groupBox26.Controls.Add(this.txt_user_reservations_enddate);
+            this.groupBox26.Controls.Add(this.txt_user_reservations_startdate);
+            resources.ApplyResources(this.groupBox26, "groupBox26");
+            this.groupBox26.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox26.Name = "groupBox26";
+            this.groupBox26.TabStop = false;
+            // 
+            // txt_user_reservations_enddate
+            // 
+            resources.ApplyResources(this.txt_user_reservations_enddate, "txt_user_reservations_enddate");
+            this.txt_user_reservations_enddate.Name = "txt_user_reservations_enddate";
+            // 
+            // txt_user_reservations_startdate
+            // 
+            resources.ApplyResources(this.txt_user_reservations_startdate, "txt_user_reservations_startdate");
+            this.txt_user_reservations_startdate.Name = "txt_user_reservations_startdate";
+            // 
+            // btnCancelReservation
+            // 
+            this.btnCancelReservation.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancelReservation.BorderColor = System.Drawing.Color.Transparent;
+            this.btnCancelReservation.BorderWidth = 2;
+            this.btnCancelReservation.ButtonShape = VillageNewbies.UI.ShapedButton.ButtonsShapes.RoundRect;
+            this.btnCancelReservation.ButtonText = "Peru varaus";
+            this.btnCancelReservation.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnCancelReservation.FlatAppearance.BorderSize = 0;
+            this.btnCancelReservation.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnCancelReservation.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.btnCancelReservation, "btnCancelReservation");
+            this.btnCancelReservation.ForeColor = System.Drawing.Color.White;
+            this.btnCancelReservation.GradientAngle = 90;
+            this.btnCancelReservation.MouseClickColor1 = System.Drawing.Color.Black;
+            this.btnCancelReservation.MouseClickColor2 = System.Drawing.Color.Black;
+            this.btnCancelReservation.MouseHoverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnCancelReservation.MouseHoverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnCancelReservation.Name = "btnCancelReservation";
+            this.btnCancelReservation.ShowButtontext = true;
+            this.btnCancelReservation.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnCancelReservation.TextLocation_X = 13;
+            this.btnCancelReservation.TextLocation_Y = 16;
+            this.btnCancelReservation.Transparent1 = 250;
+            this.btnCancelReservation.Transparent2 = 250;
+            this.btnCancelReservation.UseVisualStyleBackColor = false;
+            this.btnCancelReservation.Click += new System.EventHandler(this.btnCancelReservation_Click);
+            // 
+            // checklist_user_reservations
+            // 
+            this.checklist_user_reservations.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.checklist_user_reservations.CheckOnClick = true;
+            resources.ApplyResources(this.checklist_user_reservations, "checklist_user_reservations");
+            this.checklist_user_reservations.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.checklist_user_reservations.FormattingEnabled = true;
+            this.checklist_user_reservations.Name = "checklist_user_reservations";
+            this.checklist_user_reservations.SelectedValueChanged += new System.EventHandler(this.checklist_user_reservations_SelectedValueChanged);
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.combobox_UserLoans_ItemType);
+            this.groupBox4.Controls.Add(this.txt_UserLoans_SearchItem);
+            resources.ApplyResources(this.groupBox4, "groupBox4");
+            this.groupBox4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.TabStop = false;
+            // 
+            // combobox_UserLoans_ItemType
+            // 
+            this.combobox_UserLoans_ItemType.DisplayMember = "Text";
+            this.combobox_UserLoans_ItemType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.combobox_UserLoans_ItemType, "combobox_UserLoans_ItemType");
+            this.combobox_UserLoans_ItemType.FormattingEnabled = true;
+            this.combobox_UserLoans_ItemType.Name = "combobox_UserLoans_ItemType";
+            // 
+            // txt_UserLoans_SearchItem
+            // 
+            resources.ApplyResources(this.txt_UserLoans_SearchItem, "txt_UserLoans_SearchItem");
+            this.txt_UserLoans_SearchItem.Name = "txt_UserLoans_SearchItem";
+            this.txt_UserLoans_SearchItem.TextChanged += new System.EventHandler(this.txt_UserLoans_itemsearch_TextChanged);
+            // 
+            // btn_UserLoans_ReturnItem
+            // 
+            this.btn_UserLoans_ReturnItem.BackColor = System.Drawing.Color.Transparent;
+            this.btn_UserLoans_ReturnItem.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_UserLoans_ReturnItem.BorderWidth = 2;
+            this.btn_UserLoans_ReturnItem.ButtonShape = VillageNewbies.UI.ShapedButton.ButtonsShapes.RoundRect;
+            this.btn_UserLoans_ReturnItem.ButtonText = "Palauta";
+            this.btn_UserLoans_ReturnItem.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btn_UserLoans_ReturnItem.FlatAppearance.BorderSize = 0;
+            this.btn_UserLoans_ReturnItem.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_UserLoans_ReturnItem.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.btn_UserLoans_ReturnItem, "btn_UserLoans_ReturnItem");
+            this.btn_UserLoans_ReturnItem.ForeColor = System.Drawing.Color.White;
+            this.btn_UserLoans_ReturnItem.GradientAngle = 90;
+            this.btn_UserLoans_ReturnItem.MouseClickColor1 = System.Drawing.Color.Black;
+            this.btn_UserLoans_ReturnItem.MouseClickColor2 = System.Drawing.Color.Black;
+            this.btn_UserLoans_ReturnItem.MouseHoverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btn_UserLoans_ReturnItem.MouseHoverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btn_UserLoans_ReturnItem.Name = "btn_UserLoans_ReturnItem";
+            this.btn_UserLoans_ReturnItem.ShowButtontext = true;
+            this.btn_UserLoans_ReturnItem.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btn_UserLoans_ReturnItem.TextLocation_X = 22;
+            this.btn_UserLoans_ReturnItem.TextLocation_Y = 16;
+            this.btn_UserLoans_ReturnItem.Transparent1 = 250;
+            this.btn_UserLoans_ReturnItem.Transparent2 = 250;
+            this.btn_UserLoans_ReturnItem.UseVisualStyleBackColor = false;
+            this.btn_UserLoans_ReturnItem.Click += new System.EventHandler(this.btn_UserLoans_ReturnItem_Click);
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.txt_UserLoans_ItemState);
+            this.groupBox5.Controls.Add(this.txt_UserLoans_ItemType);
+            resources.ApplyResources(this.groupBox5, "groupBox5");
+            this.groupBox5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.TabStop = false;
+            // 
+            // txt_UserLoans_ItemState
+            // 
+            resources.ApplyResources(this.txt_UserLoans_ItemState, "txt_UserLoans_ItemState");
+            this.txt_UserLoans_ItemState.Name = "txt_UserLoans_ItemState";
+            // 
+            // txt_UserLoans_ItemType
+            // 
+            resources.ApplyResources(this.txt_UserLoans_ItemType, "txt_UserLoans_ItemType");
+            this.txt_UserLoans_ItemType.Name = "txt_UserLoans_ItemType";
+            // 
+            // Checklist_UserLoans_Items
+            // 
+            this.Checklist_UserLoans_Items.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.Checklist_UserLoans_Items.CheckOnClick = true;
+            resources.ApplyResources(this.Checklist_UserLoans_Items, "Checklist_UserLoans_Items");
+            this.Checklist_UserLoans_Items.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Checklist_UserLoans_Items.FormattingEnabled = true;
+            this.Checklist_UserLoans_Items.Name = "Checklist_UserLoans_Items";
+            this.Checklist_UserLoans_Items.SelectedValueChanged += new System.EventHandler(this.Checklist_UserLoans_SelectedValueChanged);
+            // 
             // Waiting_Events_panel
             // 
             this.Waiting_Events_panel.Controls.Add(this.checkbox_AcceptAllLoans);
@@ -1133,6 +1135,7 @@
             this.Waiting_Events_panel.Controls.Add(this.btnAcceptLoan);
             this.Waiting_Events_panel.Controls.Add(this.groupBox13);
             this.Waiting_Events_panel.Controls.Add(this.checklist_Waiting_PendingLoans);
+            this.Waiting_Events_panel.Controls.Add(this.LoanHistoryPanel);
             resources.ApplyResources(this.Waiting_Events_panel, "Waiting_Events_panel");
             this.Waiting_Events_panel.Name = "Waiting_Events_panel";
             // 
@@ -1333,6 +1336,63 @@
             this.checklist_Waiting_PendingLoans.FormattingEnabled = true;
             this.checklist_Waiting_PendingLoans.Name = "checklist_Waiting_PendingLoans";
             this.checklist_Waiting_PendingLoans.SelectedValueChanged += new System.EventHandler(this.checklist_Waiting_PendingLoans_SelectedValueChanged);
+            // 
+            // LoanHistoryPanel
+            // 
+            this.LoanHistoryPanel.Controls.Add(this.groupBox21);
+            this.LoanHistoryPanel.Controls.Add(this.groupBox12);
+            resources.ApplyResources(this.LoanHistoryPanel, "LoanHistoryPanel");
+            this.LoanHistoryPanel.Name = "LoanHistoryPanel";
+            // 
+            // groupBox21
+            // 
+            this.groupBox21.Controls.Add(this.cb_LoanHistory_Item);
+            this.groupBox21.Controls.Add(this.dataGridItemLoanHistory);
+            resources.ApplyResources(this.groupBox21, "groupBox21");
+            this.groupBox21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.groupBox21.Name = "groupBox21";
+            this.groupBox21.TabStop = false;
+            // 
+            // cb_LoanHistory_Item
+            // 
+            this.cb_LoanHistory_Item.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_LoanHistory_Item.FormattingEnabled = true;
+            resources.ApplyResources(this.cb_LoanHistory_Item, "cb_LoanHistory_Item");
+            this.cb_LoanHistory_Item.Name = "cb_LoanHistory_Item";
+            this.cb_LoanHistory_Item.SelectedValueChanged += new System.EventHandler(this.cb_LoanHistory_Item_SelectedValueChanged);
+            // 
+            // dataGridItemLoanHistory
+            // 
+            this.dataGridItemLoanHistory.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridItemLoanHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(this.dataGridItemLoanHistory, "dataGridItemLoanHistory");
+            this.dataGridItemLoanHistory.Name = "dataGridItemLoanHistory";
+            // 
+            // groupBox12
+            // 
+            this.groupBox12.Controls.Add(this.cb_LoanHistory_User);
+            this.groupBox12.Controls.Add(this.dataGridUserLoanHistory);
+            this.groupBox12.Controls.Add(this.Loan_Panel);
+            resources.ApplyResources(this.groupBox12, "groupBox12");
+            this.groupBox12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.TabStop = false;
+            // 
+            // cb_LoanHistory_User
+            // 
+            this.cb_LoanHistory_User.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_LoanHistory_User.FormattingEnabled = true;
+            resources.ApplyResources(this.cb_LoanHistory_User, "cb_LoanHistory_User");
+            this.cb_LoanHistory_User.Name = "cb_LoanHistory_User";
+            this.cb_LoanHistory_User.SelectedValueChanged += new System.EventHandler(this.cb_LoanHistory_User_SelectedValueChanged);
+            // 
+            // dataGridUserLoanHistory
+            // 
+            this.dataGridUserLoanHistory.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dataGridUserLoanHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(this.dataGridUserLoanHistory, "dataGridUserLoanHistory");
+            this.dataGridUserLoanHistory.Name = "dataGridUserLoanHistory";
+            this.dataGridUserLoanHistory.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             // 
             // AccountManagement_Panel
             // 
@@ -1633,62 +1693,6 @@
             this.checklist_Reservation.MouseClick += new System.Windows.Forms.MouseEventHandler(this.checklist_Reservation_MouseClick);
             this.checklist_Reservation.SelectedValueChanged += new System.EventHandler(this.checklist_Reservation_SelectedValueChanged);
             // 
-            // LoanHistoryPanel
-            // 
-            this.LoanHistoryPanel.Controls.Add(this.groupBox21);
-            this.LoanHistoryPanel.Controls.Add(this.groupBox12);
-            resources.ApplyResources(this.LoanHistoryPanel, "LoanHistoryPanel");
-            this.LoanHistoryPanel.Name = "LoanHistoryPanel";
-            // 
-            // groupBox21
-            // 
-            this.groupBox21.Controls.Add(this.cb_LoanHistory_Item);
-            this.groupBox21.Controls.Add(this.dataGridItemLoanHistory);
-            resources.ApplyResources(this.groupBox21, "groupBox21");
-            this.groupBox21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.groupBox21.Name = "groupBox21";
-            this.groupBox21.TabStop = false;
-            // 
-            // cb_LoanHistory_Item
-            // 
-            this.cb_LoanHistory_Item.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_LoanHistory_Item.FormattingEnabled = true;
-            resources.ApplyResources(this.cb_LoanHistory_Item, "cb_LoanHistory_Item");
-            this.cb_LoanHistory_Item.Name = "cb_LoanHistory_Item";
-            this.cb_LoanHistory_Item.SelectedValueChanged += new System.EventHandler(this.cb_LoanHistory_Item_SelectedValueChanged);
-            // 
-            // dataGridItemLoanHistory
-            // 
-            this.dataGridItemLoanHistory.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridItemLoanHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            resources.ApplyResources(this.dataGridItemLoanHistory, "dataGridItemLoanHistory");
-            this.dataGridItemLoanHistory.Name = "dataGridItemLoanHistory";
-            // 
-            // groupBox12
-            // 
-            this.groupBox12.Controls.Add(this.cb_LoanHistory_User);
-            this.groupBox12.Controls.Add(this.dataGridUserLoanHistory);
-            resources.ApplyResources(this.groupBox12, "groupBox12");
-            this.groupBox12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.groupBox12.Name = "groupBox12";
-            this.groupBox12.TabStop = false;
-            // 
-            // cb_LoanHistory_User
-            // 
-            this.cb_LoanHistory_User.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_LoanHistory_User.FormattingEnabled = true;
-            resources.ApplyResources(this.cb_LoanHistory_User, "cb_LoanHistory_User");
-            this.cb_LoanHistory_User.Name = "cb_LoanHistory_User";
-            this.cb_LoanHistory_User.SelectedValueChanged += new System.EventHandler(this.cb_LoanHistory_User_SelectedValueChanged);
-            // 
-            // dataGridUserLoanHistory
-            // 
-            this.dataGridUserLoanHistory.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridUserLoanHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            resources.ApplyResources(this.dataGridUserLoanHistory, "dataGridUserLoanHistory");
-            this.dataGridUserLoanHistory.Name = "dataGridUserLoanHistory";
-            this.dataGridUserLoanHistory.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            // 
             // MainScreen
             // 
             resources.ApplyResources(this, "$this");
@@ -1710,9 +1714,6 @@
             this.Controls.Add(this.BottomPanel);
             this.Controls.Add(this.Left_Button_Panel);
             this.Controls.Add(this.BtmPanel);
-            this.Controls.Add(this.Item_Management);
-            this.Controls.Add(this.Loan_Panel);
-            this.Controls.Add(this.LoanHistoryPanel);
             this.Controls.Add(this.Waiting_Events_panel);
             this.Controls.Add(this.AccountManagement_Panel);
             this.Controls.Add(this.UserLoans_Panel);
@@ -1740,13 +1741,6 @@
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.UserLoans_Panel.ResumeLayout(false);
-            this.groupBox26.ResumeLayout(false);
-            this.groupBox26.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
             this.Item_Management.ResumeLayout(false);
             this.groupBox11.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
@@ -1758,6 +1752,13 @@
             this.groupBox9.PerformLayout();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
+            this.UserLoans_Panel.ResumeLayout(false);
+            this.groupBox26.ResumeLayout(false);
+            this.groupBox26.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.Waiting_Events_panel.ResumeLayout(false);
             this.Waiting_Events_panel.PerformLayout();
             this.groupBox15.ResumeLayout(false);
@@ -1768,6 +1769,11 @@
             this.groupBox14.PerformLayout();
             this.groupBox13.ResumeLayout(false);
             this.groupBox13.PerformLayout();
+            this.LoanHistoryPanel.ResumeLayout(false);
+            this.groupBox21.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridItemLoanHistory)).EndInit();
+            this.groupBox12.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridUserLoanHistory)).EndInit();
             this.AccountManagement_Panel.ResumeLayout(false);
             this.groupBox20.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.datagrid_Users)).EndInit();
@@ -1781,11 +1787,6 @@
             this.groupBox24.PerformLayout();
             this.groupBox25.ResumeLayout(false);
             this.groupBox25.PerformLayout();
-            this.LoanHistoryPanel.ResumeLayout(false);
-            this.groupBox21.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridItemLoanHistory)).EndInit();
-            this.groupBox12.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridUserLoanHistory)).EndInit();
             this.ResumeLayout(false);
 
         }
