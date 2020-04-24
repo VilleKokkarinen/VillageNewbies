@@ -74,7 +74,7 @@ namespace VillageNewbies
 
             cmd.CommandText = "INSERT INTO posti(postinro,toimipaikka)" + "VALUES('70100','Kuopio')," + 
                 "('00100','Helsinki')," + 
-                "('90100','Oulu')" +
+                "('90100','Oulu')," +
                 "('20100','Turku')";
             cmd.ExecuteNonQuery();
 
