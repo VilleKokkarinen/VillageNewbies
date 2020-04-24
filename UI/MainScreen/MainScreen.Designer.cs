@@ -30,24 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainScreen));
-            this.TopBorderPanel = new System.Windows.Forms.Panel();
-            this.RightPanel = new System.Windows.Forms.Panel();
-            this.LeftPanel = new System.Windows.Forms.Panel();
-            this.BottomPanel = new System.Windows.Forms.Panel();
             this.lblCurrentDate = new System.Windows.Forms.Label();
-            this.RightBottomPanel_1 = new System.Windows.Forms.Panel();
             this.BtmPanel = new System.Windows.Forms.Panel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this._CloseButton = new VillageNewbies.UI.ButtonZ();
-            this._MaxButton = new VillageNewbies.UI.MinMaxButton();
-            this._MinButton = new VillageNewbies.UI.ButtonZ();
             this.RightBottomPanel_2 = new System.Windows.Forms.Panel();
-            this.LeftBottomPanel_1 = new System.Windows.Forms.Panel();
-            this.LeftBottomPanel_2 = new System.Windows.Forms.Panel();
-            this.RightTopPanel_1 = new System.Windows.Forms.Panel();
-            this.RightTopPanel_2 = new System.Windows.Forms.Panel();
-            this.LeftTopPanel_1 = new System.Windows.Forms.Panel();
-            this.LeftTopPanel_2 = new System.Windows.Forms.Panel();
             this.Left_Button_Panel = new System.Windows.Forms.Panel();
             this.btnWaitingEvents = new VillageNewbies.UI.ButtonX();
             this.btn_Reservation = new VillageNewbies.UI.ButtonX();
@@ -178,6 +164,9 @@
             this.helpContentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.onlineHelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this._CloseButton = new VillageNewbies.UI.ButtonZ();
+            this._MaxButton = new VillageNewbies.UI.MinMaxButton();
+            this._MinButton = new VillageNewbies.UI.ButtonZ();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.TopPanel = new System.Windows.Forms.Panel();
             this.BtmPanel.SuspendLayout();
@@ -221,61 +210,11 @@
             this.TopPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // TopBorderPanel
-            // 
-            resources.ApplyResources(this.TopBorderPanel, "TopBorderPanel");
-            this.TopBorderPanel.BackColor = System.Drawing.Color.Black;
-            this.TopBorderPanel.Cursor = System.Windows.Forms.Cursors.SizeNS;
-            this.TopBorderPanel.Name = "TopBorderPanel";
-            this.TopBorderPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TopBorderPanel_MouseDown);
-            this.TopBorderPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TopBorderPanel_MouseMove);
-            this.TopBorderPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.TopBorderPanel_MouseUp);
-            // 
-            // RightPanel
-            // 
-            resources.ApplyResources(this.RightPanel, "RightPanel");
-            this.RightPanel.BackColor = System.Drawing.Color.Black;
-            this.RightPanel.Cursor = System.Windows.Forms.Cursors.SizeWE;
-            this.RightPanel.Name = "RightPanel";
-            this.RightPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.RightPanel_MouseDown);
-            this.RightPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.RightPanel_MouseMove);
-            this.RightPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.RightPanel_MouseUp);
-            // 
-            // LeftPanel
-            // 
-            resources.ApplyResources(this.LeftPanel, "LeftPanel");
-            this.LeftPanel.BackColor = System.Drawing.Color.Black;
-            this.LeftPanel.Cursor = System.Windows.Forms.Cursors.SizeWE;
-            this.LeftPanel.Name = "LeftPanel";
-            this.LeftPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LeftPanel_MouseDown);
-            this.LeftPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.LeftPanel_MouseMove);
-            this.LeftPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.LeftPanel_MouseUp);
-            // 
-            // BottomPanel
-            // 
-            resources.ApplyResources(this.BottomPanel, "BottomPanel");
-            this.BottomPanel.BackColor = System.Drawing.Color.Black;
-            this.BottomPanel.Cursor = System.Windows.Forms.Cursors.SizeNS;
-            this.BottomPanel.Name = "BottomPanel";
-            this.BottomPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BottomPanel_MouseDown);
-            this.BottomPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.BottomPanel_MouseMove);
-            this.BottomPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BottomPanel_MouseUp);
-            // 
             // lblCurrentDate
             // 
             resources.ApplyResources(this.lblCurrentDate, "lblCurrentDate");
             this.lblCurrentDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lblCurrentDate.Name = "lblCurrentDate";
-            // 
-            // RightBottomPanel_1
-            // 
-            resources.ApplyResources(this.RightBottomPanel_1, "RightBottomPanel_1");
-            this.RightBottomPanel_1.BackColor = System.Drawing.Color.Black;
-            this.RightBottomPanel_1.Cursor = System.Windows.Forms.Cursors.SizeNWSE;
-            this.RightBottomPanel_1.Name = "RightBottomPanel_1";
-            this.RightBottomPanel_1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.RightBottomPanel_1_MouseDown);
-            this.RightBottomPanel_1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.RightBottomPanel_1_MouseMove);
-            this.RightBottomPanel_1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.RightBottomPanel_1_MouseUp);
             // 
             // BtmPanel
             // 
@@ -284,121 +223,15 @@
             resources.ApplyResources(this.BtmPanel, "BtmPanel");
             this.BtmPanel.Name = "BtmPanel";
             // 
-            // _CloseButton
-            // 
-            resources.ApplyResources(this._CloseButton, "_CloseButton");
-            this._CloseButton.BZBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this._CloseButton.DisplayText = "X";
-            this._CloseButton.ForeColor = System.Drawing.Color.White;
-            this._CloseButton.MouseClickColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(160)))));
-            this._CloseButton.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this._CloseButton.Name = "_CloseButton";
-            this._CloseButton.TextLocation_X = 6;
-            this._CloseButton.TextLocation_Y = 1;
-            this.toolTip1.SetToolTip(this._CloseButton, resources.GetString("_CloseButton.ToolTip"));
-            this._CloseButton.UseVisualStyleBackColor = true;
-            this._CloseButton.Click += new System.EventHandler(this._CloseButton_Click);
-            // 
-            // _MaxButton
-            // 
-            resources.ApplyResources(this._MaxButton, "_MaxButton");
-            this._MaxButton.BZBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this._MaxButton.CFormState = VillageNewbies.UI.MinMaxButton.CustomFormState.Normal;
-            this._MaxButton.DisplayText = "_";
-            this._MaxButton.ForeColor = System.Drawing.Color.White;
-            this._MaxButton.MouseClickColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(160)))));
-            this._MaxButton.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this._MaxButton.Name = "_MaxButton";
-            this._MaxButton.TextLocation_X = 8;
-            this._MaxButton.TextLocation_Y = 6;
-            this.toolTip1.SetToolTip(this._MaxButton, resources.GetString("_MaxButton.ToolTip"));
-            this._MaxButton.UseVisualStyleBackColor = true;
-            this._MaxButton.Click += new System.EventHandler(this._MaxButton_Click);
-            // 
-            // _MinButton
-            // 
-            resources.ApplyResources(this._MinButton, "_MinButton");
-            this._MinButton.BZBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this._MinButton.DisplayText = "_";
-            this._MinButton.ForeColor = System.Drawing.Color.White;
-            this._MinButton.MouseClickColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(160)))));
-            this._MinButton.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this._MinButton.Name = "_MinButton";
-            this._MinButton.TextLocation_X = 6;
-            this._MinButton.TextLocation_Y = -20;
-            this.toolTip1.SetToolTip(this._MinButton, resources.GetString("_MinButton.ToolTip"));
-            this._MinButton.UseVisualStyleBackColor = true;
-            this._MinButton.Click += new System.EventHandler(this._MinButton_Click);
-            // 
             // RightBottomPanel_2
             // 
             resources.ApplyResources(this.RightBottomPanel_2, "RightBottomPanel_2");
-            this.RightBottomPanel_2.BackColor = System.Drawing.Color.Black;
+            this.RightBottomPanel_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.RightBottomPanel_2.Cursor = System.Windows.Forms.Cursors.SizeNWSE;
             this.RightBottomPanel_2.Name = "RightBottomPanel_2";
-            this.RightBottomPanel_2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.RightBottomPanel_2_MouseDown);
-            this.RightBottomPanel_2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.RightBottomPanel_2_MouseMove);
-            this.RightBottomPanel_2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.RightBottomPanel_2_MouseUp);
-            // 
-            // LeftBottomPanel_1
-            // 
-            resources.ApplyResources(this.LeftBottomPanel_1, "LeftBottomPanel_1");
-            this.LeftBottomPanel_1.BackColor = System.Drawing.Color.Black;
-            this.LeftBottomPanel_1.Cursor = System.Windows.Forms.Cursors.SizeNESW;
-            this.LeftBottomPanel_1.Name = "LeftBottomPanel_1";
-            this.LeftBottomPanel_1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LeftBottomPanel_1_MouseDown);
-            this.LeftBottomPanel_1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.LeftBottomPanel_1_MouseMove);
-            this.LeftBottomPanel_1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.LeftBottomPanel_1_MouseUp);
-            // 
-            // LeftBottomPanel_2
-            // 
-            resources.ApplyResources(this.LeftBottomPanel_2, "LeftBottomPanel_2");
-            this.LeftBottomPanel_2.BackColor = System.Drawing.Color.Black;
-            this.LeftBottomPanel_2.Cursor = System.Windows.Forms.Cursors.SizeNESW;
-            this.LeftBottomPanel_2.Name = "LeftBottomPanel_2";
-            this.LeftBottomPanel_2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LeftBottomPanel_2_MouseDown);
-            this.LeftBottomPanel_2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.LeftBottomPanel_2_MouseMove);
-            this.LeftBottomPanel_2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.LeftBottomPanel_2_MouseUp);
-            // 
-            // RightTopPanel_1
-            // 
-            resources.ApplyResources(this.RightTopPanel_1, "RightTopPanel_1");
-            this.RightTopPanel_1.BackColor = System.Drawing.Color.Black;
-            this.RightTopPanel_1.Cursor = System.Windows.Forms.Cursors.SizeNESW;
-            this.RightTopPanel_1.Name = "RightTopPanel_1";
-            this.RightTopPanel_1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.RightTopPanel_1_MouseDown);
-            this.RightTopPanel_1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.RightTopPanel_1_MouseMove);
-            this.RightTopPanel_1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.RightTopPanel_1_MouseUp);
-            // 
-            // RightTopPanel_2
-            // 
-            resources.ApplyResources(this.RightTopPanel_2, "RightTopPanel_2");
-            this.RightTopPanel_2.BackColor = System.Drawing.Color.Black;
-            this.RightTopPanel_2.Cursor = System.Windows.Forms.Cursors.SizeNESW;
-            this.RightTopPanel_2.Name = "RightTopPanel_2";
-            this.RightTopPanel_2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.RightTopPanel_2_MouseDown);
-            this.RightTopPanel_2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.RightTopPanel_2_MouseMove);
-            this.RightTopPanel_2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.RightTopPanel_2_MouseUp);
-            // 
-            // LeftTopPanel_1
-            // 
-            this.LeftTopPanel_1.BackColor = System.Drawing.Color.Black;
-            this.LeftTopPanel_1.Cursor = System.Windows.Forms.Cursors.SizeNWSE;
-            resources.ApplyResources(this.LeftTopPanel_1, "LeftTopPanel_1");
-            this.LeftTopPanel_1.Name = "LeftTopPanel_1";
-            this.LeftTopPanel_1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LeftTopPanel_1_MouseDown);
-            this.LeftTopPanel_1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.LeftTopPanel_1_MouseMove);
-            this.LeftTopPanel_1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.LeftTopPanel_1_MouseUp);
-            // 
-            // LeftTopPanel_2
-            // 
-            this.LeftTopPanel_2.BackColor = System.Drawing.Color.Black;
-            this.LeftTopPanel_2.Cursor = System.Windows.Forms.Cursors.SizeNWSE;
-            resources.ApplyResources(this.LeftTopPanel_2, "LeftTopPanel_2");
-            this.LeftTopPanel_2.Name = "LeftTopPanel_2";
-            this.LeftTopPanel_2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LeftTopPanel_2_MouseDown);
-            this.LeftTopPanel_2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.LeftTopPanel_2_MouseMove);
-            this.LeftTopPanel_2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.LeftTopPanel_2_MouseUp);
+            this.RightBottomPanel_2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDown);
+            this.RightBottomPanel_2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseMove);
+            this.RightBottomPanel_2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseUp);
             // 
             // Left_Button_Panel
             // 
@@ -1667,6 +1500,52 @@
             resources.ApplyResources(this.aboutToolStripMenuItem, "aboutToolStripMenuItem");
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
+            // _CloseButton
+            // 
+            resources.ApplyResources(this._CloseButton, "_CloseButton");
+            this._CloseButton.BZBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this._CloseButton.DisplayText = "X";
+            this._CloseButton.ForeColor = System.Drawing.Color.White;
+            this._CloseButton.MouseClickColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(160)))));
+            this._CloseButton.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this._CloseButton.Name = "_CloseButton";
+            this._CloseButton.TextLocation_X = 6;
+            this._CloseButton.TextLocation_Y = 1;
+            this.toolTip1.SetToolTip(this._CloseButton, resources.GetString("_CloseButton.ToolTip"));
+            this._CloseButton.UseVisualStyleBackColor = true;
+            this._CloseButton.Click += new System.EventHandler(this._CloseButton_Click);
+            // 
+            // _MaxButton
+            // 
+            resources.ApplyResources(this._MaxButton, "_MaxButton");
+            this._MaxButton.BZBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this._MaxButton.CFormState = VillageNewbies.UI.MinMaxButton.CustomFormState.Normal;
+            this._MaxButton.DisplayText = "_";
+            this._MaxButton.ForeColor = System.Drawing.Color.White;
+            this._MaxButton.MouseClickColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(160)))));
+            this._MaxButton.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this._MaxButton.Name = "_MaxButton";
+            this._MaxButton.TextLocation_X = 8;
+            this._MaxButton.TextLocation_Y = 6;
+            this.toolTip1.SetToolTip(this._MaxButton, resources.GetString("_MaxButton.ToolTip"));
+            this._MaxButton.UseVisualStyleBackColor = true;
+            this._MaxButton.Click += new System.EventHandler(this._MaxButton_Click);
+            // 
+            // _MinButton
+            // 
+            resources.ApplyResources(this._MinButton, "_MinButton");
+            this._MinButton.BZBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this._MinButton.DisplayText = "_";
+            this._MinButton.ForeColor = System.Drawing.Color.White;
+            this._MinButton.MouseClickColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(160)))));
+            this._MinButton.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this._MinButton.Name = "_MinButton";
+            this._MinButton.TextLocation_X = 6;
+            this._MinButton.TextLocation_Y = -20;
+            this.toolTip1.SetToolTip(this._MinButton, resources.GetString("_MinButton.ToolTip"));
+            this._MinButton.UseVisualStyleBackColor = true;
+            this._MinButton.Click += new System.EventHandler(this._MinButton_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::VillageNewbies.Properties.Resources.logo;
@@ -1685,30 +1564,19 @@
             this.TopPanel.Controls.Add(this.WindowTextLabel);
             resources.ApplyResources(this.TopPanel, "TopPanel");
             this.TopPanel.Name = "TopPanel";
-            this.TopPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TopPanel_MouseDown);
-            this.TopPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TopPanel_MouseMove);
-            this.TopPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.TopPanel_MouseUp);
-            this.TopPanel.Resize += new System.EventHandler(this.TopPanel_Resize);
+            this.TopPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDown);
+            this.TopPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseMove);
+            this.TopPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseUp);
+            this.TopPanel.Resize += new System.EventHandler(this.Panel_Resize);
             // 
             // MainScreen
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.Controls.Add(this.LeftPanel);
-            this.Controls.Add(this.LeftTopPanel_1);
-            this.Controls.Add(this.LeftTopPanel_2);
-            this.Controls.Add(this.RightPanel);
-            this.Controls.Add(this.RightTopPanel_2);
-            this.Controls.Add(this.RightTopPanel_1);
-            this.Controls.Add(this.TopBorderPanel);
             this.Controls.Add(this.TopPanel);
-            this.Controls.Add(this.LeftBottomPanel_2);
-            this.Controls.Add(this.LeftBottomPanel_1);
             this.Controls.Add(this.RightBottomPanel_2);
-            this.Controls.Add(this.RightBottomPanel_1);
             this.Controls.Add(this.Separator_Panel);
-            this.Controls.Add(this.BottomPanel);
             this.Controls.Add(this.Left_Button_Panel);
             this.Controls.Add(this.BtmPanel);
             this.Controls.Add(this.Item_Management);
@@ -1792,21 +1660,9 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel TopBorderPanel;
-        private System.Windows.Forms.Panel RightPanel;
-        private System.Windows.Forms.Panel LeftPanel;
-        private System.Windows.Forms.Panel BottomPanel;
-        private System.Windows.Forms.Panel RightBottomPanel_1;
         private System.Windows.Forms.Panel BtmPanel;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Panel RightBottomPanel_2;
-        private System.Windows.Forms.Panel LeftBottomPanel_1;
-        private System.Windows.Forms.Panel LeftBottomPanel_2;
-        private System.Windows.Forms.Panel RightTopPanel_1;
-        private System.Windows.Forms.Panel RightTopPanel_2;
-        private System.Windows.Forms.Panel LeftTopPanel_1;
-        private System.Windows.Forms.Panel LeftTopPanel_2;
         private System.Windows.Forms.Panel Left_Button_Panel;
         private ButtonX btn_Loan;
         private System.Windows.Forms.Panel Separator_Panel;
