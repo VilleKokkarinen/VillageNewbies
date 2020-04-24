@@ -33,6 +33,9 @@
             this.lblCurrentDate = new System.Windows.Forms.Label();
             this.BtmPanel = new System.Windows.Forms.Panel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this._CloseButton = new VillageNewbies.UI.ButtonZ();
+            this._MaxButton = new VillageNewbies.UI.MinMaxButton();
+            this._MinButton = new VillageNewbies.UI.ButtonZ();
             this.RightBottomPanel_2 = new System.Windows.Forms.Panel();
             this.Left_Button_Panel = new System.Windows.Forms.Panel();
             this.btnWaitingEvents = new VillageNewbies.UI.ButtonX();
@@ -164,9 +167,6 @@
             this.helpContentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.onlineHelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this._CloseButton = new VillageNewbies.UI.ButtonZ();
-            this._MaxButton = new VillageNewbies.UI.MinMaxButton();
-            this._MinButton = new VillageNewbies.UI.ButtonZ();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.TopPanel = new System.Windows.Forms.Panel();
             this.BtmPanel.SuspendLayout();
@@ -222,6 +222,52 @@
             this.BtmPanel.Controls.Add(this.lblCurrentDate);
             resources.ApplyResources(this.BtmPanel, "BtmPanel");
             this.BtmPanel.Name = "BtmPanel";
+            // 
+            // _CloseButton
+            // 
+            resources.ApplyResources(this._CloseButton, "_CloseButton");
+            this._CloseButton.BZBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this._CloseButton.DisplayText = "X";
+            this._CloseButton.ForeColor = System.Drawing.Color.White;
+            this._CloseButton.MouseClickColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(160)))));
+            this._CloseButton.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this._CloseButton.Name = "_CloseButton";
+            this._CloseButton.TextLocation_X = 6;
+            this._CloseButton.TextLocation_Y = 1;
+            this.toolTip1.SetToolTip(this._CloseButton, resources.GetString("_CloseButton.ToolTip"));
+            this._CloseButton.UseVisualStyleBackColor = true;
+            this._CloseButton.Click += new System.EventHandler(this._CloseButton_Click);
+            // 
+            // _MaxButton
+            // 
+            resources.ApplyResources(this._MaxButton, "_MaxButton");
+            this._MaxButton.BZBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this._MaxButton.CFormState = VillageNewbies.UI.MinMaxButton.CustomFormState.Normal;
+            this._MaxButton.DisplayText = "_";
+            this._MaxButton.ForeColor = System.Drawing.Color.White;
+            this._MaxButton.MouseClickColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(160)))));
+            this._MaxButton.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this._MaxButton.Name = "_MaxButton";
+            this._MaxButton.TextLocation_X = 8;
+            this._MaxButton.TextLocation_Y = 6;
+            this.toolTip1.SetToolTip(this._MaxButton, resources.GetString("_MaxButton.ToolTip"));
+            this._MaxButton.UseVisualStyleBackColor = true;
+            this._MaxButton.Click += new System.EventHandler(this._MaxButton_Click);
+            // 
+            // _MinButton
+            // 
+            resources.ApplyResources(this._MinButton, "_MinButton");
+            this._MinButton.BZBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this._MinButton.DisplayText = "_";
+            this._MinButton.ForeColor = System.Drawing.Color.White;
+            this._MinButton.MouseClickColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(160)))));
+            this._MinButton.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this._MinButton.Name = "_MinButton";
+            this._MinButton.TextLocation_X = 6;
+            this._MinButton.TextLocation_Y = -20;
+            this.toolTip1.SetToolTip(this._MinButton, resources.GetString("_MinButton.ToolTip"));
+            this._MinButton.UseVisualStyleBackColor = true;
+            this._MinButton.Click += new System.EventHandler(this._MinButton_Click);
             // 
             // RightBottomPanel_2
             // 
@@ -1499,52 +1545,6 @@
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             resources.ApplyResources(this.aboutToolStripMenuItem, "aboutToolStripMenuItem");
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
-            // 
-            // _CloseButton
-            // 
-            resources.ApplyResources(this._CloseButton, "_CloseButton");
-            this._CloseButton.BZBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this._CloseButton.DisplayText = "X";
-            this._CloseButton.ForeColor = System.Drawing.Color.White;
-            this._CloseButton.MouseClickColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(160)))));
-            this._CloseButton.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this._CloseButton.Name = "_CloseButton";
-            this._CloseButton.TextLocation_X = 6;
-            this._CloseButton.TextLocation_Y = 1;
-            this.toolTip1.SetToolTip(this._CloseButton, resources.GetString("_CloseButton.ToolTip"));
-            this._CloseButton.UseVisualStyleBackColor = true;
-            this._CloseButton.Click += new System.EventHandler(this._CloseButton_Click);
-            // 
-            // _MaxButton
-            // 
-            resources.ApplyResources(this._MaxButton, "_MaxButton");
-            this._MaxButton.BZBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this._MaxButton.CFormState = VillageNewbies.UI.MinMaxButton.CustomFormState.Normal;
-            this._MaxButton.DisplayText = "_";
-            this._MaxButton.ForeColor = System.Drawing.Color.White;
-            this._MaxButton.MouseClickColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(160)))));
-            this._MaxButton.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this._MaxButton.Name = "_MaxButton";
-            this._MaxButton.TextLocation_X = 8;
-            this._MaxButton.TextLocation_Y = 6;
-            this.toolTip1.SetToolTip(this._MaxButton, resources.GetString("_MaxButton.ToolTip"));
-            this._MaxButton.UseVisualStyleBackColor = true;
-            this._MaxButton.Click += new System.EventHandler(this._MaxButton_Click);
-            // 
-            // _MinButton
-            // 
-            resources.ApplyResources(this._MinButton, "_MinButton");
-            this._MinButton.BZBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this._MinButton.DisplayText = "_";
-            this._MinButton.ForeColor = System.Drawing.Color.White;
-            this._MinButton.MouseClickColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(160)))));
-            this._MinButton.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this._MinButton.Name = "_MinButton";
-            this._MinButton.TextLocation_X = 6;
-            this._MinButton.TextLocation_Y = -20;
-            this.toolTip1.SetToolTip(this._MinButton, resources.GetString("_MinButton.ToolTip"));
-            this._MinButton.UseVisualStyleBackColor = true;
-            this._MinButton.Click += new System.EventHandler(this._MinButton_Click);
             // 
             // pictureBox1
             // 

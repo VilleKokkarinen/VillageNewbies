@@ -180,6 +180,120 @@
   <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>139, 17</value>
   </metadata>
+  <data name="_CloseButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="_CloseButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="_CloseButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft YaHei UI, 12pt, style=Bold</value>
+  </data>
+  <data name="_CloseButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="_CloseButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1564, 6</value>
+  </data>
+  <data name="_CloseButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 24</value>
+  </data>
+  <data name="_CloseButton.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="_CloseButton.Text" xml:space="preserve">
+    <value>X</value>
+  </data>
+  <data name="_CloseButton.ToolTip" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="&gt;&gt;_CloseButton.Name" xml:space="preserve">
+    <value>_CloseButton</value>
+  </data>
+  <data name="&gt;&gt;_CloseButton.Type" xml:space="preserve">
+    <value>VillageNewbies.UI.ButtonZ, VillageNewbies, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;_CloseButton.Parent" xml:space="preserve">
+    <value>TopPanel</value>
+  </data>
+  <data name="&gt;&gt;_CloseButton.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="_MaxButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="_MaxButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="_MaxButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="_MaxButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1533, 6</value>
+  </data>
+  <data name="_MaxButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 24</value>
+  </data>
+  <data name="_MaxButton.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="_MaxButton.Text" xml:space="preserve">
+    <value>minMaxButton1</value>
+  </data>
+  <data name="_MaxButton.ToolTip" xml:space="preserve">
+    <value>Maximize</value>
+  </data>
+  <data name="&gt;&gt;_MaxButton.Name" xml:space="preserve">
+    <value>_MaxButton</value>
+  </data>
+  <data name="&gt;&gt;_MaxButton.Type" xml:space="preserve">
+    <value>VillageNewbies.UI.MinMaxButton, VillageNewbies, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;_MaxButton.Parent" xml:space="preserve">
+    <value>TopPanel</value>
+  </data>
+  <data name="&gt;&gt;_MaxButton.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="_MinButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="_MinButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="_MinButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft YaHei UI, 20.25pt, style=Bold</value>
+  </data>
+  <data name="_MinButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="_MinButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1502, 6</value>
+  </data>
+  <data name="_MinButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 24</value>
+  </data>
+  <data name="_MinButton.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="_MinButton.Text" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="_MinButton.ToolTip" xml:space="preserve">
+    <value>Minimize</value>
+  </data>
+  <data name="&gt;&gt;_MinButton.Name" xml:space="preserve">
+    <value>_MinButton</value>
+  </data>
+  <data name="&gt;&gt;_MinButton.Type" xml:space="preserve">
+    <value>VillageNewbies.UI.ButtonZ, VillageNewbies, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;_MinButton.Parent" xml:space="preserve">
+    <value>TopPanel</value>
+  </data>
+  <data name="&gt;&gt;_MinButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="RightBottomPanel_2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
   </data>
@@ -215,6 +329,75 @@
   </data>
   <data name="Left_Button_Panel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
+  </data>
+  <data name="&gt;&gt;btnWaitingEvents.Name" xml:space="preserve">
+    <value>btnWaitingEvents</value>
+  </data>
+  <data name="&gt;&gt;btnWaitingEvents.Type" xml:space="preserve">
+    <value>VillageNewbies.UI.ButtonX, VillageNewbies, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnWaitingEvents.Parent" xml:space="preserve">
+    <value>Left_Button_Panel</value>
+  </data>
+  <data name="&gt;&gt;btnWaitingEvents.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btn_Reservation.Name" xml:space="preserve">
+    <value>btn_Reservation</value>
+  </data>
+  <data name="&gt;&gt;btn_Reservation.Type" xml:space="preserve">
+    <value>VillageNewbies.UI.ButtonX, VillageNewbies, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btn_Reservation.Parent" xml:space="preserve">
+    <value>Left_Button_Panel</value>
+  </data>
+  <data name="&gt;&gt;btn_Reservation.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btn_UsersLoans.Name" xml:space="preserve">
+    <value>btn_UsersLoans</value>
+  </data>
+  <data name="&gt;&gt;btn_UsersLoans.Type" xml:space="preserve">
+    <value>VillageNewbies.UI.ButtonX, VillageNewbies, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btn_UsersLoans.Parent" xml:space="preserve">
+    <value>Left_Button_Panel</value>
+  </data>
+  <data name="&gt;&gt;btn_UsersLoans.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;btn_Loan.Name" xml:space="preserve">
+    <value>btn_Loan</value>
+  </data>
+  <data name="&gt;&gt;btn_Loan.Type" xml:space="preserve">
+    <value>VillageNewbies.UI.ButtonX, VillageNewbies, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btn_Loan.Parent" xml:space="preserve">
+    <value>Left_Button_Panel</value>
+  </data>
+  <data name="&gt;&gt;btn_Loan.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="Left_Button_Panel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 77</value>
+  </data>
+  <data name="Left_Button_Panel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>280, 752</value>
+  </data>
+  <data name="Left_Button_Panel.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;Left_Button_Panel.Name" xml:space="preserve">
+    <value>Left_Button_Panel</value>
+  </data>
+  <data name="&gt;&gt;Left_Button_Panel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Left_Button_Panel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Left_Button_Panel.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="btnWaitingEvents.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -361,27 +544,6 @@
     <value>Left_Button_Panel</value>
   </data>
   <data name="&gt;&gt;btn_Loan.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="Left_Button_Panel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 77</value>
-  </data>
-  <data name="Left_Button_Panel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>280, 752</value>
-  </data>
-  <data name="Left_Button_Panel.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="&gt;&gt;Left_Button_Panel.Name" xml:space="preserve">
-    <value>Left_Button_Panel</value>
-  </data>
-  <data name="&gt;&gt;Left_Button_Panel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Left_Button_Panel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;Left_Button_Panel.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
   <data name="Separator_Panel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -4587,120 +4749,6 @@
   <data name="aboutToolStripMenuItem.Text" xml:space="preserve">
     <value>About</value>
   </data>
-  <data name="_CloseButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="_CloseButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="_CloseButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft YaHei UI, 12pt, style=Bold</value>
-  </data>
-  <data name="_CloseButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="_CloseButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1564, 6</value>
-  </data>
-  <data name="_CloseButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>31, 24</value>
-  </data>
-  <data name="_CloseButton.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="_CloseButton.Text" xml:space="preserve">
-    <value>X</value>
-  </data>
-  <data name="_CloseButton.ToolTip" xml:space="preserve">
-    <value>Close</value>
-  </data>
-  <data name="&gt;&gt;_CloseButton.Name" xml:space="preserve">
-    <value>_CloseButton</value>
-  </data>
-  <data name="&gt;&gt;_CloseButton.Type" xml:space="preserve">
-    <value>VillageNewbies.UI.ButtonZ, VillageNewbies, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;_CloseButton.Parent" xml:space="preserve">
-    <value>TopPanel</value>
-  </data>
-  <data name="&gt;&gt;_CloseButton.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="_MaxButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="_MaxButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="_MaxButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="_MaxButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1533, 6</value>
-  </data>
-  <data name="_MaxButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>31, 24</value>
-  </data>
-  <data name="_MaxButton.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="_MaxButton.Text" xml:space="preserve">
-    <value>minMaxButton1</value>
-  </data>
-  <data name="_MaxButton.ToolTip" xml:space="preserve">
-    <value>Maximize</value>
-  </data>
-  <data name="&gt;&gt;_MaxButton.Name" xml:space="preserve">
-    <value>_MaxButton</value>
-  </data>
-  <data name="&gt;&gt;_MaxButton.Type" xml:space="preserve">
-    <value>VillageNewbies.UI.MinMaxButton, VillageNewbies, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;_MaxButton.Parent" xml:space="preserve">
-    <value>TopPanel</value>
-  </data>
-  <data name="&gt;&gt;_MaxButton.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="_MinButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="_MinButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="_MinButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft YaHei UI, 20.25pt, style=Bold</value>
-  </data>
-  <data name="_MinButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="_MinButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1502, 6</value>
-  </data>
-  <data name="_MinButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>31, 24</value>
-  </data>
-  <data name="_MinButton.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="_MinButton.Text" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="_MinButton.ToolTip" xml:space="preserve">
-    <value>Minimize</value>
-  </data>
-  <data name="&gt;&gt;_MinButton.Name" xml:space="preserve">
-    <value>_MinButton</value>
-  </data>
-  <data name="&gt;&gt;_MinButton.Type" xml:space="preserve">
-    <value>VillageNewbies.UI.ButtonZ, VillageNewbies, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;_MinButton.Parent" xml:space="preserve">
-    <value>TopPanel</value>
-  </data>
-  <data name="&gt;&gt;_MinButton.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="pictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -4762,7 +4810,7 @@
     <value>1600, 900</value>
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>600, 480</value>
+    <value>975, 500</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value> </value>
