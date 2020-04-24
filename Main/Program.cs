@@ -17,7 +17,7 @@ namespace VillageNewbies
             Application.EnableVisualStyles();
             //Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new UI.MainScreen());
+            Application.Run(new Form1());
         }
     }
 }

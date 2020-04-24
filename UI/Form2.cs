@@ -21,7 +21,13 @@ namespace VillageNewbies.UI
         {
             SQL s = new SQL();
             s.create();
-            DataTable dt = s.returnstuff();
+            List<string> dataa = SQL.AvailableCabinsByNameAndType();
+            foreach (string i in dataa)
+            {
+                checklist_Loan_Items.Items.Add(i);
+            }
         }
+
+
     }
 }
