@@ -30,40 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainScreen));
-            this.TopBorderPanel = new System.Windows.Forms.Panel();
-            this.RightPanel = new System.Windows.Forms.Panel();
-            this.LeftPanel = new System.Windows.Forms.Panel();
-            this.BottomPanel = new System.Windows.Forms.Panel();
-            this.TopPanel = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this._MinButton = new VillageNewbies.UI.ButtonZ();
-            this._MaxButton = new VillageNewbies.UI.MinMaxButton();
-            this._CloseButton = new VillageNewbies.UI.ButtonZ();
-            this.menuStripZ1 = new VillageNewbies.UI.MenuStripZ();
-            this.ToolstripItems = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripItemManagement = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolstripaccount = new System.Windows.Forms.ToolStripMenuItem();
-            this.ToolStripAccountManagement = new System.Windows.Forms.ToolStripMenuItem();
-            this.kirjauduUlosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lainausHistoriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ToolStripSettings = new System.Windows.Forms.ToolStripMenuItem();
-            this.SettingsToolStrip_LanguageSelect = new System.Windows.Forms.ToolStripMenuItem();
-            this.ToolStripHelp = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpContentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.onlineHelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.WindowTextLabel = new System.Windows.Forms.Label();
             this.lblCurrentDate = new System.Windows.Forms.Label();
-            this.RightBottomPanel_1 = new System.Windows.Forms.Panel();
             this.BtmPanel = new System.Windows.Forms.Panel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.RightBottomPanel_2 = new System.Windows.Forms.Panel();
-            this.LeftBottomPanel_1 = new System.Windows.Forms.Panel();
-            this.LeftBottomPanel_2 = new System.Windows.Forms.Panel();
-            this.RightTopPanel_1 = new System.Windows.Forms.Panel();
-            this.RightTopPanel_2 = new System.Windows.Forms.Panel();
-            this.LeftTopPanel_1 = new System.Windows.Forms.Panel();
-            this.LeftTopPanel_2 = new System.Windows.Forms.Panel();
             this.Left_Button_Panel = new System.Windows.Forms.Panel();
             this.btnWaitingEvents = new VillageNewbies.UI.ButtonX();
             this.btn_Reservation = new VillageNewbies.UI.ButtonX();
@@ -86,6 +56,20 @@
             this.txt_Loan_Item_State = new System.Windows.Forms.TextBox();
             this.txt_Loan_ItemType = new System.Windows.Forms.TextBox();
             this.checklist_Loan_Items = new System.Windows.Forms.CheckedListBox();
+            this.UserLoans_Panel = new System.Windows.Forms.Panel();
+            this.groupBox26 = new System.Windows.Forms.GroupBox();
+            this.txt_user_reservations_enddate = new System.Windows.Forms.TextBox();
+            this.txt_user_reservations_startdate = new System.Windows.Forms.TextBox();
+            this.btnCancelReservation = new VillageNewbies.UI.ShapedButton();
+            this.checklist_user_reservations = new System.Windows.Forms.CheckedListBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.combobox_UserLoans_ItemType = new System.Windows.Forms.ComboBox();
+            this.txt_UserLoans_SearchItem = new System.Windows.Forms.TextBox();
+            this.btn_UserLoans_ReturnItem = new VillageNewbies.UI.ShapedButton();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.txt_UserLoans_ItemState = new System.Windows.Forms.TextBox();
+            this.txt_UserLoans_ItemType = new System.Windows.Forms.TextBox();
+            this.Checklist_UserLoans_Items = new System.Windows.Forms.CheckedListBox();
             this.Item_Management = new System.Windows.Forms.Panel();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
@@ -108,20 +92,6 @@
             this.btn_CreateItemType = new VillageNewbies.UI.ShapedButton();
             this.txt_CreateItemType = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.UserLoans_Panel = new System.Windows.Forms.Panel();
-            this.groupBox26 = new System.Windows.Forms.GroupBox();
-            this.txt_user_reservations_enddate = new System.Windows.Forms.TextBox();
-            this.txt_user_reservations_startdate = new System.Windows.Forms.TextBox();
-            this.btnCancelReservation = new VillageNewbies.UI.ShapedButton();
-            this.checklist_user_reservations = new System.Windows.Forms.CheckedListBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.combobox_UserLoans_ItemType = new System.Windows.Forms.ComboBox();
-            this.txt_UserLoans_SearchItem = new System.Windows.Forms.TextBox();
-            this.btn_UserLoans_ReturnItem = new VillageNewbies.UI.ShapedButton();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.txt_UserLoans_ItemState = new System.Windows.Forms.TextBox();
-            this.txt_UserLoans_ItemType = new System.Windows.Forms.TextBox();
-            this.Checklist_UserLoans_Items = new System.Windows.Forms.CheckedListBox();
             this.Waiting_Events_panel = new System.Windows.Forms.Panel();
             this.checkbox_AcceptAllLoans = new System.Windows.Forms.CheckBox();
             this.checkbox_AcceptAllReturns = new System.Windows.Forms.CheckBox();
@@ -142,13 +112,6 @@
             this.txt_Waiting_LoanItemID = new System.Windows.Forms.TextBox();
             this.dtp_Waiting_LoanReturnDate = new System.Windows.Forms.DateTimePicker();
             this.checklist_Waiting_PendingLoans = new System.Windows.Forms.CheckedListBox();
-            this.LoanHistoryPanel = new System.Windows.Forms.Panel();
-            this.groupBox21 = new System.Windows.Forms.GroupBox();
-            this.cb_LoanHistory_Item = new System.Windows.Forms.ComboBox();
-            this.dataGridItemLoanHistory = new System.Windows.Forms.DataGridView();
-            this.groupBox12 = new System.Windows.Forms.GroupBox();
-            this.cb_LoanHistory_User = new System.Windows.Forms.ComboBox();
-            this.dataGridUserLoanHistory = new System.Windows.Forms.DataGridView();
             this.AccountManagement_Panel = new System.Windows.Forms.Panel();
             this.groupBox20 = new System.Windows.Forms.GroupBox();
             this.datagrid_Users = new System.Windows.Forms.DataGridView();
@@ -180,9 +143,32 @@
             this.txt_reservation_Itemtype = new System.Windows.Forms.TextBox();
             this.txt_reservation_Itemstate = new System.Windows.Forms.TextBox();
             this.checklist_Reservation = new System.Windows.Forms.CheckedListBox();
-            this.TopPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.menuStripZ1.SuspendLayout();
+            this.LoanHistoryPanel = new System.Windows.Forms.Panel();
+            this.groupBox21 = new System.Windows.Forms.GroupBox();
+            this.cb_LoanHistory_Item = new System.Windows.Forms.ComboBox();
+            this.dataGridItemLoanHistory = new System.Windows.Forms.DataGridView();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.cb_LoanHistory_User = new System.Windows.Forms.ComboBox();
+            this.dataGridUserLoanHistory = new System.Windows.Forms.DataGridView();
+            this.WindowTextLabel = new System.Windows.Forms.Label();
+            this.menuStripZ1 = new VillageNewbies.UI.MenuStripZ();
+            this.ToolstripItems = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripItemManagement = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolstripaccount = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripAccountManagement = new System.Windows.Forms.ToolStripMenuItem();
+            this.kirjauduUlosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lainausHistoriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripSettings = new System.Windows.Forms.ToolStripMenuItem();
+            this.SettingsToolStrip_LanguageSelect = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripHelp = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpContentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.onlineHelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this._CloseButton = new VillageNewbies.UI.ButtonZ();
+            this._MaxButton = new VillageNewbies.UI.MinMaxButton();
+            this._MinButton = new VillageNewbies.UI.ButtonZ();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.TopPanel = new System.Windows.Forms.Panel();
             this.BtmPanel.SuspendLayout();
             this.Left_Button_Panel.SuspendLayout();
             this.Settings_Panel.SuspendLayout();
@@ -190,6 +176,10 @@
             this.Loan_Panel.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.UserLoans_Panel.SuspendLayout();
+            this.groupBox26.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.Item_Management.SuspendLayout();
             this.groupBox11.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -197,20 +187,11 @@
             this.groupBox10.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.groupBox8.SuspendLayout();
-            this.UserLoans_Panel.SuspendLayout();
-            this.groupBox26.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox5.SuspendLayout();
             this.Waiting_Events_panel.SuspendLayout();
             this.groupBox15.SuspendLayout();
             this.groupBox17.SuspendLayout();
             this.groupBox14.SuspendLayout();
             this.groupBox13.SuspendLayout();
-            this.LoanHistoryPanel.SuspendLayout();
-            this.groupBox21.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridItemLoanHistory)).BeginInit();
-            this.groupBox12.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridUserLoanHistory)).BeginInit();
             this.AccountManagement_Panel.SuspendLayout();
             this.groupBox20.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagrid_Users)).BeginInit();
@@ -219,242 +200,21 @@
             this.Reservation_Panel.SuspendLayout();
             this.groupBox24.SuspendLayout();
             this.groupBox25.SuspendLayout();
+            this.LoanHistoryPanel.SuspendLayout();
+            this.groupBox21.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridItemLoanHistory)).BeginInit();
+            this.groupBox12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridUserLoanHistory)).BeginInit();
+            this.menuStripZ1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.TopPanel.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // TopBorderPanel
-            // 
-            resources.ApplyResources(this.TopBorderPanel, "TopBorderPanel");
-            this.TopBorderPanel.BackColor = System.Drawing.Color.Black;
-            this.TopBorderPanel.Cursor = System.Windows.Forms.Cursors.SizeNS;
-            this.TopBorderPanel.Name = "TopBorderPanel";
-            this.TopBorderPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TopBorderPanel_MouseDown);
-            this.TopBorderPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TopBorderPanel_MouseMove);
-            this.TopBorderPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.TopBorderPanel_MouseUp);
-            // 
-            // RightPanel
-            // 
-            resources.ApplyResources(this.RightPanel, "RightPanel");
-            this.RightPanel.BackColor = System.Drawing.Color.Black;
-            this.RightPanel.Cursor = System.Windows.Forms.Cursors.SizeWE;
-            this.RightPanel.Name = "RightPanel";
-            this.RightPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.RightPanel_MouseDown);
-            this.RightPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.RightPanel_MouseMove);
-            this.RightPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.RightPanel_MouseUp);
-            // 
-            // LeftPanel
-            // 
-            resources.ApplyResources(this.LeftPanel, "LeftPanel");
-            this.LeftPanel.BackColor = System.Drawing.Color.Black;
-            this.LeftPanel.Cursor = System.Windows.Forms.Cursors.SizeWE;
-            this.LeftPanel.Name = "LeftPanel";
-            this.LeftPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LeftPanel_MouseDown);
-            this.LeftPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.LeftPanel_MouseMove);
-            this.LeftPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.LeftPanel_MouseUp);
-            // 
-            // BottomPanel
-            // 
-            resources.ApplyResources(this.BottomPanel, "BottomPanel");
-            this.BottomPanel.BackColor = System.Drawing.Color.Black;
-            this.BottomPanel.Cursor = System.Windows.Forms.Cursors.SizeNS;
-            this.BottomPanel.Name = "BottomPanel";
-            this.BottomPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BottomPanel_MouseDown);
-            this.BottomPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.BottomPanel_MouseMove);
-            this.BottomPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BottomPanel_MouseUp);
-            // 
-            // TopPanel
-            // 
-            this.TopPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.TopPanel.Controls.Add(this.pictureBox1);
-            this.TopPanel.Controls.Add(this._MinButton);
-            this.TopPanel.Controls.Add(this._MaxButton);
-            this.TopPanel.Controls.Add(this._CloseButton);
-            this.TopPanel.Controls.Add(this.menuStripZ1);
-            this.TopPanel.Controls.Add(this.WindowTextLabel);
-            resources.ApplyResources(this.TopPanel, "TopPanel");
-            this.TopPanel.Name = "TopPanel";
-            this.TopPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TopPanel_MouseDown);
-            this.TopPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TopPanel_MouseMove);
-            this.TopPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.TopPanel_MouseUp);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::VillageNewbies.Properties.Resources.logo;
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
-            // 
-            // _MinButton
-            // 
-            resources.ApplyResources(this._MinButton, "_MinButton");
-            this._MinButton.BZBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this._MinButton.DisplayText = "_";
-            this._MinButton.ForeColor = System.Drawing.Color.White;
-            this._MinButton.MouseClickColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(160)))));
-            this._MinButton.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this._MinButton.Name = "_MinButton";
-            this._MinButton.TextLocation_X = 6;
-            this._MinButton.TextLocation_Y = -20;
-            this.toolTip1.SetToolTip(this._MinButton, resources.GetString("_MinButton.ToolTip"));
-            this._MinButton.UseVisualStyleBackColor = true;
-            this._MinButton.Click += new System.EventHandler(this._MinButton_Click);
-            // 
-            // _MaxButton
-            // 
-            resources.ApplyResources(this._MaxButton, "_MaxButton");
-            this._MaxButton.BZBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this._MaxButton.CFormState = VillageNewbies.UI.MinMaxButton.CustomFormState.Normal;
-            this._MaxButton.DisplayText = "_";
-            this._MaxButton.ForeColor = System.Drawing.Color.White;
-            this._MaxButton.MouseClickColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(160)))));
-            this._MaxButton.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this._MaxButton.Name = "_MaxButton";
-            this._MaxButton.TextLocation_X = 8;
-            this._MaxButton.TextLocation_Y = 6;
-            this.toolTip1.SetToolTip(this._MaxButton, resources.GetString("_MaxButton.ToolTip"));
-            this._MaxButton.UseVisualStyleBackColor = true;
-            this._MaxButton.Click += new System.EventHandler(this._MaxButton_Click);
-            // 
-            // _CloseButton
-            // 
-            resources.ApplyResources(this._CloseButton, "_CloseButton");
-            this._CloseButton.BZBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this._CloseButton.DisplayText = "X";
-            this._CloseButton.ForeColor = System.Drawing.Color.White;
-            this._CloseButton.MouseClickColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(160)))));
-            this._CloseButton.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this._CloseButton.Name = "_CloseButton";
-            this._CloseButton.TextLocation_X = 6;
-            this._CloseButton.TextLocation_Y = 1;
-            this.toolTip1.SetToolTip(this._CloseButton, resources.GetString("_CloseButton.ToolTip"));
-            this._CloseButton.UseVisualStyleBackColor = true;
-            this._CloseButton.Click += new System.EventHandler(this._CloseButton_Click);
-            // 
-            // menuStripZ1
-            // 
-            resources.ApplyResources(this.menuStripZ1, "menuStripZ1");
-            this.menuStripZ1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ToolstripItems,
-            this.toolstripaccount,
-            this.ToolStripSettings,
-            this.ToolStripHelp});
-            this.menuStripZ1.Name = "menuStripZ1";
-            // 
-            // ToolstripItems
-            // 
-            this.ToolstripItems.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripItemManagement});
-            this.ToolstripItems.ForeColor = System.Drawing.Color.White;
-            this.ToolstripItems.Name = "ToolstripItems";
-            resources.ApplyResources(this.ToolstripItems, "ToolstripItems");
-            // 
-            // toolStripItemManagement
-            // 
-            this.toolStripItemManagement.ForeColor = System.Drawing.Color.White;
-            this.toolStripItemManagement.Name = "toolStripItemManagement";
-            resources.ApplyResources(this.toolStripItemManagement, "toolStripItemManagement");
-            this.toolStripItemManagement.Click += new System.EventHandler(this.toolStripItemManagement_Click);
-            // 
-            // toolstripaccount
-            // 
-            this.toolstripaccount.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ToolStripAccountManagement,
-            this.kirjauduUlosToolStripMenuItem,
-            this.lainausHistoriaToolStripMenuItem});
-            resources.ApplyResources(this.toolstripaccount, "toolstripaccount");
-            this.toolstripaccount.ForeColor = System.Drawing.Color.White;
-            this.toolstripaccount.Name = "toolstripaccount";
-            // 
-            // ToolStripAccountManagement
-            // 
-            resources.ApplyResources(this.ToolStripAccountManagement, "ToolStripAccountManagement");
-            this.ToolStripAccountManagement.ForeColor = System.Drawing.Color.White;
-            this.ToolStripAccountManagement.Name = "ToolStripAccountManagement";
-            this.ToolStripAccountManagement.Click += new System.EventHandler(this.ToolStripAccountManagement_Click);
-            // 
-            // kirjauduUlosToolStripMenuItem
-            // 
-            resources.ApplyResources(this.kirjauduUlosToolStripMenuItem, "kirjauduUlosToolStripMenuItem");
-            this.kirjauduUlosToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.kirjauduUlosToolStripMenuItem.Name = "kirjauduUlosToolStripMenuItem";
-            this.kirjauduUlosToolStripMenuItem.Click += new System.EventHandler(this.kirjauduUlosToolStripMenuItem_Click);
-            // 
-            // lainausHistoriaToolStripMenuItem
-            // 
-            resources.ApplyResources(this.lainausHistoriaToolStripMenuItem, "lainausHistoriaToolStripMenuItem");
-            this.lainausHistoriaToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.lainausHistoriaToolStripMenuItem.Name = "lainausHistoriaToolStripMenuItem";
-            this.lainausHistoriaToolStripMenuItem.Click += new System.EventHandler(this.lainausHistoriaToolStripMenuItem_Click);
-            // 
-            // ToolStripSettings
-            // 
-            this.ToolStripSettings.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.SettingsToolStrip_LanguageSelect});
-            this.ToolStripSettings.ForeColor = System.Drawing.Color.White;
-            this.ToolStripSettings.Name = "ToolStripSettings";
-            resources.ApplyResources(this.ToolStripSettings, "ToolStripSettings");
-            // 
-            // SettingsToolStrip_LanguageSelect
-            // 
-            this.SettingsToolStrip_LanguageSelect.ForeColor = System.Drawing.Color.White;
-            this.SettingsToolStrip_LanguageSelect.Name = "SettingsToolStrip_LanguageSelect";
-            resources.ApplyResources(this.SettingsToolStrip_LanguageSelect, "SettingsToolStrip_LanguageSelect");
-            this.SettingsToolStrip_LanguageSelect.Click += new System.EventHandler(this.Language_Settings_Button_Click);
-            // 
-            // ToolStripHelp
-            // 
-            this.ToolStripHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.helpContentsToolStripMenuItem,
-            this.onlineHelpToolStripMenuItem,
-            this.aboutToolStripMenuItem});
-            this.ToolStripHelp.ForeColor = System.Drawing.Color.White;
-            this.ToolStripHelp.Name = "ToolStripHelp";
-            resources.ApplyResources(this.ToolStripHelp, "ToolStripHelp");
-            // 
-            // helpContentsToolStripMenuItem
-            // 
-            this.helpContentsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.helpContentsToolStripMenuItem.Name = "helpContentsToolStripMenuItem";
-            resources.ApplyResources(this.helpContentsToolStripMenuItem, "helpContentsToolStripMenuItem");
-            this.helpContentsToolStripMenuItem.Click += new System.EventHandler(this.helpContentsToolStripMenuItem_Click);
-            // 
-            // onlineHelpToolStripMenuItem
-            // 
-            this.onlineHelpToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.onlineHelpToolStripMenuItem.Name = "onlineHelpToolStripMenuItem";
-            resources.ApplyResources(this.onlineHelpToolStripMenuItem, "onlineHelpToolStripMenuItem");
-            this.onlineHelpToolStripMenuItem.Click += new System.EventHandler(this.onlineHelpToolStripMenuItem_Click);
-            // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            resources.ApplyResources(this.aboutToolStripMenuItem, "aboutToolStripMenuItem");
-            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
-            // 
-            // WindowTextLabel
-            // 
-            resources.ApplyResources(this.WindowTextLabel, "WindowTextLabel");
-            this.WindowTextLabel.ForeColor = System.Drawing.Color.White;
-            this.WindowTextLabel.Name = "WindowTextLabel";
-            this.WindowTextLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.WindowTextLabel_MouseDown);
-            this.WindowTextLabel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.WindowTextLabel_MouseMove);
-            this.WindowTextLabel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.WindowTextLabel_MouseUp);
             // 
             // lblCurrentDate
             // 
             resources.ApplyResources(this.lblCurrentDate, "lblCurrentDate");
             this.lblCurrentDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lblCurrentDate.Name = "lblCurrentDate";
-            // 
-            // RightBottomPanel_1
-            // 
-            resources.ApplyResources(this.RightBottomPanel_1, "RightBottomPanel_1");
-            this.RightBottomPanel_1.BackColor = System.Drawing.Color.Black;
-            this.RightBottomPanel_1.Cursor = System.Windows.Forms.Cursors.SizeNWSE;
-            this.RightBottomPanel_1.Name = "RightBottomPanel_1";
-            this.RightBottomPanel_1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.RightBottomPanel_1_MouseDown);
-            this.RightBottomPanel_1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.RightBottomPanel_1_MouseMove);
-            this.RightBottomPanel_1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.RightBottomPanel_1_MouseUp);
             // 
             // BtmPanel
             // 
@@ -466,72 +226,12 @@
             // RightBottomPanel_2
             // 
             resources.ApplyResources(this.RightBottomPanel_2, "RightBottomPanel_2");
-            this.RightBottomPanel_2.BackColor = System.Drawing.Color.Black;
+            this.RightBottomPanel_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.RightBottomPanel_2.Cursor = System.Windows.Forms.Cursors.SizeNWSE;
             this.RightBottomPanel_2.Name = "RightBottomPanel_2";
-            this.RightBottomPanel_2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.RightBottomPanel_2_MouseDown);
-            this.RightBottomPanel_2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.RightBottomPanel_2_MouseMove);
-            this.RightBottomPanel_2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.RightBottomPanel_2_MouseUp);
-            // 
-            // LeftBottomPanel_1
-            // 
-            resources.ApplyResources(this.LeftBottomPanel_1, "LeftBottomPanel_1");
-            this.LeftBottomPanel_1.BackColor = System.Drawing.Color.Black;
-            this.LeftBottomPanel_1.Cursor = System.Windows.Forms.Cursors.SizeNESW;
-            this.LeftBottomPanel_1.Name = "LeftBottomPanel_1";
-            this.LeftBottomPanel_1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LeftBottomPanel_1_MouseDown);
-            this.LeftBottomPanel_1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.LeftBottomPanel_1_MouseMove);
-            this.LeftBottomPanel_1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.LeftBottomPanel_1_MouseUp);
-            // 
-            // LeftBottomPanel_2
-            // 
-            resources.ApplyResources(this.LeftBottomPanel_2, "LeftBottomPanel_2");
-            this.LeftBottomPanel_2.BackColor = System.Drawing.Color.Black;
-            this.LeftBottomPanel_2.Cursor = System.Windows.Forms.Cursors.SizeNESW;
-            this.LeftBottomPanel_2.Name = "LeftBottomPanel_2";
-            this.LeftBottomPanel_2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LeftBottomPanel_2_MouseDown);
-            this.LeftBottomPanel_2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.LeftBottomPanel_2_MouseMove);
-            this.LeftBottomPanel_2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.LeftBottomPanel_2_MouseUp);
-            // 
-            // RightTopPanel_1
-            // 
-            resources.ApplyResources(this.RightTopPanel_1, "RightTopPanel_1");
-            this.RightTopPanel_1.BackColor = System.Drawing.Color.Black;
-            this.RightTopPanel_1.Cursor = System.Windows.Forms.Cursors.SizeNESW;
-            this.RightTopPanel_1.Name = "RightTopPanel_1";
-            this.RightTopPanel_1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.RightTopPanel_1_MouseDown);
-            this.RightTopPanel_1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.RightTopPanel_1_MouseMove);
-            this.RightTopPanel_1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.RightTopPanel_1_MouseUp);
-            // 
-            // RightTopPanel_2
-            // 
-            resources.ApplyResources(this.RightTopPanel_2, "RightTopPanel_2");
-            this.RightTopPanel_2.BackColor = System.Drawing.Color.Black;
-            this.RightTopPanel_2.Cursor = System.Windows.Forms.Cursors.SizeNESW;
-            this.RightTopPanel_2.Name = "RightTopPanel_2";
-            this.RightTopPanel_2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.RightTopPanel_2_MouseDown);
-            this.RightTopPanel_2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.RightTopPanel_2_MouseMove);
-            this.RightTopPanel_2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.RightTopPanel_2_MouseUp);
-            // 
-            // LeftTopPanel_1
-            // 
-            this.LeftTopPanel_1.BackColor = System.Drawing.Color.Black;
-            this.LeftTopPanel_1.Cursor = System.Windows.Forms.Cursors.SizeNWSE;
-            resources.ApplyResources(this.LeftTopPanel_1, "LeftTopPanel_1");
-            this.LeftTopPanel_1.Name = "LeftTopPanel_1";
-            this.LeftTopPanel_1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LeftTopPanel_1_MouseDown);
-            this.LeftTopPanel_1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.LeftTopPanel_1_MouseMove);
-            this.LeftTopPanel_1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.LeftTopPanel_1_MouseUp);
-            // 
-            // LeftTopPanel_2
-            // 
-            this.LeftTopPanel_2.BackColor = System.Drawing.Color.Black;
-            this.LeftTopPanel_2.Cursor = System.Windows.Forms.Cursors.SizeNWSE;
-            resources.ApplyResources(this.LeftTopPanel_2, "LeftTopPanel_2");
-            this.LeftTopPanel_2.Name = "LeftTopPanel_2";
-            this.LeftTopPanel_2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LeftTopPanel_2_MouseDown);
-            this.LeftTopPanel_2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.LeftTopPanel_2_MouseMove);
-            this.LeftTopPanel_2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.LeftTopPanel_2_MouseUp);
+            this.RightBottomPanel_2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDown);
+            this.RightBottomPanel_2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseMove);
+            this.RightBottomPanel_2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseUp);
             // 
             // Left_Button_Panel
             // 
@@ -542,7 +242,6 @@
             this.Left_Button_Panel.Controls.Add(this.btn_UsersLoans);
             this.Left_Button_Panel.Controls.Add(this.btn_Loan);
             this.Left_Button_Panel.Name = "Left_Button_Panel";
-            this.Left_Button_Panel.Paint += new System.Windows.Forms.PaintEventHandler(this.Left_Button_Panel_Paint);
             // 
             // btnWaitingEvents
             // 
@@ -648,7 +347,6 @@
             this.Loan_Panel.Controls.Add(this.dtp_Loan_ReturnDate);
             this.Loan_Panel.Controls.Add(this.groupBox2);
             this.Loan_Panel.Controls.Add(this.checklist_Loan_Items);
-            this.Loan_Panel.Controls.Add(this.Item_Management);
             resources.ApplyResources(this.Loan_Panel, "Loan_Panel");
             this.Loan_Panel.Name = "Loan_Panel";
             // 
@@ -755,6 +453,155 @@
             this.checklist_Loan_Items.FormattingEnabled = true;
             this.checklist_Loan_Items.Name = "checklist_Loan_Items";
             this.checklist_Loan_Items.SelectedValueChanged += new System.EventHandler(this.checklist_Loan_Items_SelectedValueChanged);
+            // 
+            // UserLoans_Panel
+            // 
+            this.UserLoans_Panel.Controls.Add(this.groupBox26);
+            this.UserLoans_Panel.Controls.Add(this.btnCancelReservation);
+            this.UserLoans_Panel.Controls.Add(this.checklist_user_reservations);
+            this.UserLoans_Panel.Controls.Add(this.groupBox4);
+            this.UserLoans_Panel.Controls.Add(this.btn_UserLoans_ReturnItem);
+            this.UserLoans_Panel.Controls.Add(this.groupBox5);
+            this.UserLoans_Panel.Controls.Add(this.Checklist_UserLoans_Items);
+            resources.ApplyResources(this.UserLoans_Panel, "UserLoans_Panel");
+            this.UserLoans_Panel.Name = "UserLoans_Panel";
+            // 
+            // groupBox26
+            // 
+            this.groupBox26.Controls.Add(this.txt_user_reservations_enddate);
+            this.groupBox26.Controls.Add(this.txt_user_reservations_startdate);
+            resources.ApplyResources(this.groupBox26, "groupBox26");
+            this.groupBox26.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox26.Name = "groupBox26";
+            this.groupBox26.TabStop = false;
+            // 
+            // txt_user_reservations_enddate
+            // 
+            resources.ApplyResources(this.txt_user_reservations_enddate, "txt_user_reservations_enddate");
+            this.txt_user_reservations_enddate.Name = "txt_user_reservations_enddate";
+            // 
+            // txt_user_reservations_startdate
+            // 
+            resources.ApplyResources(this.txt_user_reservations_startdate, "txt_user_reservations_startdate");
+            this.txt_user_reservations_startdate.Name = "txt_user_reservations_startdate";
+            // 
+            // btnCancelReservation
+            // 
+            this.btnCancelReservation.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancelReservation.BorderColor = System.Drawing.Color.Transparent;
+            this.btnCancelReservation.BorderWidth = 2;
+            this.btnCancelReservation.ButtonShape = VillageNewbies.UI.ShapedButton.ButtonsShapes.RoundRect;
+            this.btnCancelReservation.ButtonText = "Peru varaus";
+            this.btnCancelReservation.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnCancelReservation.FlatAppearance.BorderSize = 0;
+            this.btnCancelReservation.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnCancelReservation.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.btnCancelReservation, "btnCancelReservation");
+            this.btnCancelReservation.ForeColor = System.Drawing.Color.White;
+            this.btnCancelReservation.GradientAngle = 90;
+            this.btnCancelReservation.MouseClickColor1 = System.Drawing.Color.Black;
+            this.btnCancelReservation.MouseClickColor2 = System.Drawing.Color.Black;
+            this.btnCancelReservation.MouseHoverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnCancelReservation.MouseHoverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnCancelReservation.Name = "btnCancelReservation";
+            this.btnCancelReservation.ShowButtontext = true;
+            this.btnCancelReservation.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnCancelReservation.TextLocation_X = 13;
+            this.btnCancelReservation.TextLocation_Y = 16;
+            this.btnCancelReservation.Transparent1 = 250;
+            this.btnCancelReservation.Transparent2 = 250;
+            this.btnCancelReservation.UseVisualStyleBackColor = false;
+            this.btnCancelReservation.Click += new System.EventHandler(this.btnCancelReservation_Click);
+            // 
+            // checklist_user_reservations
+            // 
+            this.checklist_user_reservations.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.checklist_user_reservations.CheckOnClick = true;
+            resources.ApplyResources(this.checklist_user_reservations, "checklist_user_reservations");
+            this.checklist_user_reservations.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.checklist_user_reservations.FormattingEnabled = true;
+            this.checklist_user_reservations.Name = "checklist_user_reservations";
+            this.checklist_user_reservations.SelectedValueChanged += new System.EventHandler(this.checklist_user_reservations_SelectedValueChanged);
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.combobox_UserLoans_ItemType);
+            this.groupBox4.Controls.Add(this.txt_UserLoans_SearchItem);
+            resources.ApplyResources(this.groupBox4, "groupBox4");
+            this.groupBox4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.TabStop = false;
+            // 
+            // combobox_UserLoans_ItemType
+            // 
+            this.combobox_UserLoans_ItemType.DisplayMember = "Text";
+            this.combobox_UserLoans_ItemType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.combobox_UserLoans_ItemType, "combobox_UserLoans_ItemType");
+            this.combobox_UserLoans_ItemType.FormattingEnabled = true;
+            this.combobox_UserLoans_ItemType.Name = "combobox_UserLoans_ItemType";
+            // 
+            // txt_UserLoans_SearchItem
+            // 
+            resources.ApplyResources(this.txt_UserLoans_SearchItem, "txt_UserLoans_SearchItem");
+            this.txt_UserLoans_SearchItem.Name = "txt_UserLoans_SearchItem";
+            this.txt_UserLoans_SearchItem.TextChanged += new System.EventHandler(this.txt_UserLoans_itemsearch_TextChanged);
+            // 
+            // btn_UserLoans_ReturnItem
+            // 
+            this.btn_UserLoans_ReturnItem.BackColor = System.Drawing.Color.Transparent;
+            this.btn_UserLoans_ReturnItem.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_UserLoans_ReturnItem.BorderWidth = 2;
+            this.btn_UserLoans_ReturnItem.ButtonShape = VillageNewbies.UI.ShapedButton.ButtonsShapes.RoundRect;
+            this.btn_UserLoans_ReturnItem.ButtonText = "Palauta";
+            this.btn_UserLoans_ReturnItem.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btn_UserLoans_ReturnItem.FlatAppearance.BorderSize = 0;
+            this.btn_UserLoans_ReturnItem.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_UserLoans_ReturnItem.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.btn_UserLoans_ReturnItem, "btn_UserLoans_ReturnItem");
+            this.btn_UserLoans_ReturnItem.ForeColor = System.Drawing.Color.White;
+            this.btn_UserLoans_ReturnItem.GradientAngle = 90;
+            this.btn_UserLoans_ReturnItem.MouseClickColor1 = System.Drawing.Color.Black;
+            this.btn_UserLoans_ReturnItem.MouseClickColor2 = System.Drawing.Color.Black;
+            this.btn_UserLoans_ReturnItem.MouseHoverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btn_UserLoans_ReturnItem.MouseHoverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btn_UserLoans_ReturnItem.Name = "btn_UserLoans_ReturnItem";
+            this.btn_UserLoans_ReturnItem.ShowButtontext = true;
+            this.btn_UserLoans_ReturnItem.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btn_UserLoans_ReturnItem.TextLocation_X = 22;
+            this.btn_UserLoans_ReturnItem.TextLocation_Y = 16;
+            this.btn_UserLoans_ReturnItem.Transparent1 = 250;
+            this.btn_UserLoans_ReturnItem.Transparent2 = 250;
+            this.btn_UserLoans_ReturnItem.UseVisualStyleBackColor = false;
+            this.btn_UserLoans_ReturnItem.Click += new System.EventHandler(this.btn_UserLoans_ReturnItem_Click);
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.txt_UserLoans_ItemState);
+            this.groupBox5.Controls.Add(this.txt_UserLoans_ItemType);
+            resources.ApplyResources(this.groupBox5, "groupBox5");
+            this.groupBox5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.TabStop = false;
+            // 
+            // txt_UserLoans_ItemState
+            // 
+            resources.ApplyResources(this.txt_UserLoans_ItemState, "txt_UserLoans_ItemState");
+            this.txt_UserLoans_ItemState.Name = "txt_UserLoans_ItemState";
+            // 
+            // txt_UserLoans_ItemType
+            // 
+            resources.ApplyResources(this.txt_UserLoans_ItemType, "txt_UserLoans_ItemType");
+            this.txt_UserLoans_ItemType.Name = "txt_UserLoans_ItemType";
+            // 
+            // Checklist_UserLoans_Items
+            // 
+            this.Checklist_UserLoans_Items.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.Checklist_UserLoans_Items.CheckOnClick = true;
+            resources.ApplyResources(this.Checklist_UserLoans_Items, "Checklist_UserLoans_Items");
+            this.Checklist_UserLoans_Items.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Checklist_UserLoans_Items.FormattingEnabled = true;
+            this.Checklist_UserLoans_Items.Name = "Checklist_UserLoans_Items";
+            this.Checklist_UserLoans_Items.SelectedValueChanged += new System.EventHandler(this.Checklist_UserLoans_SelectedValueChanged);
             // 
             // Item_Management
             // 
@@ -973,155 +820,6 @@
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
             // 
-            // UserLoans_Panel
-            // 
-            this.UserLoans_Panel.Controls.Add(this.groupBox26);
-            this.UserLoans_Panel.Controls.Add(this.btnCancelReservation);
-            this.UserLoans_Panel.Controls.Add(this.checklist_user_reservations);
-            this.UserLoans_Panel.Controls.Add(this.groupBox4);
-            this.UserLoans_Panel.Controls.Add(this.btn_UserLoans_ReturnItem);
-            this.UserLoans_Panel.Controls.Add(this.groupBox5);
-            this.UserLoans_Panel.Controls.Add(this.Checklist_UserLoans_Items);
-            resources.ApplyResources(this.UserLoans_Panel, "UserLoans_Panel");
-            this.UserLoans_Panel.Name = "UserLoans_Panel";
-            // 
-            // groupBox26
-            // 
-            this.groupBox26.Controls.Add(this.txt_user_reservations_enddate);
-            this.groupBox26.Controls.Add(this.txt_user_reservations_startdate);
-            resources.ApplyResources(this.groupBox26, "groupBox26");
-            this.groupBox26.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox26.Name = "groupBox26";
-            this.groupBox26.TabStop = false;
-            // 
-            // txt_user_reservations_enddate
-            // 
-            resources.ApplyResources(this.txt_user_reservations_enddate, "txt_user_reservations_enddate");
-            this.txt_user_reservations_enddate.Name = "txt_user_reservations_enddate";
-            // 
-            // txt_user_reservations_startdate
-            // 
-            resources.ApplyResources(this.txt_user_reservations_startdate, "txt_user_reservations_startdate");
-            this.txt_user_reservations_startdate.Name = "txt_user_reservations_startdate";
-            // 
-            // btnCancelReservation
-            // 
-            this.btnCancelReservation.BackColor = System.Drawing.Color.Transparent;
-            this.btnCancelReservation.BorderColor = System.Drawing.Color.Transparent;
-            this.btnCancelReservation.BorderWidth = 2;
-            this.btnCancelReservation.ButtonShape = VillageNewbies.UI.ShapedButton.ButtonsShapes.RoundRect;
-            this.btnCancelReservation.ButtonText = "Peru varaus";
-            this.btnCancelReservation.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnCancelReservation.FlatAppearance.BorderSize = 0;
-            this.btnCancelReservation.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnCancelReservation.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.btnCancelReservation, "btnCancelReservation");
-            this.btnCancelReservation.ForeColor = System.Drawing.Color.White;
-            this.btnCancelReservation.GradientAngle = 90;
-            this.btnCancelReservation.MouseClickColor1 = System.Drawing.Color.Black;
-            this.btnCancelReservation.MouseClickColor2 = System.Drawing.Color.Black;
-            this.btnCancelReservation.MouseHoverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnCancelReservation.MouseHoverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnCancelReservation.Name = "btnCancelReservation";
-            this.btnCancelReservation.ShowButtontext = true;
-            this.btnCancelReservation.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnCancelReservation.TextLocation_X = 13;
-            this.btnCancelReservation.TextLocation_Y = 16;
-            this.btnCancelReservation.Transparent1 = 250;
-            this.btnCancelReservation.Transparent2 = 250;
-            this.btnCancelReservation.UseVisualStyleBackColor = false;
-            this.btnCancelReservation.Click += new System.EventHandler(this.btnCancelReservation_Click);
-            // 
-            // checklist_user_reservations
-            // 
-            this.checklist_user_reservations.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.checklist_user_reservations.CheckOnClick = true;
-            resources.ApplyResources(this.checklist_user_reservations, "checklist_user_reservations");
-            this.checklist_user_reservations.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.checklist_user_reservations.FormattingEnabled = true;
-            this.checklist_user_reservations.Name = "checklist_user_reservations";
-            this.checklist_user_reservations.SelectedValueChanged += new System.EventHandler(this.checklist_user_reservations_SelectedValueChanged);
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.combobox_UserLoans_ItemType);
-            this.groupBox4.Controls.Add(this.txt_UserLoans_SearchItem);
-            resources.ApplyResources(this.groupBox4, "groupBox4");
-            this.groupBox4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.TabStop = false;
-            // 
-            // combobox_UserLoans_ItemType
-            // 
-            this.combobox_UserLoans_ItemType.DisplayMember = "Text";
-            this.combobox_UserLoans_ItemType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            resources.ApplyResources(this.combobox_UserLoans_ItemType, "combobox_UserLoans_ItemType");
-            this.combobox_UserLoans_ItemType.FormattingEnabled = true;
-            this.combobox_UserLoans_ItemType.Name = "combobox_UserLoans_ItemType";
-            // 
-            // txt_UserLoans_SearchItem
-            // 
-            resources.ApplyResources(this.txt_UserLoans_SearchItem, "txt_UserLoans_SearchItem");
-            this.txt_UserLoans_SearchItem.Name = "txt_UserLoans_SearchItem";
-            this.txt_UserLoans_SearchItem.TextChanged += new System.EventHandler(this.txt_UserLoans_itemsearch_TextChanged);
-            // 
-            // btn_UserLoans_ReturnItem
-            // 
-            this.btn_UserLoans_ReturnItem.BackColor = System.Drawing.Color.Transparent;
-            this.btn_UserLoans_ReturnItem.BorderColor = System.Drawing.Color.Transparent;
-            this.btn_UserLoans_ReturnItem.BorderWidth = 2;
-            this.btn_UserLoans_ReturnItem.ButtonShape = VillageNewbies.UI.ShapedButton.ButtonsShapes.RoundRect;
-            this.btn_UserLoans_ReturnItem.ButtonText = "Palauta";
-            this.btn_UserLoans_ReturnItem.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.btn_UserLoans_ReturnItem.FlatAppearance.BorderSize = 0;
-            this.btn_UserLoans_ReturnItem.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_UserLoans_ReturnItem.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.btn_UserLoans_ReturnItem, "btn_UserLoans_ReturnItem");
-            this.btn_UserLoans_ReturnItem.ForeColor = System.Drawing.Color.White;
-            this.btn_UserLoans_ReturnItem.GradientAngle = 90;
-            this.btn_UserLoans_ReturnItem.MouseClickColor1 = System.Drawing.Color.Black;
-            this.btn_UserLoans_ReturnItem.MouseClickColor2 = System.Drawing.Color.Black;
-            this.btn_UserLoans_ReturnItem.MouseHoverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.btn_UserLoans_ReturnItem.MouseHoverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.btn_UserLoans_ReturnItem.Name = "btn_UserLoans_ReturnItem";
-            this.btn_UserLoans_ReturnItem.ShowButtontext = true;
-            this.btn_UserLoans_ReturnItem.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.btn_UserLoans_ReturnItem.TextLocation_X = 22;
-            this.btn_UserLoans_ReturnItem.TextLocation_Y = 16;
-            this.btn_UserLoans_ReturnItem.Transparent1 = 250;
-            this.btn_UserLoans_ReturnItem.Transparent2 = 250;
-            this.btn_UserLoans_ReturnItem.UseVisualStyleBackColor = false;
-            this.btn_UserLoans_ReturnItem.Click += new System.EventHandler(this.btn_UserLoans_ReturnItem_Click);
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.txt_UserLoans_ItemState);
-            this.groupBox5.Controls.Add(this.txt_UserLoans_ItemType);
-            resources.ApplyResources(this.groupBox5, "groupBox5");
-            this.groupBox5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.TabStop = false;
-            // 
-            // txt_UserLoans_ItemState
-            // 
-            resources.ApplyResources(this.txt_UserLoans_ItemState, "txt_UserLoans_ItemState");
-            this.txt_UserLoans_ItemState.Name = "txt_UserLoans_ItemState";
-            // 
-            // txt_UserLoans_ItemType
-            // 
-            resources.ApplyResources(this.txt_UserLoans_ItemType, "txt_UserLoans_ItemType");
-            this.txt_UserLoans_ItemType.Name = "txt_UserLoans_ItemType";
-            // 
-            // Checklist_UserLoans_Items
-            // 
-            this.Checklist_UserLoans_Items.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.Checklist_UserLoans_Items.CheckOnClick = true;
-            resources.ApplyResources(this.Checklist_UserLoans_Items, "Checklist_UserLoans_Items");
-            this.Checklist_UserLoans_Items.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Checklist_UserLoans_Items.FormattingEnabled = true;
-            this.Checklist_UserLoans_Items.Name = "Checklist_UserLoans_Items";
-            this.Checklist_UserLoans_Items.SelectedValueChanged += new System.EventHandler(this.Checklist_UserLoans_SelectedValueChanged);
-            // 
             // Waiting_Events_panel
             // 
             this.Waiting_Events_panel.Controls.Add(this.checkbox_AcceptAllLoans);
@@ -1135,7 +833,6 @@
             this.Waiting_Events_panel.Controls.Add(this.btnAcceptLoan);
             this.Waiting_Events_panel.Controls.Add(this.groupBox13);
             this.Waiting_Events_panel.Controls.Add(this.checklist_Waiting_PendingLoans);
-            this.Waiting_Events_panel.Controls.Add(this.LoanHistoryPanel);
             resources.ApplyResources(this.Waiting_Events_panel, "Waiting_Events_panel");
             this.Waiting_Events_panel.Name = "Waiting_Events_panel";
             // 
@@ -1336,63 +1033,6 @@
             this.checklist_Waiting_PendingLoans.FormattingEnabled = true;
             this.checklist_Waiting_PendingLoans.Name = "checklist_Waiting_PendingLoans";
             this.checklist_Waiting_PendingLoans.SelectedValueChanged += new System.EventHandler(this.checklist_Waiting_PendingLoans_SelectedValueChanged);
-            // 
-            // LoanHistoryPanel
-            // 
-            this.LoanHistoryPanel.Controls.Add(this.groupBox21);
-            this.LoanHistoryPanel.Controls.Add(this.groupBox12);
-            resources.ApplyResources(this.LoanHistoryPanel, "LoanHistoryPanel");
-            this.LoanHistoryPanel.Name = "LoanHistoryPanel";
-            // 
-            // groupBox21
-            // 
-            this.groupBox21.Controls.Add(this.cb_LoanHistory_Item);
-            this.groupBox21.Controls.Add(this.dataGridItemLoanHistory);
-            resources.ApplyResources(this.groupBox21, "groupBox21");
-            this.groupBox21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.groupBox21.Name = "groupBox21";
-            this.groupBox21.TabStop = false;
-            // 
-            // cb_LoanHistory_Item
-            // 
-            this.cb_LoanHistory_Item.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_LoanHistory_Item.FormattingEnabled = true;
-            resources.ApplyResources(this.cb_LoanHistory_Item, "cb_LoanHistory_Item");
-            this.cb_LoanHistory_Item.Name = "cb_LoanHistory_Item";
-            this.cb_LoanHistory_Item.SelectedValueChanged += new System.EventHandler(this.cb_LoanHistory_Item_SelectedValueChanged);
-            // 
-            // dataGridItemLoanHistory
-            // 
-            this.dataGridItemLoanHistory.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridItemLoanHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            resources.ApplyResources(this.dataGridItemLoanHistory, "dataGridItemLoanHistory");
-            this.dataGridItemLoanHistory.Name = "dataGridItemLoanHistory";
-            // 
-            // groupBox12
-            // 
-            this.groupBox12.Controls.Add(this.cb_LoanHistory_User);
-            this.groupBox12.Controls.Add(this.dataGridUserLoanHistory);
-            this.groupBox12.Controls.Add(this.Loan_Panel);
-            resources.ApplyResources(this.groupBox12, "groupBox12");
-            this.groupBox12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.groupBox12.Name = "groupBox12";
-            this.groupBox12.TabStop = false;
-            // 
-            // cb_LoanHistory_User
-            // 
-            this.cb_LoanHistory_User.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_LoanHistory_User.FormattingEnabled = true;
-            resources.ApplyResources(this.cb_LoanHistory_User, "cb_LoanHistory_User");
-            this.cb_LoanHistory_User.Name = "cb_LoanHistory_User";
-            this.cb_LoanHistory_User.SelectedValueChanged += new System.EventHandler(this.cb_LoanHistory_User_SelectedValueChanged);
-            // 
-            // dataGridUserLoanHistory
-            // 
-            this.dataGridUserLoanHistory.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridUserLoanHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            resources.ApplyResources(this.dataGridUserLoanHistory, "dataGridUserLoanHistory");
-            this.dataGridUserLoanHistory.Name = "dataGridUserLoanHistory";
-            this.dataGridUserLoanHistory.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             // 
             // AccountManagement_Panel
             // 
@@ -1693,27 +1333,255 @@
             this.checklist_Reservation.MouseClick += new System.Windows.Forms.MouseEventHandler(this.checklist_Reservation_MouseClick);
             this.checklist_Reservation.SelectedValueChanged += new System.EventHandler(this.checklist_Reservation_SelectedValueChanged);
             // 
+            // LoanHistoryPanel
+            // 
+            this.LoanHistoryPanel.Controls.Add(this.groupBox21);
+            this.LoanHistoryPanel.Controls.Add(this.groupBox12);
+            resources.ApplyResources(this.LoanHistoryPanel, "LoanHistoryPanel");
+            this.LoanHistoryPanel.Name = "LoanHistoryPanel";
+            // 
+            // groupBox21
+            // 
+            this.groupBox21.Controls.Add(this.cb_LoanHistory_Item);
+            this.groupBox21.Controls.Add(this.dataGridItemLoanHistory);
+            resources.ApplyResources(this.groupBox21, "groupBox21");
+            this.groupBox21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.groupBox21.Name = "groupBox21";
+            this.groupBox21.TabStop = false;
+            // 
+            // cb_LoanHistory_Item
+            // 
+            this.cb_LoanHistory_Item.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_LoanHistory_Item.FormattingEnabled = true;
+            resources.ApplyResources(this.cb_LoanHistory_Item, "cb_LoanHistory_Item");
+            this.cb_LoanHistory_Item.Name = "cb_LoanHistory_Item";
+            this.cb_LoanHistory_Item.SelectedValueChanged += new System.EventHandler(this.cb_LoanHistory_Item_SelectedValueChanged);
+            // 
+            // dataGridItemLoanHistory
+            // 
+            this.dataGridItemLoanHistory.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridItemLoanHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(this.dataGridItemLoanHistory, "dataGridItemLoanHistory");
+            this.dataGridItemLoanHistory.Name = "dataGridItemLoanHistory";
+            // 
+            // groupBox12
+            // 
+            this.groupBox12.Controls.Add(this.cb_LoanHistory_User);
+            this.groupBox12.Controls.Add(this.dataGridUserLoanHistory);
+            resources.ApplyResources(this.groupBox12, "groupBox12");
+            this.groupBox12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.TabStop = false;
+            // 
+            // cb_LoanHistory_User
+            // 
+            this.cb_LoanHistory_User.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_LoanHistory_User.FormattingEnabled = true;
+            resources.ApplyResources(this.cb_LoanHistory_User, "cb_LoanHistory_User");
+            this.cb_LoanHistory_User.Name = "cb_LoanHistory_User";
+            this.cb_LoanHistory_User.SelectedValueChanged += new System.EventHandler(this.cb_LoanHistory_User_SelectedValueChanged);
+            // 
+            // dataGridUserLoanHistory
+            // 
+            this.dataGridUserLoanHistory.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dataGridUserLoanHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(this.dataGridUserLoanHistory, "dataGridUserLoanHistory");
+            this.dataGridUserLoanHistory.Name = "dataGridUserLoanHistory";
+            this.dataGridUserLoanHistory.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            // 
+            // WindowTextLabel
+            // 
+            resources.ApplyResources(this.WindowTextLabel, "WindowTextLabel");
+            this.WindowTextLabel.ForeColor = System.Drawing.Color.White;
+            this.WindowTextLabel.Name = "WindowTextLabel";
+            this.WindowTextLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.WindowTextLabel_MouseDown);
+            this.WindowTextLabel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.WindowTextLabel_MouseMove);
+            this.WindowTextLabel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.WindowTextLabel_MouseUp);
+            // 
+            // menuStripZ1
+            // 
+            resources.ApplyResources(this.menuStripZ1, "menuStripZ1");
+            this.menuStripZ1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolstripItems,
+            this.toolstripaccount,
+            this.ToolStripSettings,
+            this.ToolStripHelp});
+            this.menuStripZ1.Name = "menuStripZ1";
+            // 
+            // ToolstripItems
+            // 
+            this.ToolstripItems.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripItemManagement});
+            this.ToolstripItems.ForeColor = System.Drawing.Color.White;
+            this.ToolstripItems.Name = "ToolstripItems";
+            resources.ApplyResources(this.ToolstripItems, "ToolstripItems");
+            // 
+            // toolStripItemManagement
+            // 
+            this.toolStripItemManagement.ForeColor = System.Drawing.Color.White;
+            this.toolStripItemManagement.Name = "toolStripItemManagement";
+            resources.ApplyResources(this.toolStripItemManagement, "toolStripItemManagement");
+            this.toolStripItemManagement.Click += new System.EventHandler(this.toolStripItemManagement_Click);
+            // 
+            // toolstripaccount
+            // 
+            this.toolstripaccount.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripAccountManagement,
+            this.kirjauduUlosToolStripMenuItem,
+            this.lainausHistoriaToolStripMenuItem});
+            resources.ApplyResources(this.toolstripaccount, "toolstripaccount");
+            this.toolstripaccount.ForeColor = System.Drawing.Color.White;
+            this.toolstripaccount.Name = "toolstripaccount";
+            // 
+            // ToolStripAccountManagement
+            // 
+            resources.ApplyResources(this.ToolStripAccountManagement, "ToolStripAccountManagement");
+            this.ToolStripAccountManagement.ForeColor = System.Drawing.Color.White;
+            this.ToolStripAccountManagement.Name = "ToolStripAccountManagement";
+            this.ToolStripAccountManagement.Click += new System.EventHandler(this.ToolStripAccountManagement_Click);
+            // 
+            // kirjauduUlosToolStripMenuItem
+            // 
+            resources.ApplyResources(this.kirjauduUlosToolStripMenuItem, "kirjauduUlosToolStripMenuItem");
+            this.kirjauduUlosToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.kirjauduUlosToolStripMenuItem.Name = "kirjauduUlosToolStripMenuItem";
+            this.kirjauduUlosToolStripMenuItem.Click += new System.EventHandler(this.kirjauduUlosToolStripMenuItem_Click);
+            // 
+            // lainausHistoriaToolStripMenuItem
+            // 
+            resources.ApplyResources(this.lainausHistoriaToolStripMenuItem, "lainausHistoriaToolStripMenuItem");
+            this.lainausHistoriaToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.lainausHistoriaToolStripMenuItem.Name = "lainausHistoriaToolStripMenuItem";
+            this.lainausHistoriaToolStripMenuItem.Click += new System.EventHandler(this.lainausHistoriaToolStripMenuItem_Click);
+            // 
+            // ToolStripSettings
+            // 
+            this.ToolStripSettings.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.SettingsToolStrip_LanguageSelect});
+            this.ToolStripSettings.ForeColor = System.Drawing.Color.White;
+            this.ToolStripSettings.Name = "ToolStripSettings";
+            resources.ApplyResources(this.ToolStripSettings, "ToolStripSettings");
+            // 
+            // SettingsToolStrip_LanguageSelect
+            // 
+            this.SettingsToolStrip_LanguageSelect.ForeColor = System.Drawing.Color.White;
+            this.SettingsToolStrip_LanguageSelect.Name = "SettingsToolStrip_LanguageSelect";
+            resources.ApplyResources(this.SettingsToolStrip_LanguageSelect, "SettingsToolStrip_LanguageSelect");
+            this.SettingsToolStrip_LanguageSelect.Click += new System.EventHandler(this.Language_Settings_Button_Click);
+            // 
+            // ToolStripHelp
+            // 
+            this.ToolStripHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.helpContentsToolStripMenuItem,
+            this.onlineHelpToolStripMenuItem,
+            this.aboutToolStripMenuItem});
+            this.ToolStripHelp.ForeColor = System.Drawing.Color.White;
+            this.ToolStripHelp.Name = "ToolStripHelp";
+            resources.ApplyResources(this.ToolStripHelp, "ToolStripHelp");
+            // 
+            // helpContentsToolStripMenuItem
+            // 
+            this.helpContentsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.helpContentsToolStripMenuItem.Name = "helpContentsToolStripMenuItem";
+            resources.ApplyResources(this.helpContentsToolStripMenuItem, "helpContentsToolStripMenuItem");
+            this.helpContentsToolStripMenuItem.Click += new System.EventHandler(this.helpContentsToolStripMenuItem_Click);
+            // 
+            // onlineHelpToolStripMenuItem
+            // 
+            this.onlineHelpToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.onlineHelpToolStripMenuItem.Name = "onlineHelpToolStripMenuItem";
+            resources.ApplyResources(this.onlineHelpToolStripMenuItem, "onlineHelpToolStripMenuItem");
+            this.onlineHelpToolStripMenuItem.Click += new System.EventHandler(this.onlineHelpToolStripMenuItem_Click);
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            resources.ApplyResources(this.aboutToolStripMenuItem, "aboutToolStripMenuItem");
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            // 
+            // _CloseButton
+            // 
+            resources.ApplyResources(this._CloseButton, "_CloseButton");
+            this._CloseButton.BZBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this._CloseButton.DisplayText = "X";
+            this._CloseButton.ForeColor = System.Drawing.Color.White;
+            this._CloseButton.MouseClickColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(160)))));
+            this._CloseButton.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this._CloseButton.Name = "_CloseButton";
+            this._CloseButton.TextLocation_X = 6;
+            this._CloseButton.TextLocation_Y = 1;
+            this.toolTip1.SetToolTip(this._CloseButton, resources.GetString("_CloseButton.ToolTip"));
+            this._CloseButton.UseVisualStyleBackColor = true;
+            this._CloseButton.Click += new System.EventHandler(this._CloseButton_Click);
+            // 
+            // _MaxButton
+            // 
+            resources.ApplyResources(this._MaxButton, "_MaxButton");
+            this._MaxButton.BZBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this._MaxButton.CFormState = VillageNewbies.UI.MinMaxButton.CustomFormState.Normal;
+            this._MaxButton.DisplayText = "_";
+            this._MaxButton.ForeColor = System.Drawing.Color.White;
+            this._MaxButton.MouseClickColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(160)))));
+            this._MaxButton.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this._MaxButton.Name = "_MaxButton";
+            this._MaxButton.TextLocation_X = 8;
+            this._MaxButton.TextLocation_Y = 6;
+            this.toolTip1.SetToolTip(this._MaxButton, resources.GetString("_MaxButton.ToolTip"));
+            this._MaxButton.UseVisualStyleBackColor = true;
+            this._MaxButton.Click += new System.EventHandler(this._MaxButton_Click);
+            // 
+            // _MinButton
+            // 
+            resources.ApplyResources(this._MinButton, "_MinButton");
+            this._MinButton.BZBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this._MinButton.DisplayText = "_";
+            this._MinButton.ForeColor = System.Drawing.Color.White;
+            this._MinButton.MouseClickColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(160)))));
+            this._MinButton.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this._MinButton.Name = "_MinButton";
+            this._MinButton.TextLocation_X = 6;
+            this._MinButton.TextLocation_Y = -20;
+            this.toolTip1.SetToolTip(this._MinButton, resources.GetString("_MinButton.ToolTip"));
+            this._MinButton.UseVisualStyleBackColor = true;
+            this._MinButton.Click += new System.EventHandler(this._MinButton_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::VillageNewbies.Properties.Resources.logo;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            // 
+            // TopPanel
+            // 
+            this.TopPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.TopPanel.Controls.Add(this.pictureBox1);
+            this.TopPanel.Controls.Add(this._MinButton);
+            this.TopPanel.Controls.Add(this._MaxButton);
+            this.TopPanel.Controls.Add(this._CloseButton);
+            this.TopPanel.Controls.Add(this.menuStripZ1);
+            this.TopPanel.Controls.Add(this.WindowTextLabel);
+            resources.ApplyResources(this.TopPanel, "TopPanel");
+            this.TopPanel.Name = "TopPanel";
+            this.TopPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDown);
+            this.TopPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseMove);
+            this.TopPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseUp);
+            this.TopPanel.Resize += new System.EventHandler(this.Panel_Resize);
+            // 
             // MainScreen
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.Controls.Add(this.LeftPanel);
-            this.Controls.Add(this.LeftTopPanel_1);
-            this.Controls.Add(this.LeftTopPanel_2);
-            this.Controls.Add(this.RightPanel);
-            this.Controls.Add(this.RightTopPanel_2);
-            this.Controls.Add(this.RightTopPanel_1);
-            this.Controls.Add(this.TopBorderPanel);
             this.Controls.Add(this.TopPanel);
-            this.Controls.Add(this.LeftBottomPanel_2);
-            this.Controls.Add(this.LeftBottomPanel_1);
             this.Controls.Add(this.RightBottomPanel_2);
-            this.Controls.Add(this.RightBottomPanel_1);
             this.Controls.Add(this.Separator_Panel);
-            this.Controls.Add(this.BottomPanel);
             this.Controls.Add(this.Left_Button_Panel);
             this.Controls.Add(this.BtmPanel);
+            this.Controls.Add(this.Item_Management);
+            this.Controls.Add(this.Loan_Panel);
+            this.Controls.Add(this.LoanHistoryPanel);
             this.Controls.Add(this.Waiting_Events_panel);
             this.Controls.Add(this.AccountManagement_Panel);
             this.Controls.Add(this.UserLoans_Panel);
@@ -1724,11 +1592,6 @@
             this.Name = "MainScreen";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainScreen_FormClosing);
             this.Load += new System.EventHandler(this.BlackForm_Load);
-            this.TopPanel.ResumeLayout(false);
-            this.TopPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.menuStripZ1.ResumeLayout(false);
-            this.menuStripZ1.PerformLayout();
             this.BtmPanel.ResumeLayout(false);
             this.BtmPanel.PerformLayout();
             this.Left_Button_Panel.ResumeLayout(false);
@@ -1741,6 +1604,13 @@
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.UserLoans_Panel.ResumeLayout(false);
+            this.groupBox26.ResumeLayout(false);
+            this.groupBox26.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.Item_Management.ResumeLayout(false);
             this.groupBox11.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
@@ -1752,13 +1622,6 @@
             this.groupBox9.PerformLayout();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
-            this.UserLoans_Panel.ResumeLayout(false);
-            this.groupBox26.ResumeLayout(false);
-            this.groupBox26.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
             this.Waiting_Events_panel.ResumeLayout(false);
             this.Waiting_Events_panel.PerformLayout();
             this.groupBox15.ResumeLayout(false);
@@ -1769,11 +1632,6 @@
             this.groupBox14.PerformLayout();
             this.groupBox13.ResumeLayout(false);
             this.groupBox13.PerformLayout();
-            this.LoanHistoryPanel.ResumeLayout(false);
-            this.groupBox21.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridItemLoanHistory)).EndInit();
-            this.groupBox12.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridUserLoanHistory)).EndInit();
             this.AccountManagement_Panel.ResumeLayout(false);
             this.groupBox20.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.datagrid_Users)).EndInit();
@@ -1787,42 +1645,29 @@
             this.groupBox24.PerformLayout();
             this.groupBox25.ResumeLayout(false);
             this.groupBox25.PerformLayout();
+            this.LoanHistoryPanel.ResumeLayout(false);
+            this.groupBox21.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridItemLoanHistory)).EndInit();
+            this.groupBox12.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridUserLoanHistory)).EndInit();
+            this.menuStripZ1.ResumeLayout(false);
+            this.menuStripZ1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.TopPanel.ResumeLayout(false);
+            this.TopPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel TopBorderPanel;
-        private System.Windows.Forms.Panel RightPanel;
-        private System.Windows.Forms.Panel LeftPanel;
-        private System.Windows.Forms.Panel BottomPanel;
-        private System.Windows.Forms.Panel TopPanel;
-        private ButtonZ _CloseButton;
-        private System.Windows.Forms.Panel RightBottomPanel_1;
-        private System.Windows.Forms.Label WindowTextLabel;
-        private MinMaxButton _MaxButton;
         private System.Windows.Forms.Panel BtmPanel;
-        private ButtonZ _MinButton;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Panel RightBottomPanel_2;
-        private System.Windows.Forms.Panel LeftBottomPanel_1;
-        private System.Windows.Forms.Panel LeftBottomPanel_2;
-        private System.Windows.Forms.Panel RightTopPanel_1;
-        private System.Windows.Forms.Panel RightTopPanel_2;
-        private System.Windows.Forms.Panel LeftTopPanel_1;
-        private System.Windows.Forms.Panel LeftTopPanel_2;
         private System.Windows.Forms.Panel Left_Button_Panel;
         private ButtonX btn_Loan;
         private System.Windows.Forms.Panel Separator_Panel;
         private ButtonX btn_UsersLoans;
         private ButtonX btn_Reservation;
-        private MenuStripZ menuStripZ1;
-        private System.Windows.Forms.ToolStripMenuItem ToolStripHelp;
-        private System.Windows.Forms.ToolStripMenuItem helpContentsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem onlineHelpToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ToolStripSettings;
         private System.Windows.Forms.Panel Settings_Panel;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton rbEnglish;
@@ -1838,7 +1683,6 @@
         private System.Windows.Forms.DateTimePicker dtp_Loan_ReturnDate;
         private ShapedButton btn_Loan_LoanItem;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.ToolStripMenuItem SettingsToolStrip_LanguageSelect;
         private System.Windows.Forms.Panel UserLoans_Panel;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.ComboBox combobox_UserLoans_ItemType;
@@ -1854,7 +1698,6 @@
         private System.Windows.Forms.TextBox txt_ChangeItem_ItemState;
         private System.Windows.Forms.TextBox txt_ChangeItem_ItemType;
         private System.Windows.Forms.TextBox txt_ChangeItem_ItemID;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox8;
         private ShapedButton btn_CreateItemType;
         private System.Windows.Forms.TextBox txt_CreateItemType;
@@ -1886,10 +1729,6 @@
         private System.Windows.Forms.TextBox txt_Waiting_ReturnItemID;
         private System.Windows.Forms.CheckedListBox checklist_Waiting_PendingReturns;
         private ButtonX btnWaitingEvents;
-        private System.Windows.Forms.ToolStripMenuItem toolstripaccount;
-        private System.Windows.Forms.ToolStripMenuItem ToolStripAccountManagement;
-        private System.Windows.Forms.ToolStripMenuItem ToolstripItems;
-        private System.Windows.Forms.ToolStripMenuItem toolStripItemManagement;
         private System.Windows.Forms.Panel AccountManagement_Panel;
         private System.Windows.Forms.Panel Reservation_Panel;
         private System.Windows.Forms.GroupBox groupBox24;
@@ -1910,7 +1749,6 @@
         private System.Windows.Forms.TextBox txt_user_reservations_enddate;
         private System.Windows.Forms.TextBox txt_user_reservations_startdate;
         private System.Windows.Forms.TextBox txt_Loan_ReservedTill;
-        private System.Windows.Forms.ToolStripMenuItem kirjauduUlosToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupBox19;
         private System.Windows.Forms.TextBox txt_AM_NewEmail;
         private System.Windows.Forms.TextBox txt_AM_NewEmail_Confirm;
@@ -1931,7 +1769,6 @@
         private ShapedButton btn_UpdateUserDetails;
         private System.Windows.Forms.DataGridView datagrid_Users;
         private System.Windows.Forms.Label lblCurrentDate;
-        private System.Windows.Forms.ToolStripMenuItem lainausHistoriaToolStripMenuItem;
         private System.Windows.Forms.Panel LoanHistoryPanel;
         private System.Windows.Forms.GroupBox groupBox21;
         private System.Windows.Forms.ComboBox cb_LoanHistory_Item;
@@ -1943,5 +1780,24 @@
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.TextBox txt_ItemNewName;
         private System.Windows.Forms.ComboBox cb_ItemNewState;
+        private System.Windows.Forms.Label WindowTextLabel;
+        private MenuStripZ menuStripZ1;
+        private System.Windows.Forms.ToolStripMenuItem ToolstripItems;
+        private System.Windows.Forms.ToolStripMenuItem toolStripItemManagement;
+        private System.Windows.Forms.ToolStripMenuItem toolstripaccount;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripAccountManagement;
+        private System.Windows.Forms.ToolStripMenuItem kirjauduUlosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem lainausHistoriaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripSettings;
+        private System.Windows.Forms.ToolStripMenuItem SettingsToolStrip_LanguageSelect;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripHelp;
+        private System.Windows.Forms.ToolStripMenuItem helpContentsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem onlineHelpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private ButtonZ _CloseButton;
+        private MinMaxButton _MaxButton;
+        private ButtonZ _MinButton;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel TopPanel;
     }
 }

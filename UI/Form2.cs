@@ -7,22 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using VillageNewbies.UI;
 
-namespace VillageNewbies
+namespace VillageNewbies.UI
 {
-    public partial class Form1 : Form
+    public partial class Varaus : Form
     {
-        public Form1()
+        public Varaus()
         {
             InitializeComponent();
-
         }
 
-        private void Btn_Varaus_Click(object sender, EventArgs e)
+        private void Varaus_Load(object sender, EventArgs e)
         {
-            Varaus vr = new Varaus();
-            vr.ShowDialog();
+            SQL s = new SQL();
+            s.create();
+            DataTable dt = s.returnstuff();
         }
     }
 }

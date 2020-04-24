@@ -14,9 +14,76 @@ namespace VillageNewbies.UI
 {
     public partial class MainScreen : Form
     {
+        #region starting Stuff
         TypeAssistant Loan_Assistant;
         TypeAssistant UserLoans_Assistant;
         TypeAssistant Reservation_Assistant;
+
+
+        private void itemtypes()
+        {/*
+            using (MySqlConnection connection = Program.sql.MySqlConnection())
+            {
+
+                ComboItem def = new ComboItem();
+                def.ID = 999;
+                def.Text = "KAIKKI";
+                connection.Open();
+                combobox_Loan_ItemType.Items.Clear();
+                combobox_Loan_ItemType.Items.Add(def);
+                combobox_Loan_ItemType.SelectedItem = combobox_Loan_ItemType.Items[0];
+
+                combobox_UserLoans_ItemType.Items.Clear();
+                combobox_UserLoans_ItemType.Items.Add(def);
+                combobox_UserLoans_ItemType.SelectedItem = combobox_UserLoans_ItemType.Items[0];
+
+                ComboBoxCreateItemType.Items.Clear();
+                ComboBoxCreateItemType.Items.Add(def);
+                ComboBoxCreateItemType.SelectedItem = ComboBoxCreateItemType.Items[0];
+
+                cb_ItemNewState.Items.Clear();
+                cb_ItemNewState.DisplayMember = "Text";
+
+                combox_reservation_itemtype.Items.Clear();
+                combox_reservation_itemtype.Items.Add(def);
+                combox_reservation_itemtype.SelectedItem = combox_reservation_itemtype.Items[0];
+
+                using (MySqlCommand GetItemTypes = Program.sql.MySqlGetItemTypes(connection))
+                {
+                    MySqlDataReader reader = GetItemTypes.ExecuteReader();
+
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            string text = (string)reader["IT_NAME"];
+                            int id = (int)reader["IT_ID"];
+                            combobox_Loan_ItemType.Items.Add(new ComboItem { Text = text, ID = id });
+                            combobox_UserLoans_ItemType.Items.Add(new ComboItem { Text = text, ID = id });
+                            ComboBoxCreateItemType.Items.Add(new ComboItem { Text = text, ID = id });
+                            combox_reservation_itemtype.Items.Add(new ComboItem { Text = text, ID = id });
+                        }
+                    }
+                }
+
+                using (MySqlCommand GetItemTypes = Program.sql.MySqlGetItemStates(connection))
+                {
+                    MySqlDataReader reader = GetItemTypes.ExecuteReader();
+
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            string text = (string)reader["IS_NAME"];
+                            int id = (int)reader["IS_ID"];
+                            cb_ItemNewState.Items.Add(new ComboItem { Text = text, ID = id });
+                        }
+                    }
+                }
+
+            }
+            */
+        }
 
         private void txt_reservation_itemsearch_TextChanged(object sender, EventArgs e)
         {
@@ -104,6 +171,7 @@ namespace VillageNewbies.UI
             */
         }
 
+        #endregion
         public MainScreen()
         {
             InitializeComponent();
@@ -151,8 +219,6 @@ namespace VillageNewbies.UI
 
         }
 
-
-
         private void BlackForm_Load(object sender, EventArgs e)
         {
             //_MaxButton.PerformClick();
@@ -160,89 +226,51 @@ namespace VillageNewbies.UI
 
         #region Draggin form events
 
-        bool isTopPanelDragged = false;
-        bool isLeftPanelDragged = false;
-        bool isRightPanelDragged = false;
-        bool isBottomPanelDragged = false;
-        bool isTopBorderPanelDragged = false;
-
-        bool isRightBottomPanelDragged = false;
-        bool isLeftBottomPanelDragged = false;
-        bool isRightTopPanelDragged = false;
-        bool isLeftTopPanelDragged = false;
-
-        bool isWindowMaximized = false;
-        Point offset;
-        Size _normalWindowSize;
-        Point _normalWindowLocation = Point.Empty;
-
-
-
-        private void TopBorderPanel_MouseDown(object sender, MouseEventArgs e)
+        private void Panel_Resize(object sender, EventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
+            if (this.Size.Width <= 1425)
             {
-                isTopBorderPanelDragged = true;
+                menuStripZ1.Parent = BtmPanel;
             }
             else
             {
-                isTopBorderPanelDragged = false;
+                menuStripZ1.Parent = TopPanel;
             }
         }
-
-
-        private void TopBorderPanel_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (e.Y < this.Location.Y)
-            {
-                if (isTopBorderPanelDragged)
-                {
-                    if (this.Height < 50)
-                    {
-                        this.Height = 50;
-                        isTopBorderPanelDragged = false;
-                    }
-                    else
-                    {
-                        this.Location = new Point(this.Location.X, this.Location.Y + e.Y);
-                        this.Height = this.Height - e.Y;
-                    }
-                }
-            }
-        }
-
-
-        private void TopBorderPanel_MouseUp(object sender, MouseEventArgs e)
-        {
-            isTopBorderPanelDragged = false;
-        }
-
-
-
-        private void TopPanel_MouseDown(object sender, MouseEventArgs e)
+        private void Panel_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
-                isTopPanelDragged = true;
+               
+
+                isPanelDragged = true;
                 Point pointStartPosition = this.PointToScreen(new Point(e.X, e.Y));
                 offset = new Point();
                 offset.X = this.Location.X - pointStartPosition.X;
                 offset.Y = this.Location.Y - pointStartPosition.Y;
+
+                // TODO kulmat
+                if (PointToClient(Cursor.Position).X <= Size.Width && PointToClient(Cursor.Position).X >= Size.Width-25 ||
+                    PointToClient(Cursor.Position).Y <= Size.Height && PointToClient(Cursor.Position).Y >= Size.Height - 25
+                   )
+                {
+                    isPanelRezising = true;
+                    isPanelDragged = false;
+                }
             }
             else
             {
-                isTopPanelDragged = false;
+                isPanelDragged = false;
             }
             if (e.Clicks == 2)
             {
-                isTopPanelDragged = false;
+                isPanelDragged = false;
                 _MaxButton_Click(sender, e);
             }
         }
-
-        private void TopPanel_MouseMove(object sender, MouseEventArgs e)
+        private void Panel_MouseMove(object sender, MouseEventArgs e)
         {
-            if (isTopPanelDragged)
+            if (isPanelDragged)
             {
                 Point newPoint = TopPanel.PointToScreen(new Point(e.X, e.Y));
                 newPoint.Offset(offset);
@@ -260,12 +288,16 @@ namespace VillageNewbies.UI
                     }
                 }
             }
+            else if (isPanelRezising)
+            {
+                this.Width = this.Width + e.X;
+                this.Height = this.Height + e.Y;
+            }
         }
-
-
-        private void TopPanel_MouseUp(object sender, MouseEventArgs e)
+        private void Panel_MouseUp(object sender, MouseEventArgs e)
         {
-            isTopPanelDragged = false;
+            isPanelDragged = false;
+            isPanelRezising = false;
             if (this.Location.Y <= 5)
             {
                 if (!isWindowMaximized)
@@ -275,131 +307,20 @@ namespace VillageNewbies.UI
 
                     Rectangle rect = Screen.PrimaryScreen.WorkingArea;
                     this.Location = new Point(0, 0);
-                    this.Size = new System.Drawing.Size(rect.Width, rect.Height);
+                    this.Size = new Size(rect.Width, rect.Height);
                     toolTip1.SetToolTip(_MaxButton, "Restore Down");
                     _MaxButton.CFormState = MinMaxButton.CustomFormState.Maximize;
                     isWindowMaximized = true;
                 }
             }
         }
+        bool isPanelDragged = false;
+        bool isPanelRezising = false;
 
-
-
-        private void LeftPanel_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (this.Location.X <= 0 || e.X < 0)
-            {
-                isLeftPanelDragged = false;
-                this.Location = new Point(10, this.Location.Y);
-            }
-            else
-            {
-                if (e.Button == MouseButtons.Left)
-                {
-                    isLeftPanelDragged = true;
-                }
-                else
-                {
-                    isLeftPanelDragged = false;
-                }
-            }
-        }
-
-        private void LeftPanel_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (e.X < this.Location.X)
-            {
-                if (isLeftPanelDragged)
-                {
-                    if (this.Width < 100)
-                    {
-                        this.Width = 100;
-                        isLeftPanelDragged = false;
-                    }
-                    else
-                    {
-                        this.Location = new Point(this.Location.X + e.X, this.Location.Y);
-                        this.Width = this.Width - e.X;
-                    }
-                }
-            }
-        }
-
-        private void LeftPanel_MouseUp(object sender, MouseEventArgs e)
-        {
-            isLeftPanelDragged = false;
-        }
-
-
-
-        private void RightPanel_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                isRightPanelDragged = true;
-            }
-            else
-            {
-                isRightPanelDragged = false;
-            }
-        }
-
-        private void RightPanel_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (isRightPanelDragged)
-            {
-                if (this.Width < 100)
-                {
-                    this.Width = 100;
-                    isRightPanelDragged = false;
-                }
-                else
-                {
-                    this.Width = this.Width + e.X;
-                }
-            }
-        }
-
-        private void RightPanel_MouseUp(object sender, MouseEventArgs e)
-        {
-            isRightPanelDragged = false;
-        }
-
-
-
-        private void BottomPanel_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                isBottomPanelDragged = true;
-            }
-            else
-            {
-                isBottomPanelDragged = false;
-            }
-        }
-
-        private void BottomPanel_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (isBottomPanelDragged)
-            {
-                if (this.Height < 50)
-                {
-                    this.Height = 50;
-                    isBottomPanelDragged = false;
-                }
-                else
-                {
-                    this.Height = this.Height + e.Y;
-                }
-            }
-        }
-
-        private void BottomPanel_MouseUp(object sender, MouseEventArgs e)
-        {
-            isBottomPanelDragged = false;
-        }
-
+        bool isWindowMaximized = false;
+        Point offset;
+        Size _normalWindowSize;
+        Point _normalWindowLocation = Point.Empty;
 
         private void _MinButton_Click(object sender, EventArgs e)
         {
@@ -435,271 +356,7 @@ namespace VillageNewbies.UI
             this.Close();
         }
 
-
-
-
-        private void RightBottomPanel_1_MouseDown(object sender, MouseEventArgs e)
-        {
-            isRightBottomPanelDragged = true;
-        }
-
-        private void RightBottomPanel_1_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (isRightBottomPanelDragged)
-            {
-                if (this.Width < 100 || this.Height < 50)
-                {
-                    this.Width = 100;
-                    this.Height = 50;
-                    isRightBottomPanelDragged = false;
-                }
-                else
-                {
-                    this.Width = this.Width + e.X;
-                    this.Height = this.Height + e.Y;
-                }
-            }
-        }
-
-
-        private void RightBottomPanel_1_MouseUp(object sender, MouseEventArgs e)
-        {
-            isRightBottomPanelDragged = false;
-        }
-
-        private void RightBottomPanel_2_MouseDown(object sender, MouseEventArgs e)
-        {
-            RightBottomPanel_1_MouseDown(sender, e);
-        }
-
-        private void RightBottomPanel_2_MouseMove(object sender, MouseEventArgs e)
-        {
-            RightBottomPanel_1_MouseMove(sender, e);
-        }
-
-        private void RightBottomPanel_2_MouseUp(object sender, MouseEventArgs e)
-        {
-            RightBottomPanel_1_MouseUp(sender, e);
-        }
-
-
-
-        private void LeftBottomPanel_1_MouseDown(object sender, MouseEventArgs e)
-        {
-            isLeftBottomPanelDragged = true;
-        }
-
-        private void LeftBottomPanel_1_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (e.X < this.Location.X)
-            {
-                if (isLeftBottomPanelDragged || this.Height < 50)
-                {
-                    if (this.Width < 100)
-                    {
-                        this.Width = 100;
-                        this.Height = 50;
-                        isLeftBottomPanelDragged = false;
-                    }
-                    else
-                    {
-                        this.Location = new Point(this.Location.X + e.X, this.Location.Y);
-                        this.Width = this.Width - e.X;
-                        this.Height = this.Height + e.Y;
-                    }
-                }
-            }
-        }
-
-        private void LeftBottomPanel_1_MouseUp(object sender, MouseEventArgs e)
-        {
-            isLeftBottomPanelDragged = false;
-        }
-
-        private void LeftBottomPanel_2_MouseDown(object sender, MouseEventArgs e)
-        {
-            LeftBottomPanel_1_MouseDown(sender, e);
-        }
-
-        private void LeftBottomPanel_2_MouseMove(object sender, MouseEventArgs e)
-        {
-            LeftBottomPanel_1_MouseMove(sender, e);
-        }
-
-        private void LeftBottomPanel_2_MouseUp(object sender, MouseEventArgs e)
-        {
-            LeftBottomPanel_1_MouseUp(sender, e);
-        }
-
-
-
-
-        private void RightTopPanel_1_MouseDown(object sender, MouseEventArgs e)
-        {
-            isRightTopPanelDragged = true;
-        }
-
-        private void RightTopPanel_1_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (e.Y < this.Location.Y || e.X < this.Location.X)
-            {
-                if (isRightTopPanelDragged)
-                {
-                    if (this.Height < 50 || this.Width < 100)
-                    {
-                        this.Height = 50;
-                        this.Width = 100;
-                        isRightTopPanelDragged = false;
-                    }
-                    else
-                    {
-                        this.Location = new Point(this.Location.X, this.Location.Y + e.Y);
-                        this.Height = this.Height - e.Y;
-                        this.Width = this.Width + e.X;
-                    }
-                }
-            }
-        }
-
-        private void RightTopPanel_1_MouseUp(object sender, MouseEventArgs e)
-        {
-            isRightTopPanelDragged = false;
-        }
-
-        private void RightTopPanel_2_MouseDown(object sender, MouseEventArgs e)
-        {
-            RightTopPanel_1_MouseDown(sender, e);
-        }
-
-        private void RightTopPanel_2_MouseMove(object sender, MouseEventArgs e)
-        {
-            RightTopPanel_1_MouseMove(sender, e);
-        }
-
-        private void RightTopPanel_2_MouseUp(object sender, MouseEventArgs e)
-        {
-            RightTopPanel_1_MouseUp(sender, e);
-        }
-
-
-
-
-
-        private void LeftTopPanel_1_MouseDown(object sender, MouseEventArgs e)
-        {
-            isLeftTopPanelDragged = true;
-        }
-
-        private void LeftTopPanel_1_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (e.X < this.Location.X || e.Y < this.Location.Y)
-            {
-                if (isLeftTopPanelDragged)
-                {
-                    if (this.Width < 100 || this.Height < 50)
-                    {
-                        this.Width = 100;
-                        this.Height = 100;
-                        isLeftTopPanelDragged = false;
-                    }
-                    else
-                    {
-                        this.Location = new Point(this.Location.X + e.X, this.Location.Y);
-                        this.Width = this.Width - e.X;
-                        this.Location = new Point(this.Location.X, this.Location.Y + e.Y);
-                        this.Height = this.Height - e.Y;
-                    }
-                }
-            }
-
-        }
-
-        private void LeftTopPanel_1_MouseUp(object sender, MouseEventArgs e)
-        {
-            isLeftTopPanelDragged = false;
-        }
-
-        private void LeftTopPanel_2_MouseDown(object sender, MouseEventArgs e)
-        {
-            LeftTopPanel_1_MouseDown(sender, e);
-        }
-
-        private void LeftTopPanel_2_MouseMove(object sender, MouseEventArgs e)
-        {
-            LeftTopPanel_1_MouseMove(sender, e);
-        }
-
-        private void LeftTopPanel_2_MouseUp(object sender, MouseEventArgs e)
-        {
-            LeftTopPanel_1_MouseUp(sender, e);
-        }
-
         #endregion
-
-        private void itemtypes()
-        {/*
-            using (MySqlConnection connection = Program.sql.MySqlConnection())
-            {
-
-                ComboItem def = new ComboItem();
-                def.ID = 999;
-                def.Text = "KAIKKI";
-                connection.Open();
-                combobox_Loan_ItemType.Items.Clear();
-                combobox_Loan_ItemType.Items.Add(def);
-                combobox_Loan_ItemType.SelectedItem = combobox_Loan_ItemType.Items[0];
-
-                combobox_UserLoans_ItemType.Items.Clear();
-                combobox_UserLoans_ItemType.Items.Add(def);
-                combobox_UserLoans_ItemType.SelectedItem = combobox_UserLoans_ItemType.Items[0];
-
-                ComboBoxCreateItemType.Items.Clear();
-                ComboBoxCreateItemType.Items.Add(def);
-                ComboBoxCreateItemType.SelectedItem = ComboBoxCreateItemType.Items[0];
-
-                cb_ItemNewState.Items.Clear();
-                cb_ItemNewState.DisplayMember = "Text";
-
-                combox_reservation_itemtype.Items.Clear();
-                combox_reservation_itemtype.Items.Add(def);
-                combox_reservation_itemtype.SelectedItem = combox_reservation_itemtype.Items[0];
-
-                using (MySqlCommand GetItemTypes = Program.sql.MySqlGetItemTypes(connection))
-                {
-                    MySqlDataReader reader = GetItemTypes.ExecuteReader();
-
-                    if (reader.HasRows)
-                    {
-                        while (reader.Read())
-                        {
-                            string text = (string)reader["IT_NAME"];
-                            int id = (int)reader["IT_ID"];
-                            combobox_Loan_ItemType.Items.Add(new ComboItem { Text = text, ID = id });
-                            combobox_UserLoans_ItemType.Items.Add(new ComboItem { Text = text, ID = id });
-                            ComboBoxCreateItemType.Items.Add(new ComboItem { Text = text, ID = id });
-                            combox_reservation_itemtype.Items.Add(new ComboItem { Text = text, ID = id });
-                        }
-                    }
-                }
-
-                using (MySqlCommand GetItemTypes = Program.sql.MySqlGetItemStates(connection))
-                {
-                    MySqlDataReader reader = GetItemTypes.ExecuteReader();
-
-                    if (reader.HasRows)
-                    {
-                        while (reader.Read())
-                        {
-                            string text = (string)reader["IS_NAME"];
-                            int id = (int)reader["IS_ID"];
-                            cb_ItemNewState.Items.Add(new ComboItem { Text = text, ID = id });
-                        }
-                    }
-                }
-
-            }
-            */
-        }
 
 
         #region LeftPanel_Buttons
@@ -828,6 +485,8 @@ namespace VillageNewbies.UI
         }
         private void toolStripItemManagement_Click(object sender, EventArgs e)
         {
+            //TODO
+
             btn_Loan.BZBackColor = Color.FromArgb(40, 40, 40);
             btn_UsersLoans.BZBackColor = Color.FromArgb(50, 50, 50);
             btn_Reservation.BZBackColor = Color.FromArgb(40, 40, 40);
@@ -838,6 +497,7 @@ namespace VillageNewbies.UI
 
             Item_Management.Visible = true;
             Controls.SetChildIndex(Item_Management, Controls.Count - 8);
+
             itemtypes();
             GetAllItems();
         }
@@ -915,17 +575,17 @@ namespace VillageNewbies.UI
 
         private void WindowTextLabel_MouseDown(object sender, MouseEventArgs e)
         {
-            TopPanel_MouseDown(sender, e);
+            Panel_MouseDown(sender, e);
         }
 
         private void WindowTextLabel_MouseMove(object sender, MouseEventArgs e)
         {
-            TopPanel_MouseMove(sender, e);
+            Panel_MouseMove(sender, e);
         }
 
         private void WindowTextLabel_MouseUp(object sender, MouseEventArgs e)
         {
-            TopPanel_MouseUp(sender, e);
+            Panel_MouseUp(sender, e);
         }
 
         private void shapedButton4_Click(object sender, EventArgs e)
@@ -1150,6 +810,25 @@ namespace VillageNewbies.UI
 
         #region Reservation panel
 
+        private void checklist_Reservation_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            if (e.CurrentValue == CheckState.Checked)
+            {
+                txt_reservation_Itemstate.Text = "";
+                txt_reservation_Itemtype.Text = "";
+                e.NewValue = CheckState.Unchecked;
+            }
+            if (e.NewValue == CheckState.Unchecked)
+            {
+                txt_reservation_Itemstate.Text = "";
+                txt_reservation_Itemtype.Text = "";
+            }
+
+        }
+
+        private void checklist_Reservation_MouseClick(object sender, MouseEventArgs e)
+        {
+        }
         private void checklist_Reservation_SelectedValueChanged(object sender, EventArgs e)
         {/*
             try
@@ -1981,6 +1660,58 @@ namespace VillageNewbies.UI
 
         }
 
+
+        private void cb_EditItemDetails_SelectedValueChanged(object sender, EventArgs e)
+        {/*
+            txt_ChangeItem_ItemID.Text = ((Item)cb_EditItemDetails.SelectedItem).ID.ToString();
+            txt_ChangeItem_ItemType.Text = ((Item)cb_EditItemDetails.SelectedItem).TYPE.ToString();
+            txt_ChangeItem_ItemState.Text = ((Item)cb_EditItemDetails.SelectedItem).STATE.ToString();
+            txt_ItemNewName.Text = ((Item)cb_EditItemDetails.SelectedItem).NAME.ToString();
+            cb_ItemNewState.SelectedItem = cb_ItemNewState.Items[((Item)cb_EditItemDetails.SelectedItem).STATE];
+            using (MySqlConnection connection = Program.sql.MySqlConnection())
+            {
+                using (MySqlCommand ItemType = Program.sql.MySqlGetItemTypeName(connection))
+                {
+                    ItemType.Parameters.AddWithValue("@ITEMTYPEID", txt_ChangeItem_ItemType.Text);
+
+                    connection.Open();
+                    MySqlDataReader reader = ItemType.ExecuteReader();
+
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            string itemtype = (string)reader["IT_NAME"];
+                            txt_ChangeItem_ItemType.Text = itemtype;
+                        }
+                    }
+                }
+                connection.Close();
+            }
+            using (MySqlConnection connection = Program.sql.MySqlConnection())
+            {
+                using (MySqlCommand ItemType = Program.sql.MySqlGetItemStateName(connection))
+                {
+                    ItemType.Parameters.AddWithValue("@ITEMSTATEID", txt_ChangeItem_ItemState.Text);
+
+                    connection.Open();
+                    MySqlDataReader reader = ItemType.ExecuteReader();
+
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            string itemstate = (string)reader["IS_NAME"];
+                            txt_ChangeItem_ItemState.Text = itemstate;
+                        }
+                    }
+                }
+                connection.Close();
+            }
+            */
+
+        }
+
         private void btn_CreateItem_Click(object sender, EventArgs e)
         {/*
             try
@@ -2189,12 +1920,7 @@ namespace VillageNewbies.UI
         #endregion
 
 
-        private void MainScreen_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            DialogResult exit = MessageBox.Show("Are you sure you want to exit?", "!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            e.Cancel = (exit == DialogResult.No);
-        }
-
+        #region Toolstrip
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string dev = "Main Dev & Coder: Ville Kokkarinen\nEmail: kokkarinen.ville@gmail.com\nGithub: VilleKokkarinen\n\n";
@@ -2214,81 +1940,13 @@ namespace VillageNewbies.UI
             Process.Start("https://github.com/VilleKokkarinen/Ohje_dokumentti.pdf"); // linkki korjaus
         }
 
-        private void checklist_Reservation_ItemCheck(object sender, ItemCheckEventArgs e)
+
+        #endregion
+
+        private void MainScreen_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (e.CurrentValue == CheckState.Checked)
-            {
-                txt_reservation_Itemstate.Text = "";
-                txt_reservation_Itemtype.Text = "";
-                e.NewValue = CheckState.Unchecked;
-            }
-            if (e.NewValue == CheckState.Unchecked)
-            {
-                txt_reservation_Itemstate.Text = "";
-                txt_reservation_Itemtype.Text = "";
-            }
-
+            DialogResult exit = MessageBox.Show("Are you sure you want to exit?", "!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            e.Cancel = (exit == DialogResult.No);
         }
-
-        private void checklist_Reservation_MouseClick(object sender, MouseEventArgs e)
-        {
-        }
-
-        private void cb_EditItemDetails_SelectedValueChanged(object sender, EventArgs e)
-        {/*
-            txt_ChangeItem_ItemID.Text = ((Item)cb_EditItemDetails.SelectedItem).ID.ToString();
-            txt_ChangeItem_ItemType.Text = ((Item)cb_EditItemDetails.SelectedItem).TYPE.ToString();
-            txt_ChangeItem_ItemState.Text = ((Item)cb_EditItemDetails.SelectedItem).STATE.ToString();
-            txt_ItemNewName.Text = ((Item)cb_EditItemDetails.SelectedItem).NAME.ToString();
-            cb_ItemNewState.SelectedItem = cb_ItemNewState.Items[((Item)cb_EditItemDetails.SelectedItem).STATE];
-            using (MySqlConnection connection = Program.sql.MySqlConnection())
-            {
-                using (MySqlCommand ItemType = Program.sql.MySqlGetItemTypeName(connection))
-                {
-                    ItemType.Parameters.AddWithValue("@ITEMTYPEID", txt_ChangeItem_ItemType.Text);
-
-                    connection.Open();
-                    MySqlDataReader reader = ItemType.ExecuteReader();
-
-                    if (reader.HasRows)
-                    {
-                        while (reader.Read())
-                        {
-                            string itemtype = (string)reader["IT_NAME"];
-                            txt_ChangeItem_ItemType.Text = itemtype;
-                        }
-                    }
-                }
-                connection.Close();
-            }
-            using (MySqlConnection connection = Program.sql.MySqlConnection())
-            {
-                using (MySqlCommand ItemType = Program.sql.MySqlGetItemStateName(connection))
-                {
-                    ItemType.Parameters.AddWithValue("@ITEMSTATEID", txt_ChangeItem_ItemState.Text);
-
-                    connection.Open();
-                    MySqlDataReader reader = ItemType.ExecuteReader();
-
-                    if (reader.HasRows)
-                    {
-                        while (reader.Read())
-                        {
-                            string itemstate = (string)reader["IS_NAME"];
-                            txt_ChangeItem_ItemState.Text = itemstate;
-                        }
-                    }
-                }
-                connection.Close();
-            }
-            */
-
-        }
-
-        private void Left_Button_Panel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-    }
-    
+    }    
 }

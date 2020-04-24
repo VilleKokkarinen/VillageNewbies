@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace VillageNewbies.UI
 {
+    /// <summary>
+    /// Odottaa 0,5s kun käyttäjä syöttää tekstiä, jos lisää tekstiä ei tule -> suorittaa komennon
+    /// </summary>
     public class TypeAssistant
     {
         public event EventHandler Idled = delegate { };
