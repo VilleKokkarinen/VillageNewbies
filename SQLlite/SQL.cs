@@ -35,6 +35,31 @@ namespace VillageNewbies
             return ImportedFiles;
         }
 
+        public static List<string> AvailableCabinsByNameAndType()
+        {
+            List<string> ImportedFiles = new List<string>();
+
+            using (SQLiteConnection connection = new SQLiteConnection(@"Data Source=VillageNewbiesDB.db"))
+            {
+                using (SQLiteCommand availableItems = connection.CreateCommand())
+                {
+                    connection.Open();
+
+                    availableItems.CommandText = @"SELECT mokkinimi Mokki, katuosoite Katu, kuvaus Kuvaus FROM mokki";
+                    availableItems.CommandType = CommandType.Text;
+                    SQLiteDataReader r = availableItems.ExecuteReader();
+                    while (r.Read())
+                    {
+                        ImportedFiles.Add(r["Mokki"].ToString() + " " + r["Katu"].ToString() + " " + r["Kuvaus"].ToString());
+                    }
+
+                }
+                connection.Close();
+            }
+
+            return ImportedFiles;
+        }
+
         public DataTable returnstuff()
         {
             using (SQLiteConnection connect = new SQLiteConnection(@"Data Source=VillageNewbiesDB.db"))
@@ -130,26 +155,29 @@ namespace VillageNewbies
             cmd.CommandText = "CREATE TABLE IF NOT EXISTS mokki(" +
               "mokki_id INTEGER PRIMARY KEY," +
               "toimintaalue_id INT(11) NOT NULL," +
+              "postinro CHAR(5) NOT NULL," +
               "mokkinimi VARCHAR(45) NULL," +
               "katuosoite VARCHAR(45) NULL," +
               "kuvaus VARCHAR(150) NULL," +
               "henkilomaara INT NULL," +
               "varustelu VARCHAR(100) NULL," +
-                "FOREIGN KEY(toimintaalue_id)" +
-                "REFERENCES toimintaalue(toimintaalue_id)" +
+                "FOREIGN KEY(toimintaalue_id) " +
+                "REFERENCES toimintaalue(toimintaalue_id) " +
+                "FOREIGN KEY(postinro)" +
                 "REFERENCES posti(postinro))";
             cmd.ExecuteNonQuery();
             
 
-            cmd.CommandText = "INSERT INTO mokki(mokki_id,toimintaalue_id,mokkinimi,katuosoite,kuvaus,henkilomaara,varustelu)" +
-                "VALUES('200','1','Tahkola','Tahkontie 1','Perus mökki perheelle','5','2 makuuhuonetta ja 1 kylpyhuone saunalla')," + 
-                "('201', '1', 'Tohkola', 'Tohkotie 2', 'Laskettelijan mökki', '3', '1 isompi huone kylpyhuoneella ja saunalla')," +
-                "('203', '2', 'Levilä', 'Levintie 3', 'Luksus mökki seurueelle', '8', '3 makuuhuonetta, 2 kylpyhuonetta, sauna ja parveke')," +
-                "('204', '2', 'Lekkilä', 'Lekikuja 4', 'Laskettelijan mökki', '3', '1 isompi huone kylpyhuoneella ja saunalla')," +
-                "('205', '3', 'Rukola', 'Rukantie 5', 'Hieno mökki perheelle', '6', '2 makuuhuonetta ja 1 kylpyhuone saunalla ja ulko paljulla')," +
-                "('206', '3', 'Rakola', 'Rakolatie 6', 'Laskettelijan mökki', '3', '1 isompi huone kylpyhuoneella ja saunalla')," +
-                "('207', '4', 'Tahkola', 'Tahkontie 1', 'Perus mökki perheelle', '5', '2 makuuhuonetta ja 1 kylpyhuone saunalla')," +
-                "('208', '4', 'Himola', 'Himolankuja 8', 'Laskettelijan mökki', '3', '1 isompi huone kylpyhuoneella ja saunalla')";
+            cmd.CommandText = "INSERT INTO mokki(mokki_id,toimintaalue_id, postinro, mokkinimi,katuosoite,kuvaus,henkilomaara,varustelu)" +
+                "VALUES" +
+                "('200', '1', '87760', 'Tahkola','Tahkontie 1','Perus mökki perheelle','5','2 makuuhuonetta ja 1 kylpyhuone saunalla')," +
+                "('201', '1', '87060', 'Tohkola', 'Tohkotie 2', 'Laskettelijan mökki', '3', '1 isompi huone kylpyhuoneella ja saunalla')," +
+                "('203', '2', '87160', 'Levilä', 'Levintie 3', 'Luksus mökki seurueelle', '8', '3 makuuhuonetta, 2 kylpyhuonetta, sauna ja parveke')," +
+                "('204', '2', '87260', 'Lekkilä', 'Lekikuja 4', 'Laskettelijan mökki', '3', '1 isompi huone kylpyhuoneella ja saunalla')," +
+                "('205', '3', '87360', 'Rukola', 'Rukantie 5', 'Hieno mökki perheelle', '6', '2 makuuhuonetta ja 1 kylpyhuone saunalla ja ulko paljulla')," +
+                "('206', '3', '87460', 'Rakola', 'Rakolatie 6', 'Laskettelijan mökki', '3', '1 isompi huone kylpyhuoneella ja saunalla')," +
+                "('207', '4', '87560', 'Tahkola', 'Tahkontie 1', 'Perus mökki perheelle', '5', '2 makuuhuonetta ja 1 kylpyhuone saunalla')," +
+                "('208', '4', '87660', 'Himola', 'Himolankuja 8', 'Laskettelijan mökki', '3', '1 isompi huone kylpyhuoneella ja saunalla')";
             cmd.ExecuteNonQuery();
 
             cmd.CommandText = "DROP TABLE IF EXISTS varaus ;";
