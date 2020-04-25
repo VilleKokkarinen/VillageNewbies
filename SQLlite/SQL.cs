@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FastMember;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SQLite;
@@ -12,7 +13,50 @@ namespace VillageNewbies
     {
         public SQL()
         {
+           
+        }
 
+        public DataTable SqliteQuery_DT(string command)
+        {
+            using (SQLiteConnection connection = new SQLiteConnection(@"Data Source=VillageNewbiesDB.db"))
+            {
+                connection.Open();
+                using (SQLiteCommand fmd = connection.CreateCommand())
+                {
+                    fmd.CommandText = @command;
+                    fmd.CommandType = CommandType.Text;
+                    SQLiteDataAdapter sqlda = new SQLiteDataAdapter(fmd.CommandText, connection);
+
+                    DataTable dt;
+
+                    using (dt = new DataTable())
+                    {
+                        sqlda.Fill(dt);
+                    }
+                    return dt;
+                }
+            }
+        }
+        public List<DataRow> SQLiteQuery_DT_List(string command)
+        {
+            using (SQLiteConnection connection = new SQLiteConnection(@"Data Source=VillageNewbiesDB.db"))
+            {
+                connection.Open();
+                using (SQLiteCommand fmd = connection.CreateCommand())
+                {
+                    fmd.CommandText = @command;
+                    fmd.CommandType = CommandType.Text;
+                    SQLiteDataAdapter sqlda = new SQLiteDataAdapter(fmd.CommandText, connection);
+
+                    DataTable dt;
+
+                    using (dt = new DataTable())
+                    {
+                        sqlda.Fill(dt);
+                    }
+                    return dt.AsEnumerable().ToList();
+                }
+            }
         }
 
         public static List<string> GetImportedFileList()
@@ -35,9 +79,13 @@ namespace VillageNewbies
             return ImportedFiles;
         }
 
-        public static List<string> AvailableCabinsByNameAndType()
+        /// <summary>
+        /// Palauttaa KAIKKI mökit, myös jo varatut
+        /// </summary>
+        /// <returns></returns>
+        public static List<Cabin> GetAllCabins()
         {
-            List<string> ImportedFiles = new List<string>();
+            List<Cabin> ImportedFiles = new List<Cabin>();
 
             using (SQLiteConnection connection = new SQLiteConnection(@"Data Source=VillageNewbiesDB.db"))
             {
@@ -45,18 +93,27 @@ namespace VillageNewbies
                 {
                     connection.Open();
 
-                    availableItems.CommandText = @"SELECT mokkinimi Mokki, katuosoite Katu, kuvaus Kuvaus FROM mokki";
+                    availableItems.CommandText = @"SELECT * FROM mokki";
                     availableItems.CommandType = CommandType.Text;
                     SQLiteDataReader r = availableItems.ExecuteReader();
                     while (r.Read())
                     {
-                        ImportedFiles.Add(r["Mokki"].ToString() + " " + r["Katu"].ToString() + " " + r["Kuvaus"].ToString());
-                    }
+                        ImportedFiles.Add(
+                            new Cabin(
+                                ID: Convert.ToInt32(r["mokki_id"].ToString()),
+                                ToimintaAlueID: Convert.ToInt32(r["toimintaalue_id"].ToString()),
+                                posti: r["postinro"].ToString(),
+                                Nimi: r["mokkinimi"].ToString(),
+                                katu: r["katuosoite"].ToString(),
+                                MaxAsukkaat: Convert.ToInt32(r["henkilomaara"].ToString()),
+                                kuvaus: r["kuvaus"].ToString(),
+                                varustelu: r["varustelu"].ToString()
+                                ));
 
+                    }
                 }
                 connection.Close();
             }
-
             return ImportedFiles;
         }
 

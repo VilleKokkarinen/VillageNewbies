@@ -25,16 +25,44 @@ namespace VillageNewbies.UI
         {
             SQL s = new SQL();
             s.create();
-            List<string> dataa = SQL.AvailableCabinsByNameAndType();
-            foreach (string i in dataa)
+
+            /*
+             * Tapa 1
+             */
+            List<Cabin> dataa = SQL.GetAllCabins();
+            foreach (Cabin i in dataa)
             {
-                checklist_Loan_Items.Items.Add(i);
+                checklist_Loan_Cabins.Items.Add(i);
+                checklist_Loan_Cabins.DisplayMember = i.mokkinimi;
             }
 
-            //dataGridView1.DataSource = null;
             dataGridView1.DataSource = s.returnstuff();
 
+            /*
+             * Tapa 2
+             * 
+             */
+            List<DataRow> dataa2 = s.SQLiteQuery_DT_List(
+                "SELECT * FROM mokki");
 
+            foreach (DataRow i in dataa2)
+            {
+                Cabin c = new Cabin(
+                    Convert.ToInt32(i[0].ToString()), // <-> i["mokki_id"]
+                    Convert.ToInt32(i[1].ToString()),
+                    i[2].ToString(),
+                    i[3].ToString(),
+                    i[4].ToString(),
+                    i[5].ToString(),
+                    Convert.ToInt32(i[6].ToString()),
+                    i[7].ToString()
+                    );
+                    
+                checklist_Loan_Cabins.Items.Add(c);
+                checklist_Loan_Cabins.DisplayMember = "DISPLAYNAME";
+            }
+
+            dataGridView1.DataSource = s.returnstuff();
         }
 
 
@@ -53,6 +81,16 @@ namespace VillageNewbies.UI
                 txtboxEmail.Text = selectedRow.Cells["email"].Value.ToString();
                 txtboxPuhelinnro.Text = selectedRow.Cells["puhelinnro"].Value.ToString();
             }
+        }
+
+        /// <summary>
+        /// chekkilistan valinta vaihtuu -> syötä tietoja textiboxiin
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void checklist_Loan_Cabins_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txt_Cabin_Type.Text = ((Cabin)checklist_Loan_Cabins.SelectedItem).toimintaalue_id.ToString();
         }
     }
 }

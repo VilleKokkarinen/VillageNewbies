@@ -31,13 +31,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.combobox_Loan_ItemType = new System.Windows.Forms.ComboBox();
-            this.txt_LoanItem_SearchItem = new System.Windows.Forms.TextBox();
+            this.combobox_Cabin_something = new System.Windows.Forms.ComboBox();
+            this.txt_SearchCabin = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txt_Loan_ReservedTill = new System.Windows.Forms.TextBox();
-            this.txt_Loan_Item_State = new System.Windows.Forms.TextBox();
-            this.txt_Loan_ItemType = new System.Windows.Forms.TextBox();
-            this.checklist_Loan_Items = new System.Windows.Forms.CheckedListBox();
+            this.txt_Cabin_ReservedTill = new System.Windows.Forms.TextBox();
+            this.txt_Cabin_State = new System.Windows.Forms.TextBox();
+            this.txt_Cabin_Type = new System.Windows.Forms.TextBox();
+            this.checklist_Loan_Cabins = new System.Windows.Forms.CheckedListBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.Cmb_Alue = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -75,7 +75,7 @@
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.groupBox3);
             this.panel1.Controls.Add(this.groupBox2);
-            this.panel1.Controls.Add(this.checklist_Loan_Items);
+            this.panel1.Controls.Add(this.checklist_Loan_Cabins);
             this.panel1.Controls.Add(this.listBox1);
             this.panel1.Location = new System.Drawing.Point(239, 11);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
@@ -102,8 +102,8 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.combobox_Loan_ItemType);
-            this.groupBox3.Controls.Add(this.txt_LoanItem_SearchItem);
+            this.groupBox3.Controls.Add(this.combobox_Cabin_something);
+            this.groupBox3.Controls.Add(this.txt_SearchCabin);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.groupBox3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox3.Location = new System.Drawing.Point(243, 18);
@@ -111,34 +111,34 @@
             this.groupBox3.Size = new System.Drawing.Size(187, 99);
             this.groupBox3.TabIndex = 52;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Hae Tavaroita";
+            this.groupBox3.Text = "Hae mökkejä";
             // 
-            // combobox_Loan_ItemType
+            // combobox_Cabin_something
             // 
-            this.combobox_Loan_ItemType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.combobox_Loan_ItemType.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.combobox_Loan_ItemType.DisplayMember = "Text";
-            this.combobox_Loan_ItemType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.combobox_Loan_ItemType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.combobox_Loan_ItemType.FormattingEnabled = true;
-            this.combobox_Loan_ItemType.Location = new System.Drawing.Point(7, 58);
-            this.combobox_Loan_ItemType.Name = "combobox_Loan_ItemType";
-            this.combobox_Loan_ItemType.Size = new System.Drawing.Size(140, 28);
-            this.combobox_Loan_ItemType.TabIndex = 47;
+            this.combobox_Cabin_something.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.combobox_Cabin_something.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.combobox_Cabin_something.DisplayMember = "Text";
+            this.combobox_Cabin_something.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combobox_Cabin_something.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.combobox_Cabin_something.FormattingEnabled = true;
+            this.combobox_Cabin_something.Location = new System.Drawing.Point(7, 58);
+            this.combobox_Cabin_something.Name = "combobox_Cabin_something";
+            this.combobox_Cabin_something.Size = new System.Drawing.Size(140, 28);
+            this.combobox_Cabin_something.TabIndex = 47;
             // 
-            // txt_LoanItem_SearchItem
+            // txt_SearchCabin
             // 
-            this.txt_LoanItem_SearchItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txt_LoanItem_SearchItem.Location = new System.Drawing.Point(7, 23);
-            this.txt_LoanItem_SearchItem.Name = "txt_LoanItem_SearchItem";
-            this.txt_LoanItem_SearchItem.Size = new System.Drawing.Size(140, 26);
-            this.txt_LoanItem_SearchItem.TabIndex = 45;
+            this.txt_SearchCabin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txt_SearchCabin.Location = new System.Drawing.Point(7, 23);
+            this.txt_SearchCabin.Name = "txt_SearchCabin";
+            this.txt_SearchCabin.Size = new System.Drawing.Size(140, 26);
+            this.txt_SearchCabin.TabIndex = 45;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.txt_Loan_ReservedTill);
-            this.groupBox2.Controls.Add(this.txt_Loan_Item_State);
-            this.groupBox2.Controls.Add(this.txt_Loan_ItemType);
+            this.groupBox2.Controls.Add(this.txt_Cabin_ReservedTill);
+            this.groupBox2.Controls.Add(this.txt_Cabin_State);
+            this.groupBox2.Controls.Add(this.txt_Cabin_Type);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox2.Location = new System.Drawing.Point(244, 165);
@@ -146,45 +146,46 @@
             this.groupBox2.Size = new System.Drawing.Size(186, 124);
             this.groupBox2.TabIndex = 51;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Tavaran tiedot";
+            this.groupBox2.Text = "Mökin tiedot";
             // 
-            // txt_Loan_ReservedTill
+            // txt_Cabin_ReservedTill
             // 
-            this.txt_Loan_ReservedTill.Location = new System.Drawing.Point(6, 92);
-            this.txt_Loan_ReservedTill.Name = "txt_Loan_ReservedTill";
-            this.txt_Loan_ReservedTill.ReadOnly = true;
-            this.txt_Loan_ReservedTill.Size = new System.Drawing.Size(172, 26);
-            this.txt_Loan_ReservedTill.TabIndex = 3;
+            this.txt_Cabin_ReservedTill.Location = new System.Drawing.Point(6, 92);
+            this.txt_Cabin_ReservedTill.Name = "txt_Cabin_ReservedTill";
+            this.txt_Cabin_ReservedTill.ReadOnly = true;
+            this.txt_Cabin_ReservedTill.Size = new System.Drawing.Size(172, 26);
+            this.txt_Cabin_ReservedTill.TabIndex = 3;
             // 
-            // txt_Loan_Item_State
+            // txt_Cabin_State
             // 
-            this.txt_Loan_Item_State.Location = new System.Drawing.Point(6, 59);
-            this.txt_Loan_Item_State.Name = "txt_Loan_Item_State";
-            this.txt_Loan_Item_State.ReadOnly = true;
-            this.txt_Loan_Item_State.Size = new System.Drawing.Size(143, 26);
-            this.txt_Loan_Item_State.TabIndex = 2;
+            this.txt_Cabin_State.Location = new System.Drawing.Point(6, 59);
+            this.txt_Cabin_State.Name = "txt_Cabin_State";
+            this.txt_Cabin_State.ReadOnly = true;
+            this.txt_Cabin_State.Size = new System.Drawing.Size(143, 26);
+            this.txt_Cabin_State.TabIndex = 2;
             // 
-            // txt_Loan_ItemType
+            // txt_Cabin_Type
             // 
-            this.txt_Loan_ItemType.Location = new System.Drawing.Point(6, 25);
-            this.txt_Loan_ItemType.Name = "txt_Loan_ItemType";
-            this.txt_Loan_ItemType.ReadOnly = true;
-            this.txt_Loan_ItemType.Size = new System.Drawing.Size(144, 26);
-            this.txt_Loan_ItemType.TabIndex = 1;
+            this.txt_Cabin_Type.Location = new System.Drawing.Point(6, 25);
+            this.txt_Cabin_Type.Name = "txt_Cabin_Type";
+            this.txt_Cabin_Type.ReadOnly = true;
+            this.txt_Cabin_Type.Size = new System.Drawing.Size(144, 26);
+            this.txt_Cabin_Type.TabIndex = 1;
             // 
-            // checklist_Loan_Items
+            // checklist_Loan_Cabins
             // 
-            this.checklist_Loan_Items.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.checklist_Loan_Items.CheckOnClick = true;
-            this.checklist_Loan_Items.DisplayMember = "Text";
-            this.checklist_Loan_Items.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.checklist_Loan_Items.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.checklist_Loan_Items.FormattingEnabled = true;
-            this.checklist_Loan_Items.HorizontalScrollbar = true;
-            this.checklist_Loan_Items.Location = new System.Drawing.Point(3, 13);
-            this.checklist_Loan_Items.Name = "checklist_Loan_Items";
-            this.checklist_Loan_Items.Size = new System.Drawing.Size(225, 276);
-            this.checklist_Loan_Items.TabIndex = 50;
+            this.checklist_Loan_Cabins.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.checklist_Loan_Cabins.CheckOnClick = true;
+            this.checklist_Loan_Cabins.DisplayMember = "Text";
+            this.checklist_Loan_Cabins.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.checklist_Loan_Cabins.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.checklist_Loan_Cabins.FormattingEnabled = true;
+            this.checklist_Loan_Cabins.HorizontalScrollbar = true;
+            this.checklist_Loan_Cabins.Location = new System.Drawing.Point(3, 13);
+            this.checklist_Loan_Cabins.Name = "checklist_Loan_Cabins";
+            this.checklist_Loan_Cabins.Size = new System.Drawing.Size(225, 276);
+            this.checklist_Loan_Cabins.TabIndex = 50;
+            this.checklist_Loan_Cabins.SelectedIndexChanged += new System.EventHandler(this.checklist_Loan_Cabins_SelectedIndexChanged);
             // 
             // listBox1
             // 
@@ -463,13 +464,13 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckedListBox Clb_Ominaisuudet;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.ComboBox combobox_Loan_ItemType;
-        private System.Windows.Forms.TextBox txt_LoanItem_SearchItem;
+        private System.Windows.Forms.ComboBox combobox_Cabin_something;
+        private System.Windows.Forms.TextBox txt_SearchCabin;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox txt_Loan_ReservedTill;
-        private System.Windows.Forms.TextBox txt_Loan_Item_State;
-        private System.Windows.Forms.TextBox txt_Loan_ItemType;
-        private System.Windows.Forms.CheckedListBox checklist_Loan_Items;
+        private System.Windows.Forms.TextBox txt_Cabin_ReservedTill;
+        private System.Windows.Forms.TextBox txt_Cabin_State;
+        private System.Windows.Forms.TextBox txt_Cabin_Type;
+        private System.Windows.Forms.CheckedListBox checklist_Loan_Cabins;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label labelAsiakas_id;
         private System.Windows.Forms.TextBox txtboxAsiakas_id;
