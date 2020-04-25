@@ -187,10 +187,10 @@ namespace VillageNewbies
               "varaus_id INTEGER PRIMARY KEY AUTOINCREMENT," +
               "asiakas_id INT(11)  NOT NULL," +
               "mokki_id INT  NOT NULL," +
-              "varattu_pvm DATETIME NULL DEFAULT NULL," +
-              "vahvistus_pvm DATETIME NULL DEFAULT NULL," +
-              "varattu_alkupvm DATETIME NULL DEFAULT NULL," +
-              "varattu_loppupvm DATETIME NULL DEFAULT NULL," +
+              "varattu_pvm INTEGER NULL DEFAULT NULL," +
+              "vahvistus_pvm INTEGER NULL DEFAULT NULL," +
+              "varattu_alkupvm INTEGER NULL DEFAULT NULL," +
+              "varattu_loppupvm INTEGER NULL DEFAULT NULL," +
                 "FOREIGN KEY(asiakas_id)" +
                 "REFERENCES asiakas (asiakas_id)" +
                 "FOREIGN KEY(mokki_id)" +
@@ -198,8 +198,8 @@ namespace VillageNewbies
             cmd.ExecuteNonQuery();
 
             cmd.CommandText = "INSERT INTO varaus(varaus_id,asiakas_id,mokki_id,varattu_pvm,vahvistus_pvm,varattu_alkupvm,varattu_loppupvm)" +
-                "VALUES(300,100,200,23042020,23042020,05052020,12052020)," + 
-                "(301,107,205,18032020,20042020,06072020,16072020)";
+                "VALUES(300,100,200,23042020,23042020,05052020,14052020)," +
+                "(301,107,205,18032020,20032020,06072020,16072020)";
             cmd.ExecuteNonQuery();
 
             cmd.CommandText = "DROP TABLE IF EXISTS lasku ;";
@@ -238,7 +238,7 @@ namespace VillageNewbies
                " VALUES(400, 1,'Hevosajelu','2 hevosen rekiajelu', 150, 14)," + 
                "(401, 1,'Laskettelu','1 päivän rinne lippu', 80, 10)," +
                "(403, 2,'Laskettelu','1 päivän rinne lippu', 90, 10)," +
-               "(404, 2,'Ravintola passi','Viikonlopun ilmaiset ravintolapalvelut', 100, 124)," +
+               "(404, 2,'Ravintola passi','Viikonlopun ilmaiset ravintolapalvelut', 100, 24)," +
                "(405, 3,'Laskettelu','1 päivän rinne lippu', 100, 10)," +
                "(406, 3,'Joulupukki','Joulupukki lapsille illaksi', 50, 20)," +
                "(407, 4,'Laskettelu','1 päivän rinne lippu', 80, 10)," +
