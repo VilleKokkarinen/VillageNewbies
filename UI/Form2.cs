@@ -70,18 +70,6 @@ namespace VillageNewbies.UI
                 Clb_Palvelut.DisplayMember = "DISPLAYNAME";
             }
 
-            List<DataRow> alueet = s.SQLiteQuery_DataRowList("Select * from toimintaalue");
-            combobox_Cabin_Region.Items.Add("<kaikki>");
-            foreach (DataRow i in alueet)
-            {
-                OperatingArea oa = new OperatingArea(
-
-                    Convert.ToInt32(i[0].ToString()),
-                    i[1].ToString()
-                    );
-                combobox_Cabin_Region.Items.Add(oa);
-                combobox_Cabin_Region.DisplayMember = "DISPLAYNAME";
-            }
             dataGridView1.DataSource = s.returnstuff();
         }
 
