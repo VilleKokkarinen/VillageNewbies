@@ -378,12 +378,6 @@ namespace VillageNewbies.UI
 
             checklist_Loan_Items.Items.Clear();
             checklist_Loan_Items.DisplayMember = "NAME";
-            List<Item> list = AvailableItemsByNameAndType(txt_LoanItem_SearchItem.Text);
-            foreach (Item i in list)
-            {
-                checklist_Loan_Items.Items.Add(i);
-            }
-
         }
 
         private void btn_Loans_Click(object sender, EventArgs e)
@@ -423,11 +417,6 @@ namespace VillageNewbies.UI
 
             checklist_Reservation.Items.Clear();
             checklist_Reservation.DisplayMember = "NAME";
-            List<Item> list = AvailableItemsByNameAndType(txt_reservation_itemsearch.Text);
-            foreach (Item i in list)
-            {
-                checklist_Reservation.Items.Add(i);
-            }
             itemtypes();
         }
 
@@ -608,46 +597,8 @@ namespace VillageNewbies.UI
         {
             checklist_Loan_Items.Items.Clear();
             checklist_Loan_Items.DisplayMember = "NAME";
-            List<Item> list = AvailableItemsByNameAndType(txt_LoanItem_SearchItem.Text, ((ComboItem)combobox_Loan_ItemType.SelectedItem).ID);
-            foreach (Item i in list)
-            {
-                checklist_Loan_Items.Items.Add(i);
-            }
         }
-
-        /// <summary>
-        /// Hakee lainattavat tavarat, nimen ja tyypin perusteella. Nimi on oletuksena tyhjä, ja tyyppi 999- eli "Kaikki"
-        /// </summary>
-        /// <param name="name"></param>
-        /// <param name="type"></param>
-        private List<Item> AvailableItemsByNameAndType(string name = "", int type = 999)
-        {
-            List<Item> ItemList = new List<Item>();
-            /*
-            using (MySqlConnection connection = Program.sql.MySqlConnection())
-            {
-                using (MySqlCommand availableItems = Program.sql.MySqlGetAvailableItems(connection, name, type))
-                {
-                    connection.Open();
-
-                    MySqlDataReader reader = availableItems.ExecuteReader();
-                    if (reader.HasRows)
-                    {
-                        while (reader.Read())
-                        {
-                            int ItemID = (int)reader["I_ID"];
-                            string Itemname = (string)reader["I_NAME"];
-                            int ItemType = (int)reader["I_TYPE"];
-                            int ItemState = (int)reader["I_STATE"];
-                            ItemList.Add(new Item(ItemID, Itemname, ItemType, ItemState));
-                        }
-                    }
-                }
-                connection.Close();
-            }
-            */
-            return ItemList;
-        }
+               
 
         /// <summary>
         /// Valittujen tavaroiden lainaus
@@ -1041,11 +992,7 @@ namespace VillageNewbies.UI
         {
             checklist_Reservation.Items.Clear();
             checklist_Reservation.DisplayMember = "NAME";
-            List<Item> list = AvailableItemsByNameAndType(txt_reservation_itemsearch.Text, ((ComboItem)combox_reservation_itemtype.SelectedItem).ID);
-            foreach (Item i in list)
-            {
-                checklist_Reservation.Items.Add(i);
-            }
+           
         }
 
         #endregion
