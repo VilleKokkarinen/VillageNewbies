@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using VillageNewbies.Objects.Cabin;
 
 namespace VillageNewbies.UI
 {
@@ -43,7 +42,7 @@ namespace VillageNewbies.UI
              * Tapa 2
              * 
              */
-            List<DataRow> dataa2 = s.SQLiteQuery_DT_List(
+            List<DataRow> dataa2 = s.SQLiteQuery_DataRowList(
                 "SELECT * FROM mokki");
 
             foreach (DataRow i in dataa2)
@@ -63,8 +62,8 @@ namespace VillageNewbies.UI
                 checklist_Loan_Cabins.DisplayMember = "DISPLAYNAME";
             }
 
-            List<Services> palveludata = SQL.GetAllServices();
-            foreach (Services i in palveludata)
+            List<Service> palveludata = SQL.GetAllServices();
+            foreach (Service i in palveludata)
             {
                 Clb_Palvelut.Items.Add(i);
                 Clb_Palvelut.DisplayMember = "DISPLAYNAME";

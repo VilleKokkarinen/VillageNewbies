@@ -20,14 +20,18 @@ namespace VillageNewbies
         public string kuvaus { get; set; }
         public string nimi { get; set; }
         public double hinta { get; set; }
+        public double ALV { get; set; }
 
-        public Service(int palvelu_id, int toimintaalue_id, string kuvaus, string nimi, double hinta)
+        public string DISPLAYNAME => $"{nimi} - {kuvaus} - {hinta}";
+
+        public Service(int palvelu_id, int toimintaalue_id, string kuvaus, string nimi, double hinta, double ALV)
         {
             this.palvelu_id = palvelu_id;
             this.toimintaalue_id = toimintaalue_id;
             this.kuvaus = kuvaus;
             this.nimi = nimi;
             this.hinta = hinta;
+            this.ALV = ALV;
         }
     }
 }

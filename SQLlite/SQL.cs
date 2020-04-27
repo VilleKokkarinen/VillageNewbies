@@ -6,7 +6,6 @@ using System.Data.SQLite;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using VillageNewbies.Objects.Cabin;
 
 namespace VillageNewbies
 {
@@ -118,9 +117,9 @@ namespace VillageNewbies
             return ImportedFiles;
         }
 
-        public static List<Services> GetAllServices()
+        public static List<Service> GetAllServices()
         {
-            List<Services> ImportedFiles = new List<Services>();
+            List<Service> ImportedFiles = new List<Service>();
 
             using (SQLiteConnection connection = new SQLiteConnection(@"Data Source=VillageNewbiesDB.db"))
             {
@@ -134,10 +133,10 @@ namespace VillageNewbies
                     while (r.Read())
                     {
                         ImportedFiles.Add(
-                            new Services(
-                                ID: Convert.ToInt32(r["palvelu_id"].ToString()),
-                                ToimintaAlueID: Convert.ToInt32(r["toimintaalue_id"].ToString()),
-                                Nimi: r["nimi"].ToString(),
+                            new Service(
+                                palvelu_id: Convert.ToInt32(r["palvelu_id"].ToString()),
+                                toimintaalue_id: Convert.ToInt32(r["toimintaalue_id"].ToString()),
+                                nimi: r["nimi"].ToString(),
                                 kuvaus: r["kuvaus"].ToString(),
                                 hinta: Convert.ToInt32(r["hinta"].ToString()),
                                 ALV: Convert.ToInt32(r["alv"].ToString())
