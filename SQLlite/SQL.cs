@@ -37,7 +37,7 @@ namespace VillageNewbies
                 }
             }
         }
-        public List<DataRow> SQLiteQuery_DT_List(string command)
+        public List<DataRow> SQLiteQuery_DataRowList(string command)
         {
             using (SQLiteConnection connection = new SQLiteConnection(@"Data Source=VillageNewbiesDB.db"))
             {
@@ -151,7 +151,10 @@ namespace VillageNewbies
             cmd.CommandText = "DROP TABLE IF EXISTS posti";
             cmd.ExecuteNonQuery();
 
-            cmd.CommandText = "CREATE TABLE IF NOT EXISTS posti (postinro CHAR(5) NOT NULL, toimipaikka VARCHAR(45) NULL,PRIMARY KEY(postinro))";
+            cmd.CommandText = "CREATE TABLE IF NOT EXISTS posti (" +
+                "postinro CHAR(5) NOT NULL," +
+                "toimipaikka VARCHAR(45) NULL," +
+                "PRIMARY KEY(postinro))";
             cmd.ExecuteNonQuery();
 
             cmd.CommandText = "INSERT INTO posti(postinro,toimipaikka)" + "VALUES('70100','Kuopio')," + 
@@ -187,10 +190,6 @@ namespace VillageNewbies
                 "('107','90100', 'Kalle', 'Kehveli', 'Rööperitie23', 'kalle.k@gmail.com', '0509263456')," + 
                 "('108','20100', 'Seppo', 'Turunen', 'Turuntie8', 'seppo.t@gmail.com', '0501234567')," +
                 "('109','20100', 'Pentti', 'Hirvonen', 'Hirvoskuja13', 'pentti.h@gmail.com', '0445542689')";
-            
-
-
-
             cmd.ExecuteNonQuery();
 
 
@@ -237,7 +236,7 @@ namespace VillageNewbies
                 "('208', '4', '87660', 'Himola', 'Himolankuja 8', 'Laskettelijan mökki', '3', '1 isompi huone kylpyhuoneella ja saunalla')";
             cmd.ExecuteNonQuery();
 
-            cmd.CommandText = "DROP TABLE IF EXISTS varaus ;";
+            cmd.CommandText = "DROP TABLE IF EXISTS varaus";
             cmd.ExecuteNonQuery();
 
             cmd.CommandText = "CREATE TABLE IF NOT EXISTS varaus (" +
@@ -259,7 +258,7 @@ namespace VillageNewbies
                 "(301,107,205,18032020,20032020,06072020,16072020)";
             cmd.ExecuteNonQuery();
 
-            cmd.CommandText = "DROP TABLE IF EXISTS lasku ;";
+            cmd.CommandText = "DROP TABLE IF EXISTS lasku";
             cmd.ExecuteNonQuery();
 
             cmd.CommandText = "CREATE TABLE IF NOT EXISTS lasku (" +
@@ -276,7 +275,7 @@ namespace VillageNewbies
                "(301,550,24)";
             cmd.ExecuteNonQuery();
 
-            cmd.CommandText = "DROP TABLE IF EXISTS palvelu ;";
+            cmd.CommandText = "DROP TABLE IF EXISTS palvelu";
             cmd.ExecuteNonQuery();
 
             cmd.CommandText = "CREATE TABLE IF NOT EXISTS palvelu (" +
@@ -302,7 +301,7 @@ namespace VillageNewbies
                "(408, 4,'Moottorikelkkailu','Opastettu moottorikelkkailu ajelu', 40, 14)";
             cmd.ExecuteNonQuery();
 
-            cmd.CommandText = "DROP TABLE IF EXISTS varauksen_palvelut ;";
+            cmd.CommandText = "DROP TABLE IF EXISTS varauksen_palvelut";
             cmd.ExecuteNonQuery();
 
             cmd.CommandText = "CREATE TABLE IF NOT EXISTS varauksen_palvelut (" +
