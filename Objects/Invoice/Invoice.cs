@@ -13,6 +13,7 @@
         public double summa { get; set; }
         public int alv { get; set; }
 
+        public string DISPLAYNAME => $"{lasku_id} {varaus_id} - {summa}";
         public Invoice(int lasku_id, int varaus_id, double summa, int alv)
         {
             this.lasku_id = lasku_id;

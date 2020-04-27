@@ -15,6 +15,8 @@ namespace VillageNewbies
         public int toimintaalue_id { get; set; }
         public string nimi { get; set; }
 
+        public string DISPLAYNAME => $"{nimi}";
+
         public OperatingArea(int toimintaalue_id, string nimi)
         {
             this.toimintaalue_id = toimintaalue_id;

@@ -31,8 +31,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.combobox_Cabin_something = new System.Windows.Forms.ComboBox();
-            this.txt_SearchCabin = new System.Windows.Forms.TextBox();
+            this.combobox_Cabin_Region = new System.Windows.Forms.ComboBox();
+            this.txt_Cabin_Search_Name = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txt_Cabin_Details = new System.Windows.Forms.TextBox();
             this.txt_Cabin_State = new System.Windows.Forms.TextBox();
@@ -78,7 +78,7 @@
             this.panel1.Controls.Add(this.checklist_Loan_Cabins);
             this.panel1.Controls.Add(this.listBox1);
             this.panel1.Location = new System.Drawing.Point(239, 11);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1056, 632);
             this.panel1.TabIndex = 0;
@@ -103,37 +103,38 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.combobox_Cabin_something);
-            this.groupBox3.Controls.Add(this.txt_SearchCabin);
+            this.groupBox3.Controls.Add(this.combobox_Cabin_Region);
+            this.groupBox3.Controls.Add(this.txt_Cabin_Search_Name);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.groupBox3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox3.Location = new System.Drawing.Point(243, 18);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(187, 99);
+            this.groupBox3.Size = new System.Drawing.Size(187, 194);
             this.groupBox3.TabIndex = 52;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Hae mökkejä";
             // 
-            // combobox_Cabin_something
+            // combobox_Cabin_Region
             // 
-            this.combobox_Cabin_something.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.combobox_Cabin_something.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.combobox_Cabin_something.DisplayMember = "Text";
-            this.combobox_Cabin_something.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.combobox_Cabin_something.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.combobox_Cabin_something.FormattingEnabled = true;
-            this.combobox_Cabin_something.Location = new System.Drawing.Point(7, 58);
-            this.combobox_Cabin_something.Name = "combobox_Cabin_something";
-            this.combobox_Cabin_something.Size = new System.Drawing.Size(140, 28);
-            this.combobox_Cabin_something.TabIndex = 47;
+            this.combobox_Cabin_Region.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.combobox_Cabin_Region.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.combobox_Cabin_Region.DisplayMember = "Text";
+            this.combobox_Cabin_Region.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combobox_Cabin_Region.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.combobox_Cabin_Region.FormattingEnabled = true;
+            this.combobox_Cabin_Region.Location = new System.Drawing.Point(7, 58);
+            this.combobox_Cabin_Region.Name = "combobox_Cabin_Region";
+            this.combobox_Cabin_Region.Size = new System.Drawing.Size(140, 28);
+            this.combobox_Cabin_Region.TabIndex = 47;
+            this.combobox_Cabin_Region.SelectedIndexChanged += new System.EventHandler(this.combobox_Cabin_Region_SelectedIndexChanged);
             // 
-            // txt_SearchCabin
+            // txt_Cabin_Search_Name
             // 
-            this.txt_SearchCabin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txt_SearchCabin.Location = new System.Drawing.Point(7, 23);
-            this.txt_SearchCabin.Name = "txt_SearchCabin";
-            this.txt_SearchCabin.Size = new System.Drawing.Size(140, 26);
-            this.txt_SearchCabin.TabIndex = 45;
+            this.txt_Cabin_Search_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txt_Cabin_Search_Name.Location = new System.Drawing.Point(7, 23);
+            this.txt_Cabin_Search_Name.Name = "txt_Cabin_Search_Name";
+            this.txt_Cabin_Search_Name.Size = new System.Drawing.Size(140, 26);
+            this.txt_Cabin_Search_Name.TabIndex = 45;
             // 
             // groupBox2
             // 
@@ -142,7 +143,7 @@
             this.groupBox2.Controls.Add(this.txt_Cabin_MaxResidents);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox2.Location = new System.Drawing.Point(244, 123);
+            this.groupBox2.Location = new System.Drawing.Point(244, 218);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(186, 138);
             this.groupBox2.TabIndex = 51;
@@ -185,7 +186,7 @@
             this.checklist_Loan_Cabins.HorizontalScrollbar = true;
             this.checklist_Loan_Cabins.Location = new System.Drawing.Point(3, 13);
             this.checklist_Loan_Cabins.Name = "checklist_Loan_Cabins";
-            this.checklist_Loan_Cabins.Size = new System.Drawing.Size(225, 259);
+            this.checklist_Loan_Cabins.Size = new System.Drawing.Size(225, 344);
             this.checklist_Loan_Cabins.TabIndex = 50;
             this.checklist_Loan_Cabins.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.checklist_Loan_Cabins_ItemCheck);
             this.checklist_Loan_Cabins.SelectedIndexChanged += new System.EventHandler(this.checklist_Loan_Cabins_SelectedIndexChanged);
@@ -194,7 +195,7 @@
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(443, 25);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(2);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(199, 134);
             this.listBox1.TabIndex = 0;
@@ -203,7 +204,7 @@
             // 
             this.Cmb_Alue.FormattingEnabled = true;
             this.Cmb_Alue.Location = new System.Drawing.Point(75, 14);
-            this.Cmb_Alue.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Cmb_Alue.Margin = new System.Windows.Forms.Padding(2);
             this.Cmb_Alue.Name = "Cmb_Alue";
             this.Cmb_Alue.Size = new System.Drawing.Size(123, 21);
             this.Cmb_Alue.TabIndex = 1;
@@ -222,7 +223,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(75, 65);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(151, 20);
             this.dateTimePicker1.TabIndex = 3;
@@ -230,7 +231,7 @@
             // dateTimePicker2
             // 
             this.dateTimePicker2.Location = new System.Drawing.Point(75, 106);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(151, 20);
             this.dateTimePicker2.TabIndex = 4;
@@ -261,7 +262,7 @@
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(85, 149);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(92, 21);
             this.comboBox1.TabIndex = 7;
@@ -281,7 +282,7 @@
             // 
             this.Clb_Palvelut.FormattingEnabled = true;
             this.Clb_Palvelut.Location = new System.Drawing.Point(9, 202);
-            this.Clb_Palvelut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Clb_Palvelut.Margin = new System.Windows.Forms.Padding(2);
             this.Clb_Palvelut.Name = "Clb_Palvelut";
             this.Clb_Palvelut.Size = new System.Drawing.Size(227, 64);
             this.Clb_Palvelut.TabIndex = 9;
@@ -438,7 +439,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dateTimePicker1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Varaus";
             this.Text = "Varaus";
             this.Load += new System.EventHandler(this.Varaus_Load);
@@ -467,8 +468,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckedListBox Clb_Palvelut;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.ComboBox combobox_Cabin_something;
-        private System.Windows.Forms.TextBox txt_SearchCabin;
+        private System.Windows.Forms.ComboBox combobox_Cabin_Region;
+        private System.Windows.Forms.TextBox txt_Cabin_Search_Name;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txt_Cabin_Details;
         private System.Windows.Forms.TextBox txt_Cabin_State;

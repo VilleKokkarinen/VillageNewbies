@@ -28,7 +28,7 @@ namespace VillageNewbies.UI
 
             /*
              * Tapa 1
-             */
+             
             List<Cabin> dataa = SQL.GetAllCabins();
             foreach (Cabin i in dataa)
             {
@@ -37,6 +37,7 @@ namespace VillageNewbies.UI
             }
 
             dataGridView1.DataSource = s.returnstuff();
+            */
 
             /*
              * Tapa 2
@@ -69,6 +70,18 @@ namespace VillageNewbies.UI
                 Clb_Palvelut.DisplayMember = "DISPLAYNAME";
             }
 
+            List<DataRow> alueet = s.SQLiteQuery_DataRowList("Select * from toimintaalue");
+            combobox_Cabin_Region.Items.Add("<kaikki>");
+            foreach (DataRow i in alueet)
+            {
+                OperatingArea oa = new OperatingArea(
+
+                    Convert.ToInt32(i[0].ToString()),
+                    i[1].ToString()
+                    );
+                combobox_Cabin_Region.Items.Add(oa);
+                combobox_Cabin_Region.DisplayMember = "DISPLAYNAME";
+            }
             dataGridView1.DataSource = s.returnstuff();
         }
 
@@ -97,7 +110,6 @@ namespace VillageNewbies.UI
         /// <param name="e"></param>
         private void checklist_Loan_Cabins_SelectedIndexChanged(object sender, EventArgs e)
         {
-            checklist_Loan_Cabins.SelectionMode = SelectionMode.One;
             txt_Cabin_MaxResidents.Text = ((Cabin)checklist_Loan_Cabins.SelectedItem).henkilomaara.ToString();
             txt_Cabin_Details.Text = ((Cabin)checklist_Loan_Cabins.SelectedItem).kuvaus;
         }
@@ -109,6 +121,35 @@ namespace VillageNewbies.UI
                 checklist_Loan_Cabins.ItemCheck -= checklist_Loan_Cabins_ItemCheck;
                 checklist_Loan_Cabins.SetItemChecked(checklist_Loan_Cabins.CheckedIndices[0], false);
                 checklist_Loan_Cabins.ItemCheck += checklist_Loan_Cabins_ItemCheck;
+            }
+        }
+
+        private void combobox_Cabin_Region_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            checklist_Loan_Cabins.Items.Clear();
+            SQL s = new SQL();
+            string query = "SELECT * FROM mokki";
+
+            if (combobox_Cabin_Region.SelectedItem.ToString() != "<kaikki>")
+                query = "SELECT * FROM mokki where mokki.toimintaalue_id = " + ((OperatingArea)combobox_Cabin_Region.SelectedItem).toimintaalue_id;
+            
+
+            List<DataRow> dataa2 = s.SQLiteQuery_DataRowList(query);
+            foreach (DataRow i in dataa2)
+            {
+                Cabin c = new Cabin(
+                    Convert.ToInt32(i[0].ToString()), // <-> i["mokki_id"]
+                    Convert.ToInt32(i[1].ToString()),
+                    i[2].ToString(),
+                    i[3].ToString(),
+                    i[4].ToString(),
+                    i[5].ToString(),
+                    Convert.ToInt32(i[6].ToString()),
+                    i[7].ToString()
+                    );
+
+                checklist_Loan_Cabins.Items.Add(c);
+                checklist_Loan_Cabins.DisplayMember = "DISPLAYNAME";
             }
         }
     }

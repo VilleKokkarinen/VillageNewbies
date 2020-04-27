@@ -16,6 +16,7 @@ namespace VillageNewbies
         public string postinro { get; set; }
         public string toimipaikka { get; set; }
 
+        public string DISPLAYNAME => $"{postinro} - {toimipaikka}";
         public Mail(string postinro, string toimipaikka)
         {
             this.postinro = postinro;
