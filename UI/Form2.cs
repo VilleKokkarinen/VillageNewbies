@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VillageNewbies.Objects.Cabin;
 
 namespace VillageNewbies.UI
 {
@@ -25,16 +26,51 @@ namespace VillageNewbies.UI
         {
             SQL s = new SQL();
             s.create();
-            List<string> dataa = SQL.AvailableCabinsByNameAndType();
-            foreach (string i in dataa)
+
+            /*
+             * Tapa 1
+             */
+            List<Cabin> dataa = SQL.GetAllCabins();
+            foreach (Cabin i in dataa)
             {
-                checklist_Loan_Items.Items.Add(i);
+                checklist_Loan_Cabins.Items.Add(i);
+                checklist_Loan_Cabins.DisplayMember = i.mokkinimi;
             }
 
-            //dataGridView1.DataSource = null;
             dataGridView1.DataSource = s.returnstuff();
 
+            /*
+             * Tapa 2
+             * 
+             */
+            List<DataRow> dataa2 = s.SQLiteQuery_DT_List(
+                "SELECT * FROM mokki");
 
+            foreach (DataRow i in dataa2)
+            {
+                Cabin c = new Cabin(
+                    Convert.ToInt32(i[0].ToString()), // <-> i["mokki_id"]
+                    Convert.ToInt32(i[1].ToString()),
+                    i[2].ToString(),
+                    i[3].ToString(),
+                    i[4].ToString(),
+                    i[5].ToString(),
+                    Convert.ToInt32(i[6].ToString()),
+                    i[7].ToString()
+                    );
+                    
+                checklist_Loan_Cabins.Items.Add(c);
+                checklist_Loan_Cabins.DisplayMember = "DISPLAYNAME";
+            }
+
+            List<Services> palveludata = SQL.GetAllServices();
+            foreach (Services i in palveludata)
+            {
+                Clb_Palvelut.Items.Add(i);
+                Clb_Palvelut.DisplayMember = "DISPLAYNAME";
+            }
+
+            dataGridView1.DataSource = s.returnstuff();
         }
 
 
@@ -52,6 +88,28 @@ namespace VillageNewbies.UI
                 txtboxlahiosoite.Text = selectedRow.Cells["lahiosoite"].Value.ToString();
                 txtboxEmail.Text = selectedRow.Cells["email"].Value.ToString();
                 txtboxPuhelinnro.Text = selectedRow.Cells["puhelinnro"].Value.ToString();
+            }
+        }
+
+        /// <summary>
+        /// chekkilistan valinta vaihtuu -> syötä tietoja textiboxiin
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void checklist_Loan_Cabins_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            checklist_Loan_Cabins.SelectionMode = SelectionMode.One;
+            txt_Cabin_MaxResidents.Text = ((Cabin)checklist_Loan_Cabins.SelectedItem).henkilomaara.ToString();
+            txt_Cabin_Details.Text = ((Cabin)checklist_Loan_Cabins.SelectedItem).kuvaus;
+        }
+
+        private void checklist_Loan_Cabins_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            if (e.NewValue == CheckState.Checked && checklist_Loan_Cabins.CheckedItems.Count > 0)
+            {
+                checklist_Loan_Cabins.ItemCheck -= checklist_Loan_Cabins_ItemCheck;
+                checklist_Loan_Cabins.SetItemChecked(checklist_Loan_Cabins.CheckedIndices[0], false);
+                checklist_Loan_Cabins.ItemCheck += checklist_Loan_Cabins_ItemCheck;
             }
         }
     }

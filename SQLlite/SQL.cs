@@ -1,10 +1,12 @@
-﻿using System;
+﻿using FastMember;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SQLite;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VillageNewbies.Objects.Cabin;
 
 namespace VillageNewbies
 {
@@ -12,7 +14,50 @@ namespace VillageNewbies
     {
         public SQL()
         {
+           
+        }
 
+        public DataTable SqliteQuery_DT(string command)
+        {
+            using (SQLiteConnection connection = new SQLiteConnection(@"Data Source=VillageNewbiesDB.db"))
+            {
+                connection.Open();
+                using (SQLiteCommand fmd = connection.CreateCommand())
+                {
+                    fmd.CommandText = @command;
+                    fmd.CommandType = CommandType.Text;
+                    SQLiteDataAdapter sqlda = new SQLiteDataAdapter(fmd.CommandText, connection);
+
+                    DataTable dt;
+
+                    using (dt = new DataTable())
+                    {
+                        sqlda.Fill(dt);
+                    }
+                    return dt;
+                }
+            }
+        }
+        public List<DataRow> SQLiteQuery_DataRowList(string command)
+        {
+            using (SQLiteConnection connection = new SQLiteConnection(@"Data Source=VillageNewbiesDB.db"))
+            {
+                connection.Open();
+                using (SQLiteCommand fmd = connection.CreateCommand())
+                {
+                    fmd.CommandText = @command;
+                    fmd.CommandType = CommandType.Text;
+                    SQLiteDataAdapter sqlda = new SQLiteDataAdapter(fmd.CommandText, connection);
+
+                    DataTable dt;
+
+                    using (dt = new DataTable())
+                    {
+                        sqlda.Fill(dt);
+                    }
+                    return dt.AsEnumerable().ToList();
+                }
+            }
         }
 
         public static List<string> GetImportedFileList()
@@ -35,9 +80,13 @@ namespace VillageNewbies
             return ImportedFiles;
         }
 
-        public static List<string> AvailableCabinsByNameAndType()
+        /// <summary>
+        /// Palauttaa KAIKKI mökit, myös jo varatut
+        /// </summary>
+        /// <returns></returns>
+        public static List<Cabin> GetAllCabins()
         {
-            List<string> ImportedFiles = new List<string>();
+            List<Cabin> ImportedFiles = new List<Cabin>();
 
             using (SQLiteConnection connection = new SQLiteConnection(@"Data Source=VillageNewbiesDB.db"))
             {
@@ -45,18 +94,59 @@ namespace VillageNewbies
                 {
                     connection.Open();
 
-                    availableItems.CommandText = @"SELECT mokkinimi Mokki, katuosoite Katu, kuvaus Kuvaus FROM mokki";
+                    availableItems.CommandText = @"SELECT * FROM mokki";
                     availableItems.CommandType = CommandType.Text;
                     SQLiteDataReader r = availableItems.ExecuteReader();
                     while (r.Read())
                     {
-                        ImportedFiles.Add(r["Mokki"].ToString() + " " + r["Katu"].ToString() + " " + r["Kuvaus"].ToString());
-                    }
+                        ImportedFiles.Add(
+                            new Cabin(
+                                ID: Convert.ToInt32(r["mokki_id"].ToString()),
+                                ToimintaAlueID: Convert.ToInt32(r["toimintaalue_id"].ToString()),
+                                posti: r["postinro"].ToString(),
+                                Nimi: r["mokkinimi"].ToString(),
+                                katu: r["katuosoite"].ToString(),
+                                MaxAsukkaat: Convert.ToInt32(r["henkilomaara"].ToString()),
+                                kuvaus: r["kuvaus"].ToString(),
+                                varustelu: r["varustelu"].ToString()
+                                ));
 
+                    }
                 }
                 connection.Close();
             }
+            return ImportedFiles;
+        }
 
+        public static List<Services> GetAllServices()
+        {
+            List<Services> ImportedFiles = new List<Services>();
+
+            using (SQLiteConnection connection = new SQLiteConnection(@"Data Source=VillageNewbiesDB.db"))
+            {
+                using (SQLiteCommand availableItems = connection.CreateCommand())
+                {
+                    connection.Open();
+
+                    availableItems.CommandText = @"SELECT * FROM palvelu";
+                    availableItems.CommandType = CommandType.Text;
+                    SQLiteDataReader r = availableItems.ExecuteReader();
+                    while (r.Read())
+                    {
+                        ImportedFiles.Add(
+                            new Services(
+                                ID: Convert.ToInt32(r["palvelu_id"].ToString()),
+                                ToimintaAlueID: Convert.ToInt32(r["toimintaalue_id"].ToString()),
+                                Nimi: r["nimi"].ToString(),
+                                kuvaus: r["kuvaus"].ToString(),
+                                hinta: Convert.ToInt32(r["hinta"].ToString()),
+                                ALV: Convert.ToInt32(r["alv"].ToString())
+                                ));
+
+                    }
+                }
+                connection.Close();
+            }
             return ImportedFiles;
         }
 
@@ -94,7 +184,10 @@ namespace VillageNewbies
             cmd.CommandText = "DROP TABLE IF EXISTS posti";
             cmd.ExecuteNonQuery();
 
-            cmd.CommandText = "CREATE TABLE IF NOT EXISTS posti (postinro CHAR(5) NOT NULL, toimipaikka VARCHAR(45) NULL,PRIMARY KEY(postinro))";
+            cmd.CommandText = "CREATE TABLE IF NOT EXISTS posti (" +
+                "postinro CHAR(5) NOT NULL," +
+                "toimipaikka VARCHAR(45) NULL," +
+                "PRIMARY KEY(postinro))";
             cmd.ExecuteNonQuery();
 
             cmd.CommandText = "INSERT INTO posti(postinro,toimipaikka)" + "VALUES('70100','Kuopio')," + 
@@ -130,10 +223,6 @@ namespace VillageNewbies
                 "('107','90100', 'Kalle', 'Kehveli', 'Rööperitie23', 'kalle.k@gmail.com', '0509263456')," + 
                 "('108','20100', 'Seppo', 'Turunen', 'Turuntie8', 'seppo.t@gmail.com', '0501234567')," +
                 "('109','20100', 'Pentti', 'Hirvonen', 'Hirvoskuja13', 'pentti.h@gmail.com', '0445542689')";
-            
-
-
-
             cmd.ExecuteNonQuery();
 
 
@@ -180,7 +269,7 @@ namespace VillageNewbies
                 "('208', '4', '87660', 'Himola', 'Himolankuja 8', 'Laskettelijan mökki', '3', '1 isompi huone kylpyhuoneella ja saunalla')";
             cmd.ExecuteNonQuery();
 
-            cmd.CommandText = "DROP TABLE IF EXISTS varaus ;";
+            cmd.CommandText = "DROP TABLE IF EXISTS varaus";
             cmd.ExecuteNonQuery();
 
             cmd.CommandText = "CREATE TABLE IF NOT EXISTS varaus (" +
@@ -202,7 +291,7 @@ namespace VillageNewbies
                 "(301,107,205,18032020,20032020,06072020,16072020)";
             cmd.ExecuteNonQuery();
 
-            cmd.CommandText = "DROP TABLE IF EXISTS lasku ;";
+            cmd.CommandText = "DROP TABLE IF EXISTS lasku";
             cmd.ExecuteNonQuery();
 
             cmd.CommandText = "CREATE TABLE IF NOT EXISTS lasku (" +
@@ -219,7 +308,7 @@ namespace VillageNewbies
                "(301,550,24)";
             cmd.ExecuteNonQuery();
 
-            cmd.CommandText = "DROP TABLE IF EXISTS palvelu ;";
+            cmd.CommandText = "DROP TABLE IF EXISTS palvelu";
             cmd.ExecuteNonQuery();
 
             cmd.CommandText = "CREATE TABLE IF NOT EXISTS palvelu (" +
@@ -245,7 +334,7 @@ namespace VillageNewbies
                "(408, 4,'Moottorikelkkailu','Opastettu moottorikelkkailu ajelu', 40, 14)";
             cmd.ExecuteNonQuery();
 
-            cmd.CommandText = "DROP TABLE IF EXISTS varauksen_palvelut ;";
+            cmd.CommandText = "DROP TABLE IF EXISTS varauksen_palvelut";
             cmd.ExecuteNonQuery();
 
             cmd.CommandText = "CREATE TABLE IF NOT EXISTS varauksen_palvelut (" +

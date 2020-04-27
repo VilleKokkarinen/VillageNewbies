@@ -53,6 +53,9 @@
     <StartupObject>VillageNewbies.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FastMember, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\FastMember.1.5.0\lib\net461\FastMember.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.SQLite, Version=1.0.112.1, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
@@ -69,6 +72,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Objects\Cabin\Services.cs" />
     <Compile Include="UI\CustomObjects\Buttons\ButtonX.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -107,8 +111,8 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="UI\TypeAssistant.cs" />
-    <Compile Include="User\Item.cs" />
-    <Compile Include="User\Loan.cs" />
+    <Compile Include="Objects\User\Item.cs" />
+    <Compile Include="Objects\Cabin\Cabin.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
