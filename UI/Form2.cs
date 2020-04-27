@@ -82,7 +82,19 @@ namespace VillageNewbies.UI
         /// <param name="e"></param>
         private void checklist_Loan_Cabins_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txt_Cabin_Type.Text = ((Cabin)checklist_Loan_Cabins.SelectedItem).toimintaalue_id.ToString();
+            checklist_Loan_Cabins.SelectionMode = SelectionMode.One;
+            txt_Cabin_MaxResidents.Text = ((Cabin)checklist_Loan_Cabins.SelectedItem).henkilomaara.ToString();
+            txt_Cabin_Details.Text = ((Cabin)checklist_Loan_Cabins.SelectedItem).kuvaus;
+        }
+
+        private void checklist_Loan_Cabins_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            if (e.NewValue == CheckState.Checked && checklist_Loan_Cabins.CheckedItems.Count > 0)
+            {
+                checklist_Loan_Cabins.ItemCheck -= checklist_Loan_Cabins_ItemCheck;
+                checklist_Loan_Cabins.SetItemChecked(checklist_Loan_Cabins.CheckedIndices[0], false);
+                checklist_Loan_Cabins.ItemCheck += checklist_Loan_Cabins_ItemCheck;
+            }
         }
     }
 }

@@ -34,9 +34,9 @@
             this.combobox_Cabin_something = new System.Windows.Forms.ComboBox();
             this.txt_SearchCabin = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txt_Cabin_ReservedTill = new System.Windows.Forms.TextBox();
+            this.txt_Cabin_Details = new System.Windows.Forms.TextBox();
             this.txt_Cabin_State = new System.Windows.Forms.TextBox();
-            this.txt_Cabin_Type = new System.Windows.Forms.TextBox();
+            this.txt_Cabin_MaxResidents = new System.Windows.Forms.TextBox();
             this.checklist_Loan_Cabins = new System.Windows.Forms.CheckedListBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.Cmb_Alue = new System.Windows.Forms.ComboBox();
@@ -136,41 +136,42 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.txt_Cabin_ReservedTill);
+            this.groupBox2.Controls.Add(this.txt_Cabin_Details);
             this.groupBox2.Controls.Add(this.txt_Cabin_State);
-            this.groupBox2.Controls.Add(this.txt_Cabin_Type);
+            this.groupBox2.Controls.Add(this.txt_Cabin_MaxResidents);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox2.Location = new System.Drawing.Point(244, 165);
+            this.groupBox2.Location = new System.Drawing.Point(243, 136);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(186, 124);
+            this.groupBox2.Size = new System.Drawing.Size(186, 170);
             this.groupBox2.TabIndex = 51;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Mökin tiedot";
             // 
-            // txt_Cabin_ReservedTill
+            // txt_Cabin_Details
             // 
-            this.txt_Cabin_ReservedTill.Location = new System.Drawing.Point(6, 92);
-            this.txt_Cabin_ReservedTill.Name = "txt_Cabin_ReservedTill";
-            this.txt_Cabin_ReservedTill.ReadOnly = true;
-            this.txt_Cabin_ReservedTill.Size = new System.Drawing.Size(172, 26);
-            this.txt_Cabin_ReservedTill.TabIndex = 3;
+            this.txt_Cabin_Details.Location = new System.Drawing.Point(8, 57);
+            this.txt_Cabin_Details.Multiline = true;
+            this.txt_Cabin_Details.Name = "txt_Cabin_Details";
+            this.txt_Cabin_Details.ReadOnly = true;
+            this.txt_Cabin_Details.Size = new System.Drawing.Size(172, 103);
+            this.txt_Cabin_Details.TabIndex = 3;
             // 
             // txt_Cabin_State
             // 
-            this.txt_Cabin_State.Location = new System.Drawing.Point(6, 59);
+            this.txt_Cabin_State.Location = new System.Drawing.Point(48, 25);
             this.txt_Cabin_State.Name = "txt_Cabin_State";
             this.txt_Cabin_State.ReadOnly = true;
-            this.txt_Cabin_State.Size = new System.Drawing.Size(143, 26);
+            this.txt_Cabin_State.Size = new System.Drawing.Size(132, 26);
             this.txt_Cabin_State.TabIndex = 2;
             // 
-            // txt_Cabin_Type
+            // txt_Cabin_MaxResidents
             // 
-            this.txt_Cabin_Type.Location = new System.Drawing.Point(6, 25);
-            this.txt_Cabin_Type.Name = "txt_Cabin_Type";
-            this.txt_Cabin_Type.ReadOnly = true;
-            this.txt_Cabin_Type.Size = new System.Drawing.Size(144, 26);
-            this.txt_Cabin_Type.TabIndex = 1;
+            this.txt_Cabin_MaxResidents.Location = new System.Drawing.Point(6, 25);
+            this.txt_Cabin_MaxResidents.Name = "txt_Cabin_MaxResidents";
+            this.txt_Cabin_MaxResidents.ReadOnly = true;
+            this.txt_Cabin_MaxResidents.Size = new System.Drawing.Size(36, 26);
+            this.txt_Cabin_MaxResidents.TabIndex = 1;
             // 
             // checklist_Loan_Cabins
             // 
@@ -183,8 +184,9 @@
             this.checklist_Loan_Cabins.HorizontalScrollbar = true;
             this.checklist_Loan_Cabins.Location = new System.Drawing.Point(3, 13);
             this.checklist_Loan_Cabins.Name = "checklist_Loan_Cabins";
-            this.checklist_Loan_Cabins.Size = new System.Drawing.Size(225, 276);
+            this.checklist_Loan_Cabins.Size = new System.Drawing.Size(225, 293);
             this.checklist_Loan_Cabins.TabIndex = 50;
+            this.checklist_Loan_Cabins.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.checklist_Loan_Cabins_ItemCheck);
             this.checklist_Loan_Cabins.SelectedIndexChanged += new System.EventHandler(this.checklist_Loan_Cabins_SelectedIndexChanged);
             // 
             // listBox1
@@ -437,7 +439,7 @@
             this.Controls.Add(this.dateTimePicker1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Varaus";
-            this.Text = "Varaus";
+            this.Text = "9";
             this.Load += new System.EventHandler(this.Varaus_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -467,9 +469,9 @@
         private System.Windows.Forms.ComboBox combobox_Cabin_something;
         private System.Windows.Forms.TextBox txt_SearchCabin;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox txt_Cabin_ReservedTill;
+        private System.Windows.Forms.TextBox txt_Cabin_Details;
         private System.Windows.Forms.TextBox txt_Cabin_State;
-        private System.Windows.Forms.TextBox txt_Cabin_Type;
+        private System.Windows.Forms.TextBox txt_Cabin_MaxResidents;
         private System.Windows.Forms.CheckedListBox checklist_Loan_Cabins;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label labelAsiakas_id;
