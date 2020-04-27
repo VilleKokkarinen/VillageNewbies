@@ -149,6 +149,34 @@ namespace VillageNewbies
             return ImportedFiles;
         }
 
+        public static List<OperatingArea> GetAllAreas()
+        {
+            List<OperatingArea> ImportedFiles = new List<OperatingArea>();
+
+            using (SQLiteConnection connection = new SQLiteConnection(@"Data Source=VillageNewbiesDB.db"))
+            {
+                using (SQLiteCommand availableItems = connection.CreateCommand())
+                {
+                    connection.Open();
+
+                    availableItems.CommandText = @"SELECT * FROM toimintaalue";
+                    availableItems.CommandType = CommandType.Text;
+                    SQLiteDataReader r = availableItems.ExecuteReader();
+                    while (r.Read())
+                    {
+                        ImportedFiles.Add(
+                            new OperatingArea(
+                                toimintaalue_id: Convert.ToInt32(r["toimintaalue_id"].ToString()),
+                                nimi: r["nimi"].ToString()
+                                ));
+
+                    }
+                }
+                connection.Close();
+            }
+            return ImportedFiles;
+        }
+
         public DataTable returnstuff()
         {
             using (SQLiteConnection connect = new SQLiteConnection(@"Data Source=VillageNewbiesDB.db"))
