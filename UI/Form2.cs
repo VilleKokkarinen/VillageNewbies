@@ -69,6 +69,13 @@ namespace VillageNewbies.UI
                 Clb_Palvelut.DisplayMember = "DISPLAYNAME";
             }
 
+            List<OperatingArea> aluedata = SQL.GetAllAreas();
+            foreach (OperatingArea i in aluedata)
+            {
+                Cmb_Alue.Items.Add(i);
+                Cmb_Alue.DisplayMember = "DISPLAYNAME";
+            }
+
             dataGridView1.DataSource = s.returnstuff();
         }
 
