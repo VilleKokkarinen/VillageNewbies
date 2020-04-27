@@ -63,6 +63,13 @@ namespace VillageNewbies.UI
                 checklist_Loan_Cabins.DisplayMember = "DISPLAYNAME";
             }
 
+            List<OperatingArea> aluedata = SQL.GetAllAreas();
+            foreach (OperatingArea i in aluedata)
+            {
+                Cmb_Alue.Items.Add(i);
+                Cmb_Alue.DisplayMember = "DISPLAYNAME";
+            }
+
             List<Service> palveludata = SQL.GetAllServices();
             foreach (Service i in palveludata)
             {
@@ -71,6 +78,19 @@ namespace VillageNewbies.UI
             }
 
             dataGridView1.DataSource = s.returnstuff();
+
+            List<DataRow> alueet = s.SQLiteQuery_DataRowList("Select * from toimintaalue");
+            combobox_Cabin_Region.Items.Add("<kaikki>");
+            foreach (DataRow i in alueet)
+            {
+                OperatingArea oa = new OperatingArea(
+
+                    Convert.ToInt32(i[0].ToString()),
+                    i[1].ToString()
+                    );
+                combobox_Cabin_Region.Items.Add(oa);
+                combobox_Cabin_Region.DisplayMember = "DISPLAYNAME";
+            }
         }
 
 
@@ -138,6 +158,7 @@ namespace VillageNewbies.UI
 
                 checklist_Loan_Cabins.Items.Add(c);
                 checklist_Loan_Cabins.DisplayMember = "DISPLAYNAME";
+                //testi
             }
         }
     }
