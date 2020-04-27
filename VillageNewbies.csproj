@@ -72,6 +72,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Objects\Cabin\Services.cs" />
     <Compile Include="UI\CustomObjects\Buttons\ButtonX.cs">
       <SubType>Component</SubType>
     </Compile>

@@ -6,6 +6,7 @@ using System.Data.SQLite;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VillageNewbies.Objects.Cabin;
 
 namespace VillageNewbies
 {
@@ -108,6 +109,38 @@ namespace VillageNewbies
                                 MaxAsukkaat: Convert.ToInt32(r["henkilomaara"].ToString()),
                                 kuvaus: r["kuvaus"].ToString(),
                                 varustelu: r["varustelu"].ToString()
+                                ));
+
+                    }
+                }
+                connection.Close();
+            }
+            return ImportedFiles;
+        }
+
+        public static List<Services> GetAllServices()
+        {
+            List<Services> ImportedFiles = new List<Services>();
+
+            using (SQLiteConnection connection = new SQLiteConnection(@"Data Source=VillageNewbiesDB.db"))
+            {
+                using (SQLiteCommand availableItems = connection.CreateCommand())
+                {
+                    connection.Open();
+
+                    availableItems.CommandText = @"SELECT * FROM palvelu";
+                    availableItems.CommandType = CommandType.Text;
+                    SQLiteDataReader r = availableItems.ExecuteReader();
+                    while (r.Read())
+                    {
+                        ImportedFiles.Add(
+                            new Services(
+                                ID: Convert.ToInt32(r["palvelu_id"].ToString()),
+                                ToimintaAlueID: Convert.ToInt32(r["toimintaalue_id"].ToString()),
+                                Nimi: r["nimi"].ToString(),
+                                kuvaus: r["kuvaus"].ToString(),
+                                hinta: Convert.ToInt32(r["hinta"].ToString()),
+                                ALV: Convert.ToInt32(r["alv"].ToString())
                                 ));
 
                     }

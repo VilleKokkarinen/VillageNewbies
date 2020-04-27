@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VillageNewbies.Objects.Cabin;
 
 namespace VillageNewbies.UI
 {
@@ -60,6 +61,13 @@ namespace VillageNewbies.UI
                     
                 checklist_Loan_Cabins.Items.Add(c);
                 checklist_Loan_Cabins.DisplayMember = "DISPLAYNAME";
+            }
+
+            List<Services> palveludata = SQL.GetAllServices();
+            foreach (Services i in palveludata)
+            {
+                Clb_Palvelut.Items.Add(i);
+                Clb_Palvelut.DisplayMember = "DISPLAYNAME";
             }
 
             dataGridView1.DataSource = s.returnstuff();
