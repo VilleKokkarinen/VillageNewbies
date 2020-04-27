@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VillageNewbies.Objects.Cabin;
 
 namespace VillageNewbies.UI
 {
@@ -17,12 +18,14 @@ namespace VillageNewbies.UI
             InitializeComponent();
         }
 
+ 
+            
+        
+
         private void Varaus_Load(object sender, EventArgs e)
         {
             SQL s = new SQL();
             s.create();
-
-            dataGridView1.DataSource = s.returnstuff();
 
             /*
              * Tapa 1
@@ -34,10 +37,14 @@ namespace VillageNewbies.UI
                 checklist_Loan_Cabins.DisplayMember = i.mokkinimi;
             }
 
+            dataGridView1.DataSource = s.returnstuff();
+
             /*
              * Tapa 2
+             * 
              */
-            List<DataRow> dataa2 = s.SQLiteQuery_DataRowList("SELECT * FROM mokki");
+            List<DataRow> dataa2 = s.SQLiteQuery_DT_List(
+                "SELECT * FROM mokki");
 
             foreach (DataRow i in dataa2)
             {
@@ -55,6 +62,15 @@ namespace VillageNewbies.UI
                 checklist_Loan_Cabins.Items.Add(c);
                 checklist_Loan_Cabins.DisplayMember = "DISPLAYNAME";
             }
+
+            List<Services> palveludata = SQL.GetAllServices();
+            foreach (Services i in palveludata)
+            {
+                Clb_Palvelut.Items.Add(i);
+                Clb_Palvelut.DisplayMember = "DISPLAYNAME";
+            }
+
+            dataGridView1.DataSource = s.returnstuff();
         }
 
 
