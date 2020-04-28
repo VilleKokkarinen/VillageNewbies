@@ -17,9 +17,9 @@ namespace VillageNewbies.UI
             InitializeComponent();
         }
 
- 
-            
-        
+
+
+
 
         private void Varaus_Load(object sender, EventArgs e)
         {
@@ -58,7 +58,7 @@ namespace VillageNewbies.UI
                     Convert.ToInt32(i[6].ToString()),
                     i[7].ToString()
                     );
-                    
+
                 checklist_Loan_Cabins.Items.Add(c);
                 checklist_Loan_Cabins.DisplayMember = "DISPLAYNAME";
             }
@@ -140,7 +140,7 @@ namespace VillageNewbies.UI
 
             if (combobox_Cabin_Region.SelectedItem.ToString() != "<kaikki>")
                 query = "SELECT * FROM mokki where mokki.toimintaalue_id = " + ((OperatingArea)combobox_Cabin_Region.SelectedItem).toimintaalue_id;
-            
+
 
             List<DataRow> dataa2 = s.SQLiteQuery_DataRowList(query);
             foreach (DataRow i in dataa2)
@@ -159,6 +159,36 @@ namespace VillageNewbies.UI
                 checklist_Loan_Cabins.Items.Add(c);
                 checklist_Loan_Cabins.DisplayMember = "DISPLAYNAME";
                 //testi
+            }
+        }
+
+        private void txt_Cabin_Search_Name_TextChanged(object sender, EventArgs e)
+        {
+            checklist_Loan_Cabins.Items.Clear();
+            SQL s = new SQL();
+            string query = "SELECT * FROM mokki";
+
+
+            if (txt_Cabin_Search_Name.Text != null)
+                query = "SELECT * FROM mokki where mokki.mokkinimi LIKE '%" + txt_Cabin_Search_Name.Text + "%'";
+
+
+            List<DataRow> dataa2 = s.SQLiteQuery_DataRowList(query);
+            foreach (DataRow i in dataa2)
+            {
+                Cabin c = new Cabin(
+                    Convert.ToInt32(i[0].ToString()), // <-> i["mokki_id"]
+                    Convert.ToInt32(i[1].ToString()),
+                    i[2].ToString(),
+                    i[3].ToString(),
+                    i[4].ToString(),
+                    i[5].ToString(),
+                    Convert.ToInt32(i[6].ToString()),
+                    i[7].ToString()
+                    );
+
+                checklist_Loan_Cabins.Items.Add(c);
+                checklist_Loan_Cabins.DisplayMember = "DISPLAYNAME";
             }
         }
     }
