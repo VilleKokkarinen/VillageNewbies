@@ -91,7 +91,7 @@
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(4, 458);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
@@ -109,9 +109,9 @@
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.groupBox3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox3.Location = new System.Drawing.Point(324, 22);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox3.Size = new System.Drawing.Size(249, 239);
             this.groupBox3.TabIndex = 52;
             this.groupBox3.TabStop = false;
@@ -126,7 +126,7 @@
             this.combobox_Cabin_Region.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.combobox_Cabin_Region.FormattingEnabled = true;
             this.combobox_Cabin_Region.Location = new System.Drawing.Point(9, 71);
-            this.combobox_Cabin_Region.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.combobox_Cabin_Region.Margin = new System.Windows.Forms.Padding(4);
             this.combobox_Cabin_Region.Name = "combobox_Cabin_Region";
             this.combobox_Cabin_Region.Size = new System.Drawing.Size(185, 33);
             this.combobox_Cabin_Region.TabIndex = 47;
@@ -136,7 +136,7 @@
             // 
             this.txt_Cabin_Search_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txt_Cabin_Search_Name.Location = new System.Drawing.Point(9, 28);
-            this.txt_Cabin_Search_Name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Cabin_Search_Name.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Cabin_Search_Name.Name = "txt_Cabin_Search_Name";
             this.txt_Cabin_Search_Name.Size = new System.Drawing.Size(185, 30);
             this.txt_Cabin_Search_Name.TabIndex = 45;
@@ -150,9 +150,9 @@
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox2.Location = new System.Drawing.Point(325, 268);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(248, 170);
             this.groupBox2.TabIndex = 51;
             this.groupBox2.TabStop = false;
@@ -161,7 +161,7 @@
             // txt_Cabin_Details
             // 
             this.txt_Cabin_Details.Location = new System.Drawing.Point(11, 70);
-            this.txt_Cabin_Details.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Cabin_Details.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Cabin_Details.Multiline = true;
             this.txt_Cabin_Details.Name = "txt_Cabin_Details";
             this.txt_Cabin_Details.ReadOnly = true;
@@ -171,7 +171,7 @@
             // txt_Cabin_State
             // 
             this.txt_Cabin_State.Location = new System.Drawing.Point(55, 31);
-            this.txt_Cabin_State.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Cabin_State.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Cabin_State.Name = "txt_Cabin_State";
             this.txt_Cabin_State.ReadOnly = true;
             this.txt_Cabin_State.Size = new System.Drawing.Size(181, 30);
@@ -180,7 +180,7 @@
             // txt_Cabin_MaxResidents
             // 
             this.txt_Cabin_MaxResidents.Location = new System.Drawing.Point(8, 31);
-            this.txt_Cabin_MaxResidents.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Cabin_MaxResidents.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Cabin_MaxResidents.Name = "txt_Cabin_MaxResidents";
             this.txt_Cabin_MaxResidents.ReadOnly = true;
             this.txt_Cabin_MaxResidents.Size = new System.Drawing.Size(37, 30);
@@ -196,7 +196,7 @@
             this.checklist_Loan_Cabins.FormattingEnabled = true;
             this.checklist_Loan_Cabins.HorizontalScrollbar = true;
             this.checklist_Loan_Cabins.Location = new System.Drawing.Point(4, 16);
-            this.checklist_Loan_Cabins.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checklist_Loan_Cabins.Margin = new System.Windows.Forms.Padding(4);
             this.checklist_Loan_Cabins.Name = "checklist_Loan_Cabins";
             this.checklist_Loan_Cabins.Size = new System.Drawing.Size(299, 403);
             this.checklist_Loan_Cabins.TabIndex = 50;
@@ -309,7 +309,7 @@
             // txtboxAsiakas_id
             // 
             this.txtboxAsiakas_id.Location = new System.Drawing.Point(148, 471);
-            this.txtboxAsiakas_id.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtboxAsiakas_id.Margin = new System.Windows.Forms.Padding(4);
             this.txtboxAsiakas_id.Name = "txtboxAsiakas_id";
             this.txtboxAsiakas_id.Size = new System.Drawing.Size(132, 22);
             this.txtboxAsiakas_id.TabIndex = 11;
@@ -327,7 +327,7 @@
             // txtboxEtunimi
             // 
             this.txtboxEtunimi.Location = new System.Drawing.Point(148, 508);
-            this.txtboxEtunimi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtboxEtunimi.Margin = new System.Windows.Forms.Padding(4);
             this.txtboxEtunimi.Name = "txtboxEtunimi";
             this.txtboxEtunimi.Size = new System.Drawing.Size(132, 22);
             this.txtboxEtunimi.TabIndex = 13;
@@ -345,7 +345,7 @@
             // txtboxSukunimi
             // 
             this.txtboxSukunimi.Location = new System.Drawing.Point(148, 546);
-            this.txtboxSukunimi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtboxSukunimi.Margin = new System.Windows.Forms.Padding(4);
             this.txtboxSukunimi.Name = "txtboxSukunimi";
             this.txtboxSukunimi.Size = new System.Drawing.Size(132, 22);
             this.txtboxSukunimi.TabIndex = 15;
@@ -363,7 +363,7 @@
             // txtboxPostinro
             // 
             this.txtboxPostinro.Location = new System.Drawing.Point(148, 585);
-            this.txtboxPostinro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtboxPostinro.Margin = new System.Windows.Forms.Padding(4);
             this.txtboxPostinro.Name = "txtboxPostinro";
             this.txtboxPostinro.Size = new System.Drawing.Size(132, 22);
             this.txtboxPostinro.TabIndex = 17;
@@ -381,7 +381,7 @@
             // txtboxlahiosoite
             // 
             this.txtboxlahiosoite.Location = new System.Drawing.Point(148, 623);
-            this.txtboxlahiosoite.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtboxlahiosoite.Margin = new System.Windows.Forms.Padding(4);
             this.txtboxlahiosoite.Name = "txtboxlahiosoite";
             this.txtboxlahiosoite.Size = new System.Drawing.Size(132, 22);
             this.txtboxlahiosoite.TabIndex = 19;
@@ -399,7 +399,7 @@
             // txtboxEmail
             // 
             this.txtboxEmail.Location = new System.Drawing.Point(148, 661);
-            this.txtboxEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtboxEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtboxEmail.Name = "txtboxEmail";
             this.txtboxEmail.Size = new System.Drawing.Size(132, 22);
             this.txtboxEmail.TabIndex = 21;
@@ -417,7 +417,7 @@
             // txtboxPuhelinnro
             // 
             this.txtboxPuhelinnro.Location = new System.Drawing.Point(148, 702);
-            this.txtboxPuhelinnro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtboxPuhelinnro.Margin = new System.Windows.Forms.Padding(4);
             this.txtboxPuhelinnro.Name = "txtboxPuhelinnro";
             this.txtboxPuhelinnro.Size = new System.Drawing.Size(132, 22);
             this.txtboxPuhelinnro.TabIndex = 23;
@@ -426,12 +426,13 @@
             // 
             this.buttonLisääMuokkaa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLisääMuokkaa.Location = new System.Drawing.Point(48, 759);
-            this.buttonLisääMuokkaa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonLisääMuokkaa.Margin = new System.Windows.Forms.Padding(4);
             this.buttonLisääMuokkaa.Name = "buttonLisääMuokkaa";
             this.buttonLisääMuokkaa.Size = new System.Drawing.Size(216, 28);
             this.buttonLisääMuokkaa.TabIndex = 24;
             this.buttonLisääMuokkaa.Text = "Lisää / Muokkaa";
             this.buttonLisääMuokkaa.UseVisualStyleBackColor = true;
+            this.buttonLisääMuokkaa.Click += new System.EventHandler(this.buttonLisääMuokkaa_Click);
             // 
             // Varaus
             // 

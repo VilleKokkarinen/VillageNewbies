@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -18,6 +19,9 @@ namespace VillageNewbies.UI
            
         }
 
+        private SQLiteConnection connection;
+        private SQLiteCommand cmd;
+        private SQLiteDataAdapter DB;
 
 
 
@@ -204,6 +208,33 @@ namespace VillageNewbies.UI
             txtboxlahiosoite.Clear();
             txtboxEmail.Clear(); 
             txtboxPuhelinnro.Clear();
+        }
+
+        private void SetConnection()
+        {
+             connection = new SQLiteConnection(@"Data Source=VillageNewbiesDB.db");
+        }
+
+        private void ExecuteQuery(string textquery)
+        {
+            SetConnection();
+            connection.Open();
+            cmd = connection.CreateCommand();
+            cmd.CommandText = textquery;
+            cmd.ExecuteNonQuery();
+            connection.Close();
+        }
+
+        private void buttonLisääMuokkaa_Click(object sender, EventArgs e)
+        {
+
+            if (dataGridView1.SelectedCells.Count == 0)
+            {
+                string textquery = "INSERT INTO asiakas(asiakas_id,postinro,etunimi,sukunimi,lahiosoite,email,puhelinnro)values('" + txtboxAsiakas_id.Text +"'," +
+                    " '" + txtboxPostinro.Text + "' , '" + txtboxEtunimi.Text + "' , '" + txtboxSukunimi.Text + "' , '" + txtboxlahiosoite.Text +
+                    "' , '" + txtboxEmail.Text + "' , '" + txtboxPuhelinnro.Text + "')";
+                ExecuteQuery(textquery);
+            }
         }
     }
 }
