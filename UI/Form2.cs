@@ -15,6 +15,7 @@ namespace VillageNewbies.UI
         public Varaus()
         {
             InitializeComponent();
+           
         }
 
 
@@ -78,6 +79,9 @@ namespace VillageNewbies.UI
             }
 
             dataGridView1.DataSource = s.returnstuff();
+
+            dataGridView1.ClearSelection();
+            clear_txt_boxes();
 
             List<DataRow> alueet = s.SQLiteQuery_DataRowList("Select * from toimintaalue");
             combobox_Cabin_Region.Items.Add("<kaikki>");
@@ -190,6 +194,16 @@ namespace VillageNewbies.UI
                 checklist_Loan_Cabins.Items.Add(c);
                 checklist_Loan_Cabins.DisplayMember = "DISPLAYNAME";
             }
+        }
+        private void clear_txt_boxes()
+        {
+            txtboxAsiakas_id.Clear();
+            txtboxEtunimi.Clear();
+            txtboxSukunimi.Clear();
+            txtboxPostinro.Clear();
+            txtboxlahiosoite.Clear();
+            txtboxEmail.Clear(); 
+            txtboxPuhelinnro.Clear();
         }
     }
 }
