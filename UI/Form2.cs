@@ -225,15 +225,17 @@ namespace VillageNewbies.UI
             connection.Close();
         }
 
+
         private void buttonLisääMuokkaa_Click(object sender, EventArgs e)
         {
-
+            SQL s = new SQL();
             if (dataGridView1.SelectedCells.Count == 0)
             {
                 string textquery = "INSERT INTO asiakas(asiakas_id,postinro,etunimi,sukunimi,lahiosoite,email,puhelinnro)values('" + txtboxAsiakas_id.Text +"'," +
                     " '" + txtboxPostinro.Text + "' , '" + txtboxEtunimi.Text + "' , '" + txtboxSukunimi.Text + "' , '" + txtboxlahiosoite.Text +
                     "' , '" + txtboxEmail.Text + "' , '" + txtboxPuhelinnro.Text + "')";
                 ExecuteQuery(textquery);
+                dataGridView1.DataSource = s.returnstuff();
             }
         }
     }
