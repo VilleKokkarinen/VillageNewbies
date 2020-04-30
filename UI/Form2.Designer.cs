@@ -38,7 +38,6 @@
             this.txt_Cabin_State = new System.Windows.Forms.TextBox();
             this.txt_Cabin_MaxResidents = new System.Windows.Forms.TextBox();
             this.checklist_Loan_Cabins = new System.Windows.Forms.CheckedListBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.Cmb_Alue = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -63,6 +62,9 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtboxPuhelinnro = new System.Windows.Forms.TextBox();
             this.buttonLisääMuokkaa = new System.Windows.Forms.Button();
+            this.Btn_Varaa = new System.Windows.Forms.Button();
+            this.Lbl_Hinta = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -76,7 +78,6 @@
             this.panel1.Controls.Add(this.groupBox3);
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.checklist_Loan_Cabins);
-            this.panel1.Controls.Add(this.listBox1);
             this.panel1.Location = new System.Drawing.Point(319, 14);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
@@ -203,16 +204,6 @@
             this.checklist_Loan_Cabins.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.checklist_Loan_Cabins_ItemCheck);
             this.checklist_Loan_Cabins.SelectedIndexChanged += new System.EventHandler(this.checklist_Loan_Cabins_SelectedIndexChanged);
             // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(591, 31);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(264, 164);
-            this.listBox1.TabIndex = 0;
-            // 
             // Cmb_Alue
             // 
             this.Cmb_Alue.FormattingEnabled = true;
@@ -271,6 +262,15 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"});
             this.comboBox1.Location = new System.Drawing.Point(113, 183);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox1.Name = "comboBox1";
@@ -299,7 +299,7 @@
             // labelAsiakas_id
             // 
             this.labelAsiakas_id.AutoSize = true;
-            this.labelAsiakas_id.Location = new System.Drawing.Point(16, 471);
+            this.labelAsiakas_id.Location = new System.Drawing.Point(16, 362);
             this.labelAsiakas_id.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelAsiakas_id.Name = "labelAsiakas_id";
             this.labelAsiakas_id.Size = new System.Drawing.Size(76, 17);
@@ -308,7 +308,7 @@
             // 
             // txtboxAsiakas_id
             // 
-            this.txtboxAsiakas_id.Location = new System.Drawing.Point(148, 471);
+            this.txtboxAsiakas_id.Location = new System.Drawing.Point(148, 362);
             this.txtboxAsiakas_id.Margin = new System.Windows.Forms.Padding(4);
             this.txtboxAsiakas_id.Name = "txtboxAsiakas_id";
             this.txtboxAsiakas_id.Size = new System.Drawing.Size(132, 22);
@@ -317,7 +317,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 508);
+            this.label5.Location = new System.Drawing.Point(16, 399);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(54, 17);
@@ -326,7 +326,7 @@
             // 
             // txtboxEtunimi
             // 
-            this.txtboxEtunimi.Location = new System.Drawing.Point(148, 508);
+            this.txtboxEtunimi.Location = new System.Drawing.Point(148, 396);
             this.txtboxEtunimi.Margin = new System.Windows.Forms.Padding(4);
             this.txtboxEtunimi.Name = "txtboxEtunimi";
             this.txtboxEtunimi.Size = new System.Drawing.Size(132, 22);
@@ -335,7 +335,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(16, 546);
+            this.label6.Location = new System.Drawing.Point(16, 434);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(65, 17);
@@ -344,7 +344,7 @@
             // 
             // txtboxSukunimi
             // 
-            this.txtboxSukunimi.Location = new System.Drawing.Point(148, 546);
+            this.txtboxSukunimi.Location = new System.Drawing.Point(148, 431);
             this.txtboxSukunimi.Margin = new System.Windows.Forms.Padding(4);
             this.txtboxSukunimi.Name = "txtboxSukunimi";
             this.txtboxSukunimi.Size = new System.Drawing.Size(132, 22);
@@ -353,7 +353,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(16, 585);
+            this.label7.Location = new System.Drawing.Point(16, 464);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(87, 17);
@@ -362,7 +362,7 @@
             // 
             // txtboxPostinro
             // 
-            this.txtboxPostinro.Location = new System.Drawing.Point(148, 585);
+            this.txtboxPostinro.Location = new System.Drawing.Point(148, 461);
             this.txtboxPostinro.Margin = new System.Windows.Forms.Padding(4);
             this.txtboxPostinro.Name = "txtboxPostinro";
             this.txtboxPostinro.Size = new System.Drawing.Size(132, 22);
@@ -371,7 +371,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(16, 623);
+            this.label8.Location = new System.Drawing.Point(17, 494);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(73, 17);
@@ -380,7 +380,7 @@
             // 
             // txtboxlahiosoite
             // 
-            this.txtboxlahiosoite.Location = new System.Drawing.Point(148, 623);
+            this.txtboxlahiosoite.Location = new System.Drawing.Point(148, 491);
             this.txtboxlahiosoite.Margin = new System.Windows.Forms.Padding(4);
             this.txtboxlahiosoite.Name = "txtboxlahiosoite";
             this.txtboxlahiosoite.Size = new System.Drawing.Size(132, 22);
@@ -389,7 +389,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(16, 661);
+            this.label9.Location = new System.Drawing.Point(16, 526);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(42, 17);
@@ -398,7 +398,7 @@
             // 
             // txtboxEmail
             // 
-            this.txtboxEmail.Location = new System.Drawing.Point(148, 661);
+            this.txtboxEmail.Location = new System.Drawing.Point(148, 521);
             this.txtboxEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtboxEmail.Name = "txtboxEmail";
             this.txtboxEmail.Size = new System.Drawing.Size(132, 22);
@@ -407,7 +407,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(16, 702);
+            this.label10.Location = new System.Drawing.Point(16, 556);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(82, 17);
@@ -416,7 +416,7 @@
             // 
             // txtboxPuhelinnro
             // 
-            this.txtboxPuhelinnro.Location = new System.Drawing.Point(148, 702);
+            this.txtboxPuhelinnro.Location = new System.Drawing.Point(148, 551);
             this.txtboxPuhelinnro.Margin = new System.Windows.Forms.Padding(4);
             this.txtboxPuhelinnro.Name = "txtboxPuhelinnro";
             this.txtboxPuhelinnro.Size = new System.Drawing.Size(132, 22);
@@ -425,7 +425,7 @@
             // buttonLisääMuokkaa
             // 
             this.buttonLisääMuokkaa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLisääMuokkaa.Location = new System.Drawing.Point(48, 759);
+            this.buttonLisääMuokkaa.Location = new System.Drawing.Point(32, 594);
             this.buttonLisääMuokkaa.Margin = new System.Windows.Forms.Padding(4);
             this.buttonLisääMuokkaa.Name = "buttonLisääMuokkaa";
             this.buttonLisääMuokkaa.Size = new System.Drawing.Size(216, 28);
@@ -434,11 +434,41 @@
             this.buttonLisääMuokkaa.UseVisualStyleBackColor = true;
             this.buttonLisääMuokkaa.Click += new System.EventHandler(this.buttonLisääMuokkaa_Click);
             // 
+            // Btn_Varaa
+            // 
+            this.Btn_Varaa.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Varaa.Location = new System.Drawing.Point(62, 738);
+            this.Btn_Varaa.Name = "Btn_Varaa";
+            this.Btn_Varaa.Size = new System.Drawing.Size(136, 50);
+            this.Btn_Varaa.TabIndex = 25;
+            this.Btn_Varaa.Text = "Varaa";
+            this.Btn_Varaa.UseVisualStyleBackColor = true;
+            // 
+            // Lbl_Hinta
+            // 
+            this.Lbl_Hinta.AutoSize = true;
+            this.Lbl_Hinta.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Hinta.Location = new System.Drawing.Point(16, 660);
+            this.Lbl_Hinta.Name = "Lbl_Hinta";
+            this.Lbl_Hinta.Size = new System.Drawing.Size(63, 26);
+            this.Lbl_Hinta.TabIndex = 26;
+            this.Lbl_Hinta.Text = "Hinta";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(148, 665);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.TabIndex = 27;
+            // 
             // Varaus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1741, 805);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Lbl_Hinta);
+            this.Controls.Add(this.Btn_Varaa);
             this.Controls.Add(this.buttonLisääMuokkaa);
             this.Controls.Add(this.txtboxPuhelinnro);
             this.Controls.Add(this.label10);
@@ -482,7 +512,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.ComboBox Cmb_Alue;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
@@ -516,5 +545,8 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtboxPuhelinnro;
         private System.Windows.Forms.Button buttonLisääMuokkaa;
+        private System.Windows.Forms.Button Btn_Varaa;
+        private System.Windows.Forms.Label Lbl_Hinta;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

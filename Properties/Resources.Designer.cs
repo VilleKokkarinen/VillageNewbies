@@ -73,6 +73,16 @@ namespace VillageNewbies.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logo1 {
+            get {
+                object obj = ResourceManager.GetObject("logo1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mainscreenbg {
             get {
                 object obj = ResourceManager.GetObject("mainscreenbg", resourceCulture);
@@ -96,6 +106,16 @@ namespace VillageNewbies.Properties {
         internal static System.Drawing.Bitmap rezise {
             get {
                 object obj = ResourceManager.GetObject("rezise", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap teksti {
+            get {
+                object obj = ResourceManager.GetObject("teksti", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -21,7 +21,6 @@ namespace VillageNewbies.UI
 
         private SQLiteConnection connection;
         private SQLiteCommand cmd;
-        private SQLiteDataAdapter DB;
 
 
 
@@ -29,7 +28,7 @@ namespace VillageNewbies.UI
         private void Varaus_Load(object sender, EventArgs e)
         {
             SQL s = new SQL();
-            s.create();
+            //s.create();
 
             /*
              * Tapa 1
@@ -229,13 +228,41 @@ namespace VillageNewbies.UI
         private void buttonLisääMuokkaa_Click(object sender, EventArgs e)
         {
             SQL s = new SQL();
-            if (dataGridView1.SelectedCells.Count == 0)
+            if (dataGridView1.SelectedCells.Count <= 0)
             {
-                string textquery = "INSERT INTO asiakas(asiakas_id,postinro,etunimi,sukunimi,lahiosoite,email,puhelinnro)values('" + txtboxAsiakas_id.Text +"'," +
+                try
+                {
+                    string textquery = "INSERT INTO asiakas(asiakas_id,postinro,etunimi,sukunimi,lahiosoite,email,puhelinnro)values('" + txtboxAsiakas_id.Text + "'," +
                     " '" + txtboxPostinro.Text + "' , '" + txtboxEtunimi.Text + "' , '" + txtboxSukunimi.Text + "' , '" + txtboxlahiosoite.Text +
                     "' , '" + txtboxEmail.Text + "' , '" + txtboxPuhelinnro.Text + "')";
-                ExecuteQuery(textquery);
-                dataGridView1.DataSource = s.returnstuff();
+                    ExecuteQuery(textquery);
+                    dataGridView1.DataSource = s.returnstuff();
+                    MessageBox.Show("Lisäys onnistui");
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+
+            }
+            else
+            {
+                try
+                {
+                    string textquery = "UPDATE asiakas SET postinro = '" + txtboxPostinro.Text + "', etunimi = '" + txtboxEtunimi.Text +
+                    "', sukunimi ='" + txtboxSukunimi.Text + "', lahiosoite ='" + txtboxlahiosoite.Text + "', email ='" + txtboxEmail.Text +
+                    "', puhelinnro ='" + txtboxPuhelinnro.Text + "' WHERE asiakas_id = '" + txtboxAsiakas_id.Text + "';";
+                    ExecuteQuery(textquery);
+                    dataGridView1.DataSource = s.returnstuff();
+                    MessageBox.Show("Muokkaus onnistui");
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+
             }
         }
     }
