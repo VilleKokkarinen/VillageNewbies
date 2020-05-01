@@ -24,5 +24,11 @@ namespace VillageNewbies
             Varaus vr = new Varaus();
             vr.ShowDialog();
         }
+
+        private void Btn_Hallinta_Click(object sender, EventArgs e)
+        {
+            HallintaValinta valinta = new HallintaValinta();
+            valinta.ShowDialog();
+        }
     }
 }

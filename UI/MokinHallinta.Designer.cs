@@ -37,7 +37,7 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGrid_Mokit = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -48,7 +48,7 @@
             this.btn_Lisaa = new System.Windows.Forms.Button();
             this.btn_Muokkaa = new System.Windows.Forms.Button();
             this.btn_Poista = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Mokit)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -116,15 +116,15 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "ID";
             // 
-            // dataGridView1
+            // dataGrid_Mokit
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(25, 296);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(503, 271);
-            this.dataGridView1.TabIndex = 9;
+            this.dataGrid_Mokit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGrid_Mokit.Location = new System.Drawing.Point(25, 296);
+            this.dataGrid_Mokit.Name = "dataGrid_Mokit";
+            this.dataGrid_Mokit.RowHeadersWidth = 51;
+            this.dataGrid_Mokit.RowTemplate.Height = 24;
+            this.dataGrid_Mokit.Size = new System.Drawing.Size(503, 271);
+            this.dataGrid_Mokit.TabIndex = 9;
             // 
             // label3
             // 
@@ -226,7 +226,7 @@
             this.Controls.Add(this.btn_Lisaa);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGrid_Mokit);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label9);
@@ -243,7 +243,8 @@
             this.Controls.Add(this.textBox5);
             this.Name = "MokinHallinta";
             this.Text = "MökinHallinta";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.MokinHallinta_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Mokit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -260,7 +261,7 @@
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGrid_Mokit;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;

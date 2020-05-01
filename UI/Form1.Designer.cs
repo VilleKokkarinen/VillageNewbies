@@ -31,17 +31,17 @@
             this.Left_panel = new System.Windows.Forms.Panel();
             this.Btn4 = new System.Windows.Forms.Button();
             this.Btn3 = new System.Windows.Forms.Button();
-            this.Btn2 = new System.Windows.Forms.Button();
+            this.Btn_Hallinta = new System.Windows.Forms.Button();
             this.Btn_Varaus = new System.Windows.Forms.Button();
             this.Central_Panel = new System.Windows.Forms.Panel();
+            this.PicBox1 = new System.Windows.Forms.PictureBox();
             this.Top_panel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.PicBox1 = new System.Windows.Forms.PictureBox();
             this.Left_panel.SuspendLayout();
             this.Central_Panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBox1)).BeginInit();
             this.Top_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PicBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // Left_panel
@@ -49,7 +49,7 @@
             this.Left_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.Left_panel.Controls.Add(this.Btn4);
             this.Left_panel.Controls.Add(this.Btn3);
-            this.Left_panel.Controls.Add(this.Btn2);
+            this.Left_panel.Controls.Add(this.Btn_Hallinta);
             this.Left_panel.Controls.Add(this.Btn_Varaus);
             this.Left_panel.Location = new System.Drawing.Point(1, 125);
             this.Left_panel.Name = "Left_panel";
@@ -74,14 +74,15 @@
             this.Btn3.Text = "Varausten historia";
             this.Btn3.UseVisualStyleBackColor = true;
             // 
-            // Btn2
+            // Btn_Hallinta
             // 
-            this.Btn2.Location = new System.Drawing.Point(29, 102);
-            this.Btn2.Name = "Btn2";
-            this.Btn2.Size = new System.Drawing.Size(95, 36);
-            this.Btn2.TabIndex = 1;
-            this.Btn2.Text = "Hallinta";
-            this.Btn2.UseVisualStyleBackColor = true;
+            this.Btn_Hallinta.Location = new System.Drawing.Point(29, 102);
+            this.Btn_Hallinta.Name = "Btn_Hallinta";
+            this.Btn_Hallinta.Size = new System.Drawing.Size(95, 36);
+            this.Btn_Hallinta.TabIndex = 1;
+            this.Btn_Hallinta.Text = "Hallinta";
+            this.Btn_Hallinta.UseVisualStyleBackColor = true;
+            this.Btn_Hallinta.Click += new System.EventHandler(this.Btn_Hallinta_Click);
             // 
             // Btn_Varaus
             // 
@@ -102,6 +103,15 @@
             this.Central_Panel.Size = new System.Drawing.Size(883, 429);
             this.Central_Panel.TabIndex = 1;
             // 
+            // PicBox1
+            // 
+            this.PicBox1.Image = global::VillageNewbies.Properties.Resources.mokki2;
+            this.PicBox1.Location = new System.Drawing.Point(0, 3);
+            this.PicBox1.Name = "PicBox1";
+            this.PicBox1.Size = new System.Drawing.Size(880, 423);
+            this.PicBox1.TabIndex = 0;
+            this.PicBox1.TabStop = false;
+            // 
             // Top_panel
             // 
             this.Top_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
@@ -120,15 +130,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // PicBox1
-            // 
-            this.PicBox1.Image = global::VillageNewbies.Properties.Resources.mokki2;
-            this.PicBox1.Location = new System.Drawing.Point(0, 3);
-            this.PicBox1.Name = "PicBox1";
-            this.PicBox1.Size = new System.Drawing.Size(880, 423);
-            this.PicBox1.TabIndex = 0;
-            this.PicBox1.TabStop = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -141,9 +142,9 @@
             this.Name = "Form1";
             this.Left_panel.ResumeLayout(false);
             this.Central_Panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PicBox1)).EndInit();
             this.Top_panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PicBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -155,7 +156,7 @@
         private System.Windows.Forms.Panel Top_panel;
         private System.Windows.Forms.Button Btn4;
         private System.Windows.Forms.Button Btn3;
-        private System.Windows.Forms.Button Btn2;
+        private System.Windows.Forms.Button Btn_Hallinta;
         private System.Windows.Forms.Button Btn_Varaus;
         private System.Windows.Forms.PictureBox PicBox1;
         private System.Windows.Forms.PictureBox pictureBox1;

@@ -12,9 +12,15 @@ namespace VillageNewbies.UI
 {
     public partial class MokinHallinta : Form
     {
+        SQL s = new SQL();
         public MokinHallinta()
         {
             InitializeComponent();
+        }
+
+        private void MokinHallinta_Load(object sender, EventArgs e)
+        {
+            dataGrid_Mokit.DataSource = s.returnstuff();
         }
     }
 }
