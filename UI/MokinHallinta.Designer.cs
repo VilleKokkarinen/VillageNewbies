@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox_MokkiID = new System.Windows.Forms.TextBox();
+            this.textBox_Alue = new System.Windows.Forms.TextBox();
+            this.textBox_PostiNro = new System.Windows.Forms.TextBox();
+            this.textBox_MokinNimi = new System.Windows.Forms.TextBox();
+            this.textBox_Osoite = new System.Windows.Forms.TextBox();
+            this.textBox_Kuvaus = new System.Windows.Forms.TextBox();
+            this.textBox6_Maara = new System.Windows.Forms.TextBox();
+            this.textBox_Varustelu = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGrid_Mokit = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
@@ -51,61 +51,61 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Mokit)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // textBox_MokkiID
             // 
-            this.textBox1.Location = new System.Drawing.Point(135, 32);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(119, 22);
-            this.textBox1.TabIndex = 0;
+            this.textBox_MokkiID.Location = new System.Drawing.Point(135, 32);
+            this.textBox_MokkiID.Name = "textBox_MokkiID";
+            this.textBox_MokkiID.Size = new System.Drawing.Size(119, 22);
+            this.textBox_MokkiID.TabIndex = 0;
             // 
-            // textBox2
+            // textBox_Alue
             // 
-            this.textBox2.Location = new System.Drawing.Point(409, 32);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(119, 22);
-            this.textBox2.TabIndex = 1;
+            this.textBox_Alue.Location = new System.Drawing.Point(409, 32);
+            this.textBox_Alue.Name = "textBox_Alue";
+            this.textBox_Alue.Size = new System.Drawing.Size(119, 22);
+            this.textBox_Alue.TabIndex = 1;
             // 
-            // textBox4
+            // textBox_PostiNro
             // 
-            this.textBox4.Location = new System.Drawing.Point(135, 158);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(119, 22);
-            this.textBox4.TabIndex = 2;
+            this.textBox_PostiNro.Location = new System.Drawing.Point(135, 158);
+            this.textBox_PostiNro.Name = "textBox_PostiNro";
+            this.textBox_PostiNro.Size = new System.Drawing.Size(119, 22);
+            this.textBox_PostiNro.TabIndex = 2;
             // 
-            // textBox3
+            // textBox_MokinNimi
             // 
-            this.textBox3.Location = new System.Drawing.Point(409, 158);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(119, 22);
-            this.textBox3.TabIndex = 3;
+            this.textBox_MokinNimi.Location = new System.Drawing.Point(409, 158);
+            this.textBox_MokinNimi.Name = "textBox_MokinNimi";
+            this.textBox_MokinNimi.Size = new System.Drawing.Size(119, 22);
+            this.textBox_MokinNimi.TabIndex = 3;
             // 
-            // textBox8
+            // textBox_Osoite
             // 
-            this.textBox8.Location = new System.Drawing.Point(135, 98);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(119, 22);
-            this.textBox8.TabIndex = 4;
+            this.textBox_Osoite.Location = new System.Drawing.Point(135, 98);
+            this.textBox_Osoite.Name = "textBox_Osoite";
+            this.textBox_Osoite.Size = new System.Drawing.Size(119, 22);
+            this.textBox_Osoite.TabIndex = 4;
             // 
-            // textBox7
+            // textBox_Kuvaus
             // 
-            this.textBox7.Location = new System.Drawing.Point(409, 95);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(119, 22);
-            this.textBox7.TabIndex = 5;
+            this.textBox_Kuvaus.Location = new System.Drawing.Point(409, 95);
+            this.textBox_Kuvaus.Name = "textBox_Kuvaus";
+            this.textBox_Kuvaus.Size = new System.Drawing.Size(119, 22);
+            this.textBox_Kuvaus.TabIndex = 5;
             // 
-            // textBox6
+            // textBox6_Maara
             // 
-            this.textBox6.Location = new System.Drawing.Point(135, 221);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(119, 22);
-            this.textBox6.TabIndex = 6;
+            this.textBox6_Maara.Location = new System.Drawing.Point(135, 221);
+            this.textBox6_Maara.Name = "textBox6_Maara";
+            this.textBox6_Maara.Size = new System.Drawing.Size(119, 22);
+            this.textBox6_Maara.TabIndex = 6;
             // 
-            // textBox5
+            // textBox_Varustelu
             // 
-            this.textBox5.Location = new System.Drawing.Point(409, 221);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(119, 22);
-            this.textBox5.TabIndex = 7;
+            this.textBox_Varustelu.Location = new System.Drawing.Point(409, 221);
+            this.textBox_Varustelu.Name = "textBox_Varustelu";
+            this.textBox_Varustelu.Size = new System.Drawing.Size(119, 22);
+            this.textBox_Varustelu.TabIndex = 7;
             // 
             // label1
             // 
@@ -125,6 +125,7 @@
             this.dataGrid_Mokit.RowTemplate.Height = 24;
             this.dataGrid_Mokit.Size = new System.Drawing.Size(503, 271);
             this.dataGrid_Mokit.TabIndex = 9;
+            this.dataGrid_Mokit.SelectionChanged += new System.EventHandler(this.dataGrid_Mokit_SelectionChanged);
             // 
             // label3
             // 
@@ -228,19 +229,19 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.dataGrid_Mokit);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBox_MokkiID);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox_Alue);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBox_PostiNro);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox_MokinNimi);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.textBox_Osoite);
+            this.Controls.Add(this.textBox_Kuvaus);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textBox6_Maara);
+            this.Controls.Add(this.textBox_Varustelu);
             this.Name = "MokinHallinta";
             this.Text = "MökinHallinta";
             this.Load += new System.EventHandler(this.MokinHallinta_Load);
@@ -252,14 +253,14 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox_MokkiID;
+        private System.Windows.Forms.TextBox textBox_Alue;
+        private System.Windows.Forms.TextBox textBox_PostiNro;
+        private System.Windows.Forms.TextBox textBox_MokinNimi;
+        private System.Windows.Forms.TextBox textBox_Osoite;
+        private System.Windows.Forms.TextBox textBox_Kuvaus;
+        private System.Windows.Forms.TextBox textBox6_Maara;
+        private System.Windows.Forms.TextBox textBox_Varustelu;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGrid_Mokit;
         private System.Windows.Forms.Label label3;

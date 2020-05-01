@@ -199,7 +199,29 @@ namespace VillageNewbies
             }
         }
 
-            public void create()
+        public DataTable returnCabinsDT()
+        {
+            using (SQLiteConnection connect = new SQLiteConnection(@"Data Source=VillageNewbiesDB.db"))
+            {
+                connect.Open();
+                using (SQLiteCommand fmd = connect.CreateCommand())
+                {
+
+                    string CommandText = "SELECT * FROM mokki";
+                    SQLiteDataAdapter sqlda = new SQLiteDataAdapter(CommandText, connect);
+
+                    DataTable dt;
+
+                    using (dt = new DataTable())
+                    {
+                        sqlda.Fill(dt);
+                    }
+                    return dt;
+                }
+            }
+        }
+
+        public void create()
         {
 
             string cs = @"URI=file:VillageNewbiesDB.db";
