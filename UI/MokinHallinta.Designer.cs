@@ -198,6 +198,7 @@
             this.btn_Lisaa.TabIndex = 18;
             this.btn_Lisaa.Text = "Lisää";
             this.btn_Lisaa.UseVisualStyleBackColor = true;
+            this.btn_Lisaa.Click += new System.EventHandler(this.btn_Lisaa_Click);
             // 
             // btn_Muokkaa
             // 
@@ -207,6 +208,7 @@
             this.btn_Muokkaa.TabIndex = 19;
             this.btn_Muokkaa.Text = "Muokkaa";
             this.btn_Muokkaa.UseVisualStyleBackColor = true;
+            this.btn_Muokkaa.Click += new System.EventHandler(this.btn_Muokkaa_Click);
             // 
             // btn_Poista
             // 
@@ -216,6 +218,7 @@
             this.btn_Poista.TabIndex = 20;
             this.btn_Poista.Text = "Poista";
             this.btn_Poista.UseVisualStyleBackColor = true;
+            this.btn_Poista.Click += new System.EventHandler(this.btn_Poista_Click);
             // 
             // MokinHallinta
             // 
