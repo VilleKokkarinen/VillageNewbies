@@ -90,5 +90,44 @@ namespace VillageNewbies.UI
                 }
             }
         }
+
+        private void btn_Muokkaa_Click(object sender, EventArgs e)
+        {
+            if (dataGridView_Palvelut.SelectedCells.Count > 0)
+            {
+                try
+                {
+                    string textquery = "UPDATE palvelu SET nimi = '" + textBox_PalveluNimi.Text + "', kuvaus = '" + textBox_Kuvaus.Text +
+                    "', hinta ='" + textBox_Hinta.Text + "', alv ='" + textBox_ALV.Text + "', toimintaalue_id ='" + comboBox_AlueID.Text +
+                    "' WHERE palvelu_id = '" + textBox_PalveluID.Text + "';";
+                    ExecuteQuery(textquery);
+                    dataGridView_Palvelut.DataSource = s.returnServicesDT();
+                    MessageBox.Show("Muokkaus onnistui");
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+            }
+        }
+
+        private void btn_Poista_Click(object sender, EventArgs e)
+        {
+            if (dataGridView_Palvelut.SelectedCells.Count > 0)
+            {
+                DialogResult result = MessageBox.Show("Haluatko varmasti poistaa palvelun?", "Poista", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    string textquey = "DELETE FROM palvelu where palvelu_id = '" + textBox_PalveluID.Text + "'";
+                    ExecuteQuery(textquey);
+                    dataGridView_Palvelut.DataSource = s.returnServicesDT();
+                }
+                else if (result == DialogResult.No)
+                {
+
+                }
+            }
+        }
     }
 }
