@@ -86,6 +86,7 @@
             this.button_Asiakas.Size = new System.Drawing.Size(107, 78);
             this.button_Asiakas.TabIndex = 1;
             this.button_Asiakas.UseVisualStyleBackColor = true;
+            this.button_Asiakas.Click += new System.EventHandler(this.button_Asiakas_Click);
             // 
             // label_Asiakas
             // 

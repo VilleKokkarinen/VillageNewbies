@@ -32,5 +32,13 @@ namespace VillageNewbies.UI
             palvelu.TopMost = true;
             Close();
         }
+
+        private void button_Asiakas_Click(object sender, EventArgs e)
+        {
+            AsiakasHallinta asiakas = new AsiakasHallinta();
+            asiakas.Show();
+            asiakas.TopMost = true;
+            Close();
+        }
     }
 }
