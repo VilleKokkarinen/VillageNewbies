@@ -25,11 +25,11 @@ namespace VillageNewbies.UI
             Close();
         }
 
-        private void button_Alue_Click(object sender, EventArgs e)
+        private void button_Palvelu_Click(object sender, EventArgs e)
         {
-            AlueHallinta alue = new AlueHallinta();
-            alue.Show();
-            alue.TopMost = true;
+            PalveluHallinta palvelu = new PalveluHallinta();
+            palvelu.Show();
+            palvelu.TopMost = true;
             Close();
         }
     }

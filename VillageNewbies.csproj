@@ -79,11 +79,11 @@
     <Compile Include="Objects\ReservationService\ReservationService.cs" />
     <Compile Include="Objects\Reservation\Reservation.cs" />
     <Compile Include="Objects\Service\Service.cs" />
-    <Compile Include="UI\AlueHallinta.cs">
+    <Compile Include="UI\PalveluHallinta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\AlueHallinta.Designer.cs">
-      <DependentUpon>AlueHallinta.cs</DependentUpon>
+    <Compile Include="UI\PalveluHallinta.Designer.cs">
+      <DependentUpon>PalveluHallinta.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\CustomObjects\Buttons\ButtonX.cs">
       <SubType>Component</SubType>
@@ -146,8 +146,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UI\AlueHallinta.resx">
-      <DependentUpon>AlueHallinta.cs</DependentUpon>
+    <EmbeddedResource Include="UI\PalveluHallinta.resx">
+      <DependentUpon>PalveluHallinta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

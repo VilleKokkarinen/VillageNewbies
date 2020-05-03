@@ -1,6 +1,6 @@
 ﻿namespace VillageNewbies.UI
 {
-    partial class AlueHallinta
+    partial class PalveluHallinta
     {
         /// <summary>
         /// Required designer variable.
@@ -31,20 +31,20 @@
             this.btn_Poista = new System.Windows.Forms.Button();
             this.btn_Muokkaa = new System.Windows.Forms.Button();
             this.btn_Lisaa = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView_Palvelut = new System.Windows.Forms.DataGridView();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox_PalveluID = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox_Hinta = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox_ALV = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox_Kuvaus = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.comboBox_AlueID = new System.Windows.Forms.ComboBox();
+            this.textBox_PalveluNimi = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Palvelut)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Poista
@@ -73,16 +73,18 @@
             this.btn_Lisaa.TabIndex = 38;
             this.btn_Lisaa.Text = "Lisää";
             this.btn_Lisaa.UseVisualStyleBackColor = true;
+            this.btn_Lisaa.Click += new System.EventHandler(this.btn_Lisaa_Click);
             // 
-            // dataGridView1
+            // dataGridView_Palvelut
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(34, 214);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(503, 271);
-            this.dataGridView1.TabIndex = 30;
+            this.dataGridView_Palvelut.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_Palvelut.Location = new System.Drawing.Point(34, 214);
+            this.dataGridView_Palvelut.Name = "dataGridView_Palvelut";
+            this.dataGridView_Palvelut.RowHeadersWidth = 51;
+            this.dataGridView_Palvelut.RowTemplate.Height = 24;
+            this.dataGridView_Palvelut.Size = new System.Drawing.Size(503, 271);
+            this.dataGridView_Palvelut.TabIndex = 30;
+            this.dataGridView_Palvelut.SelectionChanged += new System.EventHandler(this.dataGridView_Palvelut_SelectionChanged);
             // 
             // label8
             // 
@@ -93,12 +95,12 @@
             this.label8.TabIndex = 35;
             this.label8.Text = "Kuvaus:";
             // 
-            // textBox1
+            // textBox_PalveluID
             // 
-            this.textBox1.Location = new System.Drawing.Point(144, 27);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(119, 22);
-            this.textBox1.TabIndex = 21;
+            this.textBox_PalveluID.Location = new System.Drawing.Point(144, 27);
+            this.textBox_PalveluID.Name = "textBox_PalveluID";
+            this.textBox_PalveluID.Size = new System.Drawing.Size(119, 22);
+            this.textBox_PalveluID.TabIndex = 21;
             // 
             // label9
             // 
@@ -118,12 +120,12 @@
             this.label5.TabIndex = 33;
             this.label5.Text = "alv%";
             // 
-            // textBox4
+            // textBox_Hinta
             // 
-            this.textBox4.Location = new System.Drawing.Point(144, 153);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(119, 22);
-            this.textBox4.TabIndex = 23;
+            this.textBox_Hinta.Location = new System.Drawing.Point(144, 153);
+            this.textBox_Hinta.Name = "textBox_Hinta";
+            this.textBox_Hinta.Size = new System.Drawing.Size(119, 22);
+            this.textBox_Hinta.TabIndex = 23;
             // 
             // label4
             // 
@@ -134,12 +136,12 @@
             this.label4.TabIndex = 32;
             this.label4.Text = "Hinta €";
             // 
-            // textBox3
+            // textBox_ALV
             // 
-            this.textBox3.Location = new System.Drawing.Point(418, 153);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(119, 22);
-            this.textBox3.TabIndex = 24;
+            this.textBox_ALV.Location = new System.Drawing.Point(418, 153);
+            this.textBox_ALV.Name = "textBox_ALV";
+            this.textBox_ALV.Size = new System.Drawing.Size(119, 22);
+            this.textBox_ALV.TabIndex = 24;
             // 
             // label3
             // 
@@ -150,12 +152,12 @@
             this.label3.TabIndex = 31;
             this.label3.Text = "Toimialue ID:";
             // 
-            // textBox7
+            // textBox_Kuvaus
             // 
-            this.textBox7.Location = new System.Drawing.Point(418, 90);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(119, 22);
-            this.textBox7.TabIndex = 26;
+            this.textBox_Kuvaus.Location = new System.Drawing.Point(418, 90);
+            this.textBox_Kuvaus.Name = "textBox_Kuvaus";
+            this.textBox_Kuvaus.Size = new System.Drawing.Size(119, 22);
+            this.textBox_Kuvaus.TabIndex = 26;
             // 
             // label1
             // 
@@ -166,46 +168,46 @@
             this.label1.TabIndex = 29;
             this.label1.Text = "Palvelu ID:";
             // 
-            // comboBox1
+            // comboBox_AlueID
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(144, 96);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(119, 24);
-            this.comboBox1.TabIndex = 41;
+            this.comboBox_AlueID.FormattingEnabled = true;
+            this.comboBox_AlueID.Location = new System.Drawing.Point(418, 29);
+            this.comboBox_AlueID.Name = "comboBox_AlueID";
+            this.comboBox_AlueID.Size = new System.Drawing.Size(119, 24);
+            this.comboBox_AlueID.TabIndex = 42;
             // 
-            // comboBox2
+            // textBox_PalveluNimi
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(418, 29);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(119, 24);
-            this.comboBox2.TabIndex = 42;
+            this.textBox_PalveluNimi.Location = new System.Drawing.Point(144, 96);
+            this.textBox_PalveluNimi.Name = "textBox_PalveluNimi";
+            this.textBox_PalveluNimi.Size = new System.Drawing.Size(119, 22);
+            this.textBox_PalveluNimi.TabIndex = 23;
             // 
-            // AlueHallinta
+            // PalveluHallinta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(571, 580);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBox_AlueID);
             this.Controls.Add(this.btn_Poista);
             this.Controls.Add(this.btn_Muokkaa);
             this.Controls.Add(this.btn_Lisaa);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridView_Palvelut);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBox_PalveluID);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBox_PalveluNimi);
+            this.Controls.Add(this.textBox_Hinta);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox_ALV);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.textBox_Kuvaus);
             this.Controls.Add(this.label1);
-            this.Name = "AlueHallinta";
-            this.Text = "AlueHallinta";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Name = "PalveluHallinta";
+            this.Text = "Palveluiden Hallinta";
+            this.Load += new System.EventHandler(this.PalveluHallinta_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Palvelut)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -216,18 +218,18 @@
         private System.Windows.Forms.Button btn_Poista;
         private System.Windows.Forms.Button btn_Muokkaa;
         private System.Windows.Forms.Button btn_Lisaa;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView_Palvelut;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox_PalveluID;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox_Hinta;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox_ALV;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBox_Kuvaus;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox_AlueID;
+        private System.Windows.Forms.TextBox textBox_PalveluNimi;
     }
 }

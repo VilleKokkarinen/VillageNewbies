@@ -57,6 +57,7 @@
             this.button_Palvelu.Size = new System.Drawing.Size(107, 78);
             this.button_Palvelu.TabIndex = 1;
             this.button_Palvelu.UseVisualStyleBackColor = true;
+            this.button_Palvelu.Click += new System.EventHandler(this.button_Palvelu_Click);
             // 
             // button_Alue
             // 
@@ -66,7 +67,6 @@
             this.button_Alue.Size = new System.Drawing.Size(107, 78);
             this.button_Alue.TabIndex = 1;
             this.button_Alue.UseVisualStyleBackColor = true;
-            this.button_Alue.Click += new System.EventHandler(this.button_Alue_Click);
             // 
             // button_Mokki
             // 
