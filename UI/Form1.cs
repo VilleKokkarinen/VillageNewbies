@@ -30,5 +30,12 @@ namespace VillageNewbies
             HallintaValinta valinta = new HallintaValinta();
             valinta.ShowDialog();
         }
+
+        private void Btn_Varaukset_Click(object sender, EventArgs e)
+        {
+            Varaukset varaukset = new Varaukset();
+            varaukset.Show();
+            varaukset.TopLevel = true;
+        }
     }
 }
