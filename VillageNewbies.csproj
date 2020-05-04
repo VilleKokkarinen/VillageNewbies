@@ -91,6 +91,12 @@
     <Compile Include="UI\AsiakasHallinta.Designer.cs">
       <DependentUpon>AsiakasHallinta.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Lasku.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Lasku.Designer.cs">
+      <DependentUpon>Lasku.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\PalveluHallinta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\AsiakasHallinta.resx">
       <DependentUpon>AsiakasHallinta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Lasku.resx">
+      <DependentUpon>Lasku.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\PalveluHallinta.resx">
       <DependentUpon>PalveluHallinta.cs</DependentUpon>

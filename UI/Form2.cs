@@ -19,6 +19,11 @@ namespace VillageNewbies.UI
            
         }
 
+        public static string SetValueForAlue = "";
+        public static string SetValueForTulopäivä = "";
+        public static string SetValueForLähtöpäivä = "";
+
+
         private SQLiteConnection connection;
         private SQLiteCommand cmd;
 
