@@ -219,7 +219,7 @@ namespace VillageNewbies.UI
                 {
                     string textquery = "INSERT INTO asiakas(asiakas_id,postinro,etunimi,sukunimi,lahiosoite,email,puhelinnro)values('" + txtboxAsiakas_id.Text + "'," +
                     " '" + txtboxPostinro.Text + "' , '" + txtboxEtunimi.Text + "' , '" + txtboxSukunimi.Text + "' , '" + txtboxlahiosoite.Text +
-                    "' , '" + txtboxEmail.Text + "' , '" + txtboxPuhelinnro.Text + "')";
+                    "' , '" + @txtboxEmail.Text + "' , '" + txtboxPuhelinnro.Text + "')";
                     ExecuteQuery(textquery);
                     dataGridView1.DataSource = s.returnstuff();
                     MessageBox.Show("Lisäys onnistui");
@@ -279,17 +279,24 @@ namespace VillageNewbies.UI
             naytavaratutmokit();
         }
 
-        private void Btn_Varaa_Click(object sender, EventArgs e)
+        public static long ConvertToUnixTime(DateTime datetime)
         {
-            /*
-            string textquery = "INSERT INTO varaus(varaus_id,asiakas_id,mokki_id,varattu_pvm,vahvistus_pvm,varattu_alkupvm,varattu_loppupvm)values('" + txtboxAsiakas_id.Text + "'," +
-                    " '" + txtboxPostinro.Text + "' , '" + txtboxEtunimi.Text + "' , '" + txtboxSukunimi.Text + "' , '" + txtboxlahiosoite.Text +
-                    "' , '" + txtboxEmail.Text + "' , '" + txtboxPuhelinnro.Text + "')";
+            DateTime sTime = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
+
+            return (long)(datetime - sTime).TotalSeconds;
+        }
+
+        private void Btn_Varaa_Click(object sender, EventArgs e)
+        {            
+            string textquery = $"INSERT INTO varaus(asiakas_id,mokki_id,varattu_pvm,vahvistus_pvm,varattu_alkupvm,varattu_loppupvm)values(" +
+                $"{txtboxAsiakas_id.Text}, {((Cabin)checklist_Loan_Cabins.SelectedItem).mokki_id}, date('now'), date('now'), {ConvertToUnixTime(dateTimePicker1.Value)}, {ConvertToUnixTime(dateTimePicker2.Value)})";
+
+
             ExecuteQuery(textquery);
             MessageBox.Show("Lisäys onnistui");
             Lasku lasku = new Lasku();
             lasku.Show();
-            */
+            
         }
     }
 }
