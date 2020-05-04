@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.dataGridView_Varaukset = new System.Windows.Forms.DataGridView();
+            this.button_Poista = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Varaukset)).BeginInit();
             this.SuspendLayout();
             // 
@@ -41,12 +42,24 @@
             this.dataGridView_Varaukset.RowTemplate.Height = 24;
             this.dataGridView_Varaukset.Size = new System.Drawing.Size(527, 342);
             this.dataGridView_Varaukset.TabIndex = 0;
+            this.dataGridView_Varaukset.SelectionChanged += new System.EventHandler(this.dataGridView_Varaukset_SelectionChanged);
+            // 
+            // button_Poista
+            // 
+            this.button_Poista.Location = new System.Drawing.Point(464, 400);
+            this.button_Poista.Name = "button_Poista";
+            this.button_Poista.Size = new System.Drawing.Size(75, 23);
+            this.button_Poista.TabIndex = 1;
+            this.button_Poista.Text = "Poista";
+            this.button_Poista.UseVisualStyleBackColor = true;
+            this.button_Poista.Click += new System.EventHandler(this.button_Poista_Click);
             // 
             // Varaukset
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button_Poista);
             this.Controls.Add(this.dataGridView_Varaukset);
             this.Name = "Varaukset";
             this.Text = "Varaukset";
@@ -59,5 +72,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView_Varaukset;
+        private System.Windows.Forms.Button button_Poista;
     }
 }
