@@ -22,49 +22,37 @@ namespace VillageNewbies.UI
         private SQLiteConnection connection;
         private SQLiteCommand cmd;
 
-
-
+        private BindingList<Cabin> Mokit;
+        private BindingList<Cabin> NakyvatMokit;
 
         private void Varaus_Load(object sender, EventArgs e)
         {
+            Mokit = new BindingList<Cabin>();
+            NakyvatMokit = new BindingList<Cabin>();
+
             SQL s = new SQL();
             //s.create();
+            checklist_Loan_Cabins.DataSource = NakyvatMokit;
+            checklist_Loan_Cabins.DisplayMember = "DISPLAYNAME";
 
-            /*
-             * Tapa 1
-             
-            List<Cabin> dataa = SQL.GetAllCabins();
-            foreach (Cabin i in dataa)
-            {
-                checklist_Loan_Cabins.Items.Add(i);
-                checklist_Loan_Cabins.DisplayMember = i.mokkinimi;
-            }
-
-            dataGridView1.DataSource = s.returnstuff();
-            */
-
-            /*
-             * Tapa 2
-             * 
-             */
             List<DataRow> dataa2 = s.SQLiteQuery_DataRowList(
                 "SELECT * FROM mokki");
 
             foreach (DataRow i in dataa2)
             {
                 Cabin c = new Cabin(
-                    Convert.ToInt32(i[0].ToString()), // <-> i["mokki_id"]
-                    Convert.ToInt32(i[1].ToString()),
-                    i[2].ToString(),
-                    i[3].ToString(),
-                    i[4].ToString(),
-                    i[5].ToString(),
-                    Convert.ToInt32(i[6].ToString()),
-                    i[7].ToString()
-                    );
-
-                checklist_Loan_Cabins.Items.Add(c);
-                checklist_Loan_Cabins.DisplayMember = "DISPLAYNAME";
+                   Convert.ToInt32(i[0].ToString()), // <-> i["mokki_id"]
+                   Convert.ToInt32(i[1].ToString()),
+                   i[2].ToString(),
+                   i[3].ToString(),
+                   i[4].ToString(),
+                   i[5].ToString(),
+                   Convert.ToInt32(i[6].ToString()),
+                   i[8].ToString(),
+                   Convert.ToInt32(i[7].ToString())
+                   );
+                Mokit.Add(c);
+                NakyvatMokit.Add(c);
             }
 
             List<OperatingArea> aluedata = SQL.GetAllAreas();
@@ -98,6 +86,7 @@ namespace VillageNewbies.UI
                 combobox_Cabin_Region.Items.Add(oa);
                 combobox_Cabin_Region.DisplayMember = "DISPLAYNAME";
             }
+            naytavaratutmokit();
         }
 
 
@@ -125,8 +114,14 @@ namespace VillageNewbies.UI
         /// <param name="e"></param>
         private void checklist_Loan_Cabins_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txt_Cabin_MaxResidents.Text = ((Cabin)checklist_Loan_Cabins.SelectedItem).henkilomaara.ToString();
-            txt_Cabin_Details.Text = ((Cabin)checklist_Loan_Cabins.SelectedItem).kuvaus;
+            if(checklist_Loan_Cabins.SelectedItem != null)
+            {
+                txt_Cabin_MaxResidents.Text = ((Cabin)checklist_Loan_Cabins.SelectedItem).henkilomaara.ToString();
+                txt_Cabin_Details.Text = ((Cabin)checklist_Loan_Cabins.SelectedItem).kuvaus;
+                txt_Cabin_Price.Text = ((Cabin)checklist_Loan_Cabins.SelectedItem).hinta.ToString();
+                txt_Cabin_State.Text = ((Cabin)checklist_Loan_Cabins.SelectedItem).varattu == true ? "varattu" : "avoin";
+            }
+           
         }
 
         private void checklist_Loan_Cabins_ItemCheck(object sender, ItemCheckEventArgs e)
@@ -141,32 +136,21 @@ namespace VillageNewbies.UI
 
         private void combobox_Cabin_Region_SelectedIndexChanged(object sender, EventArgs e)
         {
-            checklist_Loan_Cabins.Items.Clear();
-            SQL s = new SQL();
-            string query = "SELECT * FROM mokki";
+            NakyvatMokit.Clear();
 
-            if (combobox_Cabin_Region.SelectedItem.ToString() != "<kaikki>")
-                query = "SELECT * FROM mokki where mokki.toimintaalue_id = " + ((OperatingArea)combobox_Cabin_Region.SelectedItem).toimintaalue_id;
-
-
-            List<DataRow> dataa2 = s.SQLiteQuery_DataRowList(query);
-            foreach (DataRow i in dataa2)
+            foreach(Cabin c in Mokit)
             {
-                Cabin c = new Cabin(
-                    Convert.ToInt32(i[0].ToString()), // <-> i["mokki_id"]
-                    Convert.ToInt32(i[1].ToString()),
-                    i[2].ToString(),
-                    i[3].ToString(),
-                    i[4].ToString(),
-                    i[5].ToString(),
-                    Convert.ToInt32(i[6].ToString()),
-                    i[7].ToString()
-                    );
-
-                checklist_Loan_Cabins.Items.Add(c);
-                checklist_Loan_Cabins.DisplayMember = "DISPLAYNAME";
-                //testi
+                if(c.toimintaalue_id == ((OperatingArea)combobox_Cabin_Region.SelectedItem).toimintaalue_id)
+                {
+                    NakyvatMokit.Add(c);
+                }
             }
+
+            if(combobox_Cabin_Region.SelectedItem.ToString() == "<kaikki>")
+            {
+                NakyvatMokit = Mokit;
+            }
+            
         }
 
         private void txt_Cabin_Search_Name_TextChanged(object sender, EventArgs e)
@@ -184,15 +168,16 @@ namespace VillageNewbies.UI
             foreach (DataRow i in dataa2)
             {
                 Cabin c = new Cabin(
-                    Convert.ToInt32(i[0].ToString()), // <-> i["mokki_id"]
-                    Convert.ToInt32(i[1].ToString()),
-                    i[2].ToString(),
-                    i[3].ToString(),
-                    i[4].ToString(),
-                    i[5].ToString(),
-                    Convert.ToInt32(i[6].ToString()),
-                    i[7].ToString()
-                    );
+                   Convert.ToInt32(i[0].ToString()), // <-> i["mokki_id"]
+                   Convert.ToInt32(i[1].ToString()),
+                   i[2].ToString(),
+                   i[3].ToString(),
+                   i[4].ToString(),
+                   i[5].ToString(),
+                   Convert.ToInt32(i[6].ToString()),
+                   i[8].ToString(),
+                   Convert.ToInt32(i[7].ToString())
+                   );
 
                 checklist_Loan_Cabins.Items.Add(c);
                 checklist_Loan_Cabins.DisplayMember = "DISPLAYNAME";
@@ -264,6 +249,34 @@ namespace VillageNewbies.UI
                 }
 
             }
+        }
+
+        private void naytavaratutmokit()
+        {
+            if (check_Cabin_Show_Reserved.Checked == false)
+            {
+                NakyvatMokit.Clear();
+
+                foreach (Cabin c in Mokit)
+                {
+                    if (c.varattu == false)
+                    {
+                        NakyvatMokit.Add(c);
+                    }
+                }
+            }
+            else
+            {
+                NakyvatMokit.Clear();
+                foreach (Cabin c in Mokit)
+                {
+                    NakyvatMokit.Add(c);
+                }
+            }
+        }
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            naytavaratutmokit();
         }
     }
 }

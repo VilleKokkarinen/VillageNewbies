@@ -58,6 +58,24 @@ namespace VillageNewbies
                 }
             }
         }
+        public string SQLiteQuery_single(string command)
+        {
+            using (SQLiteConnection connection = new SQLiteConnection(@"Data Source=VillageNewbiesDB.db"))
+            {
+                connection.Open();
+                using (SQLiteCommand fmd = connection.CreateCommand())
+                {
+                    fmd.CommandText = @command;
+                    fmd.CommandType = CommandType.Text;
+                    SQLiteDataReader r = fmd.ExecuteReader();
+                    while (r.Read())
+                    {
+                        return r[0].ToString();
+                    }
+                    return null;
+                }
+            }
+        }
 
         public static List<string> GetImportedFileList()
         {
@@ -98,18 +116,17 @@ namespace VillageNewbies
                     SQLiteDataReader r = availableItems.ExecuteReader();
                     while (r.Read())
                     {
-                        ImportedFiles.Add(
-                            new Cabin(
-                                ID: Convert.ToInt32(r["mokki_id"].ToString()),
-                                ToimintaAlueID: Convert.ToInt32(r["toimintaalue_id"].ToString()),
-                                posti: r["postinro"].ToString(),
-                                Nimi: r["mokkinimi"].ToString(),
-                                katu: r["katuosoite"].ToString(),
-                                MaxAsukkaat: Convert.ToInt32(r["henkilomaara"].ToString()),
-                                kuvaus: r["kuvaus"].ToString(),
-                                varustelu: r["varustelu"].ToString()
-                                ));
-
+                    ImportedFiles.Add(
+                        new Cabin(
+                            Convert.ToInt32(r[0].ToString()), // <-> i["mokki_id"]
+                            Convert.ToInt32(r[1].ToString()),
+                            r[2].ToString(),
+                            r[3].ToString(),
+                            r[4].ToString(),
+                            r[5].ToString(),
+                            Convert.ToInt32(r[6].ToString()),
+                            r[8].ToString(),
+                            Convert.ToInt32(r[7].ToString())));
                     }
                 }
                 connection.Close();
@@ -322,6 +339,7 @@ namespace VillageNewbies
               "katuosoite VARCHAR(45) NULL," +
               "kuvaus VARCHAR(150) NULL," +
               "henkilomaara INT NULL," +
+              "hinta DOUBLE(8, 2) NOT NULL,"+
               "varustelu VARCHAR(100) NULL," +
                 "FOREIGN KEY(toimintaalue_id) " +
                 "REFERENCES toimintaalue(toimintaalue_id) " +
@@ -330,16 +348,16 @@ namespace VillageNewbies
             cmd.ExecuteNonQuery();
             
 
-            cmd.CommandText = "INSERT INTO mokki(mokki_id,toimintaalue_id, postinro, mokkinimi,katuosoite,kuvaus,henkilomaara,varustelu)" +
+            cmd.CommandText = "INSERT INTO mokki(mokki_id,toimintaalue_id, hinta, postinro, mokkinimi,katuosoite,kuvaus,henkilomaara,varustelu)" +
                 "VALUES" +
-                "('200', '1', '87760', 'Tahkola','Tahkontie 1','Perus mökki perheelle','5','2 makuuhuonetta ja 1 kylpyhuone saunalla')," +
-                "('201', '1', '87060', 'Tohkola', 'Tohkotie 2', 'Laskettelijan mökki', '3', '1 isompi huone kylpyhuoneella ja saunalla')," +
-                "('203', '2', '87160', 'Levilä', 'Levintie 3', 'Luksus mökki seurueelle', '8', '3 makuuhuonetta, 2 kylpyhuonetta, sauna ja parveke')," +
-                "('204', '2', '87260', 'Lekkilä', 'Lekikuja 4', 'Laskettelijan mökki', '3', '1 isompi huone kylpyhuoneella ja saunalla')," +
-                "('205', '3', '87360', 'Rukola', 'Rukantie 5', 'Hieno mökki perheelle', '6', '2 makuuhuonetta ja 1 kylpyhuone saunalla ja ulko paljulla')," +
-                "('206', '3', '87460', 'Rakola', 'Rakolatie 6', 'Laskettelijan mökki', '3', '1 isompi huone kylpyhuoneella ja saunalla')," +
-                "('207', '4', '87560', 'Tahkola', 'Tahkontie 1', 'Perus mökki perheelle', '5', '2 makuuhuonetta ja 1 kylpyhuone saunalla')," +
-                "('208', '4', '87660', 'Himola', 'Himolankuja 8', 'Laskettelijan mökki', '3', '1 isompi huone kylpyhuoneella ja saunalla')";
+                "('200', '1', '50', '87760', 'Tahkola','Tahkontie 1','Perus mökki perheelle','5','2 makuuhuonetta ja 1 kylpyhuone saunalla')," +
+                "('201', '1', '60','87060', 'Tohkola', 'Tohkotie 2', 'Laskettelijan mökki', '3', '1 isompi huone kylpyhuoneella ja saunalla')," +
+                "('203', '2', '100','87160', 'Levilä', 'Levintie 3', 'Luksus mökki seurueelle', '8', '3 makuuhuonetta, 2 kylpyhuonetta, sauna ja parveke')," +
+                "('204', '2', '50','87260', 'Lekkilä', 'Lekikuja 4', 'Laskettelijan mökki', '3', '1 isompi huone kylpyhuoneella ja saunalla')," +
+                "('205', '3', '80','87360', 'Rukola', 'Rukantie 5', 'Hieno mökki perheelle', '6', '2 makuuhuonetta ja 1 kylpyhuone saunalla ja ulko paljulla')," +
+                "('206', '3', '60','87460', 'Rakola', 'Rakolatie 6', 'Laskettelijan mökki', '3', '1 isompi huone kylpyhuoneella ja saunalla')," +
+                "('207', '4', '50','87560', 'Tahkola', 'Tahkontie 1', 'Perus mökki perheelle', '5', '2 makuuhuonetta ja 1 kylpyhuone saunalla')," +
+                "('208', '4', '60','87660', 'Himola', 'Himolankuja 8', 'Laskettelijan mökki', '3', '1 isompi huone kylpyhuoneella ja saunalla')";
             cmd.ExecuteNonQuery();
 
             cmd.CommandText = "DROP TABLE IF EXISTS varaus";
@@ -348,7 +366,7 @@ namespace VillageNewbies
             cmd.CommandText = "CREATE TABLE IF NOT EXISTS varaus (" +
               "varaus_id INTEGER PRIMARY KEY AUTOINCREMENT," +
               "asiakas_id INT(11)  NOT NULL," +
-              "mokki_id INT  NOT NULL," +
+              "mokki_id INT NOT NULL," +
               "varattu_pvm INTEGER NULL DEFAULT NULL," +
               "vahvistus_pvm INTEGER NULL DEFAULT NULL," +
               "varattu_alkupvm INTEGER NULL DEFAULT NULL," +
@@ -360,8 +378,8 @@ namespace VillageNewbies
             cmd.ExecuteNonQuery();
 
             cmd.CommandText = "INSERT INTO varaus(varaus_id,asiakas_id,mokki_id,varattu_pvm,vahvistus_pvm,varattu_alkupvm,varattu_loppupvm)" +
-                "VALUES(300,100,200,23042020,23042020,05052020,14052020)," +
-                "(301,107,205,18032020,20032020,06072020,16072020)";
+                "VALUES(300,100,200,1586088000,1586088000,1589112000,1589976000)," +
+                "(301,107,205,1586088000,1586088000,1589112000,1589976000)";
             cmd.ExecuteNonQuery();
 
             cmd.CommandText = "DROP TABLE IF EXISTS lasku";
