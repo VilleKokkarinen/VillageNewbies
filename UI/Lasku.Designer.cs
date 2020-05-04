@@ -46,6 +46,9 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label_AlueText = new System.Windows.Forms.Label();
+            this.label_AsiakasID = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -106,6 +109,9 @@
             // 
             // panel1
             // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label_AlueText);
+            this.panel1.Controls.Add(this.label16);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label9);
@@ -146,7 +152,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 75);
+            this.label1.Location = new System.Drawing.Point(21, 89);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 17);
             this.label1.TabIndex = 3;
@@ -154,6 +160,7 @@
             // 
             // panel2
             // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.label15);
             this.panel2.Controls.Add(this.label14);
             this.panel2.Controls.Add(this.label12);
@@ -219,6 +226,32 @@
             this.button1.Text = "Tulosta";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(21, 59);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(36, 17);
+            this.label16.TabIndex = 3;
+            this.label16.Text = "Alue";
+            // 
+            // label_AlueText
+            // 
+            this.label_AlueText.AutoSize = true;
+            this.label_AlueText.Location = new System.Drawing.Point(119, 59);
+            this.label_AlueText.Name = "label_AlueText";
+            this.label_AlueText.Size = new System.Drawing.Size(0, 17);
+            this.label_AlueText.TabIndex = 4;
+            // 
+            // label_AsiakasID
+            // 
+            this.label_AsiakasID.AutoSize = true;
+            this.label_AsiakasID.Location = new System.Drawing.Point(25, 69);
+            this.label_AsiakasID.Name = "label_AsiakasID";
+            this.label_AsiakasID.Size = new System.Drawing.Size(74, 17);
+            this.label_AsiakasID.TabIndex = 1;
+            this.label_AsiakasID.Text = "Asiakas ID";
+            // 
             // Lasku
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -233,9 +266,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
+            this.Controls.Add(this.label_AsiakasID);
             this.Controls.Add(this.label2);
             this.Name = "Lasku";
             this.Text = "Lasku";
+            this.Load += new System.EventHandler(this.Lasku_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -264,5 +299,8 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label_AlueText;
+        private System.Windows.Forms.Label label_AsiakasID;
     }
 }

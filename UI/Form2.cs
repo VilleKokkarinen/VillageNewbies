@@ -19,11 +19,6 @@ namespace VillageNewbies.UI
            
         }
 
-        public static string SetValueForAlue = "";
-        public static string SetValueForTulopäivä = "";
-        public static string SetValueForLähtöpäivä = "";
-
-
         private SQLiteConnection connection;
         private SQLiteCommand cmd;
 
@@ -282,6 +277,19 @@ namespace VillageNewbies.UI
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             naytavaratutmokit();
+        }
+
+        private void Btn_Varaa_Click(object sender, EventArgs e)
+        {
+            /*
+            string textquery = "INSERT INTO varaus(varaus_id,asiakas_id,mokki_id,varattu_pvm,vahvistus_pvm,varattu_alkupvm,varattu_loppupvm)values('" + txtboxAsiakas_id.Text + "'," +
+                    " '" + txtboxPostinro.Text + "' , '" + txtboxEtunimi.Text + "' , '" + txtboxSukunimi.Text + "' , '" + txtboxlahiosoite.Text +
+                    "' , '" + txtboxEmail.Text + "' , '" + txtboxPuhelinnro.Text + "')";
+            ExecuteQuery(textquery);
+            MessageBox.Show("Lisäys onnistui");
+            Lasku lasku = new Lasku();
+            lasku.Show();
+            */
         }
     }
 }

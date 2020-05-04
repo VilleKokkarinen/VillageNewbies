@@ -18,5 +18,9 @@ namespace VillageNewbies.UI
             InitializeComponent();
         }
 
+        private void Lasku_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
