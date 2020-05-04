@@ -245,6 +245,52 @@ namespace VillageNewbies
 
         }
 
+        public DataTable returnReservationsDT()
+        {
+            using (SQLiteConnection connect = new SQLiteConnection(@"Data Source=VillageNewbiesDB.db"))
+            {
+                connect.Open();
+                using (SQLiteCommand fmd = connect.CreateCommand())
+                {
+
+                    string CommandText = "SELECT * FROM varaus";
+                    SQLiteDataAdapter sqlda = new SQLiteDataAdapter(CommandText, connect);
+
+                    DataTable dt;
+
+                    using (dt = new DataTable())
+                    {
+                        sqlda.Fill(dt);
+                    }
+                    return dt;
+                }
+            }
+
+        }
+
+        public DataTable returnAreasDT()
+        {
+            using (SQLiteConnection connect = new SQLiteConnection(@"Data Source=VillageNewbiesDB.db"))
+            {
+                connect.Open();
+                using (SQLiteCommand fmd = connect.CreateCommand())
+                {
+
+                    string CommandText = "SELECT * FROM toimintaalue";
+                    SQLiteDataAdapter sqlda = new SQLiteDataAdapter(CommandText, connect);
+
+                    DataTable dt;
+
+                    using (dt = new DataTable())
+                    {
+                        sqlda.Fill(dt);
+                    }
+                    return dt;
+                }
+            }
+
+        }
+
         public void create()
         {
 

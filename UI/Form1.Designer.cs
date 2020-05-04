@@ -30,7 +30,7 @@
         {
             this.Left_panel = new System.Windows.Forms.Panel();
             this.Btn4 = new System.Windows.Forms.Button();
-            this.Btn3 = new System.Windows.Forms.Button();
+            this.Btn_Varaukset = new System.Windows.Forms.Button();
             this.Btn_Hallinta = new System.Windows.Forms.Button();
             this.Btn_Varaus = new System.Windows.Forms.Button();
             this.Central_Panel = new System.Windows.Forms.Panel();
@@ -48,7 +48,7 @@
             // 
             this.Left_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.Left_panel.Controls.Add(this.Btn4);
-            this.Left_panel.Controls.Add(this.Btn3);
+            this.Left_panel.Controls.Add(this.Btn_Varaukset);
             this.Left_panel.Controls.Add(this.Btn_Hallinta);
             this.Left_panel.Controls.Add(this.Btn_Varaus);
             this.Left_panel.Location = new System.Drawing.Point(1, 125);
@@ -65,14 +65,15 @@
             this.Btn4.Text = "Laskutus";
             this.Btn4.UseVisualStyleBackColor = true;
             // 
-            // Btn3
+            // Btn_Varaukset
             // 
-            this.Btn3.Location = new System.Drawing.Point(29, 166);
-            this.Btn3.Name = "Btn3";
-            this.Btn3.Size = new System.Drawing.Size(95, 49);
-            this.Btn3.TabIndex = 2;
-            this.Btn3.Text = "Varausten historia";
-            this.Btn3.UseVisualStyleBackColor = true;
+            this.Btn_Varaukset.Location = new System.Drawing.Point(29, 166);
+            this.Btn_Varaukset.Name = "Btn_Varaukset";
+            this.Btn_Varaukset.Size = new System.Drawing.Size(95, 49);
+            this.Btn_Varaukset.TabIndex = 2;
+            this.Btn_Varaukset.Text = "Varaukset";
+            this.Btn_Varaukset.UseVisualStyleBackColor = true;
+            this.Btn_Varaukset.Click += new System.EventHandler(this.Btn_Varaukset_Click);
             // 
             // Btn_Hallinta
             // 
@@ -90,7 +91,7 @@
             this.Btn_Varaus.Name = "Btn_Varaus";
             this.Btn_Varaus.Size = new System.Drawing.Size(95, 34);
             this.Btn_Varaus.TabIndex = 0;
-            this.Btn_Varaus.Text = "Varaus";
+            this.Btn_Varaus.Text = "Uusi varaus";
             this.Btn_Varaus.UseVisualStyleBackColor = true;
             this.Btn_Varaus.Click += new System.EventHandler(this.Btn_Varaus_Click);
             // 
@@ -155,7 +156,7 @@
         private System.Windows.Forms.Panel Central_Panel;
         private System.Windows.Forms.Panel Top_panel;
         private System.Windows.Forms.Button Btn4;
-        private System.Windows.Forms.Button Btn3;
+        private System.Windows.Forms.Button Btn_Varaukset;
         private System.Windows.Forms.Button Btn_Hallinta;
         private System.Windows.Forms.Button Btn_Varaus;
         private System.Windows.Forms.PictureBox PicBox1;

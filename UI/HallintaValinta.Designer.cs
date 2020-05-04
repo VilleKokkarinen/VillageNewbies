@@ -67,6 +67,7 @@
             this.button_Alue.Size = new System.Drawing.Size(107, 78);
             this.button_Alue.TabIndex = 1;
             this.button_Alue.UseVisualStyleBackColor = true;
+            this.button_Alue.Click += new System.EventHandler(this.button_Alue_Click);
             // 
             // button_Mokki
             // 

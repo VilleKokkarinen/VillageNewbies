@@ -79,6 +79,12 @@
     <Compile Include="Objects\ReservationService\ReservationService.cs" />
     <Compile Include="Objects\Reservation\Reservation.cs" />
     <Compile Include="Objects\Service\Service.cs" />
+    <Compile Include="UI\AlueidenHallinta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AlueidenHallinta.Designer.cs">
+      <DependentUpon>AlueidenHallinta.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\AsiakasHallinta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +148,12 @@
     </Compile>
     <Compile Include="UI\TypeAssistant.cs" />
     <Compile Include="Objects\Cabin\Cabin.cs" />
+    <Compile Include="UI\Varaukset.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Varaukset.Designer.cs">
+      <DependentUpon>Varaukset.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -152,6 +164,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI\AlueidenHallinta.resx">
+      <DependentUpon>AlueidenHallinta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\AsiakasHallinta.resx">
       <DependentUpon>AsiakasHallinta.cs</DependentUpon>
     </EmbeddedResource>
@@ -175,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\MainScreen\MainScreen.resx">
       <DependentUpon>MainScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Varaukset.resx">
+      <DependentUpon>Varaukset.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

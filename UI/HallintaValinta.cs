@@ -40,5 +40,13 @@ namespace VillageNewbies.UI
             asiakas.TopMost = true;
             Close();
         }
+
+        private void button_Alue_Click(object sender, EventArgs e)
+        {
+            AlueidenHallinta alueet = new AlueidenHallinta();
+            alueet.Show();
+            alueet.TopMost = true;
+            Close();
+        }
     }
 }

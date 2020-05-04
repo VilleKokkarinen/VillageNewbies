@@ -293,7 +293,7 @@
             this.Clb_Palvelut.Location = new System.Drawing.Point(12, 249);
             this.Clb_Palvelut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Clb_Palvelut.Name = "Clb_Palvelut";
-            this.Clb_Palvelut.Size = new System.Drawing.Size(301, 72);
+            this.Clb_Palvelut.Size = new System.Drawing.Size(301, 89);
             this.Clb_Palvelut.TabIndex = 9;
             // 
             // labelAsiakas_id
