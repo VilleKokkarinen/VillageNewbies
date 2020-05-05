@@ -46,8 +46,8 @@
             this.txt_Cabin_State = new System.Windows.Forms.TextBox();
             this.txt_Cabin_MaxResidents = new System.Windows.Forms.TextBox();
             this.checklist_Loan_Cabins = new System.Windows.Forms.CheckedListBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker_Tulo = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker_Lahto = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.comboBox_HenkMaara = new System.Windows.Forms.ComboBox();
@@ -299,21 +299,22 @@
             this.checklist_Loan_Cabins.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.checklist_Loan_Cabins_ItemCheck);
             this.checklist_Loan_Cabins.SelectedIndexChanged += new System.EventHandler(this.checklist_Loan_Cabins_SelectedIndexChanged);
             // 
-            // dateTimePicker1
+            // dateTimePicker_Tulo
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(100, 30);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 3;
+            this.dateTimePicker_Tulo.Location = new System.Drawing.Point(100, 30);
+            this.dateTimePicker_Tulo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dateTimePicker_Tulo.Name = "dateTimePicker_Tulo";
+            this.dateTimePicker_Tulo.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker_Tulo.TabIndex = 3;
             // 
-            // dateTimePicker2
+            // dateTimePicker_Lahto
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(100, 78);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker2.TabIndex = 4;
+            this.dateTimePicker_Lahto.Location = new System.Drawing.Point(100, 78);
+            this.dateTimePicker_Lahto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dateTimePicker_Lahto.Name = "dateTimePicker_Lahto";
+            this.dateTimePicker_Lahto.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker_Lahto.TabIndex = 4;
+            this.dateTimePicker_Lahto.ValueChanged += new System.EventHandler(this.dateTimePicker_Lahto_ValueChanged);
             // 
             // label2
             // 
@@ -568,10 +569,10 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.comboBox_HenkMaara);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.dateTimePicker_Lahto);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dateTimePicker_Tulo);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Varaus";
             this.Text = "Varaus";
@@ -590,8 +591,8 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker_Tulo;
+        private System.Windows.Forms.DateTimePicker dateTimePicker_Lahto;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBox_HenkMaara;

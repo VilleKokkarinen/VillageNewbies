@@ -27,10 +27,14 @@ namespace VillageNewbies.UI
         private BindingList<Cabin> Mokit;
         private BindingList<Cabin> NakyvatMokit;
 
+        private BindingList<Reservation> Varaukset;
+
         private void Varaus_Load(object sender, EventArgs e)
         {
             Mokit = new BindingList<Cabin>();
             NakyvatMokit = new BindingList<Cabin>();
+
+            Varaukset = new BindingList<Reservation>();
 
             SQL s = new SQL();
             //s.create();
@@ -69,6 +73,24 @@ namespace VillageNewbies.UI
 
             dataGridView1.ClearSelection();
             clear_txt_boxes();
+
+
+            List<DataRow> varausdata = s.SQLiteQuery_DataRowList(
+                "SELECT * FROM varaus");
+
+            foreach (DataRow i in varausdata)
+            {
+                Reservation r = new Reservation(
+                   Convert.ToInt32(i[0].ToString()), // <-> i["varaus_id"]
+                   Convert.ToInt32(i[1].ToString()),
+                   Convert.ToInt32(i[2].ToString()),
+                   Convert.ToInt32(i[3].ToString()),
+                   Convert.ToInt32(i[4].ToString()),
+                   Convert.ToInt32(i[5].ToString()),
+                   Convert.ToInt32(i[6].ToString())
+                   );
+                Varaukset.Add(r);
+            }
 
             List<DataRow> alueet = s.SQLiteQuery_DataRowList("Select * from toimintaalue");
             combobox_Cabin_Region.Items.Add("<kaikki>");
@@ -285,7 +307,7 @@ namespace VillageNewbies.UI
         private void Btn_Varaa_Click(object sender, EventArgs e)
         {            
             string textquery = $"INSERT INTO varaus(asiakas_id,mokki_id,varattu_pvm,vahvistus_pvm,varattu_alkupvm,varattu_loppupvm)values(" +
-                $"{txtboxAsiakas_id.Text}, {((Cabin)checklist_Loan_Cabins.SelectedItem).mokki_id}, date('now'), date('now'), {ConvertToUnixTime(dateTimePicker1.Value)}, {ConvertToUnixTime(dateTimePicker2.Value)})";
+                $"{txtboxAsiakas_id.Text}, {((Cabin)checklist_Loan_Cabins.SelectedItem).mokki_id}, date('now'), date('now'), {ConvertToUnixTime(dateTimePicker_Tulo.Value)}, {ConvertToUnixTime(dateTimePicker_Lahto.Value)})";
             ExecuteQuery(textquery);
             //connection.Open();
             //SQLiteDataReader reader = cmd.ExecuteReader();
@@ -309,6 +331,17 @@ namespace VillageNewbies.UI
                 if (c.henkilomaara >= int.Parse(comboBox_HenkMaara.Text) && c.varattu == false)
                 {
                     NakyvatMokit.Add(c);
+                }
+            }
+        }
+
+        private void dateTimePicker_Lahto_ValueChanged(object sender, EventArgs e)
+        {
+            foreach (Reservation r in Varaukset)
+            {
+                if (r.varattu_alkupvm && r.varattu_loppupvm != dateTimePicker_Tulo.Value.Date)
+                {
+
                 }
             }
         }
