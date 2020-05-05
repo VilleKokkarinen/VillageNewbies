@@ -24,7 +24,8 @@ namespace VillageNewbies.UI
 
         private void Lasku_Load(object sender, EventArgs e)
         {
-            FillForm();
+            Lbl_LaskuIDText.Text = Varaus.GetLaskuID;
+            //FillForm();
         }
 
         private void SetConnection()
@@ -45,7 +46,7 @@ namespace VillageNewbies.UI
 
         private void FillForm()
         {
-            string textquery = "SELECT last_insert_rowid() as data";
+            string textquery = "SELECT last_insert_rowid()";
             ExecuteQuery(textquery);
             SQLiteDataReader reader = cmd.ExecuteReader();
             Lbl_LaskuIDText.Text = (reader["data"].ToString());

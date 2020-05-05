@@ -19,6 +19,8 @@ namespace VillageNewbies.UI
            
         }
 
+        public static string GetLaskuID = "" ;
+
         private SQLiteConnection connection;
         private SQLiteCommand cmd;
 
@@ -284,9 +286,14 @@ namespace VillageNewbies.UI
         {            
             string textquery = $"INSERT INTO varaus(asiakas_id,mokki_id,varattu_pvm,vahvistus_pvm,varattu_alkupvm,varattu_loppupvm)values(" +
                 $"{txtboxAsiakas_id.Text}, {((Cabin)checklist_Loan_Cabins.SelectedItem).mokki_id}, date('now'), date('now'), {ConvertToUnixTime(dateTimePicker1.Value)}, {ConvertToUnixTime(dateTimePicker2.Value)})";
-
-
             ExecuteQuery(textquery);
+            connection.Open();
+            SQLiteDataReader reader = cmd.ExecuteReader();
+            GetLaskuID = (reader["last_insert_rowid()"].ToString());
+            connection.Close();
+
+
+            
             MessageBox.Show("Lisäys onnistui");
             Lasku lasku = new Lasku();
             lasku.Show();
