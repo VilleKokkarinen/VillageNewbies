@@ -55,12 +55,6 @@ namespace VillageNewbies.UI
                 NakyvatMokit.Add(c);
             }
 
-            List<OperatingArea> aluedata = SQL.GetAllAreas();
-            foreach (OperatingArea i in aluedata)
-            {
-                Cmb_Alue.Items.Add(i);
-                Cmb_Alue.DisplayMember = "DISPLAYNAME";
-            }
 
             List<Service> palveludata = SQL.GetAllServices();
             foreach (Service i in palveludata)
@@ -297,6 +291,19 @@ namespace VillageNewbies.UI
             Lasku lasku = new Lasku();
             lasku.Show();
             
+        }
+
+        private void comboBox_HenkMaara_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            NakyvatMokit.Clear();
+
+            foreach (Cabin c in Mokit)
+            {
+                if (c.henkilomaara >= int.Parse(comboBox_HenkMaara.Text))
+                {
+                    NakyvatMokit.Add(c);
+                }
+            }
         }
     }
 }
