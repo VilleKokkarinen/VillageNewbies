@@ -19,7 +19,7 @@ namespace VillageNewbies.UI
            
         }
 
-        public static string GetLaskuID = "" ;
+        public static string GetVarausID = "" ;
 
         private SQLiteConnection connection;
         private SQLiteCommand cmd;
@@ -287,10 +287,10 @@ namespace VillageNewbies.UI
             string textquery = $"INSERT INTO varaus(asiakas_id,mokki_id,varattu_pvm,vahvistus_pvm,varattu_alkupvm,varattu_loppupvm)values(" +
                 $"{txtboxAsiakas_id.Text}, {((Cabin)checklist_Loan_Cabins.SelectedItem).mokki_id}, date('now'), date('now'), {ConvertToUnixTime(dateTimePicker1.Value)}, {ConvertToUnixTime(dateTimePicker2.Value)})";
             ExecuteQuery(textquery);
-            connection.Open();
-            SQLiteDataReader reader = cmd.ExecuteReader();
-            GetLaskuID = (reader["last_insert_rowid()"].ToString());
-            connection.Close();
+            //connection.Open();
+            //SQLiteDataReader reader = cmd.ExecuteReader();
+            //GetVarausID = (reader["last_insert_rowid()"].ToString());
+            //connection.Close();
 
 
             
@@ -306,7 +306,7 @@ namespace VillageNewbies.UI
 
             foreach (Cabin c in Mokit)
             {
-                if (c.henkilomaara >= int.Parse(comboBox_HenkMaara.Text))
+                if (c.henkilomaara >= int.Parse(comboBox_HenkMaara.Text) && c.varattu == false)
                 {
                     NakyvatMokit.Add(c);
                 }

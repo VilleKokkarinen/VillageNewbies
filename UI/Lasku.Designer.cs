@@ -49,7 +49,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label_AsiakasID = new System.Windows.Forms.Label();
-            this.Lbl_LaskuIDText = new System.Windows.Forms.Label();
+            this.Lbl_VarausIDText = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -257,20 +257,20 @@
             this.label_AsiakasID.TabIndex = 1;
             this.label_AsiakasID.Text = "Asiakas ID";
             // 
-            // Lbl_LaskuIDText
+            // Lbl_VarausIDText
             // 
-            this.Lbl_LaskuIDText.AutoSize = true;
-            this.Lbl_LaskuIDText.Location = new System.Drawing.Point(722, 21);
-            this.Lbl_LaskuIDText.Name = "Lbl_LaskuIDText";
-            this.Lbl_LaskuIDText.Size = new System.Drawing.Size(0, 17);
-            this.Lbl_LaskuIDText.TabIndex = 7;
+            this.Lbl_VarausIDText.AutoSize = true;
+            this.Lbl_VarausIDText.Location = new System.Drawing.Point(724, 53);
+            this.Lbl_VarausIDText.Name = "Lbl_VarausIDText";
+            this.Lbl_VarausIDText.Size = new System.Drawing.Size(0, 17);
+            this.Lbl_VarausIDText.TabIndex = 7;
             // 
             // Lasku
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 602);
-            this.Controls.Add(this.Lbl_LaskuIDText);
+            this.Controls.Add(this.Lbl_VarausIDText);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.panel2);
@@ -317,6 +317,6 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label_AlueText;
         private System.Windows.Forms.Label label_AsiakasID;
-        private System.Windows.Forms.Label Lbl_LaskuIDText;
+        private System.Windows.Forms.Label Lbl_VarausIDText;
     }
 }
