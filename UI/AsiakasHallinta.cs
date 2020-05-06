@@ -16,6 +16,8 @@ namespace VillageNewbies.UI
         SQL s = new SQL();
         private SQLiteConnection connection;
         private SQLiteCommand cmd;
+        SQLiteDataAdapter adapt;
+        DataTable dt;
         public AsiakasHallinta()
         {
             InitializeComponent();
@@ -56,14 +58,15 @@ namespace VillageNewbies.UI
             {
                 try
                 {
-                    string textquery = "INSERT INTO asiakas(asiakas_id,etunimi,sukunimi,lahiosoite,postinro,email,puhelinnro)values('" + textBox_ID.Text + "'," +
+                    dataGridView_Asiakkaat.ClearSelection();
+                    string textquery = "INSERT INTO asiakas(asiakas_id,etunimi,sukunimi,lahiosoite,postinro,postitoimipaikka,email,puhelinnro)values('" + textBox_ID.Text + "'," +
                     " '" + textBox_Etunimi.Text + "' , '" + textBox_Sukunimi.Text + "' , '" + textBox_Osoite.Text + "' , '" + textBox_Postinro.Text +
-                    "' , '" + textBox_Email.Text + "' , '" + textBox_Puhnro.Text + "')";
+                    "' , '" + textBox_Postitoimipaikka.Text + "' , '" + textBox_Email.Text + "' , '" + textBox_Puhnro.Text + "')";
                     ExecuteQuery(textquery);
                     dataGridView_Asiakkaat.DataSource = s.returnstuff();
                     MessageBox.Show("Asiakas lisätty tietokantaan");
                 }
-                catch (Exception)
+                catch (Exception error)
                 {
 
                     throw;
@@ -85,6 +88,7 @@ namespace VillageNewbies.UI
                 textBox_Postinro.Text = selectedrow.Cells["postinro"].Value.ToString();
                 textBox_Email.Text = selectedrow.Cells["email"].Value.ToString();
                 textBox_Puhnro.Text = selectedrow.Cells["puhelinnro"].Value.ToString();
+                textBox_Postitoimipaikka.Text = selectedrow.Cells["postitoimipaikka"].Value.ToString();
             }
         }
 
@@ -95,13 +99,14 @@ namespace VillageNewbies.UI
                 try
                 {
                     string textquery = "UPDATE asiakas SET etunimi = '" + textBox_Etunimi.Text + "', sukunimi = '" + textBox_Sukunimi.Text +
-                    "', lahiosoite ='" + textBox_Osoite.Text + "', postinro ='" + textBox_Postinro.Text + "', email ='" + textBox_Email.Text +
+                    "', lahiosoite ='" + textBox_Osoite.Text + "', postinro ='" + textBox_Postinro.Text + "',postitoimipaikka ='" + textBox_Postitoimipaikka.Text + "', email ='" + textBox_Email.Text +
                     "', puhelinnro ='" + textBox_Puhnro.Text + "' WHERE asiakas_id = '" + textBox_ID.Text + "';";
                     ExecuteQuery(textquery);
                     dataGridView_Asiakkaat.DataSource = s.returnstuff();
+                    dataGridView_Asiakkaat.ClearSelection();
                     MessageBox.Show("Muokkaus onnistui");
                 }
-                catch (Exception error)
+                catch (Exception)
                 {
 
                     throw;
@@ -122,9 +127,23 @@ namespace VillageNewbies.UI
                 }
                 else if (result == DialogResult.No)
                 {
-
+                    MessageBox.Show("Asiakasta ei poistettu!!");
                 }
             }
+        }
+
+        private void textBox_Search_TextChanged(object sender, EventArgs e)
+        {
+            SetConnection();
+            connection.Open();
+            adapt = new SQLiteDataAdapter("SELECT * FROM asiakas WHERE sukunimi like '" + textBox_Search.Text + "%'", connection);
+            dt = new DataTable();
+            adapt.Fill(dt);
+            dataGridView_Asiakkaat.DataSource = dt;
+            //cmd = connection.CreateCommand();
+            //cmd.CommandText = textquery;
+            //cmd.ExecuteNonQuery();
+            connection.Close();
         }
     }
 }

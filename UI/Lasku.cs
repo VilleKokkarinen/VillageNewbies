@@ -14,7 +14,9 @@ namespace VillageNewbies.UI
 {
     public partial class Lasku : Form
     {
-
+        SQL s = new SQL();
+        private SQLiteConnection connection;
+        private SQLiteCommand cmd;
         public Lasku()
         {
             InitializeComponent();
@@ -22,9 +24,34 @@ namespace VillageNewbies.UI
 
         private void Lasku_Load(object sender, EventArgs e)
         {
-           label5.Text += new SQL().SQLiteQuery_single("SELECT last_insert_rowid()");
+            Lbl_VarausIDText.Text = Varaus.GetVarausID;
+            //FillForm();
         }
 
+        private void SetConnection()
+        {
+            connection = new SQLiteConnection(@"Data Source=VillageNewbiesDB.db");
+        }
+
+        private void ExecuteQuery(string textquery)
+        {
+            SetConnection();
+            connection.Open();
+            cmd = connection.CreateCommand();
+            cmd.CommandText = textquery;
+            cmd.ExecuteNonQuery();
+            //connection.Close();
+
+        }
+
+        private void FillForm()
+        {
+            string textquery = "SELECT last_insert_rowid()";
+            ExecuteQuery(textquery);
+            SQLiteDataReader reader = cmd.ExecuteReader();
+            Lbl_VarausIDText.Text = (reader["data"].ToString());
+            connection.Close();
+        }
         private void button1_Click(object sender, EventArgs e)
         {
 

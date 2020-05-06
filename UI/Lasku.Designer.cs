@@ -49,6 +49,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label_AsiakasID = new System.Windows.Forms.Label();
+            this.Lbl_VarausIDText = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -56,60 +57,54 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 78);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(25, 96);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.Size = new System.Drawing.Size(57, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "Asiakas";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(19, 105);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(25, 129);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 13);
+            this.label3.Size = new System.Drawing.Size(49, 17);
             this.label3.TabIndex = 2;
             this.label3.Text = "Osoite";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(19, 133);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(25, 164);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 13);
+            this.label4.Size = new System.Drawing.Size(87, 17);
             this.label4.TabIndex = 2;
             this.label4.Text = "Postinumero";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(452, 43);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(603, 53);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(54, 13);
+            this.label5.Size = new System.Drawing.Size(70, 17);
             this.label5.TabIndex = 1;
             this.label5.Text = "Varaus ID";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(452, 70);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(603, 86);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(63, 13);
+            this.label6.Size = new System.Drawing.Size(83, 17);
             this.label6.TabIndex = 1;
             this.label6.Text = "Päivämäärä";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(19, 157);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(25, 193);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(83, 13);
+            this.label7.Size = new System.Drawing.Size(109, 17);
             this.label7.TabIndex = 2;
             this.label7.Text = "Postitoimipaikka";
             // 
@@ -122,58 +117,53 @@
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Location = new System.Drawing.Point(21, 209);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Location = new System.Drawing.Point(28, 257);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(246, 224);
+            this.panel1.Size = new System.Drawing.Size(327, 275);
             this.panel1.TabIndex = 3;
             // 
             // label_AlueText
             // 
             this.label_AlueText.AutoSize = true;
-            this.label_AlueText.Location = new System.Drawing.Point(89, 48);
-            this.label_AlueText.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label_AlueText.Location = new System.Drawing.Point(119, 59);
             this.label_AlueText.Name = "label_AlueText";
-            this.label_AlueText.Size = new System.Drawing.Size(0, 13);
+            this.label_AlueText.Size = new System.Drawing.Size(0, 17);
             this.label_AlueText.TabIndex = 4;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(16, 48);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label16.Location = new System.Drawing.Point(21, 59);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(28, 13);
+            this.label16.Size = new System.Drawing.Size(36, 17);
             this.label16.TabIndex = 3;
             this.label16.Text = "Alue";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 72);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(21, 89);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 13);
+            this.label1.Size = new System.Drawing.Size(49, 17);
             this.label1.TabIndex = 3;
             this.label1.Text = "Osoite";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(16, 125);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Location = new System.Drawing.Point(21, 154);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(60, 13);
+            this.label10.Size = new System.Drawing.Size(78, 17);
             this.label10.TabIndex = 2;
             this.label10.Text = "Lähtöpäivä";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(16, 94);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(21, 116);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(54, 13);
+            this.label9.Size = new System.Drawing.Size(70, 17);
             this.label9.TabIndex = 1;
             this.label9.Text = "Tulopäivä";
             // 
@@ -181,10 +171,9 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(10, 12);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(13, 15);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(130, 20);
+            this.label8.Size = new System.Drawing.Size(159, 25);
             this.label8.TabIndex = 0;
             this.label8.Text = "Varauksen tiedot";
             // 
@@ -195,29 +184,27 @@
             this.panel2.Controls.Add(this.label14);
             this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.label11);
-            this.panel2.Location = new System.Drawing.Point(356, 209);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Location = new System.Drawing.Point(475, 257);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(223, 149);
+            this.panel2.Size = new System.Drawing.Size(297, 183);
             this.panel2.TabIndex = 4;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(14, 72);
-            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Location = new System.Drawing.Point(19, 89);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(63, 13);
+            this.label15.Size = new System.Drawing.Size(83, 17);
             this.label15.TabIndex = 3;
             this.label15.Text = "Lisäpalvelut";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(14, 48);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Location = new System.Drawing.Point(19, 59);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(64, 13);
+            this.label14.Size = new System.Drawing.Size(85, 17);
             this.label14.TabIndex = 2;
             this.label14.Text = "Hinta per yö";
             // 
@@ -225,10 +212,9 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(10, 119);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Location = new System.Drawing.Point(13, 146);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(106, 20);
+            this.label12.Size = new System.Drawing.Size(131, 25);
             this.label12.TabIndex = 1;
             this.label12.Text = "Loppusumma";
             // 
@@ -236,29 +222,27 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(10, 12);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Location = new System.Drawing.Point(13, 15);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(52, 20);
+            this.label11.Size = new System.Drawing.Size(65, 25);
             this.label11.TabIndex = 0;
             this.label11.Text = "Lasku";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(452, 17);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Location = new System.Drawing.Point(603, 21);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(71, 13);
+            this.label13.Size = new System.Drawing.Size(94, 17);
             this.label13.TabIndex = 5;
             this.label13.Text = "Laskunumero";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(370, 449);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Location = new System.Drawing.Point(493, 553);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(56, 19);
+            this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 6;
             this.button1.Text = "Tulosta";
             this.button1.UseVisualStyleBackColor = true;
@@ -267,18 +251,26 @@
             // label_AsiakasID
             // 
             this.label_AsiakasID.AutoSize = true;
-            this.label_AsiakasID.Location = new System.Drawing.Point(19, 56);
-            this.label_AsiakasID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label_AsiakasID.Location = new System.Drawing.Point(25, 69);
             this.label_AsiakasID.Name = "label_AsiakasID";
-            this.label_AsiakasID.Size = new System.Drawing.Size(58, 13);
+            this.label_AsiakasID.Size = new System.Drawing.Size(74, 17);
             this.label_AsiakasID.TabIndex = 1;
             this.label_AsiakasID.Text = "Asiakas ID";
             // 
+            // Lbl_VarausIDText
+            // 
+            this.Lbl_VarausIDText.AutoSize = true;
+            this.Lbl_VarausIDText.Location = new System.Drawing.Point(724, 53);
+            this.Lbl_VarausIDText.Name = "Lbl_VarausIDText";
+            this.Lbl_VarausIDText.Size = new System.Drawing.Size(0, 17);
+            this.Lbl_VarausIDText.TabIndex = 7;
+            // 
             // Lasku
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 489);
+            this.ClientSize = new System.Drawing.Size(800, 602);
+            this.Controls.Add(this.Lbl_VarausIDText);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.panel2);
@@ -290,7 +282,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label_AsiakasID);
             this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Lasku";
             this.Text = "Lasku";
             this.Load += new System.EventHandler(this.Lasku_Load);
@@ -325,5 +317,6 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label_AlueText;
         private System.Windows.Forms.Label label_AsiakasID;
+        private System.Windows.Forms.Label Lbl_VarausIDText;
     }
 }
