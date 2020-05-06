@@ -340,6 +340,7 @@ namespace VillageNewbies
             cmd.CommandText = "CREATE TABLE IF NOT EXISTS asiakas (" +
           "asiakas_id INTEGER PRIMARY KEY," +
           "postinro CHAR(5) NOT NULL," +
+          "postitoimipaikka VARCHAR(20) NULL DEFAULT NULL," +
           "etunimi VARCHAR(20) NULL DEFAULT NULL," +
           "sukunimi VARCHAR(40) NULL DEFAULT NULL," +
           "lahiosoite VARCHAR(40) NULL DEFAULT NULL," +
@@ -348,17 +349,17 @@ namespace VillageNewbies
           "FOREIGN KEY(postinro) REFERENCES posti(postinro))";
             cmd.ExecuteNonQuery();
 
-            cmd.CommandText = "INSERT INTO asiakas(asiakas_id,postinro,etunimi,sukunimi,lahiosoite,email,puhelinnro)" +
-                "VALUES('100','70100','Matti','Meikäläinen','Kuopiontie1','matti.m@gmail.com','0505005005')," +
-                "('101','70100', 'Keijo', 'Kuosmanen', 'Petosentie5', 'keijo.k@gmail.com', '0506665005')," +
-                "('102','70100', 'Sirpa', 'Suokas', 'Vuorikatu11', 'sirpa.s@gmail.com', '0446074567')," +
-                "('103','00100', 'Aaro', 'Oksman', 'MannerKatu3', 'aaro.o@gmail.com', '0409874322')," +
-                "('104','00100', 'Ben', 'För', 'Restikuja13', 'ben.f@gmail.com', '0502265105')," +
-                "('105','00100', 'Leena', 'Kuokas', 'Omatie9', 'leena.k@gmail.com', '0442346789')," +
-                "('106','90100', 'Oili', 'Vanukas', 'Ouluntie83', 'oili.v@gmail.com', '0405285344')," + 
-                "('107','90100', 'Kalle', 'Kehveli', 'Rööperitie23', 'kalle.k@gmail.com', '0509263456')," + 
-                "('108','20100', 'Seppo', 'Turunen', 'Turuntie8', 'seppo.t@gmail.com', '0501234567')," +
-                "('109','20100', 'Pentti', 'Hirvonen', 'Hirvoskuja13', 'pentti.h@gmail.com', '0445542689')";
+            cmd.CommandText = "INSERT INTO asiakas(asiakas_id,postinro,postitoimipaikka,etunimi,sukunimi,lahiosoite,email,puhelinnro)" +
+                "VALUES('100','70100','Kuopio','Matti','Meikäläinen','Kuopiontie1','matti.m@gmail.com','0505005005')," +
+                "('101','70100','Kuopio', 'Keijo', 'Kuosmanen', 'Petosentie5', 'keijo.k@gmail.com', '0506665005')," +
+                "('102','70100','Kuopio', 'Sirpa', 'Suokas', 'Vuorikatu11', 'sirpa.s@gmail.com', '0446074567')," +
+                "('103','00100','Helsinki', 'Aaro', 'Oksman', 'MannerKatu3', 'aaro.o@gmail.com', '0409874322')," +
+                "('104','00100','Helsinki', 'Ben', 'För', 'Restikuja13', 'ben.f@gmail.com', '0502265105')," +
+                "('105','00100','Helsinki', 'Leena', 'Kuokas', 'Omatie9', 'leena.k@gmail.com', '0442346789')," +
+                "('106','90100','Oulu', 'Oili', 'Vanukas', 'Ouluntie83', 'oili.v@gmail.com', '0405285344')," + 
+                "('107','90100','Oulu', 'Kalle', 'Kehveli', 'Rööperitie23', 'kalle.k@gmail.com', '0509263456')," + 
+                "('108','20100','Turku', 'Seppo', 'Turunen', 'Turuntie8', 'seppo.t@gmail.com', '0501234567')," +
+                "('109','20100','Turku', 'Pentti', 'Hirvonen', 'Hirvoskuja13', 'pentti.h@gmail.com', '0445542689')";
             cmd.ExecuteNonQuery();
 
 
