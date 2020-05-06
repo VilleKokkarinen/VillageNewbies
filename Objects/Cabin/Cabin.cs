@@ -34,7 +34,7 @@
             this.henkilomaara = henkilomaara;
             this.varustelu = varustelu;
             this.hinta = hinta;
-            this.varattu = new SQL().SQLiteQuery_single("SELECT CASE WHEN varattu_loppupvm < date('now') THEN 'varattu' ELSE 'avoin' END AS varattu_loppupvm FROM varaus WHERE varaus.mokki_id = " + mokki_id) == "varattu" ? true : false;
+            this.varattu = new SQL().SQLiteQuery_single("SELECT CASE WHEN varattu_loppupvm > strftime('%s', 'now') AND varattu_alkupvm < strftime('%s', 'now') THEN 'varattu' ELSE 'avoin' END AS varattu_loppupvm FROM varaus WHERE varaus.mokki_id = " + mokki_id) == "varattu" ? true : false;
         }
     }
 }

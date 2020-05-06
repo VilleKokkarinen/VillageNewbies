@@ -16,10 +16,10 @@ namespace VillageNewbies.UI
         public Varaus()
         {
             InitializeComponent();
-           
+
         }
 
-        public static string GetVarausID = "" ;
+        public static string GetVarausID = "";
 
         private SQLiteConnection connection;
         private SQLiteCommand cmd;
@@ -125,6 +125,7 @@ namespace VillageNewbies.UI
             }
         }
 
+
         /// <summary>
         /// chekkilistan valinta vaihtuu -> syötä tietoja textiboxiin
         /// </summary>
@@ -132,14 +133,37 @@ namespace VillageNewbies.UI
         /// <param name="e"></param>
         private void checklist_Loan_Cabins_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(checklist_Loan_Cabins.SelectedItem != null)
+            if (checklist_Loan_Cabins.SelectedItem != null)
             {
                 txt_Cabin_MaxResidents.Text = ((Cabin)checklist_Loan_Cabins.SelectedItem).henkilomaara.ToString();
                 txt_Cabin_Details.Text = ((Cabin)checklist_Loan_Cabins.SelectedItem).kuvaus;
                 txt_Cabin_Price.Text = ((Cabin)checklist_Loan_Cabins.SelectedItem).hinta.ToString();
                 txt_Cabin_State.Text = ((Cabin)checklist_Loan_Cabins.SelectedItem).varattu == true ? "varattu" : "avoin";
+
+
+                List<DateTime> lista = new List<DateTime>();
+
+                //PVM blokkaus
+                List<DataRow> paivat = new SQL().SQLiteQuery_DataRowList(
+                "SELECT varattu_alkupvm, varattu_loppupvm FROM varaus WHERE varaus.mokki_id = " + ((Cabin)checklist_Loan_Cabins.SelectedItem).mokki_id
+                + " AND varaus.varattu_loppupvm > strftime('%s', 'now')");
+
+
+                foreach (DataRow i in paivat)
+                {
+                    lista.Add(UnixTimeStampToDateTime(Convert.ToDouble(i[0].ToString())));
+                }
+
+                if (lista.Count != 0)
+                {
+                    dateTimePicker_Lahto.MaxDate = lista.Min();
+                    dateTimePicker_Tulo.MaxDate = dateTimePicker_Lahto.MaxDate;
+                    dateTimePicker_Tulo.MinDate = DateTime.Now;
+                    dateTimePicker_Lahto.MinDate = DateTime.Now;
+                    lista.Clear();
+                }
             }
-           
+
         }
 
         private void checklist_Loan_Cabins_ItemCheck(object sender, ItemCheckEventArgs e)
@@ -156,19 +180,19 @@ namespace VillageNewbies.UI
         {
             NakyvatMokit.Clear();
 
-            foreach(Cabin c in Mokit)
+            foreach (Cabin c in Mokit)
             {
-                if(c.toimintaalue_id == ((OperatingArea)combobox_Cabin_Region.SelectedItem).toimintaalue_id)
+                if (c.toimintaalue_id == ((OperatingArea)combobox_Cabin_Region.SelectedItem).toimintaalue_id)
                 {
                     NakyvatMokit.Add(c);
                 }
             }
 
-            if(combobox_Cabin_Region.SelectedItem.ToString() == "<kaikki>")
+            if (combobox_Cabin_Region.SelectedItem.ToString() == "<kaikki>")
             {
                 NakyvatMokit = Mokit;
             }
-            
+
         }
 
         private void txt_Cabin_Search_Name_TextChanged(object sender, EventArgs e)
@@ -208,13 +232,13 @@ namespace VillageNewbies.UI
             txtboxSukunimi.Clear();
             txtboxPostinro.Clear();
             txtboxlahiosoite.Clear();
-            txtboxEmail.Clear(); 
+            txtboxEmail.Clear();
             txtboxPuhelinnro.Clear();
         }
 
         private void SetConnection()
         {
-             connection = new SQLiteConnection(@"Data Source=VillageNewbiesDB.db");
+            connection = new SQLiteConnection(@"Data Source=VillageNewbiesDB.db");
         }
 
         private void ExecuteQuery(string textquery)
@@ -303,23 +327,24 @@ namespace VillageNewbies.UI
 
             return (long)(datetime - sTime).TotalSeconds;
         }
+        public static DateTime UnixTimeStampToDateTime(double unixTimeStamp)
+        {
+            // Unix timestamp is seconds past epoch
+            System.DateTime dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, System.DateTimeKind.Utc);
+            dtDateTime = dtDateTime.AddSeconds(unixTimeStamp).ToLocalTime();
+            return dtDateTime;
+        }
 
         private void Btn_Varaa_Click(object sender, EventArgs e)
-        {            
+        {
             string textquery = $"INSERT INTO varaus(asiakas_id,mokki_id,varattu_pvm,vahvistus_pvm,varattu_alkupvm,varattu_loppupvm)values(" +
-                $"{txtboxAsiakas_id.Text}, {((Cabin)checklist_Loan_Cabins.SelectedItem).mokki_id}, date('now'), date('now'), {ConvertToUnixTime(dateTimePicker_Tulo.Value)}, {ConvertToUnixTime(dateTimePicker_Lahto.Value)})";
+                 $"{txtboxAsiakas_id.Text}, {((Cabin)checklist_Loan_Cabins.SelectedItem).mokki_id}, strftime('%s', 'now'), strftime('%s', 'now'), {ConvertToUnixTime(dateTimePicker_Tulo.Value)}, {ConvertToUnixTime(dateTimePicker_Lahto.Value)})";
+
+
             ExecuteQuery(textquery);
-            //connection.Open();
-            //SQLiteDataReader reader = cmd.ExecuteReader();
-            //GetVarausID = (reader["last_insert_rowid()"].ToString());
-            //connection.Close();
-
-
-            
             MessageBox.Show("Lisäys onnistui");
             Lasku lasku = new Lasku();
             lasku.Show();
-            
         }
 
         private void comboBox_HenkMaara_SelectedIndexChanged(object sender, EventArgs e)
@@ -331,17 +356,6 @@ namespace VillageNewbies.UI
                 if (c.henkilomaara >= int.Parse(comboBox_HenkMaara.Text) && c.varattu == false)
                 {
                     NakyvatMokit.Add(c);
-                }
-            }
-        }
-
-        private void dateTimePicker_Lahto_ValueChanged(object sender, EventArgs e)
-        {
-            foreach (Reservation r in Varaukset)
-            {
-                if (r.varattu_alkupvm && r.varattu_loppupvm != dateTimePicker_Tulo.Value.Date)
-                {
-
                 }
             }
         }

@@ -314,7 +314,6 @@
             this.dateTimePicker_Lahto.Name = "dateTimePicker_Lahto";
             this.dateTimePicker_Lahto.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker_Lahto.TabIndex = 4;
-            this.dateTimePicker_Lahto.ValueChanged += new System.EventHandler(this.dateTimePicker_Lahto_ValueChanged);
             // 
             // label2
             // 
