@@ -25,9 +25,31 @@ namespace VillageNewbies.UI
 
         private void AsiakasHallinta_Load(object sender, EventArgs e)
         {
+            //s.create();
             dataGridView_Asiakkaat.DataSource = s.returnstuff();
             dataGridView_Asiakkaat.ClearSelection();
             cleartextboxes();
+
+            btn_lisaa.Enabled = false;
+
+            if (textBox_ID.Text == "" || textBox_Etunimi.Text == "" || textBox_Sukunimi.Text == "" || textBox_Osoite.Text == "" || textBox_Postinro.Text == "" ||
+               textBox_Postitoimipaikka.Text == "" || textBox_Puhnro.Text == "" || textBox_Email.Text == "")
+            {
+                btn_lisaa.Enabled = false;
+            }
+        }
+
+        private void SetButtonVisibility()
+        {
+            if (textBox_ID.Text != "" && textBox_Etunimi.Text != "" && textBox_Sukunimi.Text != "" && textBox_Osoite.Text != "" && textBox_Postinro.Text != "" &&
+               textBox_Postitoimipaikka.Text != "" && textBox_Puhnro.Text != "" && textBox_Email.Text != "")
+            {
+                btn_lisaa.Enabled = true;
+            }
+            else
+            {
+                btn_lisaa.Enabled = false;
+            }
         }
 
         private void SetConnection()
@@ -54,6 +76,7 @@ namespace VillageNewbies.UI
 
         private void btn_lisaa_Click(object sender, EventArgs e)
         {
+           
             if (dataGridView_Asiakkaat.SelectedCells.Count <= 0)
             {
                 try
@@ -72,6 +95,8 @@ namespace VillageNewbies.UI
                     throw;
                 }
             }
+
+
         }
 
         private void dataGridView_Asiakkaat_SelectionChanged(object sender, EventArgs e)
@@ -143,6 +168,64 @@ namespace VillageNewbies.UI
             //cmd = connection.CreateCommand();
             //cmd.CommandText = textquery;
             //cmd.ExecuteNonQuery();
+            connection.Close();
+        }
+
+
+        private void Btn_Tyhjenna_Click(object sender, EventArgs e)
+        {
+            cleartextboxes();
+            dataGridView_Asiakkaat.ClearSelection();
+        }
+
+        private void textBox_ID_TextChanged(object sender, EventArgs e)
+        {
+            SetButtonVisibility();
+        }
+
+        private void textBox_Etunimi_TextChanged(object sender, EventArgs e)
+        {
+            SetButtonVisibility();
+        }
+
+        private void textBox_Sukunimi_TextChanged(object sender, EventArgs e)
+        {
+            SetButtonVisibility();
+        }
+
+        private void textBox_Osoite_TextChanged(object sender, EventArgs e)
+        {
+            SetButtonVisibility();
+        }
+
+        private void textBox_Postinro_TextChanged(object sender, EventArgs e)
+        {
+            SetButtonVisibility();
+        }
+
+        private void textBox_Postitoimipaikka_TextChanged(object sender, EventArgs e)
+        {
+            SetButtonVisibility();
+        }
+
+        private void textBox_Puhnro_TextChanged(object sender, EventArgs e)
+        {
+            SetButtonVisibility();
+        }
+
+        private void textBox_Email_TextChanged(object sender, EventArgs e)
+        {
+            SetButtonVisibility();
+        }
+
+        private void textBox_EtsiPostiNro_TextChanged(object sender, EventArgs e)
+        {
+            SetConnection();
+            connection.Open();
+            adapt = new SQLiteDataAdapter("SELECT * FROM asiakas WHERE postinro LIKE '" + textBox_EtsiPostiNro.Text + "%'", connection);
+            dt = new DataTable();
+            adapt.Fill(dt);
+            dataGridView_Asiakkaat.DataSource = dt;
             connection.Close();
         }
     }
