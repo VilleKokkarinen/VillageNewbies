@@ -337,6 +337,8 @@ namespace VillageNewbies.UI
 
         private void dateTimePicker_Lahto_ValueChanged(object sender, EventArgs e)
         {
+            /*
+
             foreach (Reservation r in Varaukset)
             {
                 if (r.varattu_alkupvm && r.varattu_loppupvm != dateTimePicker_Tulo.Value.Date)
@@ -344,6 +346,7 @@ namespace VillageNewbies.UI
 
                 }
             }
+            */
         }
     }
 }
