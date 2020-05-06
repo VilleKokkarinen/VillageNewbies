@@ -289,7 +289,7 @@ namespace VillageNewbies.UI
         private void Btn_Varaa_Click(object sender, EventArgs e)
         {            
             string textquery = $"INSERT INTO varaus(asiakas_id,mokki_id,varattu_pvm,vahvistus_pvm,varattu_alkupvm,varattu_loppupvm)values(" +
-                $"{txtboxAsiakas_id.Text}, {((Cabin)checklist_Loan_Cabins.SelectedItem).mokki_id}, date('now'), date('now'), {ConvertToUnixTime(dateTimePicker1.Value)}, {ConvertToUnixTime(dateTimePicker2.Value)})";
+                $"{txtboxAsiakas_id.Text}, {((Cabin)checklist_Loan_Cabins.SelectedItem).mokki_id}, strftime('%s', 'now'), strftime('%s', 'now'), {ConvertToUnixTime(dateTimePicker1.Value)}, {ConvertToUnixTime(dateTimePicker2.Value)})";
 
 
             ExecuteQuery(textquery);
