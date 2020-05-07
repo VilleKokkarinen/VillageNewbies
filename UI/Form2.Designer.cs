@@ -71,6 +71,9 @@
             this.Btn_Varaa = new System.Windows.Forms.Button();
             this.Lbl_Hinta = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox_HaeSukunimella = new System.Windows.Forms.TextBox();
+            this.label_HaeSukuNimella = new System.Windows.Forms.Label();
+            this.Btn_Tyhjenna = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -80,6 +83,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.panel1.Controls.Add(this.label_HaeSukuNimella);
+            this.panel1.Controls.Add(this.textBox_HaeSukunimella);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.groupBox3);
             this.panel1.Controls.Add(this.groupBox2);
@@ -541,11 +546,41 @@
             this.textBox1.Size = new System.Drawing.Size(100, 22);
             this.textBox1.TabIndex = 27;
             // 
+            // textBox_HaeSukunimella
+            // 
+            this.textBox_HaeSukunimella.Location = new System.Drawing.Point(1238, 415);
+            this.textBox_HaeSukunimella.Name = "textBox_HaeSukunimella";
+            this.textBox_HaeSukunimella.Size = new System.Drawing.Size(122, 22);
+            this.textBox_HaeSukunimella.TabIndex = 54;
+            this.textBox_HaeSukunimella.TextChanged += new System.EventHandler(this.textBox_HaeSukunimella_TextChanged);
+            // 
+            // label_HaeSukuNimella
+            // 
+            this.label_HaeSukuNimella.AutoSize = true;
+            this.label_HaeSukuNimella.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_HaeSukuNimella.ForeColor = System.Drawing.Color.White;
+            this.label_HaeSukuNimella.Location = new System.Drawing.Point(1099, 415);
+            this.label_HaeSukuNimella.Name = "label_HaeSukuNimella";
+            this.label_HaeSukuNimella.Size = new System.Drawing.Size(133, 20);
+            this.label_HaeSukuNimella.TabIndex = 55;
+            this.label_HaeSukuNimella.Text = "Hae sukunimellä";
+            // 
+            // Btn_Tyhjenna
+            // 
+            this.Btn_Tyhjenna.Location = new System.Drawing.Point(19, 290);
+            this.Btn_Tyhjenna.Name = "Btn_Tyhjenna";
+            this.Btn_Tyhjenna.Size = new System.Drawing.Size(93, 58);
+            this.Btn_Tyhjenna.TabIndex = 28;
+            this.Btn_Tyhjenna.Text = "Tyhjenä tekstikentät";
+            this.Btn_Tyhjenna.UseVisualStyleBackColor = true;
+            this.Btn_Tyhjenna.Click += new System.EventHandler(this.Btn_Tyhjenna_Click);
+            // 
             // Varaus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1741, 805);
+            this.Controls.Add(this.Btn_Tyhjenna);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.Lbl_Hinta);
             this.Controls.Add(this.Btn_Varaa);
@@ -577,6 +612,7 @@
             this.Text = "Varaus";
             this.Load += new System.EventHandler(this.Varaus_Load);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
@@ -632,5 +668,8 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.CheckBox check_Cabin_Show_Reserved;
+        private System.Windows.Forms.Label label_HaeSukuNimella;
+        private System.Windows.Forms.TextBox textBox_HaeSukunimella;
+        private System.Windows.Forms.Button Btn_Tyhjenna;
     }
 }
