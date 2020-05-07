@@ -16,8 +16,10 @@ namespace VillageNewbies.UI
         public Varaus()
         {
             InitializeComponent();
-
+            Buttonvaraa();
         }
+
+        
 
         public static string GetVarausID = "";
 
@@ -39,7 +41,7 @@ namespace VillageNewbies.UI
             Varaukset = new BindingList<Reservation>();
 
             SQL s = new SQL();
-            s.create();
+            //s.create();
             checklist_Loan_Cabins.DataSource = NakyvatMokit;
             checklist_Loan_Cabins.DisplayMember = "DISPLAYNAME";
 
@@ -415,24 +417,23 @@ namespace VillageNewbies.UI
                 cmd = connection.CreateCommand();
                 cmd.CommandText = textquery;
                 cmd.ExecuteNonQuery();
-                ExecuteQuery(textquery);
+                
+                
 
 
                 // tässä pitäisi hakea tuo SELECT last_insert_rowid() kannasta ennen kuin sulkee yhteyden...
                 
                 MessageBox.Show("Lisäys onnistui");
-
+               
                 Lasku lasku = new Lasku(
                     new Client(txtboxEtunimi.Text, txtboxSukunimi.Text, Convert.ToInt32(txtboxAsiakas_id.Text), txtboxlahiosoite.Text, txtboxEmail.Text, txtboxPuhelinnro.Text, txtboxPostinro.Text),
                     ((Cabin)checklist_Loan_Cabins.SelectedItem),
                     new Reservation(Convert.ToInt32(new SQL().SQLiteQuery_single("SELECT last_insert_rowid()")), Convert.ToInt32(txtboxAsiakas_id.Text), ((Cabin)checklist_Loan_Cabins.SelectedItem).mokki_id, Convert.ToInt32(ConvertToUnixTime(DateTime.Now)), Convert.ToInt32(ConvertToUnixTime(DateTime.Now)), Convert.ToInt32(ConvertToUnixTime(dateTimePicker_Tulo.Value)), Convert.ToInt32(ConvertToUnixTime(dateTimePicker_Lahto.Value))),
                     new Invoice(0, Convert.ToInt32(new SQL().SQLiteQuery_single("SELECT last_insert_rowid()")), Convert.ToDouble(txtHinta.Text), 24)
                     );
-
-                connection.Close();
                 lasku.Show();
 
-                
+                connection.Close();
 
             }
            
@@ -466,6 +467,45 @@ namespace VillageNewbies.UI
         {
             clear_txt_boxes();
             dataGridView1.ClearSelection();
+        }
+
+        private void txtboxAsiakas_id_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void Buttonvaraa()
+        {
+ 
+            if (String.IsNullOrWhiteSpace(txtHinta.Text))
+            {
+                Btn_Varaa.Enabled = false;
+            }
+            else
+            {
+                Btn_Varaa.Enabled = true;
+            }
+        }
+
+        private void txtHinta_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Buttonvaraa();
+            if (string.IsNullOrWhiteSpace(txtHinta.Text))
+            {
+                Btn_Varaa.Enabled = false;
+            }
+            else
+            {
+                Btn_Varaa.Enabled = true;
+            } 
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+                
+            }
         }
     }
 }

@@ -398,6 +398,7 @@
             this.txtboxAsiakas_id.Name = "txtboxAsiakas_id";
             this.txtboxAsiakas_id.Size = new System.Drawing.Size(100, 20);
             this.txtboxAsiakas_id.TabIndex = 11;
+            this.txtboxAsiakas_id.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtboxAsiakas_id_KeyPress);
             // 
             // label5
             // 
@@ -536,6 +537,7 @@
             this.txtHinta.Name = "txtHinta";
             this.txtHinta.Size = new System.Drawing.Size(76, 20);
             this.txtHinta.TabIndex = 27;
+            this.txtHinta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHinta_KeyPress);
             // 
             // Btn_Tyhjenna
             // 
