@@ -421,14 +421,14 @@ namespace VillageNewbies
 
             cmd.CommandText = "INSERT INTO mokki(mokki_id,toimintaalue_id, hinta, postinro, mokkinimi,katuosoite,kuvaus,henkilomaara,varustelu)" +
                 "VALUES" +
-                "('200', '1', '50', '87760', 'Tahkola','Tahkontie 1','Perus mökki perheelle','5','2 makuuhuonetta ja 1 kylpyhuone saunalla')," +
-                "('201', '1', '60','87060', 'Tohkola', 'Tohkotie 2', 'Laskettelijan mökki', '3', '1 isompi huone kylpyhuoneella ja saunalla')," +
-                "('203', '2', '100','87160', 'Levilä', 'Levintie 3', 'Luksus mökki seurueelle', '8', '3 makuuhuonetta, 2 kylpyhuonetta, sauna ja parveke')," +
-                "('204', '2', '50','87260', 'Lekkilä', 'Lekikuja 4', 'Laskettelijan mökki', '3', '1 isompi huone kylpyhuoneella ja saunalla')," +
-                "('205', '3', '80','87360', 'Rukola', 'Rukantie 5', 'Hieno mökki perheelle', '6', '2 makuuhuonetta ja 1 kylpyhuone saunalla ja ulko paljulla')," +
-                "('206', '3', '60','87460', 'Rakola', 'Rakolatie 6', 'Laskettelijan mökki', '3', '1 isompi huone kylpyhuoneella ja saunalla')," +
-                "('207', '4', '50','87560', 'Tahkola', 'Tahkontie 1', 'Perus mökki perheelle', '5', '2 makuuhuonetta ja 1 kylpyhuone saunalla')," +
-                "('208', '4', '60','87660', 'Himola', 'Himolankuja 8', 'Laskettelijan mökki', '3', '1 isompi huone kylpyhuoneella ja saunalla')";
+                "('200', '1', '50', '73310', 'Tahkola','Tahkontie 1','Perus mökki perheelle','5','2 makuuhuonetta ja 1 kylpyhuone saunalla')," +
+                "('201', '1', '60','73310', 'Tohkola', 'Tohkotie 2', 'Laskettelijan mökki', '3', '1 isompi huone kylpyhuoneella ja saunalla')," +
+                "('203', '2', '100','99130', 'Levilä', 'Levintie 3', 'Luksus mökki seurueelle', '8', '3 makuuhuonetta, 2 kylpyhuonetta, sauna ja parveke')," +
+                "('204', '2', '50','99130', 'Lekkilä', 'Lekikuja 4', 'Laskettelijan mökki', '3', '1 isompi huone kylpyhuoneella ja saunalla')," +
+                "('205', '3', '80','93830', 'Rukola', 'Rukantie 5', 'Hieno mökki perheelle', '6', '2 makuuhuonetta ja 1 kylpyhuone saunalla ja ulko paljulla')," +
+                "('206', '3', '60','93830', 'Rakola', 'Rakolatie 6', 'Laskettelijan mökki', '3', '1 isompi huone kylpyhuoneella ja saunalla')," +
+                "('207', '4', '50','42100', 'Tahkola', 'Tahkontie 1', 'Perus mökki perheelle', '5', '2 makuuhuonetta ja 1 kylpyhuone saunalla')," +
+                "('208', '4', '60','42100', 'Himola', 'Himolankuja 8', 'Laskettelijan mökki', '3', '1 isompi huone kylpyhuoneella ja saunalla')";
             cmd.ExecuteNonQuery();
 
             cmd.CommandText = "DROP TABLE IF EXISTS varaus";
