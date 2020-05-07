@@ -32,11 +32,15 @@ namespace VillageNewbies.UI
         private BindingList<Cabin> NakyvatMokit;
 
         private BindingList<Reservation> Varaukset;
+        private BindingList<Service> palvelut;
+        private BindingList<Service> valitutpalvelut;
 
         private void Varaus_Load(object sender, EventArgs e)
         {
             Mokit = new BindingList<Cabin>();
             NakyvatMokit = new BindingList<Cabin>();
+            palvelut = new BindingList<Service>();
+            valitutpalvelut = new BindingList<Service>();
 
             Varaukset = new BindingList<Reservation>();
 
@@ -508,6 +512,33 @@ namespace VillageNewbies.UI
                 e.Handled = true;
                 
             }
+        }
+
+        private void Clb_Palvelut_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            double hinta;
+            double kokonaishinta = 0;
+
+            foreach (Service s in palvelut)
+            {
+                if (s.palvelu_id == ((Service)Clb_Palvelut.CheckedItems.AsQueryable()).palvelu_id)
+                {
+                    valitutpalvelut.Add(s);
+                }
+            }
+
+            foreach (Service ser in valitutpalvelut)
+            {
+                SetConnection();
+                string textquery = "SELECT hinta from palvelu WHERE palvelu_id = " + ser.hinta;
+                cmd.CommandText = textquery;
+                hinta = double.Parse(cmd.ExecuteScalar().ToString());
+
+                kokonaishinta += kokonaishinta + hinta;
+                
+            }
+
+            txtHinta.Text = kokonaishinta.ToString();
         }
     }
 }
