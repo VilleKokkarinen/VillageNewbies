@@ -337,8 +337,10 @@ namespace VillageNewbies
             cmd.CommandText = "DROP TABLE IF EXISTS asiakas";
             cmd.ExecuteNonQuery();
 
-            cmd.CommandText = "CREATE TABLE IF NOT EXISTS asiakas (" +
-          "asiakas_id INTEGER PRIMARY KEY," +
+
+
+        cmd.CommandText = "CREATE TABLE IF NOT EXISTS asiakas (" +
+          "asiakas_id INTEGER PRIMARY KEY AUTOINCREMENT," +
           "postinro CHAR(5) NOT NULL," +
           "postitoimipaikka VARCHAR(20) NULL DEFAULT NULL," +
           "etunimi VARCHAR(20) NULL DEFAULT NULL," +
@@ -362,6 +364,28 @@ namespace VillageNewbies
                 "('109','20100','Turku', 'Pentti', 'Hirvonen', 'Hirvoskuja13', 'pentti.h@gmail.com', '0445542689')";
             cmd.ExecuteNonQuery();
 
+
+
+            string[] _firstName = new string[] { "Adam", "Alex", "Aaron", "Ben", "Carl", "Dan", "David", "Edward", "Fred", "Frank", "George", "Hal", "Hank", "Ike", "John", "Jack", "Joe", "Larry", "Monte", "Matthew", "Mark", "Nathan", "Otto", "Paul", "Peter", "Roger", "Roger", "Steve", "Thomas", "Tim", "Ty", "Victor", "Walter" };
+
+            string[] _lastName = new string[] { "Anderson", "Ashwoon", "Aikin", "Bateman", "Bongard", "Bowers", "Boyd", "Cannon", "Cast", "Deitz", "Dewalt", "Ebner", "Frick", "Hancock", "Haworth", "Hesch", "Hoffman", "Kassing", "Knutson", "Lawless", "Lawicki", "Mccord", "McCormack", "Miller", "Myers", "Nugent", "Ortiz", "Orwig", "Ory", "Paiser", "Pak", "Pettigrew", "Quinn", "Quizoz", "Ramachandran", "Resnick", "Sagar", "Schickowski", "Schiebel", "Sellon", "Severson", "Shaffer", "Solberg", "Soloman", "Sonderling", "Soukup", "Soulis", "Stahl", "Sweeney", "Tandy", "Trebil", "Trusela", "Trussel", "Turco", "Uddin", "Uflan", "Ulrich", "Upson", "Vader", "Vail", "Valente", "Van Zandt", "Vanderpoel", "Ventotla", "Vogal", "Wagle", "Wagner", "Wakefield", "Weinstein", "Weiss", "Woo", "Yang", "Yates", "Yocum", "Zeaser", "Zeller", "Ziegler", "Bauer", "Baxster", "Casal", "Cataldi", "Caswell", "Celedon", "Chambers", "Chapman", "Christensen", "Darnell", "Davidson", "Davis", "DeLorenzo", "Dinkins", "Doran", "Dugelman", "Dugan", "Duffman", "Eastman", "Ferro", "Ferry", "Fletcher", "Fietzer", "Hylan", "Hydinger", "Illingsworth", "Ingram", "Irwin", "Jagtap", "Jenson", "Johnson", "Johnsen", "Jones", "Jurgenson", "Kalleg", "Kaskel", "Keller", "Leisinger", "LePage", "Lewis", "Linde", "Lulloff", "Maki", "Martin", "McGinnis", "Mills", "Moody", "Moore", "Napier", "Nelson", "Norquist", "Nuttle", "Olson", "Ostrander", "Reamer", "Reardon", "Reyes", "Rice", "Ripka", "Roberts", "Rogers", "Root", "Sandstrom", "Sawyer", "Schlicht", "Schmitt", "Schwager", "Schutz", "Schuster", "Tapia", "Thompson", "Tiernan", "Tisler" };
+
+            string[] _kaupungit = new string[] {"Helsinki","Turku", "Kuopio", "Oulu", "Rovaniemi", "Jyväskylä" };
+
+            string monta = "INSERT into asiakas(postinro,postitoimipaikka,etunimi,sukunimi,lahiosoite,email,puhelinnro)VALUES";
+            Random r = new Random();
+            for (int i = 0; i <= 1000; i++)
+            {
+                string firstname = _firstName[r.Next(_firstName.Length - 1)];
+                string lastname = _lastName[r.Next(_lastName.Length - 1)];
+
+                monta += $"('{r.Next(10000,99999)}', '{_kaupungit[r.Next(5)]}', '{firstname}','{lastname}', '{"tie" + r.Next(5000).ToString()}', '{firstname + "." + lastname + "@gmail.com"}', '{"044"+r.Next(1000000,9999999)}'),";
+                System.Threading.Thread.Sleep(10);
+            }
+            monta = monta.Substring(0, monta.Length - 1);
+
+            cmd.CommandText = monta;
+            cmd.ExecuteNonQuery();
 
             cmd.CommandText = "DROP TABLE IF EXISTS toimintaalue";
             cmd.ExecuteNonQuery();

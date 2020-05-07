@@ -1,6 +1,6 @@
 ﻿namespace VillageNewbies
 {   
-    class Cabin
+    public class Cabin
     {        
         public int mokki_id { get; set; }
         public int toimintaalue_id { get; set; }

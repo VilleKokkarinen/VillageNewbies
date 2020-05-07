@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VillageNewbies
 {
-    class ReservationService
+    public class ReservationService
     {
         /* "varaus_id INT(11)  NOT NULL," +
               "palvelu_id INT(11)  NOT NULL," +

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VillageNewbies
 {
-    class Mail
+    public class Mail
     {
         /*
          "postinro CHAR(5) NOT NULL," +
