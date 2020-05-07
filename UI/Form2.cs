@@ -23,6 +23,8 @@ namespace VillageNewbies.UI
 
         private SQLiteConnection connection;
         private SQLiteCommand cmd;
+        SQLiteDataAdapter adapt;
+        DataTable dt;
 
         private BindingList<Cabin> Mokit;
         private BindingList<Cabin> NakyvatMokit;
@@ -429,6 +431,23 @@ namespace VillageNewbies.UI
                     NakyvatMokit.Add(c);
                 }
             }
+        }
+
+        private void textBox_HaeSukunimella_TextChanged(object sender, EventArgs e)
+        {
+            SetConnection();
+            connection.Open();
+            adapt = new SQLiteDataAdapter("SELECT * FROM asiakas WHERE sukunimi like '" + textBox_HaeSukunimella.Text + "%'", connection);
+            dt = new DataTable();
+            adapt.Fill(dt);
+            dataGridView1.DataSource = dt;
+            connection.Close();
+        }
+
+        private void Btn_Tyhjenna_Click(object sender, EventArgs e)
+        {
+            clear_txt_boxes();
+            dataGridView1.ClearSelection();
         }
     }
 }
