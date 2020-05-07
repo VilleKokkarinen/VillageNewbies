@@ -90,7 +90,7 @@
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.checklist_Loan_Cabins);
             this.panel1.Location = new System.Drawing.Point(239, 11);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1056, 632);
             this.panel1.TabIndex = 0;
@@ -110,7 +110,7 @@
             // textBox_HaeSukunimella
             // 
             this.textBox_HaeSukunimella.Location = new System.Drawing.Point(928, 337);
-            this.textBox_HaeSukunimella.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_HaeSukunimella.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_HaeSukunimella.Name = "textBox_HaeSukunimella";
             this.textBox_HaeSukunimella.Size = new System.Drawing.Size(92, 20);
             this.textBox_HaeSukunimella.TabIndex = 54;
@@ -309,7 +309,7 @@
             // dateTimePicker_Tulo
             // 
             this.dateTimePicker_Tulo.Location = new System.Drawing.Point(75, 24);
-            this.dateTimePicker_Tulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePicker_Tulo.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker_Tulo.Name = "dateTimePicker_Tulo";
             this.dateTimePicker_Tulo.Size = new System.Drawing.Size(151, 20);
             this.dateTimePicker_Tulo.TabIndex = 3;
@@ -317,7 +317,7 @@
             // dateTimePicker_Lahto
             // 
             this.dateTimePicker_Lahto.Location = new System.Drawing.Point(75, 63);
-            this.dateTimePicker_Lahto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePicker_Lahto.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker_Lahto.Name = "dateTimePicker_Lahto";
             this.dateTimePicker_Lahto.Size = new System.Drawing.Size(151, 20);
             this.dateTimePicker_Lahto.TabIndex = 4;
@@ -357,7 +357,7 @@
             "7",
             "8"});
             this.comboBox_HenkMaara.Location = new System.Drawing.Point(82, 97);
-            this.comboBox_HenkMaara.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox_HenkMaara.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox_HenkMaara.Name = "comboBox_HenkMaara";
             this.comboBox_HenkMaara.Size = new System.Drawing.Size(92, 21);
             this.comboBox_HenkMaara.TabIndex = 7;
@@ -378,7 +378,7 @@
             // 
             this.Clb_Palvelut.FormattingEnabled = true;
             this.Clb_Palvelut.Location = new System.Drawing.Point(9, 149);
-            this.Clb_Palvelut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Clb_Palvelut.Margin = new System.Windows.Forms.Padding(2);
             this.Clb_Palvelut.Name = "Clb_Palvelut";
             this.Clb_Palvelut.Size = new System.Drawing.Size(227, 64);
             this.Clb_Palvelut.TabIndex = 9;
@@ -510,7 +510,7 @@
             // 
             this.Btn_Varaa.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Varaa.Location = new System.Drawing.Point(46, 600);
-            this.Btn_Varaa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btn_Varaa.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Varaa.Name = "Btn_Varaa";
             this.Btn_Varaa.Size = new System.Drawing.Size(102, 41);
             this.Btn_Varaa.TabIndex = 25;
@@ -532,7 +532,7 @@
             // txtHinta
             // 
             this.txtHinta.Location = new System.Drawing.Point(111, 540);
-            this.txtHinta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtHinta.Margin = new System.Windows.Forms.Padding(2);
             this.txtHinta.Name = "txtHinta";
             this.txtHinta.Size = new System.Drawing.Size(76, 20);
             this.txtHinta.TabIndex = 27;
@@ -540,7 +540,7 @@
             // Btn_Tyhjenna
             // 
             this.Btn_Tyhjenna.Location = new System.Drawing.Point(14, 236);
-            this.Btn_Tyhjenna.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btn_Tyhjenna.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Tyhjenna.Name = "Btn_Tyhjenna";
             this.Btn_Tyhjenna.Size = new System.Drawing.Size(70, 47);
             this.Btn_Tyhjenna.TabIndex = 28;
@@ -580,7 +580,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dateTimePicker_Tulo);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Varaus";
             this.Text = "Varaus";
             this.Load += new System.EventHandler(this.Varaus_Load);

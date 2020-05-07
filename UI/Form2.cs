@@ -137,6 +137,9 @@ namespace VillageNewbies.UI
         {
             if (checklist_Loan_Cabins.SelectedItem != null)
             {
+                dateTimePicker_Lahto = new DateTimePicker();
+                dateTimePicker_Tulo = new DateTimePicker();
+
                 txt_Cabin_MaxResidents.Text = ((Cabin)checklist_Loan_Cabins.SelectedItem).henkilomaara.ToString();
                 txt_Cabin_Details.Text = ((Cabin)checklist_Loan_Cabins.SelectedItem).kuvaus;
                 txt_Cabin_Price.Text = ((Cabin)checklist_Loan_Cabins.SelectedItem).hinta.ToString();
