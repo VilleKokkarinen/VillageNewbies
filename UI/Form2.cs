@@ -140,30 +140,85 @@ namespace VillageNewbies.UI
                 txt_Cabin_Price.Text = ((Cabin)checklist_Loan_Cabins.SelectedItem).hinta.ToString();
                 txt_Cabin_State.Text = ((Cabin)checklist_Loan_Cabins.SelectedItem).varattu == true ? "varattu" : "avoin";
 
-
-                List<DateTime> lista = new List<DateTime>();
-
-                //PVM blokkaus
-                List<DataRow> paivat = new SQL().SQLiteQuery_DataRowList(
-                "SELECT varattu_alkupvm, varattu_loppupvm FROM varaus WHERE varaus.mokki_id = " + ((Cabin)checklist_Loan_Cabins.SelectedItem).mokki_id
-                + " AND varaus.varattu_loppupvm > strftime('%s', 'now')");
-
-
-                foreach (DataRow i in paivat)
+                if(((Cabin)checklist_Loan_Cabins.SelectedItem).varattu == false)
                 {
-                    lista.Add(UnixTimeStampToDateTime(Convert.ToDouble(i[0].ToString())));
+                    List<DateTime> lista = new List<DateTime>();
+
+                    //PVM blokkaus
+                    List<DataRow> paivat = new SQL().SQLiteQuery_DataRowList(
+                    "SELECT varattu_alkupvm, varattu_loppupvm FROM varaus WHERE varaus.mokki_id = " + ((Cabin)checklist_Loan_Cabins.SelectedItem).mokki_id
+                    + " AND varaus.varattu_loppupvm > strftime('%s', 'now')");
+
+
+                    foreach (DataRow i in paivat)
+                    {
+                        lista.Add(UnixTimeStampToDateTime(Convert.ToDouble(i[0].ToString())));
+                    }
+
+                    if (lista.Count != 0)
+                    {
+                        dateTimePicker_Lahto.MaxDate = lista.Min().Subtract(new TimeSpan(24, 0, 0));
+                        dateTimePicker_Tulo.MaxDate = dateTimePicker_Lahto.MaxDate;
+                        dateTimePicker_Tulo.MinDate = DateTime.Now;
+                        dateTimePicker_Lahto.MinDate = DateTime.Now.AddDays(1);
+                        lista.Clear();
+                    }
+                    else
+                    {
+                        dateTimePicker_Tulo.MaxDate = DateTime.Now.AddDays(90);
+                        dateTimePicker_Tulo.MinDate = DateTime.Now;
+
+                        dateTimePicker_Lahto.MaxDate = DateTime.Now.AddDays(91);
+                        dateTimePicker_Lahto.MinDate = DateTime.Now.AddDays(1);
+                        
+                    }
                 }
-
-                if (lista.Count != 0)
+                else
                 {
-                    dateTimePicker_Lahto.MaxDate = lista.Min();
-                    dateTimePicker_Tulo.MaxDate = dateTimePicker_Lahto.MaxDate;
-                    dateTimePicker_Tulo.MinDate = DateTime.Now;
-                    dateTimePicker_Lahto.MinDate = DateTime.Now;
-                    lista.Clear();
+                    List<DateTime> lista = new List<DateTime>();
+
+                    //PVM blokkaus
+                    List<DataRow> paivat = new SQL().SQLiteQuery_DataRowList(
+                    "SELECT varattu_loppupvm FROM varaus WHERE varaus.mokki_id = " + ((Cabin)checklist_Loan_Cabins.SelectedItem).mokki_id
+                    + " AND varaus.varattu_loppupvm > strftime('%s', 'now') AND varaus.varattu_alkupvm < strftime('%s', 'now')");
+
+                    List<DateTime> lista2 = new List<DateTime>();
+                    List<DateTime> lista3 = new List<DateTime>();
+
+                    //PVM blokkaus
+                    List<DataRow> paivat2 = new SQL().SQLiteQuery_DataRowList(
+                    "SELECT varattu_loppupvm, varattu_alkupvm FROM varaus WHERE varaus.mokki_id = " + ((Cabin)checklist_Loan_Cabins.SelectedItem).mokki_id
+                    + " AND varaus.varattu_loppupvm > strftime('%s', 'now') AND varaus.varattu_alkupvm > strftime('%s', 'now')");
+
+                    foreach (DataRow i in paivat)
+                    {
+                        lista.Add(UnixTimeStampToDateTime(Convert.ToDouble(i[0].ToString())));
+                    }
+
+                    foreach (DataRow i in paivat2)
+                    {
+                        lista2.Add(UnixTimeStampToDateTime(Convert.ToDouble(i[0].ToString())));
+                        lista3.Add(UnixTimeStampToDateTime(Convert.ToDouble(i[1].ToString())));
+                    }
+
+                    if (lista2.Count != 0)
+                    {
+                        dateTimePicker_Lahto.MaxDate = lista3.Min().Subtract(new TimeSpan(24, 0, 0));
+                        dateTimePicker_Tulo.MaxDate = dateTimePicker_Lahto.MaxDate;
+                        dateTimePicker_Tulo.MinDate = DateTime.Now;
+                        dateTimePicker_Lahto.MinDate = DateTime.Now.AddDays(1);
+                        lista2.Clear();
+                    }
+
+                    if (lista.Count != 0)
+                    {
+                        dateTimePicker_Tulo.MinDate = lista.Max().AddDays(1);
+                        dateTimePicker_Lahto.MinDate = dateTimePicker_Tulo.MinDate.AddDays(1);
+                        lista.Clear();
+                    }
+                   
                 }
             }
-
         }
 
         private void checklist_Loan_Cabins_ItemCheck(object sender, ItemCheckEventArgs e)
@@ -337,14 +392,18 @@ namespace VillageNewbies.UI
 
         private void Btn_Varaa_Click(object sender, EventArgs e)
         {
-            string textquery = $"INSERT INTO varaus(asiakas_id,mokki_id,varattu_pvm,vahvistus_pvm,varattu_alkupvm,varattu_loppupvm)values(" +
-                 $"{txtboxAsiakas_id.Text}, {((Cabin)checklist_Loan_Cabins.SelectedItem).mokki_id}, strftime('%s', 'now'), strftime('%s', 'now'), {ConvertToUnixTime(dateTimePicker_Tulo.Value)}, {ConvertToUnixTime(dateTimePicker_Lahto.Value)})";
+            if(dataGridView1.SelectedRows.Count != 0)
+            {
+                string textquery = $"INSERT INTO varaus(asiakas_id,mokki_id,varattu_pvm,vahvistus_pvm,varattu_alkupvm,varattu_loppupvm)values(" +
+                $"{txtboxAsiakas_id.Text}, {((Cabin)checklist_Loan_Cabins.SelectedItem).mokki_id}, strftime('%s', 'now'), strftime('%s', 'now'), {ConvertToUnixTime(dateTimePicker_Tulo.Value)}, {ConvertToUnixTime(dateTimePicker_Lahto.Value)})";
 
 
-            ExecuteQuery(textquery);
-            MessageBox.Show("Lisäys onnistui");
-            Lasku lasku = new Lasku();
-            lasku.Show();
+                ExecuteQuery(textquery);
+                MessageBox.Show("Lisäys onnistui");
+                Lasku lasku = new Lasku();
+                lasku.Show();
+            }
+           
         }
 
         private void comboBox_HenkMaara_SelectedIndexChanged(object sender, EventArgs e)
