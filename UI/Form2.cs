@@ -144,7 +144,7 @@ namespace VillageNewbies.UI
                 txt_Cabin_Details.Text = ((Cabin)checklist_Loan_Cabins.SelectedItem).kuvaus;
                 txt_Cabin_Price.Text = ((Cabin)checklist_Loan_Cabins.SelectedItem).hinta.ToString();
                 txt_Cabin_State.Text = ((Cabin)checklist_Loan_Cabins.SelectedItem).varattu == true ? "varattu" : "avoin";
-
+                /*
                 if(((Cabin)checklist_Loan_Cabins.SelectedItem).varattu == false)
                 {
                     List<DateTime> lista = new List<DateTime>();
@@ -223,6 +223,7 @@ namespace VillageNewbies.UI
                     }
                    
                 }
+                */
             }
         }
 
@@ -406,7 +407,10 @@ namespace VillageNewbies.UI
                 cmd = connection.CreateCommand();
                 cmd.CommandText = textquery;
                 cmd.ExecuteNonQuery();
-              
+
+
+                // tässä pitäisi hakea tuo SELECT last_insert_rowid() kannasta ennen kuin sulkee yhteyden...
+                
                 MessageBox.Show("Lisäys onnistui");
 
                 Lasku lasku = new Lasku(
@@ -414,7 +418,7 @@ namespace VillageNewbies.UI
                     ((Cabin)checklist_Loan_Cabins.SelectedItem),
                     new Reservation(Convert.ToInt32(new SQL().SQLiteQuery_single("SELECT last_insert_rowid()")), Convert.ToInt32(txtboxAsiakas_id.Text), ((Cabin)checklist_Loan_Cabins.SelectedItem).mokki_id, Convert.ToInt32(ConvertToUnixTime(DateTime.Now)), Convert.ToInt32(ConvertToUnixTime(DateTime.Now)), Convert.ToInt32(ConvertToUnixTime(dateTimePicker_Tulo.Value)), Convert.ToInt32(ConvertToUnixTime(dateTimePicker_Lahto.Value))),
                     new Invoice(0, Convert.ToInt32(new SQL().SQLiteQuery_single("SELECT last_insert_rowid()")), Convert.ToDouble(txtHinta.Text), 24)
-                    ); ;
+                    );
                 lasku.Show();
 
                 connection.Close();
