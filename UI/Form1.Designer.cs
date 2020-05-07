@@ -51,25 +51,28 @@
             this.Left_panel.Controls.Add(this.Btn_Varaukset);
             this.Left_panel.Controls.Add(this.Btn_Hallinta);
             this.Left_panel.Controls.Add(this.Btn_Varaus);
-            this.Left_panel.Location = new System.Drawing.Point(1, 125);
+            this.Left_panel.Location = new System.Drawing.Point(1, 102);
+            this.Left_panel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Left_panel.Name = "Left_panel";
-            this.Left_panel.Size = new System.Drawing.Size(189, 429);
+            this.Left_panel.Size = new System.Drawing.Size(142, 349);
             this.Left_panel.TabIndex = 0;
             // 
             // Btn4
             // 
-            this.Btn4.Location = new System.Drawing.Point(29, 233);
+            this.Btn4.Location = new System.Drawing.Point(22, 189);
+            this.Btn4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Btn4.Name = "Btn4";
-            this.Btn4.Size = new System.Drawing.Size(95, 49);
+            this.Btn4.Size = new System.Drawing.Size(71, 40);
             this.Btn4.TabIndex = 3;
             this.Btn4.Text = "Laskutus";
             this.Btn4.UseVisualStyleBackColor = true;
             // 
             // Btn_Varaukset
             // 
-            this.Btn_Varaukset.Location = new System.Drawing.Point(29, 166);
+            this.Btn_Varaukset.Location = new System.Drawing.Point(22, 135);
+            this.Btn_Varaukset.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Btn_Varaukset.Name = "Btn_Varaukset";
-            this.Btn_Varaukset.Size = new System.Drawing.Size(95, 49);
+            this.Btn_Varaukset.Size = new System.Drawing.Size(71, 40);
             this.Btn_Varaukset.TabIndex = 2;
             this.Btn_Varaukset.Text = "Varaukset";
             this.Btn_Varaukset.UseVisualStyleBackColor = true;
@@ -77,9 +80,10 @@
             // 
             // Btn_Hallinta
             // 
-            this.Btn_Hallinta.Location = new System.Drawing.Point(29, 102);
+            this.Btn_Hallinta.Location = new System.Drawing.Point(22, 83);
+            this.Btn_Hallinta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Btn_Hallinta.Name = "Btn_Hallinta";
-            this.Btn_Hallinta.Size = new System.Drawing.Size(95, 36);
+            this.Btn_Hallinta.Size = new System.Drawing.Size(71, 29);
             this.Btn_Hallinta.TabIndex = 1;
             this.Btn_Hallinta.Text = "Hallinta";
             this.Btn_Hallinta.UseVisualStyleBackColor = true;
@@ -87,9 +91,10 @@
             // 
             // Btn_Varaus
             // 
-            this.Btn_Varaus.Location = new System.Drawing.Point(29, 38);
+            this.Btn_Varaus.Location = new System.Drawing.Point(22, 31);
+            this.Btn_Varaus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Btn_Varaus.Name = "Btn_Varaus";
-            this.Btn_Varaus.Size = new System.Drawing.Size(95, 34);
+            this.Btn_Varaus.Size = new System.Drawing.Size(71, 28);
             this.Btn_Varaus.TabIndex = 0;
             this.Btn_Varaus.Text = "Uusi varaus";
             this.Btn_Varaus.UseVisualStyleBackColor = true;
@@ -99,17 +104,19 @@
             // 
             this.Central_Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.Central_Panel.Controls.Add(this.PicBox1);
-            this.Central_Panel.Location = new System.Drawing.Point(184, 125);
+            this.Central_Panel.Location = new System.Drawing.Point(138, 102);
+            this.Central_Panel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Central_Panel.Name = "Central_Panel";
-            this.Central_Panel.Size = new System.Drawing.Size(883, 429);
+            this.Central_Panel.Size = new System.Drawing.Size(662, 349);
             this.Central_Panel.TabIndex = 1;
             // 
             // PicBox1
             // 
             this.PicBox1.Image = global::VillageNewbies.Properties.Resources.mokki2;
-            this.PicBox1.Location = new System.Drawing.Point(0, 3);
+            this.PicBox1.Location = new System.Drawing.Point(0, 2);
+            this.PicBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PicBox1.Name = "PicBox1";
-            this.PicBox1.Size = new System.Drawing.Size(880, 423);
+            this.PicBox1.Size = new System.Drawing.Size(660, 344);
             this.PicBox1.TabIndex = 0;
             this.PicBox1.TabStop = false;
             // 
@@ -118,28 +125,29 @@
             this.Top_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.Top_panel.Controls.Add(this.pictureBox1);
             this.Top_panel.Location = new System.Drawing.Point(1, 1);
+            this.Top_panel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Top_panel.Name = "Top_panel";
-            this.Top_panel.Size = new System.Drawing.Size(1066, 125);
+            this.Top_panel.Size = new System.Drawing.Size(800, 102);
             this.Top_panel.TabIndex = 2;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::VillageNewbies.Properties.Resources.teksti;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(2, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1060, 125);
+            this.pictureBox1.Size = new System.Drawing.Size(795, 102);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.Top_panel);
             this.Controls.Add(this.Central_Panel);
             this.Controls.Add(this.Left_panel);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Left_panel.ResumeLayout(false);
             this.Central_Panel.ResumeLayout(false);

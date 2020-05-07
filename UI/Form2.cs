@@ -297,12 +297,20 @@ namespace VillageNewbies.UI
 
         private void ExecuteQuery(string textquery)
         {
-            SetConnection();
-            connection.Open();
-            cmd = connection.CreateCommand();
-            cmd.CommandText = textquery;
-            cmd.ExecuteNonQuery();
-            connection.Close();
+            try
+            {
+                SetConnection();
+                connection.Open();
+                cmd = connection.CreateCommand();
+                cmd.CommandText = textquery;
+                cmd.ExecuteNonQuery();
+                connection.Close();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Tapahtui virhe!");
+                //throw;
+            }
         }
 
 
@@ -322,8 +330,8 @@ namespace VillageNewbies.UI
                 }
                 catch (Exception)
                 {
-
-                    throw;
+                    MessageBox.Show("Tapahtui virhe!");
+                    //throw;
                 }
 
             }
@@ -340,8 +348,8 @@ namespace VillageNewbies.UI
                 }
                 catch (Exception)
                 {
-
-                    throw;
+                    MessageBox.Show("Tapahtui virhe!");
+                    //throw;
                 }
 
             }

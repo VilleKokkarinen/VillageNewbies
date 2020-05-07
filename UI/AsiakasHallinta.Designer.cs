@@ -60,150 +60,158 @@
             // label_ID
             // 
             this.label_ID.AutoSize = true;
-            this.label_ID.Location = new System.Drawing.Point(15, 97);
+            this.label_ID.Location = new System.Drawing.Point(11, 79);
+            this.label_ID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_ID.Name = "label_ID";
-            this.label_ID.Size = new System.Drawing.Size(21, 17);
+            this.label_ID.Size = new System.Drawing.Size(18, 13);
             this.label_ID.TabIndex = 0;
             this.label_ID.Text = "ID";
             // 
             // textBox_ID
             // 
-            this.textBox_ID.Location = new System.Drawing.Point(91, 94);
-            this.textBox_ID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_ID.Location = new System.Drawing.Point(68, 76);
+            this.textBox_ID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_ID.Name = "textBox_ID";
-            this.textBox_ID.Size = new System.Drawing.Size(100, 22);
+            this.textBox_ID.Size = new System.Drawing.Size(76, 20);
             this.textBox_ID.TabIndex = 1;
             this.textBox_ID.TextChanged += new System.EventHandler(this.textBox_ID_TextChanged);
+            this.textBox_ID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_ID_KeyPress);
             // 
             // label_Etunimi
             // 
             this.label_Etunimi.AutoSize = true;
-            this.label_Etunimi.Location = new System.Drawing.Point(237, 97);
+            this.label_Etunimi.Location = new System.Drawing.Point(178, 79);
+            this.label_Etunimi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Etunimi.Name = "label_Etunimi";
-            this.label_Etunimi.Size = new System.Drawing.Size(54, 17);
+            this.label_Etunimi.Size = new System.Drawing.Size(41, 13);
             this.label_Etunimi.TabIndex = 0;
             this.label_Etunimi.Text = "Etunimi";
             // 
             // textBox_Etunimi
             // 
-            this.textBox_Etunimi.Location = new System.Drawing.Point(311, 94);
-            this.textBox_Etunimi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_Etunimi.Location = new System.Drawing.Point(233, 76);
+            this.textBox_Etunimi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_Etunimi.Name = "textBox_Etunimi";
-            this.textBox_Etunimi.Size = new System.Drawing.Size(100, 22);
+            this.textBox_Etunimi.Size = new System.Drawing.Size(76, 20);
             this.textBox_Etunimi.TabIndex = 2;
             this.textBox_Etunimi.TextChanged += new System.EventHandler(this.textBox_Etunimi_TextChanged);
             // 
             // label_Sukunimi
             // 
             this.label_Sukunimi.AutoSize = true;
-            this.label_Sukunimi.Location = new System.Drawing.Point(439, 97);
+            this.label_Sukunimi.Location = new System.Drawing.Point(329, 79);
+            this.label_Sukunimi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Sukunimi.Name = "label_Sukunimi";
-            this.label_Sukunimi.Size = new System.Drawing.Size(65, 17);
+            this.label_Sukunimi.Size = new System.Drawing.Size(50, 13);
             this.label_Sukunimi.TabIndex = 0;
             this.label_Sukunimi.Text = "Sukunimi";
             // 
             // textBox_Sukunimi
             // 
-            this.textBox_Sukunimi.Location = new System.Drawing.Point(572, 94);
-            this.textBox_Sukunimi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_Sukunimi.Location = new System.Drawing.Point(429, 76);
+            this.textBox_Sukunimi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_Sukunimi.Name = "textBox_Sukunimi";
-            this.textBox_Sukunimi.Size = new System.Drawing.Size(100, 22);
+            this.textBox_Sukunimi.Size = new System.Drawing.Size(76, 20);
             this.textBox_Sukunimi.TabIndex = 3;
             this.textBox_Sukunimi.TextChanged += new System.EventHandler(this.textBox_Sukunimi_TextChanged);
             // 
             // label_Email
             // 
             this.label_Email.AutoSize = true;
-            this.label_Email.Location = new System.Drawing.Point(237, 175);
+            this.label_Email.Location = new System.Drawing.Point(178, 142);
+            this.label_Email.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Email.Name = "label_Email";
-            this.label_Email.Size = new System.Drawing.Size(42, 17);
+            this.label_Email.Size = new System.Drawing.Size(32, 13);
             this.label_Email.TabIndex = 0;
             this.label_Email.Text = "Email";
             // 
             // textBox_Email
             // 
-            this.textBox_Email.Location = new System.Drawing.Point(311, 175);
-            this.textBox_Email.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_Email.Location = new System.Drawing.Point(233, 142);
+            this.textBox_Email.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_Email.Name = "textBox_Email";
-            this.textBox_Email.Size = new System.Drawing.Size(100, 22);
+            this.textBox_Email.Size = new System.Drawing.Size(76, 20);
             this.textBox_Email.TabIndex = 8;
             this.textBox_Email.TextChanged += new System.EventHandler(this.textBox_Email_TextChanged);
             // 
             // label_PuhNro
             // 
             this.label_PuhNro.AutoSize = true;
-            this.label_PuhNro.Location = new System.Drawing.Point(15, 178);
+            this.label_PuhNro.Location = new System.Drawing.Point(11, 145);
+            this.label_PuhNro.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_PuhNro.Name = "label_PuhNro";
-            this.label_PuhNro.Size = new System.Drawing.Size(37, 17);
+            this.label_PuhNro.Size = new System.Drawing.Size(29, 13);
             this.label_PuhNro.TabIndex = 0;
             this.label_PuhNro.Text = "Puh.";
             // 
             // textBox_Puhnro
             // 
-            this.textBox_Puhnro.Location = new System.Drawing.Point(91, 175);
-            this.textBox_Puhnro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_Puhnro.Location = new System.Drawing.Point(68, 142);
+            this.textBox_Puhnro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_Puhnro.Name = "textBox_Puhnro";
-            this.textBox_Puhnro.Size = new System.Drawing.Size(100, 22);
+            this.textBox_Puhnro.Size = new System.Drawing.Size(76, 20);
             this.textBox_Puhnro.TabIndex = 7;
             this.textBox_Puhnro.TextChanged += new System.EventHandler(this.textBox_Puhnro_TextChanged);
             // 
             // label_Osoite
             // 
             this.label_Osoite.AutoSize = true;
-            this.label_Osoite.Location = new System.Drawing.Point(13, 141);
+            this.label_Osoite.Location = new System.Drawing.Point(10, 115);
+            this.label_Osoite.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Osoite.Name = "label_Osoite";
-            this.label_Osoite.Size = new System.Drawing.Size(49, 17);
+            this.label_Osoite.Size = new System.Drawing.Size(37, 13);
             this.label_Osoite.TabIndex = 0;
             this.label_Osoite.Text = "Osoite";
             // 
             // textBox_Osoite
             // 
-            this.textBox_Osoite.Location = new System.Drawing.Point(91, 139);
-            this.textBox_Osoite.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_Osoite.Location = new System.Drawing.Point(68, 113);
+            this.textBox_Osoite.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_Osoite.Name = "textBox_Osoite";
-            this.textBox_Osoite.Size = new System.Drawing.Size(100, 22);
+            this.textBox_Osoite.Size = new System.Drawing.Size(76, 20);
             this.textBox_Osoite.TabIndex = 4;
             this.textBox_Osoite.TextChanged += new System.EventHandler(this.textBox_Osoite_TextChanged);
             // 
             // dataGridView_Asiakkaat
             // 
             this.dataGridView_Asiakkaat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_Asiakkaat.Location = new System.Drawing.Point(16, 229);
-            this.dataGridView_Asiakkaat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView_Asiakkaat.Location = new System.Drawing.Point(12, 186);
+            this.dataGridView_Asiakkaat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView_Asiakkaat.Name = "dataGridView_Asiakkaat";
             this.dataGridView_Asiakkaat.ReadOnly = true;
             this.dataGridView_Asiakkaat.RowHeadersVisible = false;
             this.dataGridView_Asiakkaat.RowHeadersWidth = 51;
             this.dataGridView_Asiakkaat.RowTemplate.Height = 24;
             this.dataGridView_Asiakkaat.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView_Asiakkaat.Size = new System.Drawing.Size(1107, 294);
+            this.dataGridView_Asiakkaat.Size = new System.Drawing.Size(830, 239);
             this.dataGridView_Asiakkaat.TabIndex = 10;
             this.dataGridView_Asiakkaat.SelectionChanged += new System.EventHandler(this.dataGridView_Asiakkaat_SelectionChanged);
             // 
             // label_PostNro
             // 
             this.label_PostNro.AutoSize = true;
-            this.label_PostNro.Location = new System.Drawing.Point(218, 139);
+            this.label_PostNro.Location = new System.Drawing.Point(164, 113);
+            this.label_PostNro.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_PostNro.Name = "label_PostNro";
-            this.label_PostNro.Size = new System.Drawing.Size(87, 17);
+            this.label_PostNro.Size = new System.Drawing.Size(65, 13);
             this.label_PostNro.TabIndex = 0;
             this.label_PostNro.Text = "Postinumero";
             // 
             // textBox_Postinro
             // 
-            this.textBox_Postinro.Location = new System.Drawing.Point(311, 136);
-            this.textBox_Postinro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_Postinro.Location = new System.Drawing.Point(233, 110);
+            this.textBox_Postinro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_Postinro.Name = "textBox_Postinro";
-            this.textBox_Postinro.Size = new System.Drawing.Size(100, 22);
+            this.textBox_Postinro.Size = new System.Drawing.Size(76, 20);
             this.textBox_Postinro.TabIndex = 5;
             this.textBox_Postinro.TextChanged += new System.EventHandler(this.textBox_Postinro_TextChanged);
             // 
             // btn_lisaa
             // 
-            this.btn_lisaa.Location = new System.Drawing.Point(211, 551);
-            this.btn_lisaa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_lisaa.Location = new System.Drawing.Point(158, 448);
+            this.btn_lisaa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_lisaa.Name = "btn_lisaa";
-            this.btn_lisaa.Size = new System.Drawing.Size(112, 23);
+            this.btn_lisaa.Size = new System.Drawing.Size(84, 19);
             this.btn_lisaa.TabIndex = 11;
             this.btn_lisaa.Text = "Lisää";
             this.btn_lisaa.UseVisualStyleBackColor = true;
@@ -211,10 +219,10 @@
             // 
             // btn_muokkaa
             // 
-            this.btn_muokkaa.Location = new System.Drawing.Point(349, 551);
-            this.btn_muokkaa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_muokkaa.Location = new System.Drawing.Point(262, 448);
+            this.btn_muokkaa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_muokkaa.Name = "btn_muokkaa";
-            this.btn_muokkaa.Size = new System.Drawing.Size(100, 23);
+            this.btn_muokkaa.Size = new System.Drawing.Size(75, 19);
             this.btn_muokkaa.TabIndex = 12;
             this.btn_muokkaa.Text = "Muokkaa";
             this.btn_muokkaa.UseVisualStyleBackColor = true;
@@ -222,10 +230,10 @@
             // 
             // btn_poista
             // 
-            this.btn_poista.Location = new System.Drawing.Point(483, 551);
-            this.btn_poista.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_poista.Location = new System.Drawing.Point(362, 448);
+            this.btn_poista.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_poista.Name = "btn_poista";
-            this.btn_poista.Size = new System.Drawing.Size(101, 23);
+            this.btn_poista.Size = new System.Drawing.Size(76, 19);
             this.btn_poista.TabIndex = 13;
             this.btn_poista.Text = "Poista";
             this.btn_poista.UseVisualStyleBackColor = true;
@@ -234,19 +242,17 @@
             // label_PostiPaikka
             // 
             this.label_PostiPaikka.AutoSize = true;
-            this.label_PostiPaikka.Location = new System.Drawing.Point(439, 142);
-            this.label_PostiPaikka.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_PostiPaikka.Location = new System.Drawing.Point(329, 115);
             this.label_PostiPaikka.Name = "label_PostiPaikka";
-            this.label_PostiPaikka.Size = new System.Drawing.Size(109, 17);
+            this.label_PostiPaikka.Size = new System.Drawing.Size(83, 13);
             this.label_PostiPaikka.TabIndex = 4;
             this.label_PostiPaikka.Text = "Postitoimipaikka";
             // 
             // textBox_Postitoimipaikka
             // 
-            this.textBox_Postitoimipaikka.Location = new System.Drawing.Point(572, 142);
-            this.textBox_Postitoimipaikka.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_Postitoimipaikka.Location = new System.Drawing.Point(429, 115);
             this.textBox_Postitoimipaikka.Name = "textBox_Postitoimipaikka";
-            this.textBox_Postitoimipaikka.Size = new System.Drawing.Size(100, 22);
+            this.textBox_Postitoimipaikka.Size = new System.Drawing.Size(76, 20);
             this.textBox_Postitoimipaikka.TabIndex = 6;
             this.textBox_Postitoimipaikka.TextChanged += new System.EventHandler(this.textBox_Postitoimipaikka_TextChanged);
             // 
@@ -254,37 +260,35 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(343, 11);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(257, 9);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(246, 39);
+            this.label9.Size = new System.Drawing.Size(196, 31);
             this.label9.TabIndex = 6;
             this.label9.Text = "Asiakashallinta";
             // 
             // textBox_Search
             // 
-            this.textBox_Search.Location = new System.Drawing.Point(859, 175);
-            this.textBox_Search.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_Search.Location = new System.Drawing.Point(644, 142);
             this.textBox_Search.Name = "textBox_Search";
-            this.textBox_Search.Size = new System.Drawing.Size(205, 22);
+            this.textBox_Search.Size = new System.Drawing.Size(155, 20);
             this.textBox_Search.TabIndex = 9;
             this.textBox_Search.TextChanged += new System.EventHandler(this.textBox_Search_TextChanged);
             // 
             // label_EtsiSukunimellä
             // 
             this.label_EtsiSukunimellä.AutoSize = true;
-            this.label_EtsiSukunimellä.Location = new System.Drawing.Point(911, 135);
-            this.label_EtsiSukunimellä.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_EtsiSukunimellä.Location = new System.Drawing.Point(683, 110);
             this.label_EtsiSukunimellä.Name = "label_EtsiSukunimellä";
-            this.label_EtsiSukunimellä.Size = new System.Drawing.Size(109, 17);
+            this.label_EtsiSukunimellä.Size = new System.Drawing.Size(82, 13);
             this.label_EtsiSukunimellä.TabIndex = 8;
             this.label_EtsiSukunimellä.Text = "Etsi sukunimellä";
             // 
             // Btn_Tyhjenna
             // 
-            this.Btn_Tyhjenna.Location = new System.Drawing.Point(706, 100);
+            this.Btn_Tyhjenna.Location = new System.Drawing.Point(530, 81);
+            this.Btn_Tyhjenna.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Btn_Tyhjenna.Name = "Btn_Tyhjenna";
-            this.Btn_Tyhjenna.Size = new System.Drawing.Size(103, 58);
+            this.Btn_Tyhjenna.Size = new System.Drawing.Size(77, 47);
             this.Btn_Tyhjenna.TabIndex = 10;
             this.Btn_Tyhjenna.Text = "Tyhjennä tekstikentät";
             this.Btn_Tyhjenna.UseVisualStyleBackColor = true;
@@ -293,25 +297,28 @@
             // label_EtsiPostiNro
             // 
             this.label_EtsiPostiNro.AutoSize = true;
-            this.label_EtsiPostiNro.Location = new System.Drawing.Point(914, 32);
+            this.label_EtsiPostiNro.Location = new System.Drawing.Point(686, 26);
+            this.label_EtsiPostiNro.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_EtsiPostiNro.Name = "label_EtsiPostiNro";
-            this.label_EtsiPostiNro.Size = new System.Drawing.Size(127, 17);
+            this.label_EtsiPostiNro.Size = new System.Drawing.Size(94, 13);
             this.label_EtsiPostiNro.TabIndex = 14;
             this.label_EtsiPostiNro.Text = "Etsi postinumerolla";
             // 
             // textBox_EtsiPostiNro
             // 
-            this.textBox_EtsiPostiNro.Location = new System.Drawing.Point(932, 65);
+            this.textBox_EtsiPostiNro.Location = new System.Drawing.Point(699, 53);
+            this.textBox_EtsiPostiNro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_EtsiPostiNro.Name = "textBox_EtsiPostiNro";
-            this.textBox_EtsiPostiNro.Size = new System.Drawing.Size(100, 22);
+            this.textBox_EtsiPostiNro.Size = new System.Drawing.Size(76, 20);
             this.textBox_EtsiPostiNro.TabIndex = 15;
             this.textBox_EtsiPostiNro.TextChanged += new System.EventHandler(this.textBox_EtsiPostiNro_TextChanged);
+            this.textBox_EtsiPostiNro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_EtsiPostiNro_KeyPress);
             // 
             // AsiakasHallinta
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1137, 597);
+            this.ClientSize = new System.Drawing.Size(853, 485);
             this.Controls.Add(this.textBox_EtsiPostiNro);
             this.Controls.Add(this.label_EtsiPostiNro);
             this.Controls.Add(this.Btn_Tyhjenna);
@@ -338,7 +345,7 @@
             this.Controls.Add(this.label_Sukunimi);
             this.Controls.Add(this.label_Etunimi);
             this.Controls.Add(this.label_ID);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "AsiakasHallinta";
             this.Text = "AsiakasHallinta";
             this.Load += new System.EventHandler(this.AsiakasHallinta_Load);
