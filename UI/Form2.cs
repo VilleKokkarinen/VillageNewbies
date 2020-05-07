@@ -407,8 +407,10 @@ namespace VillageNewbies.UI
 
         private void Btn_Varaa_Click(object sender, EventArgs e)
         {
+            int id;
             if(dataGridView1.SelectedRows.Count != 0)
             {
+
                 string textquery = $"INSERT INTO varaus(asiakas_id,mokki_id,varattu_pvm,vahvistus_pvm,varattu_alkupvm,varattu_loppupvm)values(" +
                 $"{txtboxAsiakas_id.Text}, {((Cabin)checklist_Loan_Cabins.SelectedItem).mokki_id}, strftime('%s', 'now'), strftime('%s', 'now'), {ConvertToUnixTime(dateTimePicker_Tulo.Value)}, {ConvertToUnixTime(dateTimePicker_Lahto.Value)})";
 
@@ -417,20 +419,20 @@ namespace VillageNewbies.UI
                 cmd = connection.CreateCommand();
                 cmd.CommandText = textquery;
                 cmd.ExecuteNonQuery();
-                
-                
 
+                cmd.CommandText = "select last_insert_rowid()";
+                cmd.ExecuteNonQuery();
+                System.Object temp = cmd.ExecuteScalar();
+                id = int.Parse(temp.ToString());
 
-                // tässä pitäisi hakea tuo SELECT last_insert_rowid() kannasta ennen kuin sulkee yhteyden...
-                
-                MessageBox.Show("Lisäys onnistui");
-               
                 Lasku lasku = new Lasku(
                     new Client(txtboxEtunimi.Text, txtboxSukunimi.Text, Convert.ToInt32(txtboxAsiakas_id.Text), txtboxlahiosoite.Text, txtboxEmail.Text, txtboxPuhelinnro.Text, txtboxPostinro.Text),
                     ((Cabin)checklist_Loan_Cabins.SelectedItem),
-                    new Reservation(Convert.ToInt32(new SQL().SQLiteQuery_single("SELECT last_insert_rowid()")), Convert.ToInt32(txtboxAsiakas_id.Text), ((Cabin)checklist_Loan_Cabins.SelectedItem).mokki_id, Convert.ToInt32(ConvertToUnixTime(DateTime.Now)), Convert.ToInt32(ConvertToUnixTime(DateTime.Now)), Convert.ToInt32(ConvertToUnixTime(dateTimePicker_Tulo.Value)), Convert.ToInt32(ConvertToUnixTime(dateTimePicker_Lahto.Value))),
-                    new Invoice(0, Convert.ToInt32(new SQL().SQLiteQuery_single("SELECT last_insert_rowid()")), Convert.ToDouble(txtHinta.Text), 24)
+                    new Reservation(id, Convert.ToInt32(txtboxAsiakas_id.Text), ((Cabin)checklist_Loan_Cabins.SelectedItem).mokki_id, Convert.ToInt32(ConvertToUnixTime(DateTime.Now)), Convert.ToInt32(ConvertToUnixTime(DateTime.Now)), Convert.ToInt32(ConvertToUnixTime(dateTimePicker_Tulo.Value)), Convert.ToInt32(ConvertToUnixTime(dateTimePicker_Lahto.Value))),
+                    new Invoice(0, id, Convert.ToDouble(txtHinta.Text), 24)
                     );
+
+                MessageBox.Show("Lisäys onnistui");
                 lasku.Show();
 
                 connection.Close();
