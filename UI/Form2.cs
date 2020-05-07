@@ -252,7 +252,7 @@ namespace VillageNewbies.UI
 
         private void txt_Cabin_Search_Name_TextChanged(object sender, EventArgs e)
         {
-            checklist_Loan_Cabins.Items.Clear();
+            NakyvatMokit.Clear();
             SQL s = new SQL();
             string query = "SELECT * FROM mokki";
 
@@ -275,10 +275,9 @@ namespace VillageNewbies.UI
                    i[8].ToString(),
                    Convert.ToInt32(i[7].ToString())
                    );
-
-                checklist_Loan_Cabins.Items.Add(c);
-                checklist_Loan_Cabins.DisplayMember = "DISPLAYNAME";
+                NakyvatMokit.Add(c);
             }
+            
         }
         private void clear_txt_boxes()
         {
