@@ -1,6 +1,6 @@
 ﻿namespace VillageNewbies
 {
-    class Client
+    public class Client
     {
         public int asiakas_id { get; set; }
         public string etunimi { get; set; }

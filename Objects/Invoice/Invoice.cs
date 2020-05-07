@@ -1,6 +1,6 @@
 ﻿namespace VillageNewbies
 {
-    class Invoice
+    public class Invoice
     {
         /*
            "lasku_id INTEGER PRIMARY KEY AUTOINCREMENT," +

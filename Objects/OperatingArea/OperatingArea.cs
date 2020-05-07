@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VillageNewbies
 {
-    class OperatingArea
+    public class OperatingArea
     {
         /* 
          "toimintaalue_id INTEGER PRIMARY KEY," +

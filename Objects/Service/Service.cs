@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VillageNewbies
 {
-    class Service
+    public class Service
     {
         /*  "palvelu_id INTEGER PRIMARY KEY AUTOINCREMENT," +
               "toimintaalue_id INT(11)  NOT NULL," +

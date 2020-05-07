@@ -17,9 +17,30 @@ namespace VillageNewbies.UI
         SQL s = new SQL();
         private SQLiteConnection connection;
         private SQLiteCommand cmd;
-        public Lasku()
+        public Lasku(Client asiakas, Cabin mokki, Reservation varaus, Invoice lasku)
         {
             InitializeComponent();
+            label_AsiakasID.Text += " " +asiakas.asiakas_id.ToString();
+            labelAsiakas.Text += " " + asiakas.etunimi + " " + asiakas.sukuimi;
+            labelOsoite.Text += " " + asiakas.lahiosoite;
+            labelPostinumero.Text += " " + asiakas.postinro.ToString();
+            labelPostitmp.Text += " " + asiakas.postinro.ToString(); // POSTITOIMIPAIKKA <- !!!
+
+            labelLaskunumero.Text += " " + lasku.lasku_id;
+            labelVarausID.Text += " " + varaus.varaus_id;
+            labelPaivamaara.Text += " " + DateTime.Now;
+
+            labelAlue.Text += " " + mokki.toimintaalue;
+            labelVarausOsoite.Text += " " + mokki.katuosoite;
+
+            labellblTulopaiva.Text += " " + varaus.varattu_alkupvm;
+            labelLahtopaiva.Text += " " + varaus.varattu_loppupvm;
+
+            labelHintaperYo.Text += " "; // <- TODO
+
+            labelLisapalvelut.Text += " " + " "; // <- TODO
+
+            labelLoppuSumma.Text += lasku.summa;
         }
 
         private void Lasku_Load(object sender, EventArgs e)
