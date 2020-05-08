@@ -9,6 +9,7 @@
         public string email { get; set; }
         public string puhelinnro { get; set; }
         public string postinro { get; set; }
+        public string postitoimipaikka { get; set; }
 
         public string DISPLAYNAME => $"{etunimi} {sukuimi} - {lahiosoite}";
 
@@ -16,7 +17,7 @@
         {
         }
 
-        public Client(string etunimi, string sukuimi, int asiakas_id, string lahiosoite, string email, string puhelinnro, string postinro)
+        public Client(string etunimi, string sukuimi, int asiakas_id, string lahiosoite, string email, string puhelinnro, string postinro, string postitoimipaikka)
         {
             this.etunimi = etunimi;
             this.sukuimi = sukuimi;
@@ -25,6 +26,7 @@
             this.email = email;
             this.puhelinnro = puhelinnro;
             this.postinro = postinro;
+            this.postitoimipaikka = postitoimipaikka;
         }
     }
 }

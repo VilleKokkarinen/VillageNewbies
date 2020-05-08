@@ -127,6 +127,7 @@ namespace VillageNewbies.UI
                 txtboxEtunimi.Text = selectedRow.Cells["etunimi"].Value.ToString();
                 txtboxSukunimi.Text = selectedRow.Cells["sukunimi"].Value.ToString();
                 txtboxPostinro.Text = selectedRow.Cells["postinro"].Value.ToString();
+                textBox_PostiToimiPaikka.Text = selectedRow.Cells["postitoimipaikka"].Value.ToString();
                 txtboxlahiosoite.Text = selectedRow.Cells["lahiosoite"].Value.ToString();
                 txtboxEmail.Text = selectedRow.Cells["email"].Value.ToString();
                 txtboxPuhelinnro.Text = selectedRow.Cells["puhelinnro"].Value.ToString();
@@ -297,6 +298,7 @@ namespace VillageNewbies.UI
             txtboxEtunimi.Clear();
             txtboxSukunimi.Clear();
             txtboxPostinro.Clear();
+            textBox_PostiToimiPaikka.Clear();
             txtboxlahiosoite.Clear();
             txtboxEmail.Clear();
             txtboxPuhelinnro.Clear();
@@ -333,8 +335,8 @@ namespace VillageNewbies.UI
             {
                 try
                 {
-                    string textquery = "INSERT INTO asiakas(asiakas_id,postinro,etunimi,sukunimi,lahiosoite,email,puhelinnro)values('" + txtboxAsiakas_id.Text + "'," +
-                    " '" + txtboxPostinro.Text + "' , '" + txtboxEtunimi.Text + "' , '" + txtboxSukunimi.Text + "' , '" + txtboxlahiosoite.Text +
+                    string textquery = "INSERT INTO asiakas(asiakas_id,postinro,postitoimipaikka,etunimi,sukunimi,lahiosoite,email,puhelinnro)values('" + txtboxAsiakas_id.Text + "'," +
+                    " '" + txtboxPostinro.Text + "' , '" + textBox_PostiToimiPaikka.Text + "' , '" + txtboxEtunimi.Text + "' , '" + txtboxSukunimi.Text + "' , '" + txtboxlahiosoite.Text +
                     "' , '" + @txtboxEmail.Text + "' , '" + txtboxPuhelinnro.Text + "')";
                     ExecuteQuery(textquery);
                     dataGridView1.DataSource = s.returnstuff();
@@ -351,7 +353,7 @@ namespace VillageNewbies.UI
             {
                 try
                 {
-                    string textquery = "UPDATE asiakas SET postinro = '" + txtboxPostinro.Text + "', etunimi = '" + txtboxEtunimi.Text +
+                    string textquery = "UPDATE asiakas SET postinro = '" + txtboxPostinro.Text + "', postitoimipaikka = '" +textBox_PostiToimiPaikka.Text + "', etunimi = '" + txtboxEtunimi.Text +
                     "', sukunimi ='" + txtboxSukunimi.Text + "', lahiosoite ='" + txtboxlahiosoite.Text + "', email ='" + txtboxEmail.Text +
                     "', puhelinnro ='" + txtboxPuhelinnro.Text + "' WHERE asiakas_id = '" + txtboxAsiakas_id.Text + "';";
                     ExecuteQuery(textquery);
@@ -445,7 +447,7 @@ namespace VillageNewbies.UI
 
 
                 Lasku lasku = new Lasku(
-                    new Client(txtboxEtunimi.Text, txtboxSukunimi.Text, Convert.ToInt32(txtboxAsiakas_id.Text), txtboxlahiosoite.Text, txtboxEmail.Text, txtboxPuhelinnro.Text, txtboxPostinro.Text),
+                    new Client(txtboxEtunimi.Text, txtboxSukunimi.Text, Convert.ToInt32(txtboxAsiakas_id.Text), txtboxlahiosoite.Text, txtboxEmail.Text, txtboxPuhelinnro.Text, txtboxPostinro.Text, textBox_PostiToimiPaikka.Text),
                     ((Cabin)checklist_Loan_Cabins.SelectedItem),
                     new Reservation(id, Convert.ToInt32(txtboxAsiakas_id.Text), ((Cabin)checklist_Loan_Cabins.SelectedItem).mokki_id, Convert.ToInt32(ConvertToUnixTime(DateTime.Now)), Convert.ToInt32(ConvertToUnixTime(DateTime.Now)), Convert.ToInt32(ConvertToUnixTime(dateTimePicker_Tulo.Value)), Convert.ToInt32(ConvertToUnixTime(dateTimePicker_Lahto.Value))),
                     new Invoice(0, id, Convert.ToDouble(txtHinta.Text), 24),

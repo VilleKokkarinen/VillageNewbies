@@ -34,7 +34,7 @@ namespace VillageNewbies.UI
             labelAsiakas.Text += " " + asiakas.etunimi + " " + asiakas.sukuimi;
             labelOsoite.Text += " " + asiakas.lahiosoite;
             labelPostinumero.Text += " " + asiakas.postinro.ToString();
-            labelPostitmp.Text += " " + asiakas.postinro.ToString(); // POSTITOIMIPAIKKA <- !!!
+            labelPostitmp.Text += " " + asiakas.postitoimipaikka.ToString();
 
             labelLaskunumero.Text += " " + lasku.lasku_id;
             labelVarausID.Text += " " + varaus.varaus_id;
@@ -101,6 +101,7 @@ namespace VillageNewbies.UI
         {
             Pen pen = new Pen(Color.FromArgb(255, 0, 0, 0));
 
+            e.Graphics.DrawString(labelPaivamaara.Text, new Font("Arial", 14, FontStyle.Regular), Brushes.Black, new Point(550, 30));
             e.Graphics.DrawString("LASKU", new Font("Arial", 14, FontStyle.Regular), Brushes.Black, new Point(370, 90));
 
             e.Graphics.DrawString(label_AsiakasID.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, 160));
@@ -124,11 +125,18 @@ namespace VillageNewbies.UI
             e.Graphics.DrawString(labelLahtopaiva.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(530, 390));
 
 
-            e.Graphics.DrawString("LISÄPALVELUT", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(380, 600));
-            e.Graphics.DrawLine(pen, 20, 640, 845, 640);
-            e.Graphics.DrawString("Palvelun kuvaus", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, 650));
-            e.Graphics.DrawString("Hinta ", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(530, 650));
-            e.Graphics.DrawLine(pen, 20, 670, 845, 670);
+            e.Graphics.DrawString("LISÄPALVELUT", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(380, 550));
+            e.Graphics.DrawLine(pen, 20, 590, 845, 590);
+            e.Graphics.DrawString("Palvelun kuvaus", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, 600));
+            e.Graphics.DrawString("Hinta ", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(530, 600));
+            e.Graphics.DrawLine(pen, 20, 620, 845, 620);
+
+            e.Graphics.DrawString(textBox1.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, 640));
+
+            e.Graphics.DrawLine(pen, 200, 680, 540, 680);
+            e.Graphics.DrawString("LOPPUSUMMA", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(200, 690));
+            e.Graphics.DrawString(label_LoppusummaText.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(500, 690));
+            e.Graphics.DrawLine(pen, 200, 710, 500, 710);
 
 
         }
