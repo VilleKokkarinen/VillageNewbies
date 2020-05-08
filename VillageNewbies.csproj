@@ -97,6 +97,12 @@
     <Compile Include="UI\Lasku.Designer.cs">
       <DependentUpon>Lasku.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Laskut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Laskut.Designer.cs">
+      <DependentUpon>Laskut.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\PalveluHallinta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Lasku.resx">
       <DependentUpon>Lasku.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Laskut.resx">
+      <DependentUpon>Laskut.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\PalveluHallinta.resx">
       <DependentUpon>PalveluHallinta.cs</DependentUpon>
