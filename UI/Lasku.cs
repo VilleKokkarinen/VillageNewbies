@@ -17,7 +17,13 @@ namespace VillageNewbies.UI
         SQL s = new SQL();
         private SQLiteConnection connection;
         private SQLiteCommand cmd;
-
+        public static DateTime UnixTimeStampToDateTime(double unixTimeStamp)
+        {
+            // Unix timestamp is seconds past epoch
+            System.DateTime dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, System.DateTimeKind.Utc);
+            dtDateTime = dtDateTime.AddSeconds(unixTimeStamp).ToLocalTime();
+            return dtDateTime;
+        }
         private PrintDocument printDocument1 = new PrintDocument();
         public Lasku(Client asiakas, Cabin mokki, Reservation varaus, Invoice lasku)
         {
@@ -37,8 +43,8 @@ namespace VillageNewbies.UI
             labelAlue.Text += " " + mokki.toimintaalue;
             labelVarausOsoite.Text += " " + mokki.katuosoite;
 
-            labellblTulopaiva.Text += " " + varaus.varattu_alkupvm;
-            labelLahtopaiva.Text += " " + varaus.varattu_loppupvm;
+            labellblTulopaiva.Text += " " + UnixTimeStampToDateTime(varaus.varattu_alkupvm).Date;
+            labelLahtopaiva.Text += " " + UnixTimeStampToDateTime(varaus.varattu_loppupvm).Date;
 
             labelHintaperYo.Text += " "; // <- TODO
 
