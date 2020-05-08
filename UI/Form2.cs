@@ -530,7 +530,7 @@ namespace VillageNewbies.UI
             foreach (Service ser in valitutpalvelut)
             {
                 SetConnection();
-                string textquery = "SELECT hinta from palvelu WHERE palvelu_id = " + ser.hinta;
+                string textquery = "SELECT hinta from palvelu WHERE palvelu_id = " + ser.palvelu_id;
                 cmd.CommandText = textquery;
                 hinta = double.Parse(cmd.ExecuteScalar().ToString());
 

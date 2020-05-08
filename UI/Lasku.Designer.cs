@@ -50,6 +50,7 @@
             this.Btn_Tulosta = new System.Windows.Forms.Button();
             this.label_AsiakasID = new System.Windows.Forms.Label();
             this.Lbl_VarausIDText = new System.Windows.Forms.Label();
+            this.Btn_Laheta = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -265,11 +266,22 @@
             this.Lbl_VarausIDText.Size = new System.Drawing.Size(0, 17);
             this.Lbl_VarausIDText.TabIndex = 7;
             // 
+            // Btn_Laheta
+            // 
+            this.Btn_Laheta.Location = new System.Drawing.Point(649, 547);
+            this.Btn_Laheta.Name = "Btn_Laheta";
+            this.Btn_Laheta.Size = new System.Drawing.Size(123, 44);
+            this.Btn_Laheta.TabIndex = 8;
+            this.Btn_Laheta.Text = "Lähetä sähköpostilla";
+            this.Btn_Laheta.UseVisualStyleBackColor = true;
+            this.Btn_Laheta.Click += new System.EventHandler(this.Btn_Laheta_Click);
+            // 
             // Lasku
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 602);
+            this.Controls.Add(this.Btn_Laheta);
             this.Controls.Add(this.Lbl_VarausIDText);
             this.Controls.Add(this.Btn_Tulosta);
             this.Controls.Add(this.labelLaskunumero);
@@ -318,5 +330,6 @@
         private System.Windows.Forms.Label label_AlueText;
         private System.Windows.Forms.Label label_AsiakasID;
         private System.Windows.Forms.Label Lbl_VarausIDText;
+        private System.Windows.Forms.Button Btn_Laheta;
     }
 }

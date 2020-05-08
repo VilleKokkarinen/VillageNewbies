@@ -57,7 +57,7 @@ namespace VillageNewbies.UI
         private void Lasku_Load(object sender, EventArgs e)
         {
             Lbl_VarausIDText.Text = Varaus.GetVarausID;
-            //FillForm();
+            Btn_Laheta.Enabled = false;
         }
 
         private void SetConnection()
@@ -76,17 +76,9 @@ namespace VillageNewbies.UI
 
         }
 
-        private void FillForm()
-        {
-            string textquery = "SELECT last_insert_rowid()";
-            ExecuteQuery(textquery);
-            SQLiteDataReader reader = cmd.ExecuteReader();
-            Lbl_VarausIDText.Text = (reader["data"].ToString());
-            connection.Close();
-        }
-
         private void Btn_Tulosta_Click(object sender, EventArgs e)
         {
+            Btn_Laheta.Enabled = true;
             PrintDialog p1 = new PrintDialog();
             p1.AllowSelection = true;
             p1.AllowSomePages = true;
@@ -137,6 +129,10 @@ namespace VillageNewbies.UI
 
         }
 
-
+        private void Btn_Laheta_Click(object sender, EventArgs e)
+        {
+            Sahkoposti posti = new Sahkoposti();
+            posti.Show();
+        }
     }
 }
