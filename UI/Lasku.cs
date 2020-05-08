@@ -25,7 +25,7 @@ namespace VillageNewbies.UI
             return dtDateTime;
         }
         private PrintDocument printDocument1 = new PrintDocument();
-        public Lasku(Client asiakas, Cabin mokki, Reservation varaus, Invoice lasku)
+        public Lasku(Client asiakas, Cabin mokki, Reservation varaus, Invoice lasku, Service[] palvelut = null)
         {
 
             InitializeComponent();
@@ -49,15 +49,19 @@ namespace VillageNewbies.UI
             labelHintaperYo.Text += " "; // <- TODO
 
             labelLisapalvelut.Text += " " + " "; // <- TODO
+            foreach(Service s in palvelut)
+            {
+                textBox1.Text += s.nimi + Environment.NewLine;
+            }
 
-            labelLoppuSumma.Text += lasku.summa;
+            labelLoppuSumma.Text += " "+lasku.summa;
         }
 
 
         private void Lasku_Load(object sender, EventArgs e)
         {
             Lbl_VarausIDText.Text = Varaus.GetVarausID;
-            //FillForm();
+            Btn_Laheta.Enabled = false;
         }
 
         private void SetConnection()
@@ -76,17 +80,9 @@ namespace VillageNewbies.UI
 
         }
 
-        private void FillForm()
-        {
-            string textquery = "SELECT last_insert_rowid()";
-            ExecuteQuery(textquery);
-            SQLiteDataReader reader = cmd.ExecuteReader();
-            Lbl_VarausIDText.Text = (reader["data"].ToString());
-            connection.Close();
-        }
-
         private void Btn_Tulosta_Click(object sender, EventArgs e)
         {
+            Btn_Laheta.Enabled = true;
             PrintDialog p1 = new PrintDialog();
             p1.AllowSelection = true;
             p1.AllowSomePages = true;
@@ -137,6 +133,10 @@ namespace VillageNewbies.UI
 
         }
 
-
+        private void Btn_Laheta_Click(object sender, EventArgs e)
+        {
+            Sahkoposti posti = new Sahkoposti();
+            posti.Show();
+        }
     }
 }

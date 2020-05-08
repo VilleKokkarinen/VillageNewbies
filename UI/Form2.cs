@@ -429,11 +429,27 @@ namespace VillageNewbies.UI
                 System.Object temp = cmd.ExecuteScalar();
                 id = int.Parse(temp.ToString());
 
+                foreach (Service s in valitutpalvelut)
+                {
+                    textquery = $"INSERT INTO varauksen_palvelut(varaus_id, palvelu_id, lkm)VALUES(" +
+                        $"{id},{s.palvelu_id},{1}";
+                }
+
+
+                valitutpalvelut.Clear();
+                foreach (Service s in Clb_Palvelut.CheckedItems)
+                {
+                    valitutpalvelut.Add(s);
+                }
+
+
+
                 Lasku lasku = new Lasku(
                     new Client(txtboxEtunimi.Text, txtboxSukunimi.Text, Convert.ToInt32(txtboxAsiakas_id.Text), txtboxlahiosoite.Text, txtboxEmail.Text, txtboxPuhelinnro.Text, txtboxPostinro.Text),
                     ((Cabin)checklist_Loan_Cabins.SelectedItem),
                     new Reservation(id, Convert.ToInt32(txtboxAsiakas_id.Text), ((Cabin)checklist_Loan_Cabins.SelectedItem).mokki_id, Convert.ToInt32(ConvertToUnixTime(DateTime.Now)), Convert.ToInt32(ConvertToUnixTime(DateTime.Now)), Convert.ToInt32(ConvertToUnixTime(dateTimePicker_Tulo.Value)), Convert.ToInt32(ConvertToUnixTime(dateTimePicker_Lahto.Value))),
-                    new Invoice(0, id, Convert.ToDouble(txtHinta.Text), 24)
+                    new Invoice(0, id, Convert.ToDouble(txtHinta.Text), 24),
+                    valitutpalvelut.ToArray()
                     );
 
                 MessageBox.Show("Lisäys onnistui");
@@ -442,6 +458,8 @@ namespace VillageNewbies.UI
                 connection.Close();
 
             }
+
+           
            
         }
 
@@ -514,31 +532,6 @@ namespace VillageNewbies.UI
             }
         }
 
-        private void Clb_Palvelut_ItemCheck(object sender, ItemCheckEventArgs e)
-        {
-            double hinta;
-            double kokonaishinta = 0;
-
-            foreach (Service s in palvelut)
-            {
-                if (s.palvelu_id == ((Service)Clb_Palvelut.CheckedItems.AsQueryable()).palvelu_id)
-                {
-                    valitutpalvelut.Add(s);
-                }
-            }
-
-            foreach (Service ser in valitutpalvelut)
-            {
-                SetConnection();
-                string textquery = "SELECT hinta from palvelu WHERE palvelu_id = " + ser.hinta;
-                cmd.CommandText = textquery;
-                hinta = double.Parse(cmd.ExecuteScalar().ToString());
-
-                kokonaishinta += kokonaishinta + hinta;
-                
-            }
-
-            txtHinta.Text = kokonaishinta.ToString();
-        }
+      
     }
 }
