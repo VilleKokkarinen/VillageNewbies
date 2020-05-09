@@ -46,12 +46,12 @@ namespace VillageNewbies.UI
             labellblTulopaiva.Text += " " + UnixTimeStampToDateTime(varaus.varattu_alkupvm).Date;
             labelLahtopaiva.Text += " " + UnixTimeStampToDateTime(varaus.varattu_loppupvm).Date;
 
-            labelHintaperYo.Text += " "; // <- TODO
+            label_HintaYoText.Text += " " + mokki.hinta.ToString();
 
-            labelLisapalvelut.Text += " " + " "; // <- TODO
             foreach(Service s in palvelut)
             {
                 textBox1.Text += s.nimi + Environment.NewLine;
+                textBox_PalveluidenHinta.Text += s.hinta + Environment.NewLine;
             }
 
             labelLoppuSumma.Text += " "+lasku.summa;
@@ -60,7 +60,7 @@ namespace VillageNewbies.UI
 
         private void Lasku_Load(object sender, EventArgs e)
         {
-            Lbl_VarausIDText.Text = Varaus.GetVarausID;
+            //label_HintaYoText.Text = Varaus.HintaYo.ToString();
             Btn_Laheta.Enabled = false;
         }
 
@@ -116,6 +116,7 @@ namespace VillageNewbies.UI
             e.Graphics.DrawString("Osoite", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(200, 350));
             e.Graphics.DrawString("Tulopäivä", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(370, 350));
             e.Graphics.DrawString("Lähtöpäivä", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(530, 350));
+            e.Graphics.DrawString("Hinta/Yö", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(700, 350));
 
 
             e.Graphics.DrawLine(pen, 20, 370, 845, 370);
@@ -123,20 +124,21 @@ namespace VillageNewbies.UI
             e.Graphics.DrawString(labelOsoite.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(200, 390));
             e.Graphics.DrawString(labellblTulopaiva.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(370, 390));
             e.Graphics.DrawString(labelLahtopaiva.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(530, 390));
+            e.Graphics.DrawString(label_HintaYoText.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(640, 390));
 
 
             e.Graphics.DrawString("LISÄPALVELUT", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(380, 550));
             e.Graphics.DrawLine(pen, 20, 590, 845, 590);
             e.Graphics.DrawString("Palvelun kuvaus", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, 600));
-            e.Graphics.DrawString("Hinta ", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(530, 600));
+            e.Graphics.DrawString("Hinta ", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(700, 600));
             e.Graphics.DrawLine(pen, 20, 620, 845, 620);
 
             e.Graphics.DrawString(textBox1.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, 640));
 
-            e.Graphics.DrawLine(pen, 200, 680, 540, 680);
-            e.Graphics.DrawString("LOPPUSUMMA", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(200, 690));
-            e.Graphics.DrawString(label_LoppusummaText.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(500, 690));
-            e.Graphics.DrawLine(pen, 200, 710, 500, 710);
+            e.Graphics.DrawLine(pen, 200, 770, 540, 770);
+            e.Graphics.DrawString("LOPPUSUMMA", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(200, 780));
+            e.Graphics.DrawString(label_LoppusummaText.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(500, 790));
+            e.Graphics.DrawLine(pen, 200, 800, 540, 800);
 
 
         }

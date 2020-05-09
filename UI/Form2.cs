@@ -19,10 +19,6 @@ namespace VillageNewbies.UI
             Buttonvaraa();
         }
 
-        
-
-        public static string GetVarausID = "";
-
         private SQLiteConnection connection;
         private SQLiteCommand cmd;
         SQLiteDataAdapter adapt;
@@ -151,6 +147,7 @@ namespace VillageNewbies.UI
                 txt_Cabin_Details.Text = ((Cabin)checklist_Loan_Cabins.SelectedItem).kuvaus;
                 txt_Cabin_Price.Text = ((Cabin)checklist_Loan_Cabins.SelectedItem).hinta.ToString();
                 txt_Cabin_State.Text = ((Cabin)checklist_Loan_Cabins.SelectedItem).varattu == true ? "varattu" : "avoin";
+                
                 /*
                 if(((Cabin)checklist_Loan_Cabins.SelectedItem).varattu == false)
                 {
@@ -453,7 +450,6 @@ namespace VillageNewbies.UI
                     new Invoice(0, id, Convert.ToDouble(txtHinta.Text), 24),
                     valitutpalvelut.ToArray()
                     );
-
                 MessageBox.Show("Lisäys onnistui");
                 lasku.Show();
 

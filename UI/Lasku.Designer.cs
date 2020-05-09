@@ -42,6 +42,7 @@
             this.labellblTulopaiva = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label_LoppusummaText = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.labelLisapalvelut = new System.Windows.Forms.Label();
             this.labelHintaperYo = new System.Windows.Forms.Label();
@@ -52,7 +53,9 @@
             this.label_AsiakasID = new System.Windows.Forms.Label();
             this.Lbl_VarausIDText = new System.Windows.Forms.Label();
             this.Btn_Laheta = new System.Windows.Forms.Button();
-            this.label_LoppusummaText = new System.Windows.Forms.Label();
+            this.label_HintaYoText = new System.Windows.Forms.Label();
+            this.label_PalveluidenHinta = new System.Windows.Forms.Label();
+            this.textBox_PalveluidenHinta = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -183,7 +186,10 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.label_PalveluidenHinta);
+            this.panel2.Controls.Add(this.label_HintaYoText);
             this.panel2.Controls.Add(this.label_LoppusummaText);
+            this.panel2.Controls.Add(this.textBox_PalveluidenHinta);
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.labelLisapalvelut);
             this.panel2.Controls.Add(this.labelHintaperYo);
@@ -195,15 +201,23 @@
             this.panel2.Size = new System.Drawing.Size(385, 320);
             this.panel2.TabIndex = 4;
             // 
+            // label_LoppusummaText
+            // 
+            this.label_LoppusummaText.AutoSize = true;
+            this.label_LoppusummaText.Location = new System.Drawing.Point(172, 286);
+            this.label_LoppusummaText.Name = "label_LoppusummaText";
+            this.label_LoppusummaText.Size = new System.Drawing.Size(0, 17);
+            this.label_LoppusummaText.TabIndex = 5;
+            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(23, 112);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox1.Size = new System.Drawing.Size(355, 158);
+            this.textBox1.Size = new System.Drawing.Size(149, 158);
             this.textBox1.TabIndex = 4;
             // 
             // labelLisapalvelut
@@ -292,13 +306,33 @@
             this.Btn_Laheta.UseVisualStyleBackColor = true;
             this.Btn_Laheta.Click += new System.EventHandler(this.Btn_Laheta_Click);
             // 
-            // label_LoppusummaText
+            // label_HintaYoText
             // 
-            this.label_LoppusummaText.AutoSize = true;
-            this.label_LoppusummaText.Location = new System.Drawing.Point(172, 286);
-            this.label_LoppusummaText.Name = "label_LoppusummaText";
-            this.label_LoppusummaText.Size = new System.Drawing.Size(0, 17);
-            this.label_LoppusummaText.TabIndex = 5;
+            this.label_HintaYoText.AutoSize = true;
+            this.label_HintaYoText.Location = new System.Drawing.Point(126, 59);
+            this.label_HintaYoText.Name = "label_HintaYoText";
+            this.label_HintaYoText.Size = new System.Drawing.Size(0, 17);
+            this.label_HintaYoText.TabIndex = 6;
+            // 
+            // label_PalveluidenHinta
+            // 
+            this.label_PalveluidenHinta.AutoSize = true;
+            this.label_PalveluidenHinta.Location = new System.Drawing.Point(202, 89);
+            this.label_PalveluidenHinta.Name = "label_PalveluidenHinta";
+            this.label_PalveluidenHinta.Size = new System.Drawing.Size(149, 17);
+            this.label_PalveluidenHinta.TabIndex = 7;
+            this.label_PalveluidenHinta.Text = "Lisäpalveluiden hinnat";
+            // 
+            // textBox_PalveluidenHinta
+            // 
+            this.textBox_PalveluidenHinta.Location = new System.Drawing.Point(202, 112);
+            this.textBox_PalveluidenHinta.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox_PalveluidenHinta.Multiline = true;
+            this.textBox_PalveluidenHinta.Name = "textBox_PalveluidenHinta";
+            this.textBox_PalveluidenHinta.ReadOnly = true;
+            this.textBox_PalveluidenHinta.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBox_PalveluidenHinta.Size = new System.Drawing.Size(149, 158);
+            this.textBox_PalveluidenHinta.TabIndex = 4;
             // 
             // Lasku
             // 
@@ -357,5 +391,8 @@
         private System.Windows.Forms.Button Btn_Laheta;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label_LoppusummaText;
+        private System.Windows.Forms.Label label_HintaYoText;
+        private System.Windows.Forms.Label label_PalveluidenHinta;
+        private System.Windows.Forms.TextBox textBox_PalveluidenHinta;
     }
 }
