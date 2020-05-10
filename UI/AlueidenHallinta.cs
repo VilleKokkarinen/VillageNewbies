@@ -118,5 +118,13 @@ namespace VillageNewbies.UI
                 }
             }
         }
+
+        private void textBox_AlueID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

@@ -39,13 +39,14 @@
             this.dataGridView_Varaukset.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView_Varaukset.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Varaukset.Location = new System.Drawing.Point(9, 124);
-            this.dataGridView_Varaukset.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView_Varaukset.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Varaukset.MultiSelect = false;
             this.dataGridView_Varaukset.Name = "dataGridView_Varaukset";
             this.dataGridView_Varaukset.ReadOnly = true;
             this.dataGridView_Varaukset.RowHeadersVisible = false;
             this.dataGridView_Varaukset.RowHeadersWidth = 51;
             this.dataGridView_Varaukset.RowTemplate.Height = 24;
+            this.dataGridView_Varaukset.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView_Varaukset.Size = new System.Drawing.Size(775, 184);
             this.dataGridView_Varaukset.TabIndex = 0;
             this.dataGridView_Varaukset.SelectionChanged += new System.EventHandler(this.dataGridView_Varaukset_SelectionChanged);
@@ -53,7 +54,7 @@
             // button_Poista
             // 
             this.button_Poista.Location = new System.Drawing.Point(348, 325);
-            this.button_Poista.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_Poista.Margin = new System.Windows.Forms.Padding(2);
             this.button_Poista.Name = "button_Poista";
             this.button_Poista.Size = new System.Drawing.Size(56, 19);
             this.button_Poista.TabIndex = 1;
@@ -79,7 +80,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button_Poista);
             this.Controls.Add(this.dataGridView_Varaukset);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Varaukset";
             this.Text = "Varaukset";
             this.Load += new System.EventHandler(this.Varaukset_Load);

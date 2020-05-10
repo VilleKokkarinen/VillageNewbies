@@ -16,7 +16,7 @@ namespace VillageNewbies
         public Form1()
         {
             InitializeComponent();
-            SQL s = new SQL();
+            //SQL s = new SQL();
             //s.create();
         }
 
