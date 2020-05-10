@@ -225,5 +225,33 @@ namespace VillageNewbies.UI
                 e.Handled = true;
             }
         }
+
+        private void Btn_Tyhjenna_Click(object sender, EventArgs e)
+        {
+            clear_txt_boxes();
+            dataGrid_Mokit.ClearSelection();
+        }
+
+        private void textBox_EtsiOsoite_TextChanged(object sender, EventArgs e)
+        {
+            using (SQLiteConnection connect = new SQLiteConnection(@"Data Source=VillageNewbiesDB.db"))
+            {
+                connect.Open();
+                using (SQLiteCommand fmd = connect.CreateCommand())
+                {
+
+                    string CommandText = "SELECT * FROM mokki WHERE katuosoite LIKE '" + textBox_EtsiOsoite.Text + "%'";
+                    SQLiteDataAdapter sqlda = new SQLiteDataAdapter(CommandText, connect);
+
+                    DataTable dt;
+
+                    using (dt = new DataTable())
+                    {
+                        sqlda.Fill(dt);
+                        dataGrid_Mokit.DataSource = dt;
+                    }
+                }
+            }
+        }
     }
 }
