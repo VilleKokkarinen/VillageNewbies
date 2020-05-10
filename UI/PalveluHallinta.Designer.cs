@@ -115,6 +115,7 @@
             this.textBox_PalveluID.Name = "textBox_PalveluID";
             this.textBox_PalveluID.Size = new System.Drawing.Size(90, 20);
             this.textBox_PalveluID.TabIndex = 21;
+            this.textBox_PalveluID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_PalveluID_KeyPress);
             // 
             // label9
             // 

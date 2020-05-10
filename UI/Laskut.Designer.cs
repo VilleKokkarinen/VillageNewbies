@@ -47,7 +47,7 @@
             this.dataGridView_laskut.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView_laskut.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_laskut.Location = new System.Drawing.Point(9, 83);
-            this.dataGridView_laskut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView_laskut.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_laskut.MultiSelect = false;
             this.dataGridView_laskut.Name = "dataGridView_laskut";
             this.dataGridView_laskut.ReadOnly = true;
@@ -62,7 +62,7 @@
             // Btn_Poista
             // 
             this.Btn_Poista.Location = new System.Drawing.Point(195, 302);
-            this.Btn_Poista.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btn_Poista.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Poista.Name = "Btn_Poista";
             this.Btn_Poista.Size = new System.Drawing.Size(56, 19);
             this.Btn_Poista.TabIndex = 1;
@@ -83,10 +83,11 @@
             // textBox_LaskuID
             // 
             this.textBox_LaskuID.Location = new System.Drawing.Point(559, 156);
-            this.textBox_LaskuID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_LaskuID.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_LaskuID.Name = "textBox_LaskuID";
             this.textBox_LaskuID.Size = new System.Drawing.Size(76, 20);
             this.textBox_LaskuID.TabIndex = 3;
+            this.textBox_LaskuID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_LaskuID_KeyPress);
             // 
             // label_VarausID
             // 
@@ -101,10 +102,11 @@
             // textBox_VarausID
             // 
             this.textBox_VarausID.Location = new System.Drawing.Point(559, 193);
-            this.textBox_VarausID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_VarausID.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_VarausID.Name = "textBox_VarausID";
             this.textBox_VarausID.Size = new System.Drawing.Size(76, 20);
             this.textBox_VarausID.TabIndex = 3;
+            this.textBox_VarausID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_VarausID_KeyPress);
             // 
             // label_Summa
             // 
@@ -119,10 +121,11 @@
             // textBox_Summa
             // 
             this.textBox_Summa.Location = new System.Drawing.Point(559, 226);
-            this.textBox_Summa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_Summa.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_Summa.Name = "textBox_Summa";
             this.textBox_Summa.Size = new System.Drawing.Size(76, 20);
             this.textBox_Summa.TabIndex = 3;
+            this.textBox_Summa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Summa_KeyPress);
             // 
             // label_ALV
             // 
@@ -137,10 +140,11 @@
             // textBox_ALV
             // 
             this.textBox_ALV.Location = new System.Drawing.Point(559, 264);
-            this.textBox_ALV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_ALV.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_ALV.Name = "textBox_ALV";
             this.textBox_ALV.Size = new System.Drawing.Size(76, 20);
             this.textBox_ALV.TabIndex = 3;
+            this.textBox_ALV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_ALV_KeyPress);
             // 
             // label1
             // 
@@ -168,7 +172,7 @@
             this.Controls.Add(this.label_LaskuID);
             this.Controls.Add(this.Btn_Poista);
             this.Controls.Add(this.dataGridView_laskut);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Laskut";
             this.Text = "Laskut";
             this.Load += new System.EventHandler(this.Laskut_Load);

@@ -45,7 +45,7 @@
             this.dataGridView_Alueet.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView_Alueet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Alueet.Location = new System.Drawing.Point(9, 137);
-            this.dataGridView_Alueet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView_Alueet.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Alueet.MultiSelect = false;
             this.dataGridView_Alueet.Name = "dataGridView_Alueet";
             this.dataGridView_Alueet.ReadOnly = true;
@@ -80,15 +80,16 @@
             // textBox_AlueID
             // 
             this.textBox_AlueID.Location = new System.Drawing.Point(56, 75);
-            this.textBox_AlueID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_AlueID.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_AlueID.Name = "textBox_AlueID";
             this.textBox_AlueID.Size = new System.Drawing.Size(76, 20);
             this.textBox_AlueID.TabIndex = 2;
+            this.textBox_AlueID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_AlueID_KeyPress);
             // 
             // textBox_Nimi
             // 
             this.textBox_Nimi.Location = new System.Drawing.Point(188, 73);
-            this.textBox_Nimi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_Nimi.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_Nimi.Name = "textBox_Nimi";
             this.textBox_Nimi.Size = new System.Drawing.Size(76, 20);
             this.textBox_Nimi.TabIndex = 3;
@@ -96,7 +97,7 @@
             // button_Lisaa
             // 
             this.button_Lisaa.Location = new System.Drawing.Point(65, 375);
-            this.button_Lisaa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_Lisaa.Margin = new System.Windows.Forms.Padding(2);
             this.button_Lisaa.Name = "button_Lisaa";
             this.button_Lisaa.Size = new System.Drawing.Size(56, 19);
             this.button_Lisaa.TabIndex = 4;
@@ -107,7 +108,7 @@
             // button_Muokka
             // 
             this.button_Muokka.Location = new System.Drawing.Point(136, 375);
-            this.button_Muokka.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_Muokka.Margin = new System.Windows.Forms.Padding(2);
             this.button_Muokka.Name = "button_Muokka";
             this.button_Muokka.Size = new System.Drawing.Size(56, 19);
             this.button_Muokka.TabIndex = 4;
@@ -118,7 +119,7 @@
             // button_Poista
             // 
             this.button_Poista.Location = new System.Drawing.Point(208, 375);
-            this.button_Poista.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_Poista.Margin = new System.Windows.Forms.Padding(2);
             this.button_Poista.Name = "button_Poista";
             this.button_Poista.Size = new System.Drawing.Size(56, 19);
             this.button_Poista.TabIndex = 4;
@@ -150,7 +151,7 @@
             this.Controls.Add(this.label_Nimi);
             this.Controls.Add(this.label_AlueID);
             this.Controls.Add(this.dataGridView_Alueet);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AlueidenHallinta";
             this.Text = "AlueidenHallinta";
             this.Load += new System.EventHandler(this.AlueidenHallinta_Load);

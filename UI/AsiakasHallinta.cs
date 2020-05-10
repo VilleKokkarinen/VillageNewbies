@@ -25,7 +25,7 @@ namespace VillageNewbies.UI
 
         private void AsiakasHallinta_Load(object sender, EventArgs e)
         {
-            //s.create();
+          
             dataGridView_Asiakkaat.DataSource = s.returnstuff();
             dataGridView_Asiakkaat.ClearSelection();
             cleartextboxes();
