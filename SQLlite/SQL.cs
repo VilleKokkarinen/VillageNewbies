@@ -269,8 +269,9 @@ namespace VillageNewbies
                 connect.Open();
                 using (SQLiteCommand fmd = connect.CreateCommand())
                 {
+                    
 
-                    string CommandText = "SELECT * FROM varaus";
+                    string CommandText = "SELECT varaus_id,asiakas_id,mokki_id,DATE(ROUND(varattu_pvm), 'unixepoch') as varattu_pvm , DATE(ROUND(vahvistus_pvm), 'unixepoch') as vahvistus_pvm,DATE(ROUND(varattu_alkupvm), 'unixepoch') as varattu_alkupvm,DATE(ROUND(varattu_loppupvm), 'unixepoch') as varattu_loppupvm FROM varaus";
                     SQLiteDataAdapter sqlda = new SQLiteDataAdapter(CommandText, connect);
 
                     DataTable dt;
