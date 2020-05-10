@@ -140,7 +140,9 @@ namespace VillageNewbies.UI
         {
             if (checklist_Loan_Cabins.SelectedItem != null)
             {
-                
+                dateTimePicker_Lahto.Enabled = true;
+                dateTimePicker_Tulo.Enabled = true;
+
                 txt_Cabin_MaxResidents.Text = ((Cabin)checklist_Loan_Cabins.SelectedItem).henkilomaara.ToString();
                 txt_Cabin_Details.Text = ((Cabin)checklist_Loan_Cabins.SelectedItem).kuvaus;
                 txt_Cabin_Price.Text = ((Cabin)checklist_Loan_Cabins.SelectedItem).hinta.ToString();
@@ -164,11 +166,21 @@ namespace VillageNewbies.UI
 
                     if (lista.Count != 0)
                     {
-                        dateTimePicker_Lahto.MaxDate = lista.Min().Subtract(new TimeSpan(24, 0, 0));
-                        dateTimePicker_Tulo.MaxDate = dateTimePicker_Lahto.MaxDate;
-                        dateTimePicker_Tulo.MinDate = DateTime.Now;
-                        dateTimePicker_Lahto.MinDate = DateTime.Now.AddDays(1);
-                        lista.Clear();
+                        try
+                        {
+                            dateTimePicker_Lahto.MaxDate = lista.Min().Subtract(new TimeSpan(24, 0, 0));
+                            dateTimePicker_Tulo.MaxDate = dateTimePicker_Lahto.MaxDate;
+                            dateTimePicker_Tulo.MinDate = DateTime.Now;
+                            dateTimePicker_Lahto.MinDate = DateTime.Now.AddDays(1);
+                            lista.Clear();
+                        }
+                        catch
+                        {
+                            //jos mökki on varattu, niin että sitä ei voi varata juuri nyt.. (seuraavan varaus alkaa ennen kuin tämä nykyinen ehtisi mökkiin)
+                            dateTimePicker_Lahto.Enabled = false;
+                            dateTimePicker_Tulo.Enabled = false;
+                        }
+                       
                     }
                     else
                     {
@@ -210,21 +222,36 @@ namespace VillageNewbies.UI
                         lista3.Add(UnixTimeStampToDateTime(Convert.ToDouble(i[1].ToString())));
                     }
 
-                    if (lista2.Count != 0)
-                    {
-                        dateTimePicker_Lahto.MaxDate = lista3.Min().Subtract(new TimeSpan(24, 0, 0));
-                        dateTimePicker_Tulo.MaxDate = dateTimePicker_Lahto.MaxDate;
-                        dateTimePicker_Tulo.MinDate = DateTime.Now;
-                        dateTimePicker_Lahto.MinDate = DateTime.Now.AddDays(1);
-                        lista2.Clear();
-                    }
-
+                    //aloituspaiva
                     if (lista.Count != 0)
                     {
                         dateTimePicker_Tulo.MinDate = lista.Max().AddDays(1);
                         dateTimePicker_Lahto.MinDate = dateTimePicker_Tulo.MinDate.AddDays(1);
                         lista.Clear();
                     }
+
+                    //lahtopaiva
+                    if (lista2.Count != 0)
+                    {
+                        
+                        try
+                        {
+                            dateTimePicker_Lahto.MaxDate = lista3.Min().Subtract(new TimeSpan(24, 0, 0));
+                            dateTimePicker_Tulo.MaxDate = dateTimePicker_Lahto.MaxDate;
+                            dateTimePicker_Tulo.MinDate = DateTime.Now;
+                            dateTimePicker_Lahto.MinDate = DateTime.Now.AddDays(1);
+                            lista2.Clear();
+                            
+                        }
+                        catch //jos mökki on varattu, niin että sitä ei voi varata juuri nyt.. (seuraavan varaus alkaa ennen kuin tämä nykyinen ehtisi mökkiin)
+                        {
+                            dateTimePicker_Lahto.Enabled = false;
+                            dateTimePicker_Tulo.Enabled = false;
+                        }
+                        
+                    }
+
+                   
                    
                 }
                 
