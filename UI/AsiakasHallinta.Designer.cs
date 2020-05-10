@@ -70,7 +70,7 @@
             // textBox_ID
             // 
             this.textBox_ID.Location = new System.Drawing.Point(68, 76);
-            this.textBox_ID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_ID.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_ID.Name = "textBox_ID";
             this.textBox_ID.Size = new System.Drawing.Size(76, 20);
             this.textBox_ID.TabIndex = 1;
@@ -90,7 +90,7 @@
             // textBox_Etunimi
             // 
             this.textBox_Etunimi.Location = new System.Drawing.Point(233, 76);
-            this.textBox_Etunimi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_Etunimi.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_Etunimi.Name = "textBox_Etunimi";
             this.textBox_Etunimi.Size = new System.Drawing.Size(76, 20);
             this.textBox_Etunimi.TabIndex = 2;
@@ -109,7 +109,7 @@
             // textBox_Sukunimi
             // 
             this.textBox_Sukunimi.Location = new System.Drawing.Point(429, 76);
-            this.textBox_Sukunimi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_Sukunimi.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_Sukunimi.Name = "textBox_Sukunimi";
             this.textBox_Sukunimi.Size = new System.Drawing.Size(76, 20);
             this.textBox_Sukunimi.TabIndex = 3;
@@ -128,7 +128,7 @@
             // textBox_Email
             // 
             this.textBox_Email.Location = new System.Drawing.Point(233, 142);
-            this.textBox_Email.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_Email.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_Email.Name = "textBox_Email";
             this.textBox_Email.Size = new System.Drawing.Size(76, 20);
             this.textBox_Email.TabIndex = 8;
@@ -147,7 +147,7 @@
             // textBox_Puhnro
             // 
             this.textBox_Puhnro.Location = new System.Drawing.Point(68, 142);
-            this.textBox_Puhnro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_Puhnro.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_Puhnro.Name = "textBox_Puhnro";
             this.textBox_Puhnro.Size = new System.Drawing.Size(76, 20);
             this.textBox_Puhnro.TabIndex = 7;
@@ -166,7 +166,7 @@
             // textBox_Osoite
             // 
             this.textBox_Osoite.Location = new System.Drawing.Point(68, 113);
-            this.textBox_Osoite.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_Osoite.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_Osoite.Name = "textBox_Osoite";
             this.textBox_Osoite.Size = new System.Drawing.Size(76, 20);
             this.textBox_Osoite.TabIndex = 4;
@@ -174,9 +174,11 @@
             // 
             // dataGridView_Asiakkaat
             // 
+            this.dataGridView_Asiakkaat.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView_Asiakkaat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Asiakkaat.Location = new System.Drawing.Point(12, 186);
-            this.dataGridView_Asiakkaat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView_Asiakkaat.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView_Asiakkaat.MultiSelect = false;
             this.dataGridView_Asiakkaat.Name = "dataGridView_Asiakkaat";
             this.dataGridView_Asiakkaat.ReadOnly = true;
             this.dataGridView_Asiakkaat.RowHeadersVisible = false;
@@ -200,7 +202,7 @@
             // textBox_Postinro
             // 
             this.textBox_Postinro.Location = new System.Drawing.Point(233, 110);
-            this.textBox_Postinro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_Postinro.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_Postinro.Name = "textBox_Postinro";
             this.textBox_Postinro.Size = new System.Drawing.Size(76, 20);
             this.textBox_Postinro.TabIndex = 5;
@@ -209,7 +211,7 @@
             // btn_lisaa
             // 
             this.btn_lisaa.Location = new System.Drawing.Point(158, 448);
-            this.btn_lisaa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_lisaa.Margin = new System.Windows.Forms.Padding(2);
             this.btn_lisaa.Name = "btn_lisaa";
             this.btn_lisaa.Size = new System.Drawing.Size(84, 19);
             this.btn_lisaa.TabIndex = 11;
@@ -220,7 +222,7 @@
             // btn_muokkaa
             // 
             this.btn_muokkaa.Location = new System.Drawing.Point(262, 448);
-            this.btn_muokkaa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_muokkaa.Margin = new System.Windows.Forms.Padding(2);
             this.btn_muokkaa.Name = "btn_muokkaa";
             this.btn_muokkaa.Size = new System.Drawing.Size(75, 19);
             this.btn_muokkaa.TabIndex = 12;
@@ -231,7 +233,7 @@
             // btn_poista
             // 
             this.btn_poista.Location = new System.Drawing.Point(362, 448);
-            this.btn_poista.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_poista.Margin = new System.Windows.Forms.Padding(2);
             this.btn_poista.Name = "btn_poista";
             this.btn_poista.Size = new System.Drawing.Size(76, 19);
             this.btn_poista.TabIndex = 13;
@@ -286,7 +288,7 @@
             // Btn_Tyhjenna
             // 
             this.Btn_Tyhjenna.Location = new System.Drawing.Point(530, 81);
-            this.Btn_Tyhjenna.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btn_Tyhjenna.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Tyhjenna.Name = "Btn_Tyhjenna";
             this.Btn_Tyhjenna.Size = new System.Drawing.Size(77, 47);
             this.Btn_Tyhjenna.TabIndex = 10;
@@ -307,7 +309,7 @@
             // textBox_EtsiPostiNro
             // 
             this.textBox_EtsiPostiNro.Location = new System.Drawing.Point(699, 53);
-            this.textBox_EtsiPostiNro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_EtsiPostiNro.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_EtsiPostiNro.Name = "textBox_EtsiPostiNro";
             this.textBox_EtsiPostiNro.Size = new System.Drawing.Size(76, 20);
             this.textBox_EtsiPostiNro.TabIndex = 15;
@@ -345,7 +347,7 @@
             this.Controls.Add(this.label_Sukunimi);
             this.Controls.Add(this.label_Etunimi);
             this.Controls.Add(this.label_ID);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AsiakasHallinta";
             this.Text = "AsiakasHallinta";
             this.Load += new System.EventHandler(this.AsiakasHallinta_Load);
