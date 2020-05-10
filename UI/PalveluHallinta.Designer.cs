@@ -52,7 +52,7 @@
             this.btn_Poista.Location = new System.Drawing.Point(459, 513);
             this.btn_Poista.Name = "btn_Poista";
             this.btn_Poista.Size = new System.Drawing.Size(78, 26);
-            this.btn_Poista.TabIndex = 40;
+            this.btn_Poista.TabIndex = 14;
             this.btn_Poista.Text = "Poista";
             this.btn_Poista.UseVisualStyleBackColor = true;
             this.btn_Poista.Click += new System.EventHandler(this.btn_Poista_Click);
@@ -62,7 +62,7 @@
             this.btn_Muokkaa.Location = new System.Drawing.Point(348, 513);
             this.btn_Muokkaa.Name = "btn_Muokkaa";
             this.btn_Muokkaa.Size = new System.Drawing.Size(78, 26);
-            this.btn_Muokkaa.TabIndex = 39;
+            this.btn_Muokkaa.TabIndex = 13;
             this.btn_Muokkaa.Text = "Muokkaa";
             this.btn_Muokkaa.UseVisualStyleBackColor = true;
             this.btn_Muokkaa.Click += new System.EventHandler(this.btn_Muokkaa_Click);
@@ -72,7 +72,7 @@
             this.btn_Lisaa.Location = new System.Drawing.Point(245, 513);
             this.btn_Lisaa.Name = "btn_Lisaa";
             this.btn_Lisaa.Size = new System.Drawing.Size(78, 26);
-            this.btn_Lisaa.TabIndex = 38;
+            this.btn_Lisaa.TabIndex = 12;
             this.btn_Lisaa.Text = "Lisää";
             this.btn_Lisaa.UseVisualStyleBackColor = true;
             this.btn_Lisaa.Click += new System.EventHandler(this.btn_Lisaa_Click);
@@ -85,110 +85,123 @@
             this.dataGridView_Palvelut.RowHeadersWidth = 51;
             this.dataGridView_Palvelut.RowTemplate.Height = 24;
             this.dataGridView_Palvelut.Size = new System.Drawing.Size(503, 271);
-            this.dataGridView_Palvelut.TabIndex = 30;
+            this.dataGridView_Palvelut.TabIndex = 15;
             this.dataGridView_Palvelut.SelectionChanged += new System.EventHandler(this.dataGridView_Palvelut_SelectionChanged);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.Menu;
             this.label8.Location = new System.Drawing.Point(306, 93);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(59, 17);
-            this.label8.TabIndex = 35;
+            this.label8.Size = new System.Drawing.Size(76, 20);
+            this.label8.TabIndex = 8;
             this.label8.Text = "Kuvaus:";
             // 
             // textBox_PalveluID
             // 
-            this.textBox_PalveluID.Location = new System.Drawing.Point(144, 27);
+            this.textBox_PalveluID.Location = new System.Drawing.Point(161, 30);
             this.textBox_PalveluID.Name = "textBox_PalveluID";
             this.textBox_PalveluID.Size = new System.Drawing.Size(119, 22);
-            this.textBox_PalveluID.TabIndex = 21;
+            this.textBox_PalveluID.TabIndex = 1;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(31, 96);
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.Menu;
+            this.label9.Location = new System.Drawing.Point(30, 96);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(93, 17);
-            this.label9.TabIndex = 34;
+            this.label9.Size = new System.Drawing.Size(124, 20);
+            this.label9.TabIndex = 2;
             this.label9.Text = "Palvelun Nimi";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.Menu;
             this.label5.Location = new System.Drawing.Point(306, 154);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(38, 17);
-            this.label5.TabIndex = 33;
+            this.label5.Size = new System.Drawing.Size(49, 20);
+            this.label5.TabIndex = 10;
             this.label5.Text = "alv%";
             // 
             // textBox_Hinta
             // 
-            this.textBox_Hinta.Location = new System.Drawing.Point(144, 153);
+            this.textBox_Hinta.Location = new System.Drawing.Point(161, 154);
             this.textBox_Hinta.Name = "textBox_Hinta";
             this.textBox_Hinta.Size = new System.Drawing.Size(119, 22);
-            this.textBox_Hinta.TabIndex = 23;
+            this.textBox_Hinta.TabIndex = 5;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(31, 150);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.Menu;
+            this.label4.Location = new System.Drawing.Point(31, 156);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 17);
-            this.label4.TabIndex = 32;
+            this.label4.Size = new System.Drawing.Size(70, 20);
+            this.label4.TabIndex = 4;
             this.label4.Text = "Hinta €";
             // 
             // textBox_ALV
             // 
-            this.textBox_ALV.Location = new System.Drawing.Point(418, 153);
+            this.textBox_ALV.Location = new System.Drawing.Point(440, 152);
             this.textBox_ALV.Name = "textBox_ALV";
             this.textBox_ALV.Size = new System.Drawing.Size(119, 22);
-            this.textBox_ALV.TabIndex = 24;
+            this.textBox_ALV.TabIndex = 11;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(306, 32);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.Menu;
+            this.label3.Location = new System.Drawing.Point(306, 30);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 17);
-            this.label3.TabIndex = 31;
+            this.label3.Size = new System.Drawing.Size(121, 20);
+            this.label3.TabIndex = 6;
             this.label3.Text = "Toimialue ID:";
             // 
             // textBox_Kuvaus
             // 
-            this.textBox_Kuvaus.Location = new System.Drawing.Point(418, 90);
+            this.textBox_Kuvaus.Location = new System.Drawing.Point(440, 94);
             this.textBox_Kuvaus.Name = "textBox_Kuvaus";
             this.textBox_Kuvaus.Size = new System.Drawing.Size(119, 22);
-            this.textBox_Kuvaus.TabIndex = 26;
+            this.textBox_Kuvaus.TabIndex = 9;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(31, 30);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Menu;
+            this.label1.Location = new System.Drawing.Point(30, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 17);
-            this.label1.TabIndex = 29;
+            this.label1.Size = new System.Drawing.Size(101, 20);
+            this.label1.TabIndex = 0;
             this.label1.Text = "Palvelu ID:";
             // 
             // comboBox_AlueID
             // 
             this.comboBox_AlueID.FormattingEnabled = true;
-            this.comboBox_AlueID.Location = new System.Drawing.Point(418, 29);
+            this.comboBox_AlueID.Location = new System.Drawing.Point(440, 26);
             this.comboBox_AlueID.Name = "comboBox_AlueID";
             this.comboBox_AlueID.Size = new System.Drawing.Size(119, 24);
-            this.comboBox_AlueID.TabIndex = 42;
+            this.comboBox_AlueID.TabIndex = 7;
             // 
             // textBox_PalveluNimi
             // 
-            this.textBox_PalveluNimi.Location = new System.Drawing.Point(144, 96);
+            this.textBox_PalveluNimi.Location = new System.Drawing.Point(161, 96);
             this.textBox_PalveluNimi.Name = "textBox_PalveluNimi";
             this.textBox_PalveluNimi.Size = new System.Drawing.Size(119, 22);
-            this.textBox_PalveluNimi.TabIndex = 23;
+            this.textBox_PalveluNimi.TabIndex = 3;
             // 
             // PalveluHallinta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(571, 580);
             this.Controls.Add(this.comboBox_AlueID);
             this.Controls.Add(this.btn_Poista);

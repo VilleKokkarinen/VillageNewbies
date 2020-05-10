@@ -47,33 +47,37 @@
             this.dataGridView_Alueet.RowHeadersWidth = 51;
             this.dataGridView_Alueet.RowTemplate.Height = 24;
             this.dataGridView_Alueet.Size = new System.Drawing.Size(340, 269);
-            this.dataGridView_Alueet.TabIndex = 0;
+            this.dataGridView_Alueet.TabIndex = 7;
             this.dataGridView_Alueet.SelectionChanged += new System.EventHandler(this.dataGridView_Alueet_SelectionChanged);
             // 
             // label_AlueID
             // 
             this.label_AlueID.AutoSize = true;
+            this.label_AlueID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_AlueID.ForeColor = System.Drawing.SystemColors.Menu;
             this.label_AlueID.Location = new System.Drawing.Point(9, 94);
             this.label_AlueID.Name = "label_AlueID";
-            this.label_AlueID.Size = new System.Drawing.Size(53, 17);
-            this.label_AlueID.TabIndex = 1;
+            this.label_AlueID.Size = new System.Drawing.Size(71, 20);
+            this.label_AlueID.TabIndex = 0;
             this.label_AlueID.Text = "Alue ID";
             // 
             // label_Nimi
             // 
             this.label_Nimi.AutoSize = true;
+            this.label_Nimi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Nimi.ForeColor = System.Drawing.SystemColors.Menu;
             this.label_Nimi.Location = new System.Drawing.Point(222, 94);
             this.label_Nimi.Name = "label_Nimi";
-            this.label_Nimi.Size = new System.Drawing.Size(35, 17);
-            this.label_Nimi.TabIndex = 1;
+            this.label_Nimi.Size = new System.Drawing.Size(47, 20);
+            this.label_Nimi.TabIndex = 2;
             this.label_Nimi.Text = "Nimi";
             // 
             // textBox_AlueID
             // 
-            this.textBox_AlueID.Location = new System.Drawing.Point(75, 92);
+            this.textBox_AlueID.Location = new System.Drawing.Point(86, 91);
             this.textBox_AlueID.Name = "textBox_AlueID";
             this.textBox_AlueID.Size = new System.Drawing.Size(100, 22);
-            this.textBox_AlueID.TabIndex = 2;
+            this.textBox_AlueID.TabIndex = 1;
             // 
             // textBox_Nimi
             // 
@@ -97,7 +101,7 @@
             this.button_Muokka.Location = new System.Drawing.Point(182, 461);
             this.button_Muokka.Name = "button_Muokka";
             this.button_Muokka.Size = new System.Drawing.Size(75, 23);
-            this.button_Muokka.TabIndex = 4;
+            this.button_Muokka.TabIndex = 5;
             this.button_Muokka.Text = "Muokkaa";
             this.button_Muokka.UseVisualStyleBackColor = true;
             this.button_Muokka.Click += new System.EventHandler(this.button_Muokka_Click);
@@ -107,7 +111,7 @@
             this.button_Poista.Location = new System.Drawing.Point(277, 461);
             this.button_Poista.Name = "button_Poista";
             this.button_Poista.Size = new System.Drawing.Size(75, 23);
-            this.button_Poista.TabIndex = 4;
+            this.button_Poista.TabIndex = 6;
             this.button_Poista.Text = "Poista";
             this.button_Poista.UseVisualStyleBackColor = true;
             this.button_Poista.Click += new System.EventHandler(this.button_Poista_Click);
@@ -116,6 +120,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(427, 505);
             this.Controls.Add(this.button_Poista);
             this.Controls.Add(this.button_Muokka);
