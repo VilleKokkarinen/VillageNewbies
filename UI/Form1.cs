@@ -16,8 +16,8 @@ namespace VillageNewbies
         public Form1()
         {
             InitializeComponent();
-            SQL s = new SQL();
-            s.create();
+            //SQL s = new SQL();
+            //s.create();
         }
 
         private void Btn_Varaus_Click(object sender, EventArgs e)
