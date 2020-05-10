@@ -140,15 +140,13 @@ namespace VillageNewbies.UI
         {
             if (checklist_Loan_Cabins.SelectedItem != null)
             {
-                dateTimePicker_Lahto = new DateTimePicker();
-                dateTimePicker_Tulo = new DateTimePicker();
-
+                
                 txt_Cabin_MaxResidents.Text = ((Cabin)checklist_Loan_Cabins.SelectedItem).henkilomaara.ToString();
                 txt_Cabin_Details.Text = ((Cabin)checklist_Loan_Cabins.SelectedItem).kuvaus;
                 txt_Cabin_Price.Text = ((Cabin)checklist_Loan_Cabins.SelectedItem).hinta.ToString();
                 txt_Cabin_State.Text = ((Cabin)checklist_Loan_Cabins.SelectedItem).varattu == true ? "varattu" : "avoin";
                 
-                /*
+                
                 if(((Cabin)checklist_Loan_Cabins.SelectedItem).varattu == false)
                 {
                     List<DateTime> lista = new List<DateTime>();
@@ -174,11 +172,13 @@ namespace VillageNewbies.UI
                     }
                     else
                     {
+                        
                         dateTimePicker_Tulo.MaxDate = DateTime.Now.AddDays(90);
                         dateTimePicker_Tulo.MinDate = DateTime.Now;
 
                         dateTimePicker_Lahto.MaxDate = DateTime.Now.AddDays(91);
                         dateTimePicker_Lahto.MinDate = DateTime.Now.AddDays(1);
+                        
                         
                     }
                 }
@@ -227,8 +227,9 @@ namespace VillageNewbies.UI
                     }
                    
                 }
-                */
+                
             }
+            
         }
 
         private void checklist_Loan_Cabins_ItemCheck(object sender, ItemCheckEventArgs e)
@@ -411,11 +412,13 @@ namespace VillageNewbies.UI
         private void Btn_Varaa_Click(object sender, EventArgs e)
         {
             int id;
+
             if(dataGridView1.SelectedRows.Count != 0)
             {
 
                 string textquery = $"INSERT INTO varaus(asiakas_id,mokki_id,varattu_pvm,vahvistus_pvm,varattu_alkupvm,varattu_loppupvm)values(" +
-                $"{txtboxAsiakas_id.Text}, {((Cabin)checklist_Loan_Cabins.SelectedItem).mokki_id}, strftime('%s', 'now'), strftime('%s', 'now'), {ConvertToUnixTime(dateTimePicker_Tulo.Value)}, {ConvertToUnixTime(dateTimePicker_Lahto.Value)})";
+                $"{txtboxAsiakas_id.Text}, {((Cabin)checklist_Loan_Cabins.SelectedItem).mokki_id}, strftime('%s', 'now'), strftime('%s', 'now'), {ConvertToUnixTime(dateTimePicker_Tulo.Value.Date.ToUniversalTime())}, {ConvertToUnixTime(dateTimePicker_Lahto.Value.Date.ToUniversalTime())})";
+
 
                 SetConnection();
                 connection.Open();
@@ -455,6 +458,10 @@ namespace VillageNewbies.UI
 
                 connection.Close();
 
+            }
+            else
+            {
+                MessageBox.Show("?");
             }
 
            
