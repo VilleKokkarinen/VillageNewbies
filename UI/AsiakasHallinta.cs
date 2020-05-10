@@ -25,7 +25,7 @@ namespace VillageNewbies.UI
 
         private void AsiakasHallinta_Load(object sender, EventArgs e)
         {
-            //s.create();
+          
             dataGridView_Asiakkaat.DataSource = s.returnstuff();
             dataGridView_Asiakkaat.ClearSelection();
             cleartextboxes();
@@ -89,10 +89,10 @@ namespace VillageNewbies.UI
                     dataGridView_Asiakkaat.DataSource = s.returnstuff();
                     MessageBox.Show("Asiakas lisätty tietokantaan");
                 }
-                catch (Exception error)
+                catch (Exception)
                 {
-
-                    throw;
+                    MessageBox.Show("Tapahtui virhe!");
+                    //throw;
                 }
             }
 
@@ -106,6 +106,7 @@ namespace VillageNewbies.UI
                 int index = dataGridView_Asiakkaat.SelectedCells[0].RowIndex;
                 DataGridViewRow selectedrow = dataGridView_Asiakkaat.Rows[index];
 
+                textBox_Postitoimipaikka.Text = selectedrow.Cells["postitoimipaikka"].Value.ToString();
                 textBox_ID.Text = selectedrow.Cells["asiakas_id"].Value.ToString();
                 textBox_Etunimi.Text = selectedrow.Cells["etunimi"].Value.ToString();
                 textBox_Sukunimi.Text = selectedrow.Cells["sukunimi"].Value.ToString();
@@ -113,7 +114,7 @@ namespace VillageNewbies.UI
                 textBox_Postinro.Text = selectedrow.Cells["postinro"].Value.ToString();
                 textBox_Email.Text = selectedrow.Cells["email"].Value.ToString();
                 textBox_Puhnro.Text = selectedrow.Cells["puhelinnro"].Value.ToString();
-                textBox_Postitoimipaikka.Text = selectedrow.Cells["postitoimipaikka"].Value.ToString();
+                
             }
         }
 
@@ -133,8 +134,8 @@ namespace VillageNewbies.UI
                 }
                 catch (Exception)
                 {
-
-                    throw;
+                    MessageBox.Show("Tapahtui virhe!");
+                    //throw;
                 }
             }
         }
@@ -227,6 +228,22 @@ namespace VillageNewbies.UI
             adapt.Fill(dt);
             dataGridView_Asiakkaat.DataSource = dt;
             connection.Close();
+        }
+
+        private void textBox_ID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox_EtsiPostiNro_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

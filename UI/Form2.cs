@@ -16,23 +16,27 @@ namespace VillageNewbies.UI
         public Varaus()
         {
             InitializeComponent();
-
+            Buttonvaraa();
         }
-
-        public static string GetVarausID = "";
 
         private SQLiteConnection connection;
         private SQLiteCommand cmd;
+        SQLiteDataAdapter adapt;
+        DataTable dt;
 
         private BindingList<Cabin> Mokit;
         private BindingList<Cabin> NakyvatMokit;
 
         private BindingList<Reservation> Varaukset;
+        private BindingList<Service> palvelut;
+        private BindingList<Service> valitutpalvelut;
 
         private void Varaus_Load(object sender, EventArgs e)
         {
             Mokit = new BindingList<Cabin>();
             NakyvatMokit = new BindingList<Cabin>();
+            palvelut = new BindingList<Service>();
+            valitutpalvelut = new BindingList<Service>();
 
             Varaukset = new BindingList<Reservation>();
 
@@ -119,6 +123,7 @@ namespace VillageNewbies.UI
                 txtboxEtunimi.Text = selectedRow.Cells["etunimi"].Value.ToString();
                 txtboxSukunimi.Text = selectedRow.Cells["sukunimi"].Value.ToString();
                 txtboxPostinro.Text = selectedRow.Cells["postinro"].Value.ToString();
+                textBox_PostiToimiPaikka.Text = selectedRow.Cells["postitoimipaikka"].Value.ToString();
                 txtboxlahiosoite.Text = selectedRow.Cells["lahiosoite"].Value.ToString();
                 txtboxEmail.Text = selectedRow.Cells["email"].Value.ToString();
                 txtboxPuhelinnro.Text = selectedRow.Cells["puhelinnro"].Value.ToString();
@@ -135,11 +140,13 @@ namespace VillageNewbies.UI
         {
             if (checklist_Loan_Cabins.SelectedItem != null)
             {
+                
                 txt_Cabin_MaxResidents.Text = ((Cabin)checklist_Loan_Cabins.SelectedItem).henkilomaara.ToString();
                 txt_Cabin_Details.Text = ((Cabin)checklist_Loan_Cabins.SelectedItem).kuvaus;
                 txt_Cabin_Price.Text = ((Cabin)checklist_Loan_Cabins.SelectedItem).hinta.ToString();
                 txt_Cabin_State.Text = ((Cabin)checklist_Loan_Cabins.SelectedItem).varattu == true ? "varattu" : "avoin";
-
+                
+                
                 if(((Cabin)checklist_Loan_Cabins.SelectedItem).varattu == false)
                 {
                     List<DateTime> lista = new List<DateTime>();
@@ -165,11 +172,13 @@ namespace VillageNewbies.UI
                     }
                     else
                     {
+                        
                         dateTimePicker_Tulo.MaxDate = DateTime.Now.AddDays(90);
                         dateTimePicker_Tulo.MinDate = DateTime.Now;
 
                         dateTimePicker_Lahto.MaxDate = DateTime.Now.AddDays(91);
                         dateTimePicker_Lahto.MinDate = DateTime.Now.AddDays(1);
+                        
                         
                     }
                 }
@@ -218,7 +227,9 @@ namespace VillageNewbies.UI
                     }
                    
                 }
+                
             }
+            
         }
 
         private void checklist_Loan_Cabins_ItemCheck(object sender, ItemCheckEventArgs e)
@@ -285,6 +296,7 @@ namespace VillageNewbies.UI
             txtboxEtunimi.Clear();
             txtboxSukunimi.Clear();
             txtboxPostinro.Clear();
+            textBox_PostiToimiPaikka.Clear();
             txtboxlahiosoite.Clear();
             txtboxEmail.Clear();
             txtboxPuhelinnro.Clear();
@@ -297,12 +309,20 @@ namespace VillageNewbies.UI
 
         private void ExecuteQuery(string textquery)
         {
-            SetConnection();
-            connection.Open();
-            cmd = connection.CreateCommand();
-            cmd.CommandText = textquery;
-            cmd.ExecuteNonQuery();
-            connection.Close();
+            try
+            {
+                SetConnection();
+                connection.Open();
+                cmd = connection.CreateCommand();
+                cmd.CommandText = textquery;
+                cmd.ExecuteNonQuery();
+                connection.Close();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Tapahtui virhe!");
+                //throw;
+            }
         }
 
 
@@ -313,8 +333,8 @@ namespace VillageNewbies.UI
             {
                 try
                 {
-                    string textquery = "INSERT INTO asiakas(asiakas_id,postinro,etunimi,sukunimi,lahiosoite,email,puhelinnro)values('" + txtboxAsiakas_id.Text + "'," +
-                    " '" + txtboxPostinro.Text + "' , '" + txtboxEtunimi.Text + "' , '" + txtboxSukunimi.Text + "' , '" + txtboxlahiosoite.Text +
+                    string textquery = "INSERT INTO asiakas(asiakas_id,postinro,postitoimipaikka,etunimi,sukunimi,lahiosoite,email,puhelinnro)values('" + txtboxAsiakas_id.Text + "'," +
+                    " '" + txtboxPostinro.Text + "' , '" + textBox_PostiToimiPaikka.Text + "' , '" + txtboxEtunimi.Text + "' , '" + txtboxSukunimi.Text + "' , '" + txtboxlahiosoite.Text +
                     "' , '" + @txtboxEmail.Text + "' , '" + txtboxPuhelinnro.Text + "')";
                     ExecuteQuery(textquery);
                     dataGridView1.DataSource = s.returnstuff();
@@ -322,8 +342,8 @@ namespace VillageNewbies.UI
                 }
                 catch (Exception)
                 {
-
-                    throw;
+                    MessageBox.Show("Tapahtui virhe!");
+                    //throw;
                 }
 
             }
@@ -331,7 +351,7 @@ namespace VillageNewbies.UI
             {
                 try
                 {
-                    string textquery = "UPDATE asiakas SET postinro = '" + txtboxPostinro.Text + "', etunimi = '" + txtboxEtunimi.Text +
+                    string textquery = "UPDATE asiakas SET postinro = '" + txtboxPostinro.Text + "', postitoimipaikka = '" +textBox_PostiToimiPaikka.Text + "', etunimi = '" + txtboxEtunimi.Text +
                     "', sukunimi ='" + txtboxSukunimi.Text + "', lahiosoite ='" + txtboxlahiosoite.Text + "', email ='" + txtboxEmail.Text +
                     "', puhelinnro ='" + txtboxPuhelinnro.Text + "' WHERE asiakas_id = '" + txtboxAsiakas_id.Text + "';";
                     ExecuteQuery(textquery);
@@ -340,8 +360,8 @@ namespace VillageNewbies.UI
                 }
                 catch (Exception)
                 {
-
-                    throw;
+                    MessageBox.Show("Tapahtui virhe!");
+                    //throw;
                 }
 
             }
@@ -391,17 +411,60 @@ namespace VillageNewbies.UI
 
         private void Btn_Varaa_Click(object sender, EventArgs e)
         {
+            int id;
+
             if(dataGridView1.SelectedRows.Count != 0)
             {
+
                 string textquery = $"INSERT INTO varaus(asiakas_id,mokki_id,varattu_pvm,vahvistus_pvm,varattu_alkupvm,varattu_loppupvm)values(" +
-                $"{txtboxAsiakas_id.Text}, {((Cabin)checklist_Loan_Cabins.SelectedItem).mokki_id}, strftime('%s', 'now'), strftime('%s', 'now'), {ConvertToUnixTime(dateTimePicker_Tulo.Value)}, {ConvertToUnixTime(dateTimePicker_Lahto.Value)})";
+                $"{txtboxAsiakas_id.Text}, {((Cabin)checklist_Loan_Cabins.SelectedItem).mokki_id}, strftime('%s', 'now'), strftime('%s', 'now'), {ConvertToUnixTime(dateTimePicker_Tulo.Value.Date.ToUniversalTime())}, {ConvertToUnixTime(dateTimePicker_Lahto.Value.Date.ToUniversalTime())})";
 
 
-                ExecuteQuery(textquery);
+                SetConnection();
+                connection.Open();
+                cmd = connection.CreateCommand();
+                cmd.CommandText = textquery;
+                cmd.ExecuteNonQuery();
+
+                cmd.CommandText = "select last_insert_rowid()";
+                cmd.ExecuteNonQuery();
+                System.Object temp = cmd.ExecuteScalar();
+                id = int.Parse(temp.ToString());
+
+                foreach (Service s in valitutpalvelut)
+                {
+                    textquery = $"INSERT INTO varauksen_palvelut(varaus_id, palvelu_id, lkm)VALUES(" +
+                        $"{id},{s.palvelu_id},{1}";
+                }
+
+
+                valitutpalvelut.Clear();
+                foreach (Service s in Clb_Palvelut.CheckedItems)
+                {
+                    valitutpalvelut.Add(s);
+                }
+
+
+
+                Lasku lasku = new Lasku(
+                    new Client(txtboxEtunimi.Text, txtboxSukunimi.Text, Convert.ToInt32(txtboxAsiakas_id.Text), txtboxlahiosoite.Text, txtboxEmail.Text, txtboxPuhelinnro.Text, txtboxPostinro.Text, textBox_PostiToimiPaikka.Text),
+                    ((Cabin)checklist_Loan_Cabins.SelectedItem),
+                    new Reservation(id, Convert.ToInt32(txtboxAsiakas_id.Text), ((Cabin)checklist_Loan_Cabins.SelectedItem).mokki_id, Convert.ToInt32(ConvertToUnixTime(DateTime.Now)), Convert.ToInt32(ConvertToUnixTime(DateTime.Now)), Convert.ToInt32(ConvertToUnixTime(dateTimePicker_Tulo.Value)), Convert.ToInt32(ConvertToUnixTime(dateTimePicker_Lahto.Value))),
+                    new Invoice(0, id, Convert.ToDouble(txtHinta.Text), 24),
+                    valitutpalvelut.ToArray()
+                    );
                 MessageBox.Show("Lisäys onnistui");
-                Lasku lasku = new Lasku();
                 lasku.Show();
+
+                connection.Close();
+
             }
+            else
+            {
+                MessageBox.Show("?");
+            }
+
+           
            
         }
 
@@ -417,5 +480,63 @@ namespace VillageNewbies.UI
                 }
             }
         }
+
+        private void textBox_HaeSukunimella_TextChanged(object sender, EventArgs e)
+        {
+            SetConnection();
+            connection.Open();
+            adapt = new SQLiteDataAdapter("SELECT * FROM asiakas WHERE sukunimi like '" + textBox_HaeSukunimella.Text + "%'", connection);
+            dt = new DataTable();
+            adapt.Fill(dt);
+            dataGridView1.DataSource = dt;
+            connection.Close();
+        }
+
+        private void Btn_Tyhjenna_Click(object sender, EventArgs e)
+        {
+            clear_txt_boxes();
+            dataGridView1.ClearSelection();
+        }
+
+        private void txtboxAsiakas_id_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void Buttonvaraa()
+        {
+ 
+            if (String.IsNullOrWhiteSpace(txtHinta.Text))
+            {
+                Btn_Varaa.Enabled = false;
+            }
+            else
+            {
+                Btn_Varaa.Enabled = true;
+            }
+        }
+
+        private void txtHinta_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Buttonvaraa();
+            if (string.IsNullOrWhiteSpace(txtHinta.Text))
+            {
+                Btn_Varaa.Enabled = false;
+            }
+            else
+            {
+                Btn_Varaa.Enabled = true;
+            } 
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+                
+            }
+        }
+
+      
     }
 }

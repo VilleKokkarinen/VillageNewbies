@@ -1,6 +1,8 @@
-﻿namespace VillageNewbies
+﻿using System;
+
+namespace VillageNewbies
 {   
-    class Cabin
+    public class Cabin
     {        
         public int mokki_id { get; set; }
         public int toimintaalue_id { get; set; }
@@ -34,7 +36,12 @@
             this.henkilomaara = henkilomaara;
             this.varustelu = varustelu;
             this.hinta = hinta;
-            this.varattu = new SQL().SQLiteQuery_single("SELECT CASE WHEN varattu_loppupvm > strftime('%s', 'now') AND varattu_alkupvm < strftime('%s', 'now') THEN 'varattu' ELSE 'avoin' END AS varattu_loppupvm FROM varaus WHERE mokki_id = " + mokki_id) == "varattu" ? true : false;
+
+            int pvmNyt = Convert.ToInt32(new SQL().SQLiteQuery_single("SELECT strftime('%s', 'now')"));
+            int pvmAlku = Convert.ToInt32(new SQL().SQLiteQuery_single("SELECT varattu_alkupvm from varaus where mokki_id = " + mokki_id + " AND varattu_loppupvm >= strftime('%s', 'now') AND varattu_alkupvm <= strftime('%s', 'now')"));
+            int pvmLoppu = Convert.ToInt32(new SQL().SQLiteQuery_single("SELECT varattu_loppupvm from varaus where mokki_id = " + mokki_id + " AND varattu_loppupvm >= strftime('%s', 'now') AND varattu_alkupvm <= strftime('%s', 'now')"));
+
+            this.varattu = new SQL().SQLiteQuery_single("SELECT CASE WHEN varattu_loppupvm >= strftime('%s', 'now') AND varattu_alkupvm <= strftime('%s', 'now') THEN 'varattu' ELSE 'avoin' END AS varattu_loppupvm FROM varaus WHERE mokki_id = " + mokki_id) == "varattu" ? true : false;
         }
     }
 }

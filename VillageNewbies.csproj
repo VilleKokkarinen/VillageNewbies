@@ -76,7 +76,6 @@
     <Compile Include="Objects\Invoice\Invoice.cs" />
     <Compile Include="Objects\Mail\Mail.cs" />
     <Compile Include="Objects\OperatingArea\OperatingArea.cs" />
-    <Compile Include="Objects\ReservationService\ReservationService.cs" />
     <Compile Include="Objects\Reservation\Reservation.cs" />
     <Compile Include="Objects\Service\Service.cs" />
     <Compile Include="UI\AlueidenHallinta.cs">
@@ -96,6 +95,12 @@
     </Compile>
     <Compile Include="UI\Lasku.Designer.cs">
       <DependentUpon>Lasku.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Laskut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Laskut.Designer.cs">
+      <DependentUpon>Laskut.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\PalveluHallinta.cs">
       <SubType>Form</SubType>
@@ -152,6 +157,12 @@
     <Compile Include="UI\CustomObjects\Buttons\ShapedButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="UI\Sahkoposti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Sahkoposti.Designer.cs">
+      <DependentUpon>Sahkoposti.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\TypeAssistant.cs" />
     <Compile Include="Objects\Cabin\Cabin.cs" />
     <Compile Include="UI\Varaukset.cs">
@@ -179,6 +190,9 @@
     <EmbeddedResource Include="UI\Lasku.resx">
       <DependentUpon>Lasku.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Laskut.resx">
+      <DependentUpon>Laskut.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\PalveluHallinta.resx">
       <DependentUpon>PalveluHallinta.cs</DependentUpon>
     </EmbeddedResource>
@@ -199,6 +213,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\MainScreen\MainScreen.resx">
       <DependentUpon>MainScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Sahkoposti.resx">
+      <DependentUpon>Sahkoposti.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Varaukset.resx">
       <DependentUpon>Varaukset.cs</DependentUpon>

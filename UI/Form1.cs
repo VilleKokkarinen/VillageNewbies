@@ -38,5 +38,11 @@ namespace VillageNewbies
             varaukset.Show();
             varaukset.TopLevel = true;
         }
+
+        private void Btn_Laskut_Click(object sender, EventArgs e)
+        {
+            Laskut laskut = new Laskut();
+            laskut.Show();
+        }
     }
 }

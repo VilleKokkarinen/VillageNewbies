@@ -308,6 +308,29 @@ namespace VillageNewbies
 
         }
 
+        public DataTable returnInvoicesDT()
+        {
+            using (SQLiteConnection connect = new SQLiteConnection(@"Data Source=VillageNewbiesDB.db"))
+            {
+                connect.Open();
+                using (SQLiteCommand fmd = connect.CreateCommand())
+                {
+
+                    string CommandText = "SELECT * FROM lasku";
+                    SQLiteDataAdapter sqlda = new SQLiteDataAdapter(CommandText, connect);
+
+                    DataTable dt;
+
+                    using (dt = new DataTable())
+                    {
+                        sqlda.Fill(dt);
+                    }
+                    return dt;
+                }
+            }
+
+        }
+
         public void create()
         {
 
@@ -337,8 +360,10 @@ namespace VillageNewbies
             cmd.CommandText = "DROP TABLE IF EXISTS asiakas";
             cmd.ExecuteNonQuery();
 
-            cmd.CommandText = "CREATE TABLE IF NOT EXISTS asiakas (" +
-          "asiakas_id INTEGER PRIMARY KEY," +
+
+
+        cmd.CommandText = "CREATE TABLE IF NOT EXISTS asiakas (" +
+          "asiakas_id INTEGER PRIMARY KEY AUTOINCREMENT," +
           "postinro CHAR(5) NOT NULL," +
           "postitoimipaikka VARCHAR(20) NULL DEFAULT NULL," +
           "etunimi VARCHAR(20) NULL DEFAULT NULL," +
@@ -362,6 +387,28 @@ namespace VillageNewbies
                 "('109','20100','Turku', 'Pentti', 'Hirvonen', 'Hirvoskuja13', 'pentti.h@gmail.com', '0445542689')";
             cmd.ExecuteNonQuery();
 
+
+
+            string[] _firstName = new string[] { "Adam", "Alex", "Aaron", "Ben", "Carl", "Dan", "David", "Edward", "Fred", "Frank", "George", "Hal", "Hank", "Ike", "John", "Jack", "Joe", "Larry", "Monte", "Matthew", "Mark", "Nathan", "Otto", "Paul", "Peter", "Roger", "Roger", "Steve", "Thomas", "Tim", "Ty", "Victor", "Walter" };
+
+            string[] _lastName = new string[] { "Anderson", "Ashwoon", "Aikin", "Bateman", "Bongard", "Bowers", "Boyd", "Cannon", "Cast", "Deitz", "Dewalt", "Ebner", "Frick", "Hancock", "Haworth", "Hesch", "Hoffman", "Kassing", "Knutson", "Lawless", "Lawicki", "Mccord", "McCormack", "Miller", "Myers", "Nugent", "Ortiz", "Orwig", "Ory", "Paiser", "Pak", "Pettigrew", "Quinn", "Quizoz", "Ramachandran", "Resnick", "Sagar", "Schickowski", "Schiebel", "Sellon", "Severson", "Shaffer", "Solberg", "Soloman", "Sonderling", "Soukup", "Soulis", "Stahl", "Sweeney", "Tandy", "Trebil", "Trusela", "Trussel", "Turco", "Uddin", "Uflan", "Ulrich", "Upson", "Vader", "Vail", "Valente", "Van Zandt", "Vanderpoel", "Ventotla", "Vogal", "Wagle", "Wagner", "Wakefield", "Weinstein", "Weiss", "Woo", "Yang", "Yates", "Yocum", "Zeaser", "Zeller", "Ziegler", "Bauer", "Baxster", "Casal", "Cataldi", "Caswell", "Celedon", "Chambers", "Chapman", "Christensen", "Darnell", "Davidson", "Davis", "DeLorenzo", "Dinkins", "Doran", "Dugelman", "Dugan", "Duffman", "Eastman", "Ferro", "Ferry", "Fletcher", "Fietzer", "Hylan", "Hydinger", "Illingsworth", "Ingram", "Irwin", "Jagtap", "Jenson", "Johnson", "Johnsen", "Jones", "Jurgenson", "Kalleg", "Kaskel", "Keller", "Leisinger", "LePage", "Lewis", "Linde", "Lulloff", "Maki", "Martin", "McGinnis", "Mills", "Moody", "Moore", "Napier", "Nelson", "Norquist", "Nuttle", "Olson", "Ostrander", "Reamer", "Reardon", "Reyes", "Rice", "Ripka", "Roberts", "Rogers", "Root", "Sandstrom", "Sawyer", "Schlicht", "Schmitt", "Schwager", "Schutz", "Schuster", "Tapia", "Thompson", "Tiernan", "Tisler" };
+
+            string[] _kaupungit = new string[] {"Helsinki","Turku", "Kuopio", "Oulu", "Rovaniemi", "Jyväskylä" };
+
+            string monta = "INSERT into asiakas(postinro,postitoimipaikka,etunimi,sukunimi,lahiosoite,email,puhelinnro)VALUES";
+            Random r = new Random();
+            for (int i = 0; i <= 1000; i++)
+            {
+                string firstname = _firstName[r.Next(_firstName.Length - 1)];
+                string lastname = _lastName[r.Next(_lastName.Length - 1)];
+
+                monta += $"('{r.Next(10000,99999)}', '{_kaupungit[r.Next(5)]}', '{firstname}','{lastname}', '{"tie" + r.Next(5000).ToString()}', '{firstname + "." + lastname + "@gmail.com"}', '{"044"+r.Next(1000000,9999999)}'),";
+                System.Threading.Thread.Sleep(10);
+            }
+            monta = monta.Substring(0, monta.Length - 1);
+
+            cmd.CommandText = monta;
+            cmd.ExecuteNonQuery();
 
             cmd.CommandText = "DROP TABLE IF EXISTS toimintaalue";
             cmd.ExecuteNonQuery();
@@ -397,14 +444,14 @@ namespace VillageNewbies
 
             cmd.CommandText = "INSERT INTO mokki(mokki_id,toimintaalue_id, hinta, postinro, mokkinimi,katuosoite,kuvaus,henkilomaara,varustelu)" +
                 "VALUES" +
-                "('200', '1', '50', '87760', 'Tahkola','Tahkontie 1','Perus mökki perheelle','5','2 makuuhuonetta ja 1 kylpyhuone saunalla')," +
-                "('201', '1', '60','87060', 'Tohkola', 'Tohkotie 2', 'Laskettelijan mökki', '3', '1 isompi huone kylpyhuoneella ja saunalla')," +
-                "('203', '2', '100','87160', 'Levilä', 'Levintie 3', 'Luksus mökki seurueelle', '8', '3 makuuhuonetta, 2 kylpyhuonetta, sauna ja parveke')," +
-                "('204', '2', '50','87260', 'Lekkilä', 'Lekikuja 4', 'Laskettelijan mökki', '3', '1 isompi huone kylpyhuoneella ja saunalla')," +
-                "('205', '3', '80','87360', 'Rukola', 'Rukantie 5', 'Hieno mökki perheelle', '6', '2 makuuhuonetta ja 1 kylpyhuone saunalla ja ulko paljulla')," +
-                "('206', '3', '60','87460', 'Rakola', 'Rakolatie 6', 'Laskettelijan mökki', '3', '1 isompi huone kylpyhuoneella ja saunalla')," +
-                "('207', '4', '50','87560', 'Tahkola', 'Tahkontie 1', 'Perus mökki perheelle', '5', '2 makuuhuonetta ja 1 kylpyhuone saunalla')," +
-                "('208', '4', '60','87660', 'Himola', 'Himolankuja 8', 'Laskettelijan mökki', '3', '1 isompi huone kylpyhuoneella ja saunalla')";
+                "('200', '1', '50', '73310', 'Tahkola','Tahkontie 1','Perus mökki perheelle','5','2 makuuhuonetta ja 1 kylpyhuone saunalla')," +
+                "('201', '1', '60','73310', 'Tohkola', 'Tohkotie 2', 'Laskettelijan mökki', '3', '1 isompi huone kylpyhuoneella ja saunalla')," +
+                "('203', '2', '100','99130', 'Levilä', 'Levintie 3', 'Luksus mökki seurueelle', '8', '3 makuuhuonetta, 2 kylpyhuonetta, sauna ja parveke')," +
+                "('204', '2', '50','99130', 'Lekkilä', 'Lekikuja 4', 'Laskettelijan mökki', '3', '1 isompi huone kylpyhuoneella ja saunalla')," +
+                "('205', '3', '80','93830', 'Rukola', 'Rukantie 5', 'Hieno mökki perheelle', '6', '2 makuuhuonetta ja 1 kylpyhuone saunalla ja ulko paljulla')," +
+                "('206', '3', '60','93830', 'Rakola', 'Rakolatie 6', 'Laskettelijan mökki', '3', '1 isompi huone kylpyhuoneella ja saunalla')," +
+                "('207', '4', '50','42100', 'Tahkola', 'Tahkontie 1', 'Perus mökki perheelle', '5', '2 makuuhuonetta ja 1 kylpyhuone saunalla')," +
+                "('208', '4', '60','42100', 'Himola', 'Himolankuja 8', 'Laskettelijan mökki', '3', '1 isompi huone kylpyhuoneella ja saunalla')";
             cmd.ExecuteNonQuery();
 
             cmd.CommandText = "DROP TABLE IF EXISTS varaus";

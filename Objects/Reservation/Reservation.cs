@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VillageNewbies
 {
-    class Reservation
+    public class Reservation
     {
         /*    "varaus_id INTEGER PRIMARY KEY AUTOINCREMENT," +
               "asiakas_id INT(11)  NOT NULL," +
