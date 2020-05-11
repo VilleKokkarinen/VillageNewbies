@@ -56,11 +56,14 @@
     <Reference Include="FastMember, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\FastMember.1.5.0\lib\net461\FastMember.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.SQLite, Version=1.0.112.1, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
       <HintPath>packages\System.Data.SQLite.Core.1.0.112.1\lib\net40\System.Data.SQLite.dll</HintPath>
     </Reference>
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -70,6 +73,8 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Objects\Client\Client.cs" />
@@ -90,6 +95,10 @@
     <Compile Include="UI\AsiakasHallinta.Designer.cs">
       <DependentUpon>AsiakasHallinta.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\datepikkeri.xaml.cs">
+      <DependentUpon>datepikkeri.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\datePikkeriHost.cs" />
     <Compile Include="UI\Lasku.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -260,7 +269,12 @@
     <None Include="Resources\Icons\rezise.png" />
     <None Include="Resources\logo.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Page Include="UI\datepikkeri.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\System.Data.SQLite.Core.1.0.112.1\build\net40\System.Data.SQLite.Core.targets" Condition="Exists('packages\System.Data.SQLite.Core.1.0.112.1\build\net40\System.Data.SQLite.Core.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
