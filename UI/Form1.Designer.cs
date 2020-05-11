@@ -62,7 +62,7 @@
             this.Btn_Laskut.Location = new System.Drawing.Point(29, 222);
             this.Btn_Laskut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btn_Laskut.Name = "Btn_Laskut";
-            this.Btn_Laskut.Size = new System.Drawing.Size(113, 37);
+            this.Btn_Laskut.Size = new System.Drawing.Size(113, 46);
             this.Btn_Laskut.TabIndex = 3;
             this.Btn_Laskut.Text = "Laskut";
             this.Btn_Laskut.UseVisualStyleBackColor = true;
@@ -73,7 +73,7 @@
             this.Btn_Varaukset.Location = new System.Drawing.Point(29, 160);
             this.Btn_Varaukset.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btn_Varaukset.Name = "Btn_Varaukset";
-            this.Btn_Varaukset.Size = new System.Drawing.Size(113, 37);
+            this.Btn_Varaukset.Size = new System.Drawing.Size(113, 44);
             this.Btn_Varaukset.TabIndex = 2;
             this.Btn_Varaukset.Text = "Varaukset";
             this.Btn_Varaukset.UseVisualStyleBackColor = true;
@@ -84,7 +84,7 @@
             this.Btn_Hallinta.Location = new System.Drawing.Point(29, 98);
             this.Btn_Hallinta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btn_Hallinta.Name = "Btn_Hallinta";
-            this.Btn_Hallinta.Size = new System.Drawing.Size(113, 37);
+            this.Btn_Hallinta.Size = new System.Drawing.Size(113, 48);
             this.Btn_Hallinta.TabIndex = 1;
             this.Btn_Hallinta.Text = "Hallinta";
             this.Btn_Hallinta.UseVisualStyleBackColor = true;
@@ -95,7 +95,7 @@
             this.Btn_Varaus.Location = new System.Drawing.Point(29, 37);
             this.Btn_Varaus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btn_Varaus.Name = "Btn_Varaus";
-            this.Btn_Varaus.Size = new System.Drawing.Size(113, 37);
+            this.Btn_Varaus.Size = new System.Drawing.Size(113, 46);
             this.Btn_Varaus.TabIndex = 0;
             this.Btn_Varaus.Text = "Uusi varaus";
             this.Btn_Varaus.UseVisualStyleBackColor = true;
@@ -149,7 +149,7 @@
             this.Controls.Add(this.Top_panel);
             this.Controls.Add(this.Central_Panel);
             this.Controls.Add(this.Left_panel);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Left_panel.ResumeLayout(false);
             this.Central_Panel.ResumeLayout(false);
