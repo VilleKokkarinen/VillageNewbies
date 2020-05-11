@@ -143,6 +143,12 @@ namespace VillageNewbies.UI
                 dpTulo.datePicker.datePikkeri.BlackoutDates.Clear();
                 dpLahto.datePicker.datePikkeri.BlackoutDates.Clear();
 
+                dpTulo.datePicker.datePikkeri.DisplayDateStart = DateTime.Now;
+                dpTulo.datePicker.datePikkeri.DisplayDateEnd = DateTime.Now.AddYears(3);
+
+                dpLahto.datePicker.datePikkeri.DisplayDateStart = DateTime.Now.AddDays(1);
+                dpLahto.datePicker.datePikkeri.DisplayDateEnd = DateTime.Now.AddYears(3).AddDays(1);
+
                 txt_Cabin_MaxResidents.Text = ((Cabin)checklist_Loan_Cabins.SelectedItem).henkilomaara.ToString();
                 txt_Cabin_Details.Text = ((Cabin)checklist_Loan_Cabins.SelectedItem).kuvaus;
                 txt_Cabin_Price.Text = ((Cabin)checklist_Loan_Cabins.SelectedItem).hinta.ToString();
