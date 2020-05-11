@@ -31,6 +31,9 @@ namespace VillageNewbies.UI
         private BindingList<Service> palvelut;
         private BindingList<Service> valitutpalvelut;
 
+        private double MokkiHinta;
+        private double PalveluidenHinta;
+
         private void Varaus_Load(object sender, EventArgs e)
         {
             Mokit = new BindingList<Cabin>();
@@ -111,6 +114,10 @@ namespace VillageNewbies.UI
             naytavaratutmokit();
         }
 
+        private void Laskehinta()
+        {
+            txtHinta.Text = (PalveluidenHinta + MokkiHinta).ToString();
+        }
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
@@ -140,6 +147,18 @@ namespace VillageNewbies.UI
         {
             if (checklist_Loan_Cabins.SelectedItem != null)
             {
+                MokkiHinta = 0;
+                try
+                {
+                    MokkiHinta = ((Cabin)checklist_Loan_Cabins.Items[checklist_Loan_Cabins.CheckedIndices[0]]).hinta;
+                }
+                catch {
+                    MokkiHinta = 0;
+                }                
+                
+                Laskehinta();
+                Buttonvaraa();
+
                 dpTulo.datePicker.datePikkeri.BlackoutDates.Clear();
                 dpLahto.datePicker.datePikkeri.BlackoutDates.Clear();
 
@@ -190,6 +209,7 @@ namespace VillageNewbies.UI
                 checklist_Loan_Cabins.ItemCheck -= checklist_Loan_Cabins_ItemCheck;
                 checklist_Loan_Cabins.SetItemChecked(checklist_Loan_Cabins.CheckedIndices[0], false);
                 checklist_Loan_Cabins.ItemCheck += checklist_Loan_Cabins_ItemCheck;
+                Buttonvaraa();
             }
         }
 
@@ -461,15 +481,23 @@ namespace VillageNewbies.UI
 
         private void Buttonvaraa()
         {
- 
-            if (String.IsNullOrWhiteSpace(txtHinta.Text))
+   
+            if(checklist_Loan_Cabins.CheckedItems.Count == 1)
             {
-                Btn_Varaa.Enabled = false;
+                if (String.IsNullOrWhiteSpace(txtHinta.Text))
+                {
+                    Btn_Varaa.Enabled = false;
+                }
+                else
+                {
+                    Btn_Varaa.Enabled = true;
+                }
             }
             else
             {
-                Btn_Varaa.Enabled = true;
+                Btn_Varaa.Enabled = false;
             }
+          
         }
 
         private void txtHinta_KeyPress(object sender, KeyPressEventArgs e)
@@ -489,7 +517,26 @@ namespace VillageNewbies.UI
                 
             }
         }
-
       
+
+        private void Clb_Palvelut_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            CheckedListBox clb = (CheckedListBox)sender;
+            // Switch off event handler
+            clb.ItemCheck -= Clb_Palvelut_ItemCheck;
+            clb.SetItemCheckState(e.Index, e.NewValue);
+            // Switch on event handler
+            clb.ItemCheck += Clb_Palvelut_ItemCheck;
+
+            valitutpalvelut.Clear();
+            PalveluidenHinta = 0;
+            foreach (Service s in Clb_Palvelut.CheckedItems)
+            {
+                valitutpalvelut.Add(s);
+                PalveluidenHinta += s.hinta;
+            }
+            Laskehinta();
+            Buttonvaraa();
+        }
     }
 }
