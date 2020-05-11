@@ -91,8 +91,9 @@
             this.panel1.Controls.Add(this.groupBox3);
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.checklist_Loan_Cabins);
+            this.panel1.Controls.Add(this.Clb_Palvelut);
             this.panel1.Location = new System.Drawing.Point(239, 11);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1056, 632);
             this.panel1.TabIndex = 0;
@@ -112,7 +113,7 @@
             // textBox_HaeSukunimella
             // 
             this.textBox_HaeSukunimella.Location = new System.Drawing.Point(928, 337);
-            this.textBox_HaeSukunimella.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_HaeSukunimella.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_HaeSukunimella.Name = "textBox_HaeSukunimella";
             this.textBox_HaeSukunimella.Size = new System.Drawing.Size(92, 20);
             this.textBox_HaeSukunimella.TabIndex = 54;
@@ -343,7 +344,7 @@
             "7",
             "8"});
             this.comboBox_HenkMaara.Location = new System.Drawing.Point(75, 115);
-            this.comboBox_HenkMaara.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox_HenkMaara.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox_HenkMaara.Name = "comboBox_HenkMaara";
             this.comboBox_HenkMaara.Size = new System.Drawing.Size(92, 21);
             this.comboBox_HenkMaara.TabIndex = 7;
@@ -363,10 +364,10 @@
             // Clb_Palvelut
             // 
             this.Clb_Palvelut.FormattingEnabled = true;
-            this.Clb_Palvelut.Location = new System.Drawing.Point(8, 164);
-            this.Clb_Palvelut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Clb_Palvelut.Location = new System.Drawing.Point(721, 32);
+            this.Clb_Palvelut.Margin = new System.Windows.Forms.Padding(2);
             this.Clb_Palvelut.Name = "Clb_Palvelut";
-            this.Clb_Palvelut.Size = new System.Drawing.Size(227, 34);
+            this.Clb_Palvelut.Size = new System.Drawing.Size(332, 259);
             this.Clb_Palvelut.TabIndex = 9;
             // 
             // labelAsiakas_id
@@ -497,7 +498,7 @@
             // 
             this.Btn_Varaa.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Varaa.Location = new System.Drawing.Point(46, 600);
-            this.Btn_Varaa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btn_Varaa.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Varaa.Name = "Btn_Varaa";
             this.Btn_Varaa.Size = new System.Drawing.Size(102, 41);
             this.Btn_Varaa.TabIndex = 25;
@@ -519,7 +520,7 @@
             // txtHinta
             // 
             this.txtHinta.Location = new System.Drawing.Point(111, 540);
-            this.txtHinta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtHinta.Margin = new System.Windows.Forms.Padding(2);
             this.txtHinta.Name = "txtHinta";
             this.txtHinta.Size = new System.Drawing.Size(76, 20);
             this.txtHinta.TabIndex = 27;
@@ -528,7 +529,7 @@
             // Btn_Tyhjenna
             // 
             this.Btn_Tyhjenna.Location = new System.Drawing.Point(11, 213);
-            this.Btn_Tyhjenna.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btn_Tyhjenna.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Tyhjenna.Name = "Btn_Tyhjenna";
             this.Btn_Tyhjenna.Size = new System.Drawing.Size(70, 47);
             this.Btn_Tyhjenna.TabIndex = 28;
@@ -594,13 +595,12 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtboxAsiakas_id);
             this.Controls.Add(this.labelAsiakas_id);
-            this.Controls.Add(this.Clb_Palvelut);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.comboBox_HenkMaara);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Varaus";
             this.Text = "Varaus";
             this.Load += new System.EventHandler(this.Varaus_Load);
