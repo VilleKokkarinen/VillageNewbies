@@ -63,6 +63,7 @@
     <Reference Include="System.Data.SQLite, Version=1.0.112.1, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
       <HintPath>packages\System.Data.SQLite.Core.1.0.112.1\lib\net40\System.Data.SQLite.dll</HintPath>
     </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -166,6 +167,12 @@
     <Compile Include="UI\CustomObjects\Buttons\ShapedButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="UI\Raportointi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Raportointi.Designer.cs">
+      <DependentUpon>Raportointi.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Sahkoposti.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -222,6 +229,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\MainScreen\MainScreen.resx">
       <DependentUpon>MainScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Raportointi.resx">
+      <DependentUpon>Raportointi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Sahkoposti.resx">
       <DependentUpon>Sahkoposti.cs</DependentUpon>

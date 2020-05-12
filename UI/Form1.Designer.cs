@@ -37,6 +37,7 @@
             this.PicBox1 = new System.Windows.Forms.PictureBox();
             this.Top_panel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Btn_Raportointi = new System.Windows.Forms.Button();
             this.Left_panel.SuspendLayout();
             this.Central_Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicBox1)).BeginInit();
@@ -47,6 +48,7 @@
             // Left_panel
             // 
             this.Left_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.Left_panel.Controls.Add(this.Btn_Raportointi);
             this.Left_panel.Controls.Add(this.Btn_Laskut);
             this.Left_panel.Controls.Add(this.Btn_Varaukset);
             this.Left_panel.Controls.Add(this.Btn_Hallinta);
@@ -141,6 +143,17 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // Btn_Raportointi
+            // 
+            this.Btn_Raportointi.Location = new System.Drawing.Point(29, 282);
+            this.Btn_Raportointi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Btn_Raportointi.Name = "Btn_Raportointi";
+            this.Btn_Raportointi.Size = new System.Drawing.Size(113, 46);
+            this.Btn_Raportointi.TabIndex = 3;
+            this.Btn_Raportointi.Text = "Raportointi";
+            this.Btn_Raportointi.UseVisualStyleBackColor = true;
+            this.Btn_Raportointi.Click += new System.EventHandler(this.Btn_Raportointi_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -171,6 +184,7 @@
         private System.Windows.Forms.Button Btn_Varaus;
         private System.Windows.Forms.PictureBox PicBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button Btn_Raportointi;
     }
 }
 
