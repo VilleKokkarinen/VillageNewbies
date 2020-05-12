@@ -1,4 +1,5 @@
-﻿namespace VillageNewbies.UI
+﻿using System.Windows.Forms;
+namespace VillageNewbies.UI
 {
     partial class Raportointi
     {
@@ -38,9 +39,10 @@
             // 
             // Btn_mokit
             // 
-            this.Btn_mokit.Location = new System.Drawing.Point(31, 57);
+            this.Btn_mokit.Location = new System.Drawing.Point(23, 46);
+            this.Btn_mokit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Btn_mokit.Name = "Btn_mokit";
-            this.Btn_mokit.Size = new System.Drawing.Size(75, 23);
+            this.Btn_mokit.Size = new System.Drawing.Size(56, 19);
             this.Btn_mokit.TabIndex = 0;
             this.Btn_mokit.Text = "Mökit";
             this.Btn_mokit.UseVisualStyleBackColor = true;
@@ -52,23 +54,24 @@
             this.chart_mokit.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart_mokit.Legends.Add(legend1);
-            this.chart_mokit.Location = new System.Drawing.Point(374, 23);
+            this.chart_mokit.Location = new System.Drawing.Point(167, 46);
             this.chart_mokit.Name = "chart_mokit";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
-            series1.Name = "Varauksien lkm";
+            series1.Name = "Series1";
             this.chart_mokit.Series.Add(series1);
-            this.chart_mokit.Size = new System.Drawing.Size(670, 325);
+            this.chart_mokit.Size = new System.Drawing.Size(298, 259);
             this.chart_mokit.TabIndex = 1;
             this.chart_mokit.Text = "chart1";
             // 
             // Raportointi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1056, 547);
+            this.ClientSize = new System.Drawing.Size(792, 444);
             this.Controls.Add(this.chart_mokit);
             this.Controls.Add(this.Btn_mokit);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Raportointi";
             this.Text = "Raportointi";
             this.Load += new System.EventHandler(this.Raportointi_Load);

@@ -16,7 +16,7 @@ namespace VillageNewbies.UI
 
         private BindingList<Cabin> Mokit;
         private BindingList<Reservation> MokinVaraukset;
-        private BindingList<Invoice> MokinLaskut;
+        private int MokinVaratutPaivat;
 
         public MokkiRaportointi()
         {
@@ -57,14 +57,27 @@ namespace VillageNewbies.UI
 
             }
         }
+        public static long ConvertToUnixTime(DateTime datetime)
+        {
+            DateTime sTime = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
+
+            return (long)(datetime - sTime).TotalSeconds;
+        }
+        public static DateTime UnixTimeStampToDateTime(double unixTimeStamp)
+        {
+            // Unix timestamp is seconds past epoch
+            System.DateTime dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, System.DateTimeKind.Utc);
+            dtDateTime = dtDateTime.AddSeconds(unixTimeStamp).ToLocalTime();
+            return dtDateTime;
+        }
 
         private void checklist_Cabins_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (checklist_Cabins.CheckedIndices.Count == 1)
             {
-                MokinVaraukset = new BindingList<Reservation>();
+               MokinVaratutPaivat = 0;
+               MokinVaraukset = new BindingList<Reservation>();
 
-                //PVM blokkaus
                 List<DataRow> Varaukset = new SQL().SQLiteQuery_DataRowList("SELECT * FROM varaus WHERE varaus.mokki_id = " + ((Cabin)checklist_Cabins.SelectedItem).mokki_id);
 
 
@@ -80,10 +93,14 @@ namespace VillageNewbies.UI
                          Convert.ToInt32(i[6].ToString())
                         );
                     MokinVaraukset.Add(r);
+
+                    MokinVaratutPaivat += new TimeSpan(UnixTimeStampToDateTime(r.varattu_loppupvm).Ticks - UnixTimeStampToDateTime(r.varattu_alkupvm).Ticks).Days;
                 }
                 checklist_Cabin_Reservations.DataSource = MokinVaraukset;
                 checklist_Cabin_Reservations.DisplayMember = "DISPLAYNAME";
 
+                txtCabinDetails.Clear();
+                txtCabinDetails.Text += $"mökillä yhteensä varattuja päiviä: {MokinVaratutPaivat}";
             }
 
         }
@@ -99,34 +116,5 @@ namespace VillageNewbies.UI
             }
         }
 
-        private void checklist_Cabin_Reservations_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (checklist_Cabin_Reservations.CheckedIndices.Count == 1)
-            {
-                MokinLaskut = new BindingList<Invoice>();
-
-                //PVM blokkaus
-                List<DataRow> Laskut = new SQL().SQLiteQuery_DataRowList("SELECT * FROM lasku WHERE varaus_id = " + ((Reservation)checklist_Cabin_Reservations.SelectedItem).varaus_id);
-
-
-                foreach (DataRow i in Laskut)
-                {
-                    Invoice invoice = new Invoice(
-                         Convert.ToInt32(i[0].ToString()), // <-> i["varaus_id"]
-                         Convert.ToInt32(i[1].ToString()),
-                         Convert.ToDouble(i[2].ToString()),
-                         Convert.ToInt32(i[3].ToString())
-                        );
-                    MokinLaskut.Add(invoice);
-                }
-
-                double LaskutYhteensa = 0;
-                foreach(Invoice i in MokinLaskut)
-                {
-                    LaskutYhteensa += i.summa;
-                }
-                txtCabinDetails.Text += "Tuotto yhteensä:" +LaskutYhteensa + Environment.NewLine;
-            }
-        }
     }
 }

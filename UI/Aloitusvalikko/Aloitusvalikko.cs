@@ -50,5 +50,11 @@ namespace VillageNewbies
             MokkiRaportointi m = new MokkiRaportointi();
             m.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Raportointi r = new Raportointi();
+            r.Show();
+        }
     }
 }

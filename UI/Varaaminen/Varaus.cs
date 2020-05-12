@@ -438,7 +438,7 @@ namespace VillageNewbies.UI
             {
 
                  string textquery = $"INSERT INTO varaus(asiakas_id,mokki_id,varattu_pvm,vahvistus_pvm,varattu_alkupvm,varattu_loppupvm)values(" +
-                 $"{txtboxAsiakas_id.Text}, {((Cabin)checklist_Loan_Cabins.SelectedItem).mokki_id}, strftime('%s', 'now'), strftime('%s', 'now'), {ConvertToUnixTime(dpTulo.datePicker.datePikkeri.SelectedDate.Value.Date)}, {ConvertToUnixTime(dpLahto.datePicker.datePikkeri.SelectedDate.Value.Date)})";
+                 $"{txtboxAsiakas_id.Text}, {((Cabin)checklist_Loan_Cabins.SelectedItem).mokki_id}, strftime('%s', 'now'), strftime('%s', 'now'), {ConvertToUnixTime(dpTulo.datePicker.datePikkeri.SelectedDate.Value)}, {ConvertToUnixTime(dpLahto.datePicker.datePikkeri.SelectedDate.Value)})";
 
                 SetConnection();
                 connection.Open();

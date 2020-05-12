@@ -94,7 +94,6 @@
             this.checklist_Cabin_Reservations.Size = new System.Drawing.Size(292, 429);
             this.checklist_Cabin_Reservations.TabIndex = 52;
             this.checklist_Cabin_Reservations.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.checklist_Cabin_Reservations_ItemCheck);
-            this.checklist_Cabin_Reservations.SelectedIndexChanged += new System.EventHandler(this.checklist_Cabin_Reservations_SelectedIndexChanged);
             // 
             // txtCabinDetails
             // 
