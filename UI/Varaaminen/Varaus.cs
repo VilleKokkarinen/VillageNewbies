@@ -454,7 +454,12 @@ namespace VillageNewbies.UI
                 foreach (Service s in valitutpalvelut)
                 {
                     textquery = $"INSERT INTO varauksen_palvelut(varaus_id, palvelu_id, lkm)VALUES(" +
-                        $"{id},{s.palvelu_id},{1}";
+                        $"{id},{s.palvelu_id},{1})";
+                    SetConnection();
+                    connection.Open();
+                    cmd = connection.CreateCommand();
+                    cmd.CommandText = textquery;
+                    cmd.ExecuteNonQuery();
                 }
 
 

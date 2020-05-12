@@ -36,6 +36,7 @@
             this.checklist_Cabins = new System.Windows.Forms.CheckedListBox();
             this.checklist_Cabin_Reservations = new System.Windows.Forms.CheckedListBox();
             this.txtCabinDetails = new System.Windows.Forms.TextBox();
+            this.checklist_Cabin_Reservation_Services = new System.Windows.Forms.CheckedListBox();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -94,21 +95,37 @@
             this.checklist_Cabin_Reservations.Size = new System.Drawing.Size(292, 429);
             this.checklist_Cabin_Reservations.TabIndex = 52;
             this.checklist_Cabin_Reservations.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.checklist_Cabin_Reservations_ItemCheck);
+            this.checklist_Cabin_Reservations.SelectedIndexChanged += new System.EventHandler(this.checklist_Cabin_Reservations_SelectedIndexChanged);
             // 
             // txtCabinDetails
             // 
-            this.txtCabinDetails.Location = new System.Drawing.Point(567, 16);
+            this.txtCabinDetails.Location = new System.Drawing.Point(1043, 16);
             this.txtCabinDetails.Multiline = true;
             this.txtCabinDetails.Name = "txtCabinDetails";
             this.txtCabinDetails.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.txtCabinDetails.Size = new System.Drawing.Size(274, 429);
             this.txtCabinDetails.TabIndex = 53;
             // 
+            // checklist_Cabin_Reservation_Services
+            // 
+            this.checklist_Cabin_Reservation_Services.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.checklist_Cabin_Reservation_Services.CheckOnClick = true;
+            this.checklist_Cabin_Reservation_Services.DisplayMember = "Text";
+            this.checklist_Cabin_Reservation_Services.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.checklist_Cabin_Reservation_Services.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.checklist_Cabin_Reservation_Services.FormattingEnabled = true;
+            this.checklist_Cabin_Reservation_Services.HorizontalScrollbar = true;
+            this.checklist_Cabin_Reservation_Services.Location = new System.Drawing.Point(567, 16);
+            this.checklist_Cabin_Reservation_Services.Name = "checklist_Cabin_Reservation_Services";
+            this.checklist_Cabin_Reservation_Services.Size = new System.Drawing.Size(470, 429);
+            this.checklist_Cabin_Reservation_Services.TabIndex = 54;
+            // 
             // MokkiRaportointi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(853, 485);
+            this.ClientSize = new System.Drawing.Size(1364, 485);
+            this.Controls.Add(this.checklist_Cabin_Reservation_Services);
             this.Controls.Add(this.txtCabinDetails);
             this.Controls.Add(this.checklist_Cabin_Reservations);
             this.Controls.Add(this.checklist_Cabins);
@@ -131,5 +148,6 @@
         private System.Windows.Forms.CheckedListBox checklist_Cabins;
         private System.Windows.Forms.CheckedListBox checklist_Cabin_Reservations;
         private System.Windows.Forms.TextBox txtCabinDetails;
+        private System.Windows.Forms.CheckedListBox checklist_Cabin_Reservation_Services;
     }
 }
