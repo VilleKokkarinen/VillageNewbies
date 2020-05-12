@@ -24,6 +24,8 @@ namespace VillageNewbies
         public int varattu_alkupvm { get; set; }
         public int varattu_loppupvm { get; set; }
 
+        public string DISPLAYNAME => $" varaus {UnixTimeStampToDateTime(varattu_alkupvm).ToShortDateString()} - {UnixTimeStampToDateTime(varattu_loppupvm).ToShortDateString()}";
+
         public Reservation(int varaus_id, int asiakas_id, int mokki_id, int varattu_pvm, int vahvistus_pvm, int varattu_alkupvm, int varattu_loppupvm)
         {
             this.varaus_id = varaus_id;
@@ -33,6 +35,14 @@ namespace VillageNewbies
             this.vahvistus_pvm = vahvistus_pvm;
             this.varattu_alkupvm = varattu_alkupvm;
             this.varattu_loppupvm = varattu_loppupvm;
+        }
+
+        public static DateTime UnixTimeStampToDateTime(double unixTimeStamp)
+        {
+            // Unix timestamp is seconds past epoch
+            System.DateTime dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, System.DateTimeKind.Utc);
+            dtDateTime = dtDateTime.AddSeconds(unixTimeStamp).ToLocalTime();
+            return dtDateTime;
         }
     }
 }

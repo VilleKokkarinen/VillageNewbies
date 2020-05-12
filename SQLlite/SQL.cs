@@ -489,7 +489,7 @@ namespace VillageNewbies
             "REFERENCES varaus(varaus_id))";
             cmd.ExecuteNonQuery();
 
-            cmd.CommandText = "INSERT INTO lasku(varaus_id, summa, alv )" +
+            cmd.CommandText = "INSERT INTO lasku(varaus_id, summa, alv)" +
                " VALUES(300, 450, 24)," + 
                "(301,550,24)";
             cmd.ExecuteNonQuery();

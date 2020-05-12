@@ -83,38 +83,38 @@
     <Compile Include="Objects\OperatingArea\OperatingArea.cs" />
     <Compile Include="Objects\Reservation\Reservation.cs" />
     <Compile Include="Objects\Service\Service.cs" />
-    <Compile Include="UI\AlueidenHallinta.cs">
+    <Compile Include="UI\Hallinta\Alue\AlueidenHallinta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\AlueidenHallinta.Designer.cs">
+    <Compile Include="UI\Hallinta\Alue\AlueidenHallinta.Designer.cs">
       <DependentUpon>AlueidenHallinta.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\AsiakasHallinta.cs">
+    <Compile Include="UI\Hallinta\Asiakas\AsiakasHallinta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\AsiakasHallinta.Designer.cs">
+    <Compile Include="UI\Hallinta\Asiakas\AsiakasHallinta.Designer.cs">
       <DependentUpon>AsiakasHallinta.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\datepikkeri.xaml.cs">
+    <Compile Include="UI\CustomObjects\datepikkeri.xaml.cs">
       <DependentUpon>datepikkeri.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UI\datePikkeriHost.cs" />
-    <Compile Include="UI\Lasku.cs">
+    <Compile Include="UI\CustomObjects\datePikkeriHost.cs" />
+    <Compile Include="UI\Laskutus\Lasku.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Lasku.Designer.cs">
+    <Compile Include="UI\Laskutus\Lasku.Designer.cs">
       <DependentUpon>Lasku.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Laskut.cs">
+    <Compile Include="UI\Laskutus\Laskut.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Laskut.Designer.cs">
+    <Compile Include="UI\Laskutus\Laskut.Designer.cs">
       <DependentUpon>Laskut.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\PalveluHallinta.cs">
+    <Compile Include="UI\Hallinta\Palvelu\PalveluHallinta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\PalveluHallinta.Designer.cs">
+    <Compile Include="UI\Hallinta\Palvelu\PalveluHallinta.Designer.cs">
       <DependentUpon>PalveluHallinta.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\CustomObjects\Buttons\ButtonX.cs">
@@ -123,40 +123,39 @@
     <Compile Include="UI\CustomObjects\Buttons\ButtonZ.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="UI\Form1.cs">
+    <Compile Include="UI\Aloitusvalikko\Aloitusvalikko.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="UI\Aloitusvalikko\Aloitusvalikko.Designer.cs">
+      <DependentUpon>Aloitusvalikko.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Form2.cs">
+    <Compile Include="UI\Raportointi\Mökki\Mökki.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="UI\Raportointi\Mökki\Mökki.Designer.cs">
+      <DependentUpon>Mökki.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\HallintaValinta.cs">
+    <Compile Include="UI\Varaaminen\Varaus.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\HallintaValinta.Designer.cs">
+    <Compile Include="UI\Varaaminen\Varaus.Designer.cs">
+      <DependentUpon>Varaus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Hallinta\HallintaValinta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Hallinta\HallintaValinta.Designer.cs">
       <DependentUpon>HallintaValinta.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\MokinHallinta.cs">
+    <Compile Include="UI\Hallinta\Mökki\MokinHallinta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\MokinHallinta.Designer.cs">
+    <Compile Include="UI\Hallinta\Mökki\MokinHallinta.Designer.cs">
       <DependentUpon>MokinHallinta.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\MainScreen\ComboItem.cs" />
     <Compile Include="Main\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SQLlite\SQL.cs" />
-    <Compile Include="UI\MainScreen\MainScreen.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\MainScreen\MainScreen.Designer.cs">
-      <DependentUpon>MainScreen.cs</DependentUpon>
-    </Compile>
     <Compile Include="UI\CustomObjects\MenuStripZ.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -166,18 +165,18 @@
     <Compile Include="UI\CustomObjects\Buttons\ShapedButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="UI\Sahkoposti.cs">
+    <Compile Include="UI\Laskutus\Sahkoposti.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Sahkoposti.Designer.cs">
+    <Compile Include="UI\Laskutus\Sahkoposti.Designer.cs">
       <DependentUpon>Sahkoposti.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\TypeAssistant.cs" />
+    <Compile Include="UI\CustomObjects\TypeAssistant.cs" />
     <Compile Include="Objects\Cabin\Cabin.cs" />
-    <Compile Include="UI\Varaukset.cs">
+    <Compile Include="UI\Varaaminen\Varaukset.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Varaukset.Designer.cs">
+    <Compile Include="UI\Varaaminen\Varaukset.Designer.cs">
       <DependentUpon>Varaukset.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -190,43 +189,40 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UI\AlueidenHallinta.resx">
+    <EmbeddedResource Include="UI\Hallinta\Alue\AlueidenHallinta.resx">
       <DependentUpon>AlueidenHallinta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\AsiakasHallinta.resx">
+    <EmbeddedResource Include="UI\Hallinta\Asiakas\AsiakasHallinta.resx">
       <DependentUpon>AsiakasHallinta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Lasku.resx">
+    <EmbeddedResource Include="UI\Laskutus\Lasku.resx">
       <DependentUpon>Lasku.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Laskut.resx">
+    <EmbeddedResource Include="UI\Laskutus\Laskut.resx">
       <DependentUpon>Laskut.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\PalveluHallinta.resx">
+    <EmbeddedResource Include="UI\Hallinta\Palvelu\PalveluHallinta.resx">
       <DependentUpon>PalveluHallinta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Aloitusvalikko\Aloitusvalikko.resx">
+      <DependentUpon>Aloitusvalikko.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Raportointi\Mökki\Mökki.resx">
+      <DependentUpon>Mökki.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\HallintaValinta.resx">
+    <EmbeddedResource Include="UI\Varaaminen\Varaus.resx">
+      <DependentUpon>Varaus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Hallinta\HallintaValinta.resx">
       <DependentUpon>HallintaValinta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\MokinHallinta.resx">
+    <EmbeddedResource Include="UI\Hallinta\Mökki\MokinHallinta.resx">
       <DependentUpon>MokinHallinta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\MainScreen\MainScreen.en.resx">
-      <DependentUpon>MainScreen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\MainScreen\MainScreen.resx">
-      <DependentUpon>MainScreen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\Sahkoposti.resx">
+    <EmbeddedResource Include="UI\Laskutus\Sahkoposti.resx">
       <DependentUpon>Sahkoposti.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Varaukset.resx">
+    <EmbeddedResource Include="UI\Varaaminen\Varaukset.resx">
       <DependentUpon>Varaukset.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -270,7 +266,7 @@
     <None Include="Resources\logo.png" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="UI\datepikkeri.xaml">
+    <Page Include="UI\CustomObjects\datepikkeri.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

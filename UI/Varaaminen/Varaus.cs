@@ -5,18 +5,34 @@ using System.Data;
 using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace VillageNewbies.UI
 {
+   
     public partial class Varaus : Form
     {
         public Varaus()
         {
             InitializeComponent();
-            Buttonvaraa();
+            dpTulo.datePicker.datePikkeri.SelectedDateChanged += DatePikkeri_SelectedDateChanged;
+            dpLahto.datePicker.datePikkeri.SelectedDateChanged += DatePikkeri_SelectedDateChanged1;
+
+            dpTulo.datePicker.datePikkeri.IsEnabled = false;
+            dpLahto.datePicker.datePikkeri.IsEnabled = false;
+        }
+
+        private void DatePikkeri_SelectedDateChanged1(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            Laskehinta();
+        }
+
+        private void DatePikkeri_SelectedDateChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            Laskehinta();
         }
 
         private SQLiteConnection connection;
@@ -32,6 +48,7 @@ namespace VillageNewbies.UI
         private BindingList<Service> valitutpalvelut;
 
         private double MokkiHinta;
+        private double OidenHinta;
         private double PalveluidenHinta;
 
         private void Varaus_Load(object sender, EventArgs e)
@@ -116,7 +133,24 @@ namespace VillageNewbies.UI
 
         private void Laskehinta()
         {
-            txtHinta.Text = (PalveluidenHinta + MokkiHinta).ToString();
+            int yoMaara = 0;
+
+            try
+            {
+                yoMaara = new TimeSpan(dpLahto.datePicker.datePikkeri.SelectedDate.Value.Ticks - dpTulo.datePicker.datePikkeri.SelectedDate.Value.Ticks).Days;
+            }
+            catch
+            {
+
+            }
+
+            OidenHinta = MokkiHinta * yoMaara;
+
+            if (OidenHinta != 0)
+            {
+                txtHinta.Text = (PalveluidenHinta + OidenHinta).ToString();
+            }
+           
         }
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
@@ -145,8 +179,20 @@ namespace VillageNewbies.UI
         /// <param name="e"></param>
         private void checklist_Loan_Cabins_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (checklist_Loan_Cabins.SelectedItem != null)
+            if (checklist_Loan_Cabins.CheckedIndices.Count == 1)
             {
+                dpTulo.datePicker.datePikkeri.SelectedDate = DateTime.Today;
+                dpTulo.datePicker.datePikkeri.DisplayDate = DateTime.Today;
+
+                dpLahto.datePicker.datePikkeri.SelectedDate = DateTime.Today.AddDays(1);
+                dpLahto.datePicker.datePikkeri.DisplayDate = DateTime.Today.AddDays(1);
+
+                dpTulo.datePicker.datePikkeri.IsEnabled = true;
+                dpLahto.datePicker.datePikkeri.IsEnabled = true;
+
+                Btn_Varaa.Enabled = true;
+                Laskehinta();
+
                 MokkiHinta = 0;
                 try
                 {
@@ -157,7 +203,6 @@ namespace VillageNewbies.UI
                 }                
                 
                 Laskehinta();
-                Buttonvaraa();
 
                 dpTulo.datePicker.datePikkeri.BlackoutDates.Clear();
                 dpLahto.datePicker.datePikkeri.BlackoutDates.Clear();
@@ -199,6 +244,12 @@ namespace VillageNewbies.UI
                 }
                 
             }
+            else
+            {
+                Btn_Varaa.Enabled = false;
+                dpTulo.datePicker.datePikkeri.IsEnabled = false;
+                dpLahto.datePicker.datePikkeri.IsEnabled = false;
+            }
             
         }
 
@@ -209,7 +260,6 @@ namespace VillageNewbies.UI
                 checklist_Loan_Cabins.ItemCheck -= checklist_Loan_Cabins_ItemCheck;
                 checklist_Loan_Cabins.SetItemChecked(checklist_Loan_Cabins.CheckedIndices[0], false);
                 checklist_Loan_Cabins.ItemCheck += checklist_Loan_Cabins_ItemCheck;
-                Buttonvaraa();
             }
         }
 
@@ -387,9 +437,6 @@ namespace VillageNewbies.UI
             if(dataGridView1.SelectedRows.Count != 0)
             {
 
-                // string textquery = $"INSERT INTO varaus(asiakas_id,mokki_id,varattu_pvm,vahvistus_pvm,varattu_alkupvm,varattu_loppupvm)values(" +
-                // $"{txtboxAsiakas_id.Text}, {((Cabin)checklist_Loan_Cabins.SelectedItem).mokki_id}, strftime('%s', 'now'), strftime('%s', 'now'), {ConvertToUnixTime(dateTimePicker_Tulo.Value.Date.ToUniversalTime())}, {ConvertToUnixTime(dateTimePicker_Lahto.Value.Date.ToUniversalTime())})";
-
                  string textquery = $"INSERT INTO varaus(asiakas_id,mokki_id,varattu_pvm,vahvistus_pvm,varattu_alkupvm,varattu_loppupvm)values(" +
                  $"{txtboxAsiakas_id.Text}, {((Cabin)checklist_Loan_Cabins.SelectedItem).mokki_id}, strftime('%s', 'now'), strftime('%s', 'now'), {ConvertToUnixTime(dpTulo.datePicker.datePikkeri.SelectedDate.Value.Date)}, {ConvertToUnixTime(dpLahto.datePicker.datePikkeri.SelectedDate.Value.Date)})";
 
@@ -426,6 +473,16 @@ namespace VillageNewbies.UI
                     new Invoice(0, id, Convert.ToDouble(txtHinta.Text), 24),
                     valitutpalvelut.ToArray()
                     );
+
+
+                textquery = $"INSERT INTO lasku(varaus_id, summa, alv)VALUES({id},{Convert.ToDouble(txtHinta.Text)},{24})";
+
+                SetConnection();
+                connection.Open();
+                cmd = connection.CreateCommand();
+                cmd.CommandText = textquery;
+                cmd.ExecuteNonQuery();
+
                 MessageBox.Show("Lisäys onnistui");
                 lasku.Show();
 
@@ -479,45 +536,7 @@ namespace VillageNewbies.UI
             }
         }
 
-        private void Buttonvaraa()
-        {
-   
-            if(checklist_Loan_Cabins.CheckedItems.Count == 1)
-            {
-                if (String.IsNullOrWhiteSpace(txtHinta.Text))
-                {
-                    Btn_Varaa.Enabled = false;
-                }
-                else
-                {
-                    Btn_Varaa.Enabled = true;
-                }
-            }
-            else
-            {
-                Btn_Varaa.Enabled = false;
-            }
-          
-        }
-
-        private void txtHinta_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Buttonvaraa();
-            if (string.IsNullOrWhiteSpace(txtHinta.Text))
-            {
-                Btn_Varaa.Enabled = false;
-            }
-            else
-            {
-                Btn_Varaa.Enabled = true;
-            } 
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-                
-            }
-        }
-      
+             
 
         private void Clb_Palvelut_ItemCheck(object sender, ItemCheckEventArgs e)
         {
@@ -536,7 +555,7 @@ namespace VillageNewbies.UI
                 PalveluidenHinta += s.hinta;
             }
             Laskehinta();
-            Buttonvaraa();
         }
+     
     }
 }

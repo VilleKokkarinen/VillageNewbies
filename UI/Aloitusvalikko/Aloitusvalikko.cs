@@ -44,5 +44,11 @@ namespace VillageNewbies
             Laskut laskut = new Laskut();
             laskut.Show();
         }
+
+        private void btnRaportointi_Click(object sender, EventArgs e)
+        {
+            MokkiRaportointi m = new MokkiRaportointi();
+            m.Show();
+        }
     }
 }
