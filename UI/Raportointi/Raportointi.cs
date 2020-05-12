@@ -16,38 +16,86 @@ namespace VillageNewbies.UI
         {
             InitializeComponent();
         }
-        private BindingList<Cabin> Mokit;
-
-        private void Btn_mokit_Click(object sender, EventArgs e)
-        {
-            foreach (Cabin c in Mokit)
-            {
-                this.chart_mokit.Series["Varauksien lkm"].Points.AddXY(c.mokkinimi, 15);
-            }
-        }
+        private BindingList<Client> asiakkaat;
+        private BindingList<Reservation> AsiakkaanVaraukset;
 
         private void Raportointi_Load(object sender, EventArgs e)
         {
-            Mokit = new BindingList<Cabin>();
+            asiakkaat = new BindingList<Client>();
             SQL s = new SQL();
-            List<DataRow> dataa2 = s.SQLiteQuery_DataRowList(
-                "SELECT * FROM mokki");
+            List<DataRow> asiakas = new SQL().SQLiteQuery_DataRowList("SELECT * FROM asiakas");
 
-            foreach (DataRow i in dataa2)
+            foreach (DataRow i in asiakas)
             {
-                Cabin c = new Cabin(
-                   Convert.ToInt32(i[0].ToString()), // <-> i["mokki_id"]
-                   Convert.ToInt32(i[1].ToString()),
-                   i[2].ToString(),
+                Client c = new Client(
                    i[3].ToString(),
                    i[4].ToString(),
+                   Convert.ToInt32(i[0].ToString()),
                    i[5].ToString(),
-                   Convert.ToInt32(i[6].ToString()),
-                   i[8].ToString(),
-                   Convert.ToInt32(i[7].ToString())
+                   i[6].ToString(),
+                   i[7].ToString(),
+                   i[1].ToString(),
+                   i[2].ToString()
                    );
-                Mokit.Add(c);
+                asiakkaat.Add(c);
+            }
+            CheckListAsiakkaat.DataSource = asiakkaat;
+            CheckListAsiakkaat.DisplayMember = "DISPLAYNAME";
+
+        }
+
+        private void CheckListAsiakkaat_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            if (e.NewValue == CheckState.Checked && CheckListAsiakkaat.CheckedItems.Count > 0)
+            {
+                CheckListAsiakkaat.ItemCheck -= CheckListAsiakkaat_ItemCheck;
+                CheckListAsiakkaat.SetItemChecked(CheckListAsiakkaat.CheckedIndices[0], false);
+                CheckListAsiakkaat.ItemCheck += CheckListAsiakkaat_ItemCheck;
+            }
+            if (e.NewValue != e.CurrentValue)
+            {
+                //MokinVarauksenPalvelut = new BindingList<Service>();
             }
         }
+
+        private void CheckListAsiakkaat_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            AsiakkaanVaraukset = new BindingList<Reservation>();
+            if (CheckListAsiakkaat.CheckedIndices.Count == 1)
+            {
+                //MokinVaratutPaivat = 0;
+
+
+                List<DataRow> Varaukset = new SQL().SQLiteQuery_DataRowList("SELECT * FROM varaus WHERE varaus.asiakas_id = " + ((Client)CheckListAsiakkaat.CheckedItems[0]).asiakas_id);
+
+
+                foreach (DataRow i in Varaukset)
+                {
+                    Reservation r = new Reservation(
+                         Convert.ToInt32(i[0].ToString()), // <-> i["varaus_id"]
+                         Convert.ToInt32(i[1].ToString()),
+                         Convert.ToInt32(i[2].ToString()),
+                         Convert.ToInt32(i[3].ToString()),
+                         Convert.ToInt32(i[4].ToString()),
+                         Convert.ToInt32(i[5].ToString()),
+                         Convert.ToInt32(i[6].ToString())
+                        );
+                    AsiakkaanVaraukset.Add(r);
+
+                    //MokinVaratutPaivat += new TimeSpan(UnixTimeStampToDateTime(r.varattu_loppupvm).Ticks - UnixTimeStampToDateTime(r.varattu_alkupvm).Ticks).Days;
+                }
+                CheckListVaraukset.DataSource = AsiakkaanVaraukset;
+                CheckListVaraukset.DisplayMember = "DISPLAYNAME";
+
+                //txtCabinDetails.Clear();
+                //txtCabinDetails.Text += $"mökillä yhteensä varattuja päiviä: {MokinVaratutPaivat}";
+            }
+            else
+            {
+                CheckListVaraukset.DataSource = null;
+                //checklist_Cabin_Reservation_Services.DataSource = null;
+            }
+        }
+
     }
 }

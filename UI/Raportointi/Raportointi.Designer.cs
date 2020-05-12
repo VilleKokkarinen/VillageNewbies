@@ -29,60 +29,46 @@ namespace VillageNewbies.UI
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            this.Btn_mokit = new System.Windows.Forms.Button();
-            this.chart_mokit = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            ((System.ComponentModel.ISupportInitialize)(this.chart_mokit)).BeginInit();
+            this.CheckListAsiakkaat = new System.Windows.Forms.CheckedListBox();
+            this.CheckListVaraukset = new System.Windows.Forms.CheckedListBox();
             this.SuspendLayout();
             // 
-            // Btn_mokit
+            // CheckListAsiakkaat
             // 
-            this.Btn_mokit.Location = new System.Drawing.Point(23, 46);
-            this.Btn_mokit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Btn_mokit.Name = "Btn_mokit";
-            this.Btn_mokit.Size = new System.Drawing.Size(56, 19);
-            this.Btn_mokit.TabIndex = 0;
-            this.Btn_mokit.Text = "Mökit";
-            this.Btn_mokit.UseVisualStyleBackColor = true;
-            this.Btn_mokit.Click += new System.EventHandler(this.Btn_mokit_Click);
+            this.CheckListAsiakkaat.FormattingEnabled = true;
+            this.CheckListAsiakkaat.Location = new System.Drawing.Point(13, 196);
+            this.CheckListAsiakkaat.Name = "CheckListAsiakkaat";
+            this.CheckListAsiakkaat.Size = new System.Drawing.Size(325, 310);
+            this.CheckListAsiakkaat.TabIndex = 0;
+            this.CheckListAsiakkaat.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.CheckListAsiakkaat_ItemCheck);
+            this.CheckListAsiakkaat.SelectedIndexChanged += new System.EventHandler(this.CheckListAsiakkaat_SelectedIndexChanged);
             // 
-            // chart_mokit
+            // CheckListVaraukset
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart_mokit.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart_mokit.Legends.Add(legend1);
-            this.chart_mokit.Location = new System.Drawing.Point(167, 46);
-            this.chart_mokit.Name = "chart_mokit";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart_mokit.Series.Add(series1);
-            this.chart_mokit.Size = new System.Drawing.Size(298, 259);
-            this.chart_mokit.TabIndex = 1;
-            this.chart_mokit.Text = "chart1";
+            this.CheckListVaraukset.FormattingEnabled = true;
+            this.CheckListVaraukset.Location = new System.Drawing.Point(434, 196);
+            this.CheckListVaraukset.Name = "CheckListVaraukset";
+            this.CheckListVaraukset.Size = new System.Drawing.Size(304, 293);
+            this.CheckListVaraukset.TabIndex = 1;
             // 
             // Raportointi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(792, 444);
-            this.Controls.Add(this.chart_mokit);
-            this.Controls.Add(this.Btn_mokit);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ClientSize = new System.Drawing.Size(1056, 546);
+            this.Controls.Add(this.CheckListVaraukset);
+            this.Controls.Add(this.CheckListAsiakkaat);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Raportointi";
             this.Text = "Raportointi";
             this.Load += new System.EventHandler(this.Raportointi_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.chart_mokit)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button Btn_mokit;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart_mokit;
+        private CheckedListBox CheckListAsiakkaat;
+        private CheckedListBox CheckListVaraukset;
     }
 }
